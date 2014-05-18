@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block body_id %}<body id="congrats">{% endblock %}
+{% block body %}
+
+<div id="banner">
+
+<p>Email Changed Page</p>
+
+</div><!-- banner ends -->
+
+</div><!-- header ends -->
+
+<div class="content clearfix">
+
+<div id="firsttasks">
+
+<div id="taskmsg">
+
+    <h1>New email</h1>
+
+  <div class="white-box">
+
+      {% if user.username == profile.user.username %}
+      <p>Your new email address is saved. You can continue using {{ site.name }} with this email.</p>
+      {% endif %}
+
+  </div>
+ </div>
+    </div>
+    </div>
+{% endblock %}

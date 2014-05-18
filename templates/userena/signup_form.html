@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% block body_id %}<body id="registration">{% endblock %}
+{% block body %}
+<style type="text/css">
+
+p, label {
+  color:#2f2f2f;
+  font-size: 12px;
+}
+
+#error_box{
+  float: right;
+  width: 310px;
+  background-color: #F94646;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  border-radius:25px;
+  }
+
+#error_box li{
+  color:white;
+  line-height: 75%;
+  font-size: 12px;
+
+  }
+
+
+</style>
+
+<div id="banner">
+
+<img id="shipline" src="../static/images/bi.jpg" />
+
+</div><!-- banner ends -->
+
+</div><!-- header ends -->
+
+
+
+<div class="content clearfix">
+
+<div id="clipboard">
+<img id="clipboardart" src="../static/images/clipboard.png"/>
+
+<h1>New Member Registration Form</h1>
+
+<div id="regform" class="clearfix">
+{% if form.errors %}
+    <div id="error_box"><!--error box begins here-->
+
+     <ul>{% if form.username.errors %}
+            <li></p>{{ form.username.errors.as_text }} </p></li>
+        {% endif %}
+
+        {% if form.email.errors %}
+         <li></p>{{ form.email.errors.as_text }}</p></li>
+        {% endif %}
+
+        {% if form.password1.errors %}
+            <li></p>{{ form.password1.errors.as_text }}</p></li>
+        {% endif %}
+
+        {% if form.password2.errors %}
+            <li></p>{{ form.password2.errors.as_text }}</p></li>
+        {% endif %}
+
+        {% if form.tos.errors %}
+            <li></p>{{ form.tos.errors.as_text }}</p></li>
+        {% endif %}
+        {% if form.non_field_errors %}
+            <li></p> {{ form.non_field_errors.as_text }} </p></li>
+        {% endif %}
+    </ul>
+    </div><!--error box ends here-->
+{% endif %}
+
+<form action="." method="post">
+    {% csrf_token %}
+
+    <div id="regformtop">
+        <p><label class="regformlabel" for="username">Username:</label>{{form.username|add_class:"textbox"}}</p>
+
+        <p><label class="regformlabel" for="email">E-mail:</label>{{form.email|add_class:"textbox"}}</p>
+
+        <p><label class="regformlabel">Create Password:</label>{{ form.password1|add_class:"textbox" }}</p>
+
+        <p><label class="regformlabel">Retype Password:</label>{{ form.password2|add_class:"textbox" }}</p>
+
+        <p><label class="regformlabel" for="username">Date of Birth:</label>{{form.dob}}</p>
+
+        <p align=right><label class="regformlabel" for="username"></label>{{form.tos}} I have read and agree to the Terms of Service</p>
+
+    </div><!-- regformtop ends -->
+
+    <input type="image" src="../static/images/clipboardbutton.jpg" value="Submit" id="regformbutton"  />
+
+</form>
+
+</div><!-- regform ends -->
+</div><!-- clipboard ends -->
+
+</div><!-- content ends -->
+
+{% endblock %}

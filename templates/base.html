@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title> {% block title %}ScribbleHack{% endblock %} </title>
+    {% block js %}{% endblock %}
+    {% block css %}<link rel="stylesheet" href="{{ MEDIA_URL }}layoutcss.css"> {% endblock %}
+</head>
+
+{% block body_id %}{% endblock %}
+
+{% block navi %}
+<div id="wrapper">
+
+<div id="header">
+
+<div id="sitenav">
+
+<div id="sitenavleft" class="clearfix">
+
+<a href="{% url "homepage_index" %}">
+<div id="logo" class="clearfix">
+<div id="icon">
+</div><!-- icon ends -->
+<img src="../static/images/logo.png" />
+</div><!-- logo ends -->
+</a>
+
+<div id="sitenavpagelinks" class="clearfix">
+<div class="navlink clearfix">
+<a href="{% url "homepage_browse" %}">Browse</a>
+</div><!-- navlink ends -->
+<div class="navlink clearfix">
+<a href="#">Universe</a>
+</div><!-- navlink ends -->
+<div class="navlink clearfix">
+<a href="#">Groups</a>
+</div><!-- navlink ends -->
+<div class="navlink clearfix">
+<a href="#">Projects</a>
+</div><!-- navlink ends -->
+</div><!-- sitenavpagelinks ends -->
+
+</div><!-- sitenavleft ends -->
+
+<div id="sitenavright" class="clearfix">
+
+<div id="navsearchbox">
+
+<form id="tfnewsearch" method="get" action="#">
+		       <input type="submit" class="tfbutton" src="../staic/images/searchicon.png" img />
+		       <input type="text" placeholder=" Search for stories, art or users" class="tftextinput" name="q" size="25" maxlength="120" onfocus="inputFocus(this)" onblur="inputBlur(this)">
+		</form>
+</div><!-- navsearchbox ends -->
+{% if user.is_authenticated %}
+<a href="{% url 'userena_profile_detail' user.username %}">{{ user.username }}</a>
+{% else %}
+<a href="{% url "userena_signin" %}">Sign in</a>
+{% endif %}
+
+</div><!-- sitenavright ends -->
+
+</div><!-- sitenav ends -->
+{% endblock %}
+{% block body %}{% endblock %}
+
+{% block footer %}
+<div id="footer">
+
+<div id="quicklinks">
+    <ul>
+        <li><a href="{% url "homepage_index" %}">Home</a></li>
+        {% if user.is_authenticated %}
+        <li><a href="{% url "userena_signout" %}">Logout</a></li>
+        {% endif %}
+    </ul>
+</div><!-- quicklinks ends -->
+
+</div><!-- footer ends -->
+
+
+</div><!-- wrapper ends -->
+
+
+</body>
+</html>
+{% endblock %}

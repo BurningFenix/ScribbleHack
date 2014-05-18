@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block body_id %}<body id="congrats">{% endblock %}
+{% block body %}
+
+<div id="banner">
+
+<p>Email Verification Page</p>
+
+</div><!-- banner ends -->
+
+</div><!-- header ends -->
+
+<div class="content clearfix">
+
+<div id="firsttasks">
+
+<div id="taskmsg">
+
+    <h1>Confirm your new email</h1>
+
+  <div class="white-box">
+
+      {% if user.username == profile.user.username %}
+      <p>You have received an email at {{ viewed_user.userena_signup.email_unconfirmed }}. </p>
+      <p>To associate this email address with your account ({{ viewed_user.username }}) click on the link provided in this email.</p>
+      {% endif %}
+
+  </div>
+ </div>
+    </div>
+    </div>
+{% endblock %}
+
+

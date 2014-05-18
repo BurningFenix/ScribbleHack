@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block body_id %}<body id="congrats">{% endblock %}
+{% block body %}
+
+<div id="banner">
+
+<p>(Profile Page)</p>
+
+</div><!-- banner ends -->
+
+</div><!-- header ends -->
+
+<div class="content clearfix">
+
+<div id="firsttasks">
+
+<div id="taskmsg">
+    {% if user.is_authenticated %}
+    <h1>Welcome back, {{ user.username }}</h1>
+    {% else %}
+    <h1>Welcome, new user. Please log in.</h1>
+    {% endif %}
+
+  <div class="white-box">
+
+      {% comment %}Dirty hack. Will use django-guardian in the future.{% endcomment %}
+      {% if user.username == profile.user.username %}
+        <ul id="box-nav">
+            <li><a href="{% url 'userena_profile_edit' user.username %}">Edit details</a></li>
+            <li><a href="{% url 'userena_password_change' user.username %}">Change password</a></li>
+            <li><a href="{% url 'userena_email_change' user.username %}">Change email</a></li>
+        </ul>
+      {% endif %}
+
+    <div id="details">
+
+        <img class="mugshot" src="{{ profile.get_mugshot_url }}" alt="Your mugshot" />
+        <dl>
+
+            {% if profile.user.get_full_name %}
+              <dt>Name</dt>
+              <dd>{{ profile.user.get_full_name }}</dd>
+            {% endif %}
+            {% if profile.user.email and not hide_email %}
+              <dt>Email</dt>
+              <dd>{{ profile.user.email }}</dd>
+            {% endif %}
+            {% if profile.age %}
+              <dt>Age</dt>
+              <dd>{{ profile.age }}</dd>
+            {% endif %}
+            {% if profile.website %}
+              <dt>Website</dt>
+              <dd>{{ profile.website|urlize }}</dd>
+            {% endif %}
+            {% if profile.location %}
+              <dt>Location</dt>
+              <dd>{{ profile.location }}</dd>
+            {% endif %}
+            {% if profile.about_me %}
+              <dt>About me</dt>
+              <dd>{{ profile.about_me }}</dd>
+            {% endif %}
+
+        </dl>
+
+    </div>
+  </div>
+ </div>
+    </div>
+    </div>
+{% endblock %}
+
