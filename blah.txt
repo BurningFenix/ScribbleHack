@@ -1,7 +1,0 @@
-<<<<<<< HEAD
-My file to github
-many change
-wow
-=======
-dfafsdfsdMy file to github
->>>>>>> ee18f21363b9fbd201b2c2d2eba2d045e0aa30b0
