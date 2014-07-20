@@ -1,4 +1,4 @@
-from django.conf.urls import *
+from django.conf.urls import patterns, url
 
 urlpatterns = patterns('apps.homepage.views',
 	#url('', include('django.contrib.auth.urls')),

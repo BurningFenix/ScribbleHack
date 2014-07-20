@@ -1,4 +1,4 @@
-from django.conf.urls import *
+from django.conf.urls import patterns, url
 
 urlpatterns = patterns('apps.accounts.views',
     url(r'^profile/$', 'profile', name="accounts_profile"),
