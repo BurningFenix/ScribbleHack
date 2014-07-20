@@ -20,8 +20,8 @@ def login_user(request): #Login
 			print("user is none")
 	return render_to_response('homepage/login.html', context_instance=RequestContext(request))
 
-def abrowse(request): #Art Browse Page
-    return render_to_response('homepage/art_browse.html', context_instance=RequestContext(request))
+#def browse(request): #Forgot Password Page
+    #return render_to_response('homepage/browse.html', context_instance=RequestContext(request))
 
-def wbrowse(request): #Writing Browse Page
-    return render_to_response('homepage/writing_browse.html', context_instance=RequestContext(request))
+#def congrats(request): #Forgot Password Page
+    #return render_to_response('homepage/activation_complete.html', context_instance=RequestContext(request))
