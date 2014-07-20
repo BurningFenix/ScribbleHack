@@ -4,6 +4,9 @@ from django.template import RequestContext
 def index(request): #Homepage
     return render_to_response('homepage/homepage.html', context_instance=RequestContext(request))
 
+def login(request): #Login
+    return render_to_response('homepage/login.html', context_instance=RequestContext(request))
+
 #def browse(request): #Forgot Password Page
     #return render_to_response('homepage/browse.html', context_instance=RequestContext(request))
 
