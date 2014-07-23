@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, url
-
+#comment from lucero
 urlpatterns = patterns('apps.homepage.views',
 	#url('', include('django.contrib.auth.urls')),
     url(r'^$', 'index', name="homepage_index"),
