@@ -19,11 +19,15 @@ def profile_view(request): #Profile Page
 def edit_profile_view(request): #Edit Profile Pages
 	if request.method == 'POST':
 		form = EditProfileForm(request.POST)
-		if form.is_vaild():
-			pass
+		if form.is_valid():
+			# works for the most part
+			request.user.age = form.cleaned_data['age']
+			request.user.favorite_book = form.cleaned_data['favorite_book']
+			request.user.favorite_hero = form.cleaned_data['favorite_hero']
+			request.user.save()
 	else:
 		form = EditProfileForm()
-	return render_to_response('accounts/edit_profile.html', {'form': form} , context_instance=RequestContext(request))
+	return render_to_response('accounts/edit_profile.html', {'form': form}, context_instance=RequestContext(request))
 
 def logout_view(request):
 	# attepmts to log user out only if the user was already logged in
