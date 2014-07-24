@@ -6,11 +6,11 @@
     <p>Welcome, {{ user.username }}. Thanks for logging in.</p>
     <br \>
     <h3>Some information we have about you:</h3>
-    <p>Age: {{ age }}
+    <p>Age: {{ user.age }}
     <br \>
-    Favorite book: {{ favorite_book }}
+    Favorite book: {{ user.favorite_book }}
     <br \>
-    Favorite hero: {{ favorite_hero }}</p>
+    Favorite hero: {{ user.favorite_hero }}</p>
     <br \>
 {% else %}
     <p>Welcome, new user. Please log in.</p>
