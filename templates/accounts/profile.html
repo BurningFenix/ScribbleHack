@@ -4,11 +4,20 @@
 
 {% if user.is_authenticated %}
     <p>Welcome, {{ user.username }}. Thanks for logging in.</p>
+    <br \>
+    <h3>Some information we have about you:</h3>
+    <p>Age: {{ age }}
+    <br \>
+    Favorite book: {{ favorite_book }}
+    <br \>
+    Favorite hero: {{ favorite_hero }}</p>
+    <br \>
 {% else %}
     <p>Welcome, new user. Please log in.</p>
 {% endif %}
 
-<a href="{% url "accounts_edit" %}">Edit Profile</a>
+<a href="{% url 'accounts_edit' %}">Edit Profile</a>
+<a href="{% url 'logout' %}">Logout</a>
 
 
 </body>

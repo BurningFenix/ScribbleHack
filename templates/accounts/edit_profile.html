@@ -2,5 +2,11 @@
 <body>
 <h1> EDIT PROFILE </h1>
 
+{% if form.errors %}
+<p>Invalid input. Please try again.</p>
+{% endif %}
+
+
+<a href="{% url 'logout' %}">Logout</a>
 </body>
 </html>
