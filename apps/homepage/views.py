@@ -1,6 +1,6 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from django.contrib.auth import authenticate, login
+#from django.contrib.auth import authenticate, login
 
 def index(request): #Homepage
     return render_to_response('homepage/homepage.html', context_instance=RequestContext(request))
