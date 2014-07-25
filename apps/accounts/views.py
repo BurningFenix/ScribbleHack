@@ -4,15 +4,17 @@ from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from .forms import EditProfileForm
 
+#Profile Page
 # might want to remove this decorator so that
 # anonymous users can see profile pages
 @login_required(login_url='/accounts/login/')
-def profile_view(request): #Profile Page
+def profile_view(request):
 	return render_to_response('accounts/profile.html',
 		context_instance=RequestContext(request))
 
+#Edit Profile Pages
 @login_required(login_url='/accounts/login/')
-def edit_profile_view(request): #Edit Profile Pages
+def edit_profile_view(request):
 	if request.method == 'POST':
 		form = EditProfileForm(request.POST)
 		if form.is_valid():
@@ -26,7 +28,11 @@ def edit_profile_view(request): #Edit Profile Pages
 			return render_to_response('accounts/profile.html',
 				context_instance=RequestContext(request))
 	else:
-		form = EditProfileForm()
+		form = EditProfileForm({'age':request.user.age,
+			'favorite_book':request.user.favorite_book,
+			'favorite_hero':request.user.favorite_hero}
+		)
+		
 	return render_to_response('accounts/edit_profile.html', {'form': form},
 		context_instance=RequestContext(request))
 
