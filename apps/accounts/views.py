@@ -28,11 +28,13 @@ def edit_profile_view(request):
 			return render_to_response('accounts/profile.html',
 				context_instance=RequestContext(request))
 	else:
+		# passing the dictionary will trigger validation of the form
+		# use js or whatever if you want to provide hints
 		form = EditProfileForm({'age':request.user.age,
 			'favorite_book':request.user.favorite_book,
 			'favorite_hero':request.user.favorite_hero}
 		)
-		
+
 	return render_to_response('accounts/edit_profile.html', {'form': form},
 		context_instance=RequestContext(request))
 
@@ -44,4 +46,9 @@ def logout_view(request):
 	# probably should add something to show that
 	# the user was logged out successfully
 	return render_to_response('homepage/homepage.html',
+		context_instance=RequestContext(request))
+
+def register_view(request):
+
+	return render_to_response('accounts/register.html',
 		context_instance=RequestContext(request))

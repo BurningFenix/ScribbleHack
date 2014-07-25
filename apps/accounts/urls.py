@@ -9,5 +9,5 @@ urlpatterns = patterns('apps.accounts.views',
 urlpatterns += patterns('',
 	# so this follows the following format:
 	# (regular expression, Python callback function [, optional_dictionary [, optional_name]])
-	(r'^login/$', 'django.contrib.auth.views.login', {'template_name': 'homepage/login.html'}, 'homepage_login'),
+	(r'^login/$', 'django.contrib.auth.views.login', {'template_name': 'accounts/login.html'}, 'accounts_login'),
 )

@@ -1,0 +1,17 @@
+<html>
+<body>
+<h1> REGISTER </h1>
+
+{% if form.errors %}
+<p>Invalid input. Please try again.</p>
+{% endif %}
+
+<form action="{% url 'accounts_register' %}" method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Submit" />
+</form>
+
+<a href="{% url 'homepage' %}">Homepage</a>
+</body>
+</html>
