@@ -6,5 +6,5 @@ from django.db import models
 class SHUser(AbstractUser):
 	#user = models.OneToOneField(settings.AUTH_USER_MODEL)
 	age = models.IntegerField(null = True)
-	favorite_book = models.CharField(max_length=20, blank=True)
+	favorite_book = models.CharField(max_length=40, blank=True)
 	favorite_hero = models.CharField(max_length=20, blank=True)
