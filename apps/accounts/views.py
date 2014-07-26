@@ -18,13 +18,21 @@ def edit_profile_view(request):
 	if request.method == 'POST':
 		form = EditProfileForm(request.POST)
 		if form.is_valid():
-			if form.cleaned_data['age'] is not None:
-				request.user.age = form.cleaned_data['age']
-			if form.cleaned_data['favorite_book'] != '':
-				request.user.favorite_book = form.cleaned_data['favorite_book']
-			if form.cleaned_data['favorite_hero'] != '':
-				request.user.favorite_hero = form.cleaned_data['favorite_hero']
-			request.user.save()
+			changedUser = False
+			# for everything that is valid (inter through keys because
+			# the keys are also the names of the request.user instance fields)
+			for key in form.cleaned_data.keys():
+				# not sure if should create var to store form.cleaned_data[key]
+				
+				# if not the same as stored value, set new value
+				if form.cleaned_data[key] != getattr(request.user, key):
+					setattr(request.user, key, form.cleaned_data[key])
+					changedUser = True
+
+			# only need to access the database if something was changed
+			if changedUser == True:
+				request.user.save()
+
 			return render_to_response('accounts/profile.html',
 				context_instance=RequestContext(request))
 	else:

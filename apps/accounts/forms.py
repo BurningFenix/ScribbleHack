@@ -10,9 +10,13 @@ class EditProfileForm(forms.Form):
 
 	def clean(self):
 		cleaned_data = super(EditProfileForm, self).clean()
-		if cleaned_data['age'] is None \
-			and cleaned_data['favorite_book'] == '' \
-			and cleaned_data['favorite_hero'] == '':
+		if cleaned_data['age'] is None:
+			del cleaned_data['age']
+		if cleaned_data['favorite_book'] == '':
+			del cleaned_data['favorite_book']
+		if cleaned_data['favorite_hero'] == '':
+			del cleaned_data['favorite_hero']
+		if len(cleaned_data) == 0:
 			raise forms.ValidationError(
 				_('No data given'), code='Null form')
 		return cleaned_data
