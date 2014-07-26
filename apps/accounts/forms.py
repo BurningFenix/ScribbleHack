@@ -8,6 +8,8 @@ class EditProfileForm(forms.Form):
 	favorite_hero = forms.CharField(label="Favorite Hero",
 		max_length=20, required=False)
 
+	# modified the clean() removes all entries in dict that are None or ''
+	# returns cleaned_data dict without any None or '' values
 	def clean(self):
 		cleaned_data = super(EditProfileForm, self).clean()
 		if cleaned_data['age'] is None:
@@ -32,6 +34,7 @@ class RegisterForm(forms.Form):
 		pw1 = cleaned_data['password']
 		pw2 = cleaned_data['password2']
 
+		# checks if the two passwords given are the same or not
 		if pw1 and pw2 and pw1 != pw2:
 			raise forms.ValidationError(
 				_('Passwords are not the same'), code='Unequal passwords')

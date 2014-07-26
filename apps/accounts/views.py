@@ -19,7 +19,7 @@ def edit_profile_view(request):
 		form = EditProfileForm(request.POST)
 		if form.is_valid():
 			changedUser = False
-			# for everything that is valid
+			# for everything that is valid (and not None/'')
 			# itering through keys because the keys are also the
 			# names of the attributes in the request.user instance
 			for key in form.cleaned_data.keys():
