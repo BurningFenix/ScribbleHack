@@ -1,4 +1,4 @@
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, redirect
 from django.template import RequestContext
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
@@ -49,13 +49,13 @@ def edit_profile_view(request):
 
 def logout_view(request):
 	# attepmts to log user out only if the user was already logged in
+	# also should figure out why logout() uses so many sql queries
 	if request.user.is_authenticated():
 		logout(request)
 
 	# probably should add something to show that
 	# the user was logged out successfully
-	return render_to_response('homepage/homepage.html',
-		context_instance=RequestContext(request))
+	return redirect('homepage_index')
 
 def register_view(request):
 	if request.method == 'POST':
