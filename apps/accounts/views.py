@@ -1,8 +1,8 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from django.contrib.auth import logout
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-from .forms import EditProfileForm
+from .forms import EditProfileForm, RegisterForm
 
 #Profile Page
 # might want to remove this decorator so that
@@ -49,6 +49,24 @@ def logout_view(request):
 		context_instance=RequestContext(request))
 
 def register_view(request):
+	if request.method == 'POST':
+		form = RegisterForm(request.POST)
+		if form.is_valid():
+			if form.cleaned_data['username'] != '' \
+				and form.cleaned_data['password'] != '' \
+				and form.cleaned_data['checkPassword'] != '':
+				# creates a new user using the create_user helper function
+				from .models import SHUser
+				SHUser.objects.create_user(form.cleaned_data['username'],
+					password=form.cleaned_data['password']).save()
 
-	return render_to_response('accounts/register.html',
+				# logs user in and redirects to profile page
+				user = authenticate(username=form.cleaned_data['username'],
+					password=form.cleaned_data['password'])
+				login(request, user)
+				return render_to_response('accounts/profile.html',
+					context_instance=RequestContext(request))
+	else:
+		form = RegisterForm()
+	return render_to_response('accounts/register.html', {'form': form},
 		context_instance=RequestContext(request))
