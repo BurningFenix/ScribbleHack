@@ -29,6 +29,7 @@ INSTALLED_APPS = (
     'apps.homepage',
     'apps.accounts',
     'south',
+    #'debug_toolbar',
 )
 
 AUTH_USER_MODEL = 'accounts.SHUser'
