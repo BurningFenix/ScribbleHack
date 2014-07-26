@@ -8,6 +8,15 @@ class EditProfileForm(forms.Form):
 	favorite_hero = forms.CharField(label="Favorite Hero",
 		max_length=20, required=False)
 
+	def clean(self):
+		cleaned_data = super(EditProfileForm, self).clean()
+		if cleaned_data['age'] is None \
+			and cleaned_data['favorite_book'] == '' \
+			and cleaned_data['favorite_hero'] == '':
+			raise forms.ValidationError(
+				_('No data given'), code='Null form')
+		return cleaned_data
+
 class RegisterForm(forms.Form):
 	username = forms.CharField(max_length=30, required=True)
 	password = forms.CharField(widget=forms.PasswordInput, required=True)
@@ -16,8 +25,8 @@ class RegisterForm(forms.Form):
 
 	def clean(self):
 		cleaned_data = super(RegisterForm, self).clean()
-		pw1 = cleaned_data.get('password')
-		pw2 = cleaned_data.get('password2')
+		pw1 = cleaned_data['password']
+		pw2 = cleaned_data['password2']
 
 		if pw1 and pw2 and pw1 != pw2:
 			raise forms.ValidationError(
