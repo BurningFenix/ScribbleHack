@@ -52,20 +52,18 @@ def register_view(request):
 	if request.method == 'POST':
 		form = RegisterForm(request.POST)
 		if form.is_valid():
-			if form.cleaned_data['username'] != '' \
-				and form.cleaned_data['password'] != '' \
-				and form.cleaned_data['checkPassword'] != '':
-				# creates a new user using the create_user helper function
-				from .models import SHUser
-				SHUser.objects.create_user(form.cleaned_data['username'],
-					password=form.cleaned_data['password']).save()
+			# creates a new user using the create_user helper function
+			from .models import SHUser
+			SHUser.objects.create_user(form.cleaned_data['username'],
+				password=form.cleaned_data['password']).save()
 
-				# logs user in and redirects to profile page
-				user = authenticate(username=form.cleaned_data['username'],
-					password=form.cleaned_data['password'])
-				login(request, user)
-				return render_to_response('accounts/profile.html',
-					context_instance=RequestContext(request))
+			# logs user in and redirects to profile page
+			user = authenticate(username=form.cleaned_data['username'],
+				password=form.cleaned_data['password'])
+			login(request, user)
+			return render_to_response('accounts/profile.html',
+				context_instance=RequestContext(request))
+
 	else:
 		form = RegisterForm()
 	return render_to_response('accounts/register.html', {'form': form},
