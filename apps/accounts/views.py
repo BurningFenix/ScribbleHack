@@ -19,8 +19,9 @@ def edit_profile_view(request):
 		form = EditProfileForm(request.POST)
 		if form.is_valid():
 			changedUser = False
-			# for everything that is valid (inter through keys because
-			# the keys are also the names of the request.user instance fields)
+			# for everything that is valid
+			# itering through keys because the keys are also the
+			# names of the attributes in the request.user instance
 			for key in form.cleaned_data.keys():
 				# not sure if should create var to store form.cleaned_data[key]
 				
