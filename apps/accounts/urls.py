@@ -4,6 +4,7 @@ urlpatterns = patterns('apps.accounts.views',
     url(r'^profile/$', 'profile_view', name="accounts_profile"),
     url(r'^profile/edit', 'edit_profile_view', name="accounts_edit"),
     url(r'^logout/', 'logout_view', name='logout'),
+    url(r'^register/', 'register_view', name='accounts_register')
  )
 
 urlpatterns += patterns('',
