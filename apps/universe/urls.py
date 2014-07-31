@@ -1,7 +1,9 @@
 from django.conf.urls import patterns, url
-from .views import Universe, WritingList
+from .views import UniverseView, WritingListView, CreateWritingView
 
 urlpatterns = patterns('',
-	url(r'^$', Universe.as_view()),
-	url(r'^writing/$', WritingList.as_view()),
+	url(r'^$', UniverseView.as_view()),
+	url(r'^writing/$', WritingListView.as_view()),
+	url(r'^writing/create', CreateWritingView.as_view(),
+		name='create_writing'),
 )
