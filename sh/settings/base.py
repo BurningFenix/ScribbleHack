@@ -28,7 +28,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'apps.homepage',
     'apps.accounts',
-    'south',
+    'apps.universe'
+    #'south',
     #'debug_toolbar',
 )
 

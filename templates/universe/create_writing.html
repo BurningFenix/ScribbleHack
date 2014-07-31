@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create Writing</title>
+</head>
+<body>
+
+{% if form.errors %}
+<p>Invalid input. Please try again.</p>
+{% endif %}
+
+<h1>Create Writing</h1>
+<form action="{% url 'create_writing' %}" method="post">
+{% csrf_token %}
+<p>Title: <input name="name" type="text" />
+<br />
+Text: <textarea name="content"></textarea>
+<br />
+<input type="checkbox" name="allowed_contrib" /> Allow contributions<br />
+contributions<br />
+</p>
+<input type="submit" value="Publish" />
+</form>
+
+</body>
+</html>
