@@ -29,7 +29,7 @@ INSTALLED_APPS = (
     'apps.homepage',
     'apps.accounts',
     'apps.universe'
-    #'south',
+    'south',
     #'debug_toolbar',
 )
 
