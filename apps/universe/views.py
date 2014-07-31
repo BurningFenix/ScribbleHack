@@ -1,5 +1,6 @@
 #from django.shortcuts import render
 from django.views.generic import ListView, FormView
+from braces.views import LoginRequiredMixin
 from .models import World, Writing
 from .forms import CreateWritingForm
 
@@ -10,7 +11,7 @@ class UniverseView(ListView):
 class WritingListView(ListView):
 	model = Writing
 
-class CreateWritingView(FormView):
+class CreateWritingView(LoginRequiredMixin, FormView):
 	model = Writing
 	form_class = CreateWritingForm
 	fields = ('name', 'content')
