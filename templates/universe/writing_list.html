@@ -1,0 +1,13 @@
+<html>
+<body>
+<h1> Writing </h1>
+
+<h2>Works</h2>
+<ul>
+	{% for work in object_list %}
+		<li>{{ work.name }}</li>
+	{% endfor %}
+</ul>
+
+</body>
+</html>

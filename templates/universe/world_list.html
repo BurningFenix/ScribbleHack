@@ -1,0 +1,13 @@
+<html>
+<body>
+<h1> Universe </h1>
+
+<h2>Worlds</h2>
+<ul>
+	{% for world in object_list %}
+		<li>{{ world.name }}</li>
+	{% endfor %}
+</ul>
+
+</body>
+</html>
