@@ -1,3 +1,8 @@
 from django.db import models
+from apps.universe import World, Work
 
-# Create your models here.
+class Writing(World):
+	pass
+
+class WritingPiece(Work):
+	content = models.TextField()

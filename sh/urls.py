@@ -10,5 +10,6 @@ urlpatterns = patterns('',
     (r'^accounts/', include('apps.accounts.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'universe/', include('apps.universe.urls')),
+    url(r'writing/', include('apps.writing.urls')),
     #url(r'^404/', 'sh.views.custom404')  # this is for testing
 )
