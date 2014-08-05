@@ -3,22 +3,35 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>ScribbleHack</title>
-	<link href="../../static/homepagecss.css" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="../../static/sss.css" type="text/css" media="all">
-	<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
-	<script src="../../static/js/homepagejs.js" type="text/javascript"></script>
+    <link href="../../static/homepagecss.css" rel="stylesheet" type="text/css" />
+	<link href="../../static/coin-slider-styles.css" rel="stylesheet" type="text/css" />
+    
+	<script src="../../static/js/jquery.js"></script>
+	<script src="../../static/js/jquery-ui.min.js"></script>
+    
+	<script src="../../static/js/jquery.fakecrop.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+		$('.fakecropartsm').fakecrop({wrapperWidth: 80, wrapperHeight: 80});
+		$('.fakecropartlg').fakecrop({wrapperWidth: 170, wrapperHeight: 170});
+    });
+</script>
 
-	<!--<script type="text/javascript" src="jquery-1.4.2.js"></script>-->
-	
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script src="../../static/js/coin-slider.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#slider').coinslider({width: 565, height: 300, effect: 'straight'});
+    });	
+</script>
+ 
+	<!--<script src="../../static/js/homepagejs.js" type="text/javascript"></script>
+
 	<script src="../../static/js/sss.min.js"></script>
-	
-
 	<script>
 		jQuery(function($) {
 		$('.slider').sss();
 		});
-	</script>
+	</script>-->
 
 </head>
 
@@ -89,64 +102,75 @@
 <div class="topsection">
 <div class="contentleft clearfix">
 
-<div class='slider' class='ssslide' class='sss'>
-    <img src="../../static/images/testimage3.jpg" />
-	<a href="http://scribblehack.com/kaeyamane/newlayouts/static/images/narwhal.png">
-		<img src="../../static/images/narwhal.png" />
-	</a>
-	<img src="../../static/images/testimage6.jpg" />
-	<img src="../../static/images/octobanner.jpg" />
-<!-- <img src="../static/images/slider.jpg" /> -->
-</div> 
+<div id="slider">
+    <a href="#" target="blank">
+        <img src="../../static/images/testimage6.jpg" >
+        <span>
+            Description for img01
+        </span>
+    </a>
+    <a href="#" target="blank">
+        <img src="../../static/images/mermaid_1.jpg" >
+        <span>
+            Description for img02
+        </span>
+    </a>
+    <a href="#" target="blank">
+        <img src="../../static/images/testimage3.jpg" >
+        <span>
+            Description for img03
+        </span>
+    </a>
+</div>
+
 <!-- slider ends -->
 
-<div class="gallery">
+<div id="hpgallery">
 <span>Popular in Art</span>
-	<div id="tb_right">
+	<div class="tb_right">
 		<a href="http://scribblehack.com/kaeyamane/newlayouts/static/images/narwhal.png">
-    		<img src="../../static/images/narwhal.png">
+    		<img class="fakecropartsm" src="../../static/images/narwhal.png">
   		</a>
 </div>
-	<div id="tb_right">
-	<img src="../../static/images/testimage3.jpg">
+	<div class="tb_right">
+	<img class="fakecropartsm" src="../../static/images/testimage3.jpg">
 </div>
-	<div id="tb_right">
-	<img src="../../static/images/testimage6.jpg">
+	<div class="tb_right">
+	<img class="fakecropartsm" src="../../static/images/testimage6.jpg">
 </div>
-	<div id="tb_right">
-	<img src="../../static/images/heart.png">
+	<div class="tb_right">
+	<img class="fakecropartsm" src="../../static/images/heart.png">
 </div>
-	<div id="large_tb_left">
-	<img src="../../static/images/mermaid_1.jpg">
+	<div class="large_tb_left">
+	<img class="fakecropartlg" src="../../static/images/mermaid_1.jpg">
 </div>
-	<div id="tb_right">
-	<img src="../../static/images/profilepic.jpg">
+	<div class="tb_right">
+	<img class="fakecropartsm" src="../../static/images/profilepic.jpg">
 </div>
-	<div id="tb_right">
-	<img src="../../static/images/octobanner.jpg">
+	<div class="tb_right">
+	<img class="fakecropartsm" src="../../static/images/octobanner.jpg">
 </div>
-	<div id="tb_right">3</div>
-	<div id="tb_right">4</div>
-	<div id="tb_left">1</div>
-	<div id="tb_left">2</div>
-	<div id="tb_left">3</div>
-	<div id="tb_left">4</div>
-	<div id="large_tb_right">2 big</div>
-	<div id="tb_left">1</div>
-	<div id="tb_left">2</div>
-	<div id="tb_left">3</div>
-	<div id="tb_left">4</div>
-	<div id="tb_right">1</div>
-	<div id="tb_right">2</div>
-	<div id="tb_left">3</div>
-	<div id="tb_left">4</div>
-	<div id="large_tb_right">3 big</div>
-<div id="tb_left">3</div>
-<div id="tb_left">4</div>
-<div id="tb_rightb">1a</div>
-<div id="tb_rightb">2a</div>
+	<div class="tb_right">3</div>
+	<div class="tb_right">4</div>
+	<div class="tb_left">1</div>
+	<div class="tb_left">2</div>
+	<div class="tb_left">3</div>
+	<div class="tb_left">4</div>
+	<div class="large_tb_right">2 big</div>
+	<div class="tb_left">1</div>
+	<div class="tb_left">2</div>
+	<div class="tb_left">3</div>
+	<div class="tb_left">4</div>
+	<div class="tb_right">1</div>
+	<div class="tb_right">2</div>
+	<div class="tb_left">3</div>
+	<div class="tb_left">4</div>
+	<div class="large_tb_right">3 big</div>
+<div class="tb_left">3</div>
+<div class="tb_left">4</div>
+<div class="tb_rightb">1a</div>
+<div class="tb_rightb">2a</div>
 
-<img src="../../static/images/gallery.jpg" />
 </div><!-- gallery ends -->
 
 </div><!-- contentleft ends -->
@@ -197,6 +221,41 @@
 
 </div><!-- contentright ends -->
 </div><!-- topsection ends -->
+
+<div id="bottomsection" class="clearfix">
+
+<div id="hpnews">
+<h1>News</h1>
+<ul>
+<li><h2>News article 1</h2>
+	<h3>posted 8/5/14</h3>
+    <p>news blurb</p>
+</li>
+<li><h2>News article 2</h2>
+	<h3>posted 8/5/14</h3>
+    <p>news blurb</p>
+</li>
+<li><h2>News article 3</h2>
+	<h3>posted 8/5/14</h3>
+    <p>news blurb</p>
+</li>
+</ul>
+</div>
+
+<div id="hppolls">
+<h1>Polls</h1>
+<label class="label">What is your favorite color?</label><br>
+<form action="">
+	<input type="radio" name="interest" value="not">blue<br>
+	<input type="radio" name="interest" value="slightly">green<br>
+	<input type="radio" name="interest" value="moderately">red<br>
+	<input type="radio" name="interest" value="very">orange<br>
+	<input type="radio" name="interest" value="extremely">asldjkf<br>
+	</form>
+<input type="submit" value="Submit!" />
+</div>
+
+</div><!-- bottomsection ends -->
 
 </div><!-- content ends -->
 

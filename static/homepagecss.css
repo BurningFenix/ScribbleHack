@@ -1,5 +1,5 @@
 body {
-	background-color: #d3d3d3;
+	background-color: #ede3c2;
 	padding: 0;
 	margin: 0;
 	font-family: UniversLTStd,arial,sans-serif;
@@ -24,14 +24,14 @@ body {
 }
 
 #wrapper {
-	background-color: white;
+	background-color: #f4f1d1;
 	width: 1000px;
 	height: auto;
 	text-align: left;
 	margin: 0 auto;
-	box-shadow: 0 0 15px #A8A8A8;
-	-webkit-box-shadow: 0 0 15px #A8A8A8;
-	-moz-box-shadow: 0 0 15px #A8A8A8;
+	box-shadow: 0 0 15px #d4bd98;
+	-webkit-box-shadow: 0 0 15px #d4bd98;
+	-moz-box-shadow: 0 0 15px #d4bd98;
 }
 
 a:link {color:#007777;}
@@ -45,7 +45,7 @@ a:active {color:#00A58C;}
 
 #sitenav {
 	height: 50px;
-	background-color: #2f2f2f;
+	background-color: #213d42;
 }
 
 #sitenavleft {
@@ -180,12 +180,12 @@ a:active {color:#00A58C;}
 #banner {
 	height: 210px;
 	border: solid 0 #007000;
-	border-bottom: 1px solid #2f2f2f;
+	border-bottom: 1px solid #c8853f;
 }
 
 #footer {
 	height: 200px;
-	background-color: #2f2f2f;
+	background-color: #213d42;
 }
 
 #quicklinks ul {
@@ -267,21 +267,21 @@ html[xmlns] .clearfix {
 	left: 0;
 }
 
-#home .contentleft .gallery {
-	margin-top: 10px;
+#home .contentleft #hpgallery {
 	margin-bottom: 21px;
-	width: 558px;
-        height: 604px;
+	width: 545px;
+    height: 598px;
 	border-style: solid;
 	border-width: 1px;
-	border-color: grey;
-	border-radius: 3px;
+	border-color: #3d877f;
+	background: #cde6f6;
+	border-radius: 8px;
 	padding: 10px;
 	position: absolute;
-	top: 380px;
+	top: 365px;
 }
 
-#home .contentleft .gallery span {
+#home .contentleft #hpgallery span {
 	font-family: UniversLTStd;
 	src: url(universltstd.otf); 
 	font-size: 28px;
@@ -289,65 +289,62 @@ html[xmlns] .clearfix {
 	display: block;
 }
 
-#home .contentleft .gallery > div { /*css for all gallery thumbnails*/
+#home .contentleft #hpgallery > div { /*css for all gallery thumbnails*/
 	margin: 5px;
 	border-style: solid;
 	border-width: 0px;
 	border-color: grey;
 	border-radius: 8px;
-	background-color: #ddddff;
+	background-color: #3d877f;
 	overflow: hidden;
 }
 
-#home .contentleft .gallery #tb_right {
-	width: 83px;
-        height: 83px;
+#home .contentleft #hpgallery .tb_right {
+	width: 80px;
+        height: 80px;
 	float:right;
+	margin-left: 6px;
 }
 
-#home .contentleft .gallery #tb_left {
-	width: 83px;
-        height: 83px;
+#home .contentleft #hpgallery .tb_left {
+	width: 80px;
+        height: 80px;
 	float: left;
+	margin-right: 6px;
 }
 
-#home .contentleft .gallery #tb_rightb {/*moves last 2 thumb's up*/
-	width: 83px;
-        height: 83px;
+#home .contentleft #hpgallery .tb_rightb {/*moves last 2 thumb's up*/
+	width: 80px;
+        height: 80px;
 	float: right;
 	position: relative;
     	bottom: 91px;
 }
 
-#home .contentleft .gallery #large_tb_left {
-	width: 176px;
-        height: 176px;
+#home .contentleft #hpgallery .large_tb_left {
+	width: 170px;
+        height: 170px;
 	float:left;
+	margin-right: 6px;
 }
 
-#home .contentleft .gallery #large_tb_right {
-	width: 176px;
-        height: 176px;
+#home .contentleft #hpgallery .large_tb_right {
+	width: 170px;
+        height: 170px;
 	float: right;
-}
-
-.landscape img{
-	display:block;
-	height: 100%;
-	margin: auto;
-}
-
-.portrait img{ 
-	display: block;
-	width: 100%;
-	margin: auto;
+	margin-left: 6px;
 }
 
 #home .contentleft #slider {
-	margin-top: 10px;
-	margin-bottom: 21px;
-	width: 572px;
-        height: 338px;
+	height: 340px;
+	width: 570px;
+	position: relative;
+	top: 15px;
+}
+
+#home .contentleft #slider img {
+	height: 300px;
+	width: 560px;
 }
 
 #home .contentright {
@@ -445,3 +442,37 @@ html[xmlns] .clearfix {
 
 .animated{
 }
+
+#home #bottomsection {
+	position: absolute;
+	background: pink;
+	width: 996px;
+	height: 525px;
+}
+
+#home #bottomsection #hpnews {
+	height: 480px;
+	width: 525px;
+	padding: 20px;
+	margin-left: 23px;
+	float: left;
+	background: red;
+	position: relative;
+	top: 15px;
+}
+
+#hpnews h1 {
+	margin: none;
+	padding: none;
+}
+
+#hppolls {
+	float: right;
+	height: 480px;
+	width: 350px;
+	background: green;
+	padding: 20px;
+	position: relative;
+	top: 15px;
+}
+	
