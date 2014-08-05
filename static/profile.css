@@ -1,0 +1,623 @@
+body {
+	background-color: #ede3c2;
+	padding: 0;
+	margin: 0;
+	font-family: UniversLTStd,arial,sans-serif;
+}
+
+@font-face {
+	font-family:UniversLTStd;
+	src:url(universltstd.otf);
+	font-weight: normal;
+}
+
+@font-face {
+	font-family:UniversLTStd;
+	src:url(universltstdlight.otf);
+	font-weight: lighter;
+}
+
+@font-face {
+	font-family:UniversLTStd;
+	src:url(universltstdbold.otf);
+	font-weight: bold;
+}
+
+#wrapper {
+	background-color: #f4f1d1;
+	width: 1000px;
+	height: auto;
+	text-align: left;
+	margin: 0 auto;
+	box-shadow: 0 0 15px #A8A8A8;
+	-webkit-box-shadow: 0 0 15px #A8A8A8;
+	-moz-box-shadow: 0 0 15px #A8A8A8;
+}
+
+a:link {color:#007777;}
+a:visited {color:#24555f;}
+a:hover {color:#00A58C;}
+a:active {color:#00A58C;}
+
+#header {
+	height: 260px;
+}
+
+#sitenav {
+	height: 50px;
+	background-color: #213d42;
+}
+
+#sitenavleft {
+	width: 545px;
+	height: 50px;
+	float: left;
+}
+
+#logo {
+	float: left;
+	width: 127px;
+	margin: 10px 38px 0 10px;
+	position: relative;
+}
+
+#logo img {
+	margin-right: 0;
+	float: right;
+}
+
+#icon {
+	float: left;
+	width: 22px;
+	height: 22px;
+	border-radius: 20px;
+	background-color: gainsboro;
+	position: absolute;
+	left: 0;
+	top: 3px;
+}
+
+#sitenavpagelinks {
+	float: left;
+	margin-top: 19px;
+}
+
+.navlink {
+	float: left;
+	margin-right: 31px;
+}
+
+.navlink a {
+	font-family: 'Century Gothic', Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	color: white;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+}
+
+.navlink a:hover {
+    color: #71cfbd;
+}
+
+#sitenavright {
+	width: 445px;
+	height: 50px;
+	float: right;
+}
+
+#sitenavright a {
+	font-weight: lighter;
+	font-family: 'Century Gothic',arial,sans-serif;
+	font-size: 12px;
+	color: white;
+	float: right;
+	margin-right: 12px;
+	margin-top: 19px;
+	text-decoration: none;
+	-webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+    transition: 0.5s;
+}
+
+#sitenavright a:hover {
+	color: #71cfbd;
+}
+
+#navsearchbox {
+	margin-top: 11px;
+	margin-right: 7px;
+	float: right;
+}
+
+#navsearchbox #tfnewsearch{
+		float:right;
+		padding:0px;
+		margin-top: 2px;
+	}
+
+#navsearchbox .tftextinput{
+		margin: 0;
+		padding: 0 3px 0 3px;
+		font-family: UniversLTStd;
+		src: url(universltstd.otf); 
+		font-size:12px;
+		color:#2f2f2f;
+		border-style: none;
+		border-radius: 3px;
+		height: 25px;
+		width: 194px
+	}
+
+#navsearchbox #tfnewsearch .tfbutton{
+		background-image: url(../static/images/searchicon.png);
+		background-repeat: no-repeat;
+		margin-top: 0px;
+		margin-left: 2px;
+		color: transparent;
+		background-color: transparent;
+		height: 30px;
+		width: 30px;
+		float:right;
+		border-width: 0px;
+}
+
+	/* Fixes submit button height problem in Firefox */
+#navsearchbox .tfbutton::-moz-focus-inner {
+	  border: 0;
+	}
+
+#navsearchbox	.tfclear{
+		clear:both;
+	}
+
+#banner {
+	height: 210px;
+	border: solid 0 #007000;
+	border-bottom: 1px solid #2f2f2f;
+}
+
+footer {
+	position: absolute;
+	height: 200px;
+	background-color: #2f2f2f;
+}
+
+#quicklinks ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#quicklinks li {
+	float: left;
+	margin-top: 25px;
+	margin-left: 25px;
+	background: gainsboro;
+	padding: 8px 10px;
+	outline: 1px dashed grey;
+    outline-offset: -4px;
+}
+
+#quicklinks a {
+	display: block;
+	width: auto;
+	text-align: center;
+	text-decoration: none;
+		font-family: UniversLTStd;
+	src: url(universltstd.otf);  
+	font-size: 18px;
+	color: grey;
+	font-weight: bold;
+}
+
+#quicklinks a:hover {
+	color: #2f2f2f;
+}
+	
+	
+/* Specifically, Profile Page CSS */
+
+#profile #banner {
+	background-image: url(../../static/images/404banner.jpg);
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+#profile #profbannerleft {
+	width: 360px;
+	height: 175px;
+	position: absolute;
+	top: 20px;
+	left: 220px;
+}
+
+#profile #profbigusername {
+	font-size: 38px;
+	margin: 0;
+}
+
+#profile #proffirstlastname {
+	font-size: 19px;
+	margin: 0;
+}
+
+#profile #profselftitle {
+	font-size: 15px;
+}
+
+#profile #profonlinestatus {
+	font-size: 13px;
+}
+
+#profile #profbannerright {
+	width: 400px;
+	height: 175px;
+	background-color: green;
+	float: right;
+	position: absolute;
+	top: 18px;
+	right: 25px;
+}
+
+#profile #profstatistics {
+	width: 400px;
+	float: right;
+	height: 50px;
+	position: relative;
+	top: 0;
+	background-color: #213d42;
+}
+
+#profile #profstatistics ul {
+	list-style: none;
+	margin: none;
+	padding: none;
+	display: inline;
+	padding: 10px;
+}
+
+#profile #profstatistics .profstat {
+	display: inline;
+	color: #cde6f6;
+	float: right;
+	margin-left: 22px;
+	margin-right: 23px;
+}
+
+#profile #profstatistics li {
+	text-align: center;
+	font-size: 10px;
+	margin: none;
+	padding: none;
+}
+
+#profile #profstatistics li span {
+	font-size: 21px;
+}
+	
+#profile #content {
+	height: 1577px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+#profile #contentleft {
+	margin: 0 0 0 25px;
+	padding: 0;
+	width: 578px;
+	height: 1576px;
+	position: absolute;
+	top: 1px;
+	left: 0;
+	border-right: solid 1px #213d42;
+	background-color: #cde6f6;
+}
+
+#profile #contentright {
+	float: right;
+	margin: 0 25px 0 0;
+	padding: 0;
+	width: 370px;
+	height: 1576px;
+	position: absolute;
+	top: 1px;
+	right: 0;
+	background-color: #cde6f6;
+}
+
+#contentright h1 {
+	position: relative;
+	text-align: center;
+	}
+
+#profile .proftopright {
+	display: inline;
+	float: right;
+}
+
+#profile #interests {
+	height: 810px;
+	width: 260px;
+	background-color: #f4f1d1;
+	bottom: 20px;
+	margin-bottom: 50px;
+}
+	
+#interests h2 {
+	background-color: #ede3c2;
+	color: black;
+	}
+
+#interests p {
+	text-align: center;
+	padding: 5px 10px 5px 10px;
+	margin-bottom: 0px;
+	}
+	
+#profile #badgeribbon {
+	height: 810px;
+	width: 90px;
+	margin-left: 10px;
+	background-color: #cde6f6;
+}
+
+#badgeribbon img {
+	padding-left: 10px;
+	}
+
+.badgetext {
+	color: #c8853f;
+	}
+
+h2 {
+	color: #cde6f6;
+	text-align: center;
+	background-color: #213d42;
+	padding: 5px;
+	}
+	
+	
+/* TABS SECTION, LEFT */
+
+#tabs {
+	background-color: #ede3c2;
+	border: none;
+	margin: none;
+	padding: none;
+	}
+	
+#tabs ul {
+	background-color: #ede3c2;
+	}
+
+#tabs-1, #tabs-2, #tabs-3, #tabs-4{
+	background-color: #ede3c2;
+	height: 350px;
+	}
+
+.tabsbox {
+	background-color: #f4f1d1;
+	height: 290px;
+	}
+
+.tabsbox h1 {
+	color: black;
+	text-align: left;
+	margin-bottom: 0px;
+	padding: 30px 30px 0px 30px;
+	}
+
+.tabsbox p {
+	color: black;
+	text-align: left;
+	margin-bottom: 5px;
+	padding: 0px 30px 15px 30px;
+	}
+	
+.tabsbox #statustag {
+	padding: 0px 30px 0px 30px;
+	text-indent: 10px;
+	margin-top: 5px;
+	}
+
+#tabs-1 a {
+	text-align: center;
+	margin-right: 100px;
+	padding: 15px 0px 30px 115px;
+	color: black;
+	float: left;
+	}
+
+#tabs-2 p {
+	padding: 30px;
+	}
+
+.statusboxstats {
+	text-indent: 20px;
+	text-align: center;
+	margin-top: 0px;
+	padding: 0px 0px 30px 150px;
+	float: left;
+	}
+	
+#tabs { 
+    padding: 0px; 
+    background: none; 
+    border-width: 0px; 
+} 
+
+#tabs .ui-tabs-nav { 
+    padding-left: 0px; 
+    background: none; 
+    border-width: 0px 0px 1px 0px; 
+    -moz-border-radius: 0px; 
+    -webkit-border-radius: 0px; 
+    border-radius: 0px; 
+} 
+#tabs .ui-tabs-panel { 
+    background: #ede3c2; 
+    border-width: 0px 1px 1px 1px; 
+}	
+
+#tabs .ui-tabs-anchor {
+	background-color: #ede3c2;
+	}
+	
+#tabs .ui-tabs-loading {
+	background-color: #f4f1d1;
+	}
+	
+/* PORTFOLIO SECTION, LEFT BENEATH TABS */
+
+#featuredworks {
+	width: 575px;
+	height: 400px;
+	float: left;
+	background-color: #f4f1d1;
+	border: solid #cde6f6;
+}
+
+#featuredworks h1 {
+	width: 575px;
+	text-align: center;
+	background-color: #cde6f6;
+	padding: 15px;
+	height: 30px;
+	}
+
+figure {
+	float: left;
+	padding-left: 20px;
+	margin: 10px;
+	}
+
+figcaption {
+	color: #cde6f6;
+	text-align: center;
+	margin: 5px;
+	}
+	
+	
+/* COMMENTS SECTION, BOTTOM LEFT */
+	
+#profcomments {
+	background-color: #f4f1d1;
+	width: 575px;
+	height: 700px;
+	float: left;
+	border: solid #cde6f6;
+}
+
+#profcomments h1 {
+	width: 575px;
+	text-align: center;
+	background-color: #cde6f6;
+	padding: 15px;
+	height: 30px;
+	}
+
+textarea {
+	width: 500px;
+	height: 50px;
+	padding: 10px;
+	}
+
+form {
+	padding-left: 30px;
+	}
+	
+.commentboxes {
+	padding-left: 10px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding-bottom: 50px;
+	}
+	
+.commentboxes img {
+    float:left;
+    width:70px;
+    height:70px;
+    border:3px solid #ffffff;
+    border-radius:50px
+    }
+
+.comment-content {
+   position:relative;
+   float:left;
+   margin-left:12px;
+   width:425px;
+   padding:20px;
+   border-radius:10px;
+   background-color:#FFFFFF;
+   box-shadow:1px 1px 5px rgba(0,0,0,.2);
+   }
+   
+.replycomment {
+	padding-left: 10px;
+	margin-left: 90px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding-bottom: 50px;
+	}
+	
+.replycomment img {
+    float:left;
+    width:70px;
+    height:70px;
+    border:3px solid #ffffff;
+    border-radius:50px
+    }	
+	
+.replycomment-content {
+   position:relative;
+   float:left;
+   margin-left:12px;
+   width:335px;
+   padding:20px;
+   border-radius:10px;
+   background-color:#FFFFFF;
+   box-shadow:1px 1px 5px rgba(0,0,0,.2);
+   }
+	 
+.point {
+   border-top:10px solid transparent;
+   border-bottom:10px solid transparent;
+          border-right: 12px solid #FFF;
+   position:absolute;
+   left:-10px;
+   top:12px;
+   }
+
+.searchcomments {
+	float: left;
+	position: relative;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center;
+	}
+
+#searchcomments {
+	margin-left: 175px;
+	}
+
+
+/* FRIENDS, FOLLOWERS, COLLABORATORS, BOTTOM RIGHT*/
+	
+#profbottomright {
+	width: 370px;
+	height: 200px;
+	position: relative;
+	}
+	
+#profbottomright h1 {
+	position: relative;
+	margin-top: 50px;
+	text-align: center;
+	padding-bottom: 20px 0px;
+	}

@@ -1,9 +1,39 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>ScribbleHack</title>
-<link href="../../static/layoutcss.css" rel="stylesheet" type="text/css">
-<style type="text/css"></style></head>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ScribbleHack</title>
+    <link href="../../static/homepagecss.css" rel="stylesheet" type="text/css" />
+	<link href="../../static/coin-slider-styles.css" rel="stylesheet" type="text/css" />
+    
+	<script src="../../static/js/jquery.js"></script>
+	<script src="../../static/js/jquery-ui.min.js"></script>
+    
+	<script src="../../static/js/jquery.fakecrop.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+		$('.fakecropartsm').fakecrop({wrapperWidth: 80, wrapperHeight: 80});
+		$('.fakecropartlg').fakecrop({wrapperWidth: 170, wrapperHeight: 170});
+    });
+</script>
+
+	<script src="../../static/js/coin-slider.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#slider').coinslider({width: 565, height: 300, effect: 'straight'});
+    });	
+</script>
+ 
+	<!--<script src="../../static/js/homepagejs.js" type="text/javascript"></script>
+
+	<script src="../../static/js/sss.min.js"></script>
+	<script>
+		jQuery(function($) {
+		$('.slider').sss();
+		});
+	</script>-->
+
+</head>
 
 <body id="home">
 
@@ -16,12 +46,11 @@
 
 <div id="sitenavleft" class="clearfix">
 
-
 <a href="homepage.html">
 <div id="logo" class="clearfix">
 <div id="icon">
 </div><!-- icon ends -->
-<img src="../../static/images/logo.png">
+<img src="../../static/images/logo.png" />
 </div><!-- logo ends -->
 </a>
 
@@ -47,7 +76,7 @@
 <div id="navsearchbox">
 
 <form id="tfnewsearch" method="get" action="#">
-		       <input type="submit" class="tfbutton" src="../../static/images/searchicon.png" img="">
+		       <input type="submit" class="tfbutton" src="../../static/images/searchicon.png" img />
 		       <input type="text" value=" Search for stories, art or users" class="tftextinput" name="q" size="25" maxlength="120" onfocus="inputFocus(this)" onblur="inputBlur(this)">
 		</form>
 
@@ -62,19 +91,186 @@
 
 <div id="banner">
 
-<img id="octo" src="../../static/images/octobanner.jpg">
+<img id="octo" src="../../static/images/octobanner.jpg" />
 
 </div><!-- banner ends -->
 
 </div><!-- header ends -->
 
-<div id="jcstuff"
-<a href="{% url 'accounts_login' %}">Login Page</a><br />
-<a href="{% url 'art_browse' %}">Art Browse Page</a><br />
-<a href="{% url 'writing_browse' %}">Writing Browse Page</a><br />
-<a href="{% url 'accounts_register' %}">Register </a>
+<div class="content clearfix">
+
+<div class="topsection">
+<div class="contentleft clearfix">
+
+<div id="slider">
+    <a href="#" target="blank">
+        <img src="../../static/images/testimage6.jpg" >
+        <span>
+            Description for img01
+        </span>
+    </a>
+    <a href="#" target="blank">
+        <img src="../../static/images/mermaid_1.jpg" >
+        <span>
+            Description for img02
+        </span>
+    </a>
+    <a href="#" target="blank">
+        <img src="../../static/images/testimage3.jpg" >
+        <span>
+            Description for img03
+        </span>
+    </a>
 </div>
 
+<!-- slider ends -->
+
+<div id="hpgallery">
+<span>Popular in Art</span>
+	<div class="tb_right">
+		<a href="http://scribblehack.com/kaeyamane/newlayouts/static/images/narwhal.png">
+    		<img class="fakecropartsm" src="../../static/images/narwhal.png">
+  		</a>
+</div>
+	<div class="tb_right">
+	<img class="fakecropartsm" src="../../static/images/testimage3.jpg">
+</div>
+	<div class="tb_right">
+	<img class="fakecropartsm" src="../../static/images/testimage6.jpg">
+</div>
+	<div class="tb_right">
+	<img class="fakecropartsm" src="../../static/images/heart.png">
+</div>
+	<div class="large_tb_left">
+	<img class="fakecropartlg" src="../../static/images/mermaid_1.jpg">
+</div>
+	<div class="tb_right">
+	<img class="fakecropartsm" src="../../static/images/profilepic.jpg">
+</div>
+	<div class="tb_right">
+	<img class="fakecropartsm" src="../../static/images/octobanner.jpg">
+</div>
+	<div class="tb_right">3</div>
+	<div class="tb_right">4</div>
+	<div class="tb_left">1</div>
+	<div class="tb_left">2</div>
+	<div class="tb_left">3</div>
+	<div class="tb_left">4</div>
+	<div class="large_tb_right">2 big</div>
+	<div class="tb_left">1</div>
+	<div class="tb_left">2</div>
+	<div class="tb_left">3</div>
+	<div class="tb_left">4</div>
+	<div class="tb_right">1</div>
+	<div class="tb_right">2</div>
+	<div class="tb_left">3</div>
+	<div class="tb_left">4</div>
+	<div class="large_tb_right">3 big</div>
+<div class="tb_left">3</div>
+<div class="tb_left">4</div>
+<div class="tb_rightb">1a</div>
+<div class="tb_rightb">2a</div>
+
+</div><!-- gallery ends -->
+
+</div><!-- contentleft ends -->
+
+<div class="contentright clearfix">
+
+<div id="bookshelf">
+<div id=bookcasetitle>Popular in Writing</div>
+	<div class="shelf">
+		<div class="book">book1</div>
+		<div class="book">book2</div>
+		<div class="book">book3</div>
+		<div class="shelfbg"></div>
+	</div>
+	<div class="shelftitle">BEST COVER ART</div>
+	<div class="shelf">
+		<div class="book">book1</div>
+		<div class="book">book2</div>
+		<div class="book">book3</div>
+		<div class="shelfbg"></div>
+	</div>
+	<div class="shelftitle">BEST COVER ART 2</div>
+	<div class="shelf">
+		<div class="book">book1</div>
+		<div class="book">book2</div>
+		<div class="book">book3</div>
+		<div class="shelfbg"></div>
+	</div>
+	<div class="shelftitle">POPULAR NOVELS</div>
+	<div class="shelf">
+		<div class="book">book1</div>
+		<div class="book">book2</div>
+		<div class="book">book3</div>
+		<div class="shelfbg"></div>
+	</div>
+	<div class="shelftitle">RECENTLY UPDATED</div>
+	<div class="shelf">
+		<div class="book">book1</div>
+		<div class="book">book2</div>
+		<div class="book">book3</div>
+		<div class="shelfbg"></div>
+	</div>
+	<div class="shelftitle">POPULAR POEMS & STORIES</div>
+	<div id="bookcase_bg">
+		<img src="../../static/images/bookshelf.jpg"/>
+	</div>
+</div><!-- bookshelf ends -->
+
+</div><!-- contentright ends -->
+</div><!-- topsection ends -->
+
+<div id="bottomsection" class="clearfix">
+
+<div id="hpnews">
+<h1>News</h1>
+<ul>
+<li><h2>News article 1</h2>
+	<h3>posted 8/5/14</h3>
+    <p>news blurb</p>
+</li>
+<li><h2>News article 2</h2>
+	<h3>posted 8/5/14</h3>
+    <p>news blurb</p>
+</li>
+<li><h2>News article 3</h2>
+	<h3>posted 8/5/14</h3>
+    <p>news blurb</p>
+</li>
+</ul>
+</div>
+
+<div id="hppolls">
+<h1>Polls</h1>
+<label class="label">What is your favorite color?</label><br>
+<form action="">
+	<input type="radio" name="interest" value="not">blue<br>
+	<input type="radio" name="interest" value="slightly">green<br>
+	<input type="radio" name="interest" value="moderately">red<br>
+	<input type="radio" name="interest" value="very">orange<br>
+	<input type="radio" name="interest" value="extremely">asldjkf<br>
+	</form>
+<input type="submit" value="Submit!" />
+</div>
+
+</div><!-- bottomsection ends -->
+
+</div><!-- content ends -->
+
+<div id="footer">
+
+<div id="quicklinks">
+<ul>
+<li><a href="registration.html">Registration</a></li>
+<li><a href="emailverify.html">Email Verification</a></li>
+<li><a href="congrats.html">Congrats!</a></li>
+<li><a href="login.html">Sign in</a></li>
+<li><a href="forgotpwd.html">Forgot Password</a></li>
+<li><a href="homepage_login.html">Logged In</a></li>
+</ul>
+</div><!-- quicklinks ends -->
 
 </div><!-- footer ends -->
 
@@ -82,12 +278,5 @@
 </div><!-- wrapper ends -->
 
 
-
-
-
 </body>
 </html>
-
-</body></html>
-
-
