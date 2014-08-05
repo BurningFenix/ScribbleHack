@@ -13,6 +13,7 @@ class Work(models.Model):
 	owner = models.ForeignKey(SHUser, related_name='owner')
 	allowed_contrib = models.BooleanField(blank=False)
 	contributors = models.ManyToManyField(SHUser, related_name='contributors')
+	creation_date = models.DateTimeField(auto_now_add=True)
 
 	class Meta:
 		abstract = True
