@@ -52,7 +52,6 @@ a:active {color:#00A58C;}
 	width: 545px;
 	height: 50px;
 	float: left;
-	
 }
 
 #logo {
@@ -60,7 +59,6 @@ a:active {color:#00A58C;}
 	width: 127px;
 	margin: 10px 38px 0 10px;
 	position: relative;
-	
 }
 
 #logo img {
@@ -82,7 +80,6 @@ a:active {color:#00A58C;}
 #sitenavpagelinks {
 	float: left;
 	margin-top: 19px;
-	
 }
 
 .navlink {
@@ -183,7 +180,8 @@ a:active {color:#00A58C;}
 	border-bottom: 1px solid #2f2f2f;
 }
 
-#footer {
+footer {
+	position: absolute;
 	height: 200px;
 	background-color: #2f2f2f;
 }
@@ -219,17 +217,12 @@ a:active {color:#00A58C;}
 #quicklinks a:hover {
 	color: #2f2f2f;
 }
-
-#jcstuff {
-	float: left;
-	}
-
 	
 	
-	/* Specifically, Profile Page CSS */
+/* Specifically, Profile Page CSS */
 
 #profile #banner {
-	background-color: #e0e0e0;
+	background-image: url(../../static/images/404banner.jpg);
 	position: relative;
 	margin: 0;
 	padding: 0;
@@ -272,11 +265,12 @@ a:active {color:#00A58C;}
 }
 
 #profile #profstatistics {
+	width: 400px;
 	float: right;
 	height: 50px;
 	position: relative;
 	top: 0;
-	background-color: red;
+	background-color: #213d42;
 }
 
 #profile #profstatistics ul {
@@ -284,12 +278,15 @@ a:active {color:#00A58C;}
 	margin: none;
 	padding: none;
 	display: inline;
+	padding: 10px;
 }
 
 #profile #profstatistics .profstat {
 	display: inline;
+	color: #cde6f6;
 	float: right;
-	margin-left: 38px;
+	margin-left: 22px;
+	margin-right: 23px;
 }
 
 #profile #profstatistics li {
@@ -318,8 +315,8 @@ a:active {color:#00A58C;}
 	position: absolute;
 	top: 1px;
 	left: 0;
-	border-right: solid 1px grey;
-	background-color: #213d42;
+	border-right: solid 1px #213d42;
+	background-color: #cde6f6;
 }
 
 #profile #contentright {
@@ -331,8 +328,13 @@ a:active {color:#00A58C;}
 	position: absolute;
 	top: 1px;
 	right: 0;
-	background-color: #213d42;
+	background-color: #cde6f6;
 }
+
+#contentright h1 {
+	position: relative;
+	text-align: center;
+	}
 
 #profile .proftopright {
 	display: inline;
@@ -340,26 +342,39 @@ a:active {color:#00A58C;}
 }
 
 #profile #interests {
-	height: 665px;
+	height: 810px;
 	width: 260px;
-	background-color: #cde6f6;
-	position: relative;
-	top: 15px;
+	background-color: #f4f1d1;
+	bottom: 20px;
+	margin-bottom: 50px;
 }
-
-#profile #badgeribbon {
-	height: 700px;
-	width: 90px;
-	margin-left: 10px;
+	
+#interests h2 {
 	background-color: #ede3c2;
-}
+	color: black;
+	}
 
-h1 {
-	color: #cde6f6;
+#interests p {
 	text-align: center;
-	padding-bottom: 0px;
+	padding: 5px 10px 5px 10px;
+	margin-bottom: 0px;
 	}
 	
+#profile #badgeribbon {
+	height: 810px;
+	width: 90px;
+	margin-left: 10px;
+	background-color: #cde6f6;
+}
+
+#badgeribbon img {
+	padding-left: 10px;
+	}
+
+.badgetext {
+	color: #c8853f;
+	}
+
 h2 {
 	color: #cde6f6;
 	text-align: center;
@@ -367,6 +382,242 @@ h2 {
 	padding: 5px;
 	}
 	
-p {
+	
+/* TABS SECTION, LEFT */
+
+#tabs {
+	background-color: #ede3c2;
+	border: none;
+	margin: none;
+	padding: none;
+	}
+	
+#tabs ul {
+	background-color: #ede3c2;
+	}
+
+#tabs-1, #tabs-2, #tabs-3, #tabs-4{
+	background-color: #ede3c2;
+	height: 350px;
+	}
+
+.tabsbox {
+	background-color: #f4f1d1;
+	height: 290px;
+	}
+
+.tabsbox h1 {
+	color: black;
+	text-align: left;
+	margin-bottom: 0px;
+	padding: 30px 30px 0px 30px;
+	}
+
+.tabsbox p {
+	color: black;
+	text-align: left;
+	margin-bottom: 5px;
+	padding: 0px 30px 15px 30px;
+	}
+	
+.tabsbox #statustag {
+	padding: 0px 30px 0px 30px;
+	text-indent: 10px;
+	margin-top: 5px;
+	}
+
+#tabs-1 a {
 	text-align: center;
+	margin-right: 100px;
+	padding: 15px 0px 30px 115px;
+	color: black;
+	float: left;
+	}
+
+#tabs-2 p {
+	padding: 30px;
+	}
+
+.statusboxstats {
+	text-indent: 20px;
+	text-align: center;
+	margin-top: 0px;
+	padding: 0px 0px 30px 150px;
+	float: left;
+	}
+	
+#tabs { 
+    padding: 0px; 
+    background: none; 
+    border-width: 0px; 
+} 
+
+#tabs .ui-tabs-nav { 
+    padding-left: 0px; 
+    background: none; 
+    border-width: 0px 0px 1px 0px; 
+    -moz-border-radius: 0px; 
+    -webkit-border-radius: 0px; 
+    border-radius: 0px; 
+} 
+#tabs .ui-tabs-panel { 
+    background: #ede3c2; 
+    border-width: 0px 1px 1px 1px; 
+}	
+
+#tabs .ui-tabs-anchor {
+	background-color: #ede3c2;
+	}
+	
+#tabs .ui-tabs-loading {
+	background-color: #f4f1d1;
+	}
+	
+/* PORTFOLIO SECTION, LEFT BENEATH TABS */
+
+#featuredworks {
+	width: 575px;
+	height: 400px;
+	float: left;
+	background-color: #f4f1d1;
+	border: solid #cde6f6;
+}
+
+#featuredworks h1 {
+	width: 575px;
+	text-align: center;
+	background-color: #cde6f6;
+	padding: 15px;
+	height: 30px;
+	}
+
+figure {
+	float: left;
+	padding-left: 20px;
+	margin: 10px;
+	}
+
+figcaption {
+	color: #cde6f6;
+	text-align: center;
+	margin: 5px;
+	}
+	
+	
+/* COMMENTS SECTION, BOTTOM LEFT */
+	
+#profcomments {
+	background-color: #f4f1d1;
+	width: 575px;
+	height: 700px;
+	float: left;
+	border: solid #cde6f6;
+}
+
+#profcomments h1 {
+	width: 575px;
+	text-align: center;
+	background-color: #cde6f6;
+	padding: 15px;
+	height: 30px;
+	}
+
+textarea {
+	width: 500px;
+	height: 50px;
+	padding: 10px;
+	}
+
+form {
+	padding-left: 30px;
+	}
+	
+.commentboxes {
+	padding-left: 10px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding-bottom: 50px;
+	}
+	
+.commentboxes img {
+    float:left;
+    width:70px;
+    height:70px;
+    border:3px solid #ffffff;
+    border-radius:50px
+    }
+
+.comment-content {
+   position:relative;
+   float:left;
+   margin-left:12px;
+   width:425px;
+   padding:20px;
+   border-radius:10px;
+   background-color:#FFFFFF;
+   box-shadow:1px 1px 5px rgba(0,0,0,.2);
+   }
+   
+.replycomment {
+	padding-left: 10px;
+	margin-left: 90px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding-bottom: 50px;
+	}
+	
+.replycomment img {
+    float:left;
+    width:70px;
+    height:70px;
+    border:3px solid #ffffff;
+    border-radius:50px
+    }	
+	
+.replycomment-content {
+   position:relative;
+   float:left;
+   margin-left:12px;
+   width:335px;
+   padding:20px;
+   border-radius:10px;
+   background-color:#FFFFFF;
+   box-shadow:1px 1px 5px rgba(0,0,0,.2);
+   }
+	 
+.point {
+   border-top:10px solid transparent;
+   border-bottom:10px solid transparent;
+          border-right: 12px solid #FFF;
+   position:absolute;
+   left:-10px;
+   top:12px;
+   }
+
+.searchcomments {
+	float: left;
+	position: relative;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center;
+	}
+
+#searchcomments {
+	margin-left: 175px;
+	}
+
+
+/* FRIENDS, FOLLOWERS, COLLABORATORS, BOTTOM RIGHT*/
+	
+#profbottomright {
+	width: 370px;
+	height: 200px;
+	position: relative;
+	}
+	
+#profbottomright h1 {
+	position: relative;
+	margin-top: 50px;
+	text-align: center;
+	padding-bottom: 20px 0px;
 	}
