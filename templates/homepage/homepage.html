@@ -1,9 +1,26 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>ScribbleHack</title>
-<link href="../../static/layoutcss.css" rel="stylesheet" type="text/css">
-<style type="text/css"></style></head>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ScribbleHack</title>
+	<link href="../../static/homepagecss.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="../../static/sss.css" type="text/css" media="all">
+	<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+	<script src="../../static/js/homepagejs.js" type="text/javascript"></script>
+
+	<!--<script type="text/javascript" src="jquery-1.4.2.js"></script>-->
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script src="../../static/js/sss.min.js"></script>
+	
+
+	<script>
+		jQuery(function($) {
+		$('.slider').sss();
+		});
+	</script>
+
+</head>
 
 <body id="home">
 
@@ -16,12 +33,11 @@
 
 <div id="sitenavleft" class="clearfix">
 
-
 <a href="homepage.html">
 <div id="logo" class="clearfix">
 <div id="icon">
 </div><!-- icon ends -->
-<img src="../../static/images/logo.png">
+<img src="../../static/images/logo.png" />
 </div><!-- logo ends -->
 </a>
 
@@ -47,7 +63,7 @@
 <div id="navsearchbox">
 
 <form id="tfnewsearch" method="get" action="#">
-		       <input type="submit" class="tfbutton" src="../../static/images/searchicon.png" img="">
+		       <input type="submit" class="tfbutton" src="../../static/images/searchicon.png" img />
 		       <input type="text" value=" Search for stories, art or users" class="tftextinput" name="q" size="25" maxlength="120" onfocus="inputFocus(this)" onblur="inputBlur(this)">
 		</form>
 
@@ -62,19 +78,140 @@
 
 <div id="banner">
 
-<img id="octo" src="../../static/images/octobanner.jpg">
+<img id="octo" src="../../static/images/octobanner.jpg" />
 
 </div><!-- banner ends -->
 
 </div><!-- header ends -->
 
-<div id="jcstuff"
-<a href="{% url 'accounts_login' %}">Login Page</a><br />
-<a href="{% url 'art_browse' %}">Art Browse Page</a><br />
-<a href="{% url 'writing_browse' %}">Writing Browse Page</a><br />
-<a href="{% url 'accounts_register' %}">Register </a>
-</div>
+<div class="content clearfix">
 
+<div class="topsection">
+<div class="contentleft clearfix">
+
+<div class='slider' class='ssslide' class='sss'>
+    <img src="../../static/images/testimage3.jpg" />
+	<a href="http://scribblehack.com/kaeyamane/newlayouts/static/images/narwhal.png">
+		<img src="../../static/images/narwhal.png" />
+	</a>
+	<img src="../../static/images/testimage6.jpg" />
+	<img src="../../static/images/octobanner.jpg" />
+<!-- <img src="../static/images/slider.jpg" /> -->
+</div> 
+<!-- slider ends -->
+
+<div class="gallery">
+<span>Popular in Art</span>
+	<div id="tb_right">
+		<a href="http://scribblehack.com/kaeyamane/newlayouts/static/images/narwhal.png">
+    		<img src="../../static/images/narwhal.png">
+  		</a>
+</div>
+	<div id="tb_right">
+	<img src="../../static/images/testimage3.jpg">
+</div>
+	<div id="tb_right">
+	<img src="../../static/images/testimage6.jpg">
+</div>
+	<div id="tb_right">
+	<img src="../../static/images/heart.png">
+</div>
+	<div id="large_tb_left">
+	<img src="../../static/images/mermaid_1.jpg">
+</div>
+	<div id="tb_right">
+	<img src="../../static/images/profilepic.jpg">
+</div>
+	<div id="tb_right">
+	<img src="../../static/images/octobanner.jpg">
+</div>
+	<div id="tb_right">3</div>
+	<div id="tb_right">4</div>
+	<div id="tb_left">1</div>
+	<div id="tb_left">2</div>
+	<div id="tb_left">3</div>
+	<div id="tb_left">4</div>
+	<div id="large_tb_right">2 big</div>
+	<div id="tb_left">1</div>
+	<div id="tb_left">2</div>
+	<div id="tb_left">3</div>
+	<div id="tb_left">4</div>
+	<div id="tb_right">1</div>
+	<div id="tb_right">2</div>
+	<div id="tb_left">3</div>
+	<div id="tb_left">4</div>
+	<div id="large_tb_right">3 big</div>
+<div id="tb_left">3</div>
+<div id="tb_left">4</div>
+<div id="tb_rightb">1a</div>
+<div id="tb_rightb">2a</div>
+
+<img src="../../static/images/gallery.jpg" />
+</div><!-- gallery ends -->
+
+</div><!-- contentleft ends -->
+
+<div class="contentright clearfix">
+
+<div id="bookshelf">
+<div id=bookcasetitle>Popular in Writing</div>
+	<div class="shelf">
+		<div class="book">book1</div>
+		<div class="book">book2</div>
+		<div class="book">book3</div>
+		<div class="shelfbg"></div>
+	</div>
+	<div class="shelftitle">BEST COVER ART</div>
+	<div class="shelf">
+		<div class="book">book1</div>
+		<div class="book">book2</div>
+		<div class="book">book3</div>
+		<div class="shelfbg"></div>
+	</div>
+	<div class="shelftitle">BEST COVER ART 2</div>
+	<div class="shelf">
+		<div class="book">book1</div>
+		<div class="book">book2</div>
+		<div class="book">book3</div>
+		<div class="shelfbg"></div>
+	</div>
+	<div class="shelftitle">POPULAR NOVELS</div>
+	<div class="shelf">
+		<div class="book">book1</div>
+		<div class="book">book2</div>
+		<div class="book">book3</div>
+		<div class="shelfbg"></div>
+	</div>
+	<div class="shelftitle">RECENTLY UPDATED</div>
+	<div class="shelf">
+		<div class="book">book1</div>
+		<div class="book">book2</div>
+		<div class="book">book3</div>
+		<div class="shelfbg"></div>
+	</div>
+	<div class="shelftitle">POPULAR POEMS & STORIES</div>
+	<div id="bookcase_bg">
+		<img src="../../static/images/bookshelf.jpg"/>
+	</div>
+</div><!-- bookshelf ends -->
+
+</div><!-- contentright ends -->
+</div><!-- topsection ends -->
+
+</div><!-- content ends -->
+
+<div id="footer">
+
+<div id="quicklinks">
+<ul>
+<li><a href="registration.html">Registration</a></li>
+<li><a href="emailverify.html">Email Verification</a></li>
+<li><a href="congrats.html">Congrats!</a></li>
+<li><a href="login.html">Sign in</a></li>
+<li><a href="forgotpwd.html">Forgot Password</a></li>
+<li><a href="homepage_login.html">Logged In</a></li>
+</ul>
+</div><!-- quicklinks ends -->
 
 </div><!-- footer ends -->
 
@@ -82,12 +219,5 @@
 </div><!-- wrapper ends -->
 
 
-
-
-
 </body>
 </html>
-
-</body></html>
-
-
