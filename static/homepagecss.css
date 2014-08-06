@@ -1,8 +1,11 @@
 body {
-	background-color: #ede3c2;
 	padding: 0;
 	margin: 0;
 	font-family: UniversLTStd,arial,sans-serif;
+	background-image:
+    linear-gradient(
+      #288e78, #00241D
+    );
 }
 
 @font-face {
@@ -24,14 +27,14 @@ body {
 }
 
 #wrapper {
-	background-color: #f4f1d1;
+	background-color: #63bfa5;
 	width: 1000px;
 	height: auto;
 	text-align: left;
 	margin: 0 auto;
-	box-shadow: 0 0 15px #d4bd98;
-	-webkit-box-shadow: 0 0 15px #d4bd98;
-	-moz-box-shadow: 0 0 15px #d4bd98;
+	box-shadow: 0 0 15px #00241D;
+	-webkit-box-shadow: 0 0 15px #00241D;
+	-moz-box-shadow: 0 0 15px #00241D;
 }
 
 a:link {color:#007777;}
@@ -40,12 +43,12 @@ a:hover {color:#00A58C;}
 a:active {color:#00A58C;}
 
 #header {
-	height: 260px;
+	height: 200px;
 }
 
 #sitenav {
 	height: 50px;
-	background-color: #213d42;
+	background-color: #091717;
 }
 
 #sitenavleft {
@@ -178,14 +181,14 @@ a:active {color:#00A58C;}
 	}
 
 #banner {
-	height: 210px;
+	height: 150px;
 	border: solid 0 #007000;
-	border-bottom: 1px solid #c8853f;
+	border-bottom: 1px solid #288e78;
 }
 
 #footer {
 	height: 200px;
-	background-color: #213d42;
+	background-color: #091717;
 }
 
 #quicklinks ul {
@@ -271,9 +274,6 @@ html[xmlns] .clearfix {
 	margin-bottom: 21px;
 	width: 545px;
     height: 598px;
-	border-style: solid;
-	border-width: 1px;
-	border-color: #3d877f;
 	background: #cde6f6;
 	border-radius: 8px;
 	padding: 10px;
@@ -284,9 +284,10 @@ html[xmlns] .clearfix {
 #home .contentleft #hpgallery span {
 	font-family: UniversLTStd;
 	src: url(universltstd.otf); 
-	font-size: 28px;
+	font-size: 30px;
 	padding: 5px;
 	display: block;
+	margin-bottom: 7px;
 }
 
 #home .contentleft #hpgallery > div { /*css for all gallery thumbnails*/
