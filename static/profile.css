@@ -1,5 +1,5 @@
 body {
-	background-color: #ede3c2;
+	background: linear-gradient(#88d6f2, #226d8a);
 	padding: 0;
 	margin: 0;
 	font-family: UniversLTStd,arial,sans-serif;
@@ -24,7 +24,7 @@ body {
 }
 
 #wrapper {
-	background-color: #f4f1d1;
+	background-color: white;
 	width: 1000px;
 	height: auto;
 	text-align: left;
@@ -269,7 +269,6 @@ footer {
 #profile #profbannerright {
 	width: 400px;
 	height: 175px;
-	background-color: green;
 	float: right;
 	position: absolute;
 	top: 18px;
@@ -277,12 +276,12 @@ footer {
 }
 
 #profile #profstatistics {
-	width: 400px;
+	width: 285px;
 	float: right;
 	height: 50px;
 	position: relative;
-	top: 0;
 	background-color: #213d42;
+	margin-top: 120px;
 }
 
 #profile #profstatistics ul {
@@ -290,12 +289,12 @@ footer {
 	margin: none;
 	padding: none;
 	display: inline;
-	padding: 10px;
+	padding: 10px 5px 10px 5px;
 }
 
 #profile #profstatistics .profstat {
 	display: inline;
-	color: #cde6f6;
+	color: #ddf9f9;
 	float: right;
 	margin-left: 22px;
 	margin-right: 23px;
@@ -322,13 +321,13 @@ footer {
 #profile #contentleft {
 	margin: 0 0 0 25px;
 	padding: 0;
-	width: 578px;
+	width: 590px;
 	height: 1576px;
 	position: absolute;
 	top: 1px;
 	left: 0;
 	border-right: solid 1px #213d42;
-	background-color: #cde6f6;
+	background-color: #ddf9f9;
 }
 
 
@@ -338,12 +337,12 @@ footer {
 	float: right;
 	margin: 0 25px 0 0;
 	padding: 0;
-	width: 370px;
+	width: 360px;
 	height: 1576px;
 	position: absolute;
 	top: 1px;
 	right: 0;
-	background-color: #cde6f6;
+	background-color: #ddf9f9;
 }
 
 #contentright h1 {
@@ -359,14 +358,16 @@ footer {
 #interests {
 	height: 810px;
 	width: 260px;
-	background-color: #f4f1d1;
+	background-color: #ddf9f9;
 	bottom: 20px;
-	margin-bottom: 50px;
+	margin-bottom: 15px;
+	box-shadow:1px 0px 5px rgba(5,52,44,.6) inset;
 }
 	
 #interests h2 {
-	background-color: #ede3c2;
+	background-color: #91d8cb;
 	color: black;
+	box-shadow:1px 0px 5px rgba(5,52,44,.5) inset;
 	}
 
 #interests p {
@@ -379,9 +380,10 @@ footer {
 	
 #badgeribbon {
 	height: 810px;
-	width: 90px;
-	margin-left: 10px;
-	background-color: #cde6f6;
+	width: 80px;
+	background-color: #f0fbfb;
+	padding: 5px;
+	box-shadow:0px 0px 5px rgba(5,52,44,.7) inset;
 }
 
 #badgeribbon img {
@@ -390,10 +392,11 @@ footer {
 
 #badgeribbon p{
 	color: #c8853f;
+	text-align: center;
 	}
 
 h2 {
-	color: #cde6f6;
+	color: #ddf9f9;
 	text-align: center;
 	background-color: #213d42;
 	padding: 5px;
@@ -403,55 +406,71 @@ h2 {
 /* TABS SECTION, LEFT */
 
 #tabs {
-	background-color: #ede3c2;
 	border: none;
 	margin: none;
 	padding: none;
 	background: none;
+	width: 600px;
 	}
 
 #tabs-1, #tabs-2, #tabs-3, #tabs-4, #tabs-5{
-	background-color: #f4f1d1;
 	height: 350px;
-	width: 540px;
+	width: 600px;
+	box-shadow:1px 0px 5px rgba(5,52,44,.6) inset;
+	margin-right: 0px;
 	}
 
 .tabsbox {
-	background-color: #f4f1d1;
+	background-color: #f0fbfb;
 	height: 290px;
 	width: 540px;
 	}
 
-.tabsbox h1 {
-	color: black;
-	text-align: left;
-	margin-bottom: 0px;
-	padding: 30px 30px 0px 30px;
-	}
-
 .tabsbox p {
-	color: black;
 	text-align: left;
 	margin-bottom: 5px;
 	padding: 0px 30px 15px 30px;
+	font-size: 13px;
+	font-weight: bold;
 	}
 	
 .tabsbox #statustag {
 	padding: 0px 30px 0px 30px;
 	text-indent: 10px;
-	margin-top: 5px;
+	margin-top: 10px;
 	}
 
 #tabs h1 {
 	font-size: 20px;
+	background-color: #91d8cb;
+	padding: 12px 15px 12px 30px;
 	}
 	
 #tabs-1 a {
-	text-align: center;
-	margin-right: 100px;
-	padding: 15px 0px 30px 115px;
-	color: black;
+	font-size: 14px;
+	font-weight: bold;
+	margin-right: 25px;
+	margin-left: 25px;
+	padding: 5px 10px 5px 8px;
+	color: #213d42;
 	float: left;
+	background-color: #f9f6ca;
+	text-decoration: none;
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0px 0px 5px #213d42;
+    -moz-box-shadow: inset 0px 0px 5px #213d42;
+    box-shadow: inset 0px 0px 5px #213d42;
+	}
+
+#tabs1buttons {
+	width: 600px;
+	float: left;
+	margin-left: 135px;
+	margin-top: 10px;
+	}
+	
+.icon {
+	margin-right: 5px;
 	}
 
 #tabs-2 p {
@@ -461,18 +480,15 @@ h2 {
 #tabs-5 p {
 	margin: 0px 0px;
 	}
-	
-#tabs-5 {
-	-webkit-column-count: 2; /* Chrome, Safari, Opera */
-    -moz-column-count: 2; /* Firefox */
-    column-count: 2;
-	background-color: #f4f1d1;
-	column-width:250px;
-	-moz-column-width:250px; /* Firefox */
-	-webkit-column-width:250px; /* Safari and Chrome */
-	column-span:all;
-	-webkit-column-span:all; /* Safari and Chrome */
-}
+
+table {
+	margin-top: 10px;
+	}
+
+td {
+	width: 260px;
+	vertical-align: top;
+	}
 
 .statusboxstats {
 	text-indent: 20px;
@@ -484,39 +500,49 @@ h2 {
 
 #tabs .ui-tabs-nav { 
     padding-left: 0px; 
-    background: none; 
+    background: transparent; 
     border-width: 0px 0px 1px 0px; 
-    -moz-border-radius: 0px; 
-    -webkit-border-radius: 0px; 
-    border-radius: 0px; 
+    -moz-border-radius: 10px; 
+    -webkit-border-radius: 10px; 
+    border-radius: 10px; 
 } 
 #tabs .ui-tabs-panel { 
-    background: #ede3c2; 
-    border-width: 0px 1px 1px 1px; 
+    background: #ddf9f9; 
+    
 }	
 
 #tabs .ui-tabs-anchor {
-	background-color: #ede3c2;
+	background-color: #f0fbfb;
+	font-size: 13px;
+	font-weight: bold;
 	}
 	
 #tabs .ui-tabs-loading {
-	background-color: #f4f1d1;
+	background-color: #91d8cb;
 	}
+	
+#tabs  li  a {
+    border-radius: 4px 4px 0 0;
+}
+
+#tabs  li  a:hover {
+    border-color: #EEEEEE #EEEEEE #DDDDDD;
+}
 	
 /* PORTFOLIO SECTION, LEFT BENEATH TABS */
 
 #featuredworks {
-	width: 575px;
+	width: 600px;
 	height: 400px;
 	float: left;
-	background-color: #f4f1d1;
-	border: solid #cde6f6;
+	background-color: #ddf9f9;
+	box-shadow:1px 0px 5px rgba(5,52,44,.6) inset;
 }
 
 #featuredworks h1 {
-	width: 575px;
+	width: 600px;
 	text-align: center;
-	background-color: #cde6f6;
+	background-color: #91d8cb;
 	padding: 15px;
 	height: 30px;
 	}
@@ -528,48 +554,58 @@ figure {
 	}
 
 figcaption {
-	color: #cde6f6;
+	color: #ddf9f9;
 	text-align: center;
 	margin: 5px;
 	}
-	
+
+#view_p {
+	font-size: 14px;
+	font-weight: bold;
+	margin: 25px 25px 25px 10px;
+	padding: 5px 10px 5px 8px;
+	color: #213d42;
+	float: left;
+	background-color: #f9f6ca;
+	text-decoration: none;
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0px 0px 5px #213d42;
+    -moz-box-shadow: inset 0px 0px 5px #213d42;
+    box-shadow: inset 0px 0px 5px #213d42;
+	}
 	
 /* COMMENTS SECTION, BOTTOM LEFT */
 	
 #profcomments {
-	background-color: #f4f1d1;
-	width: 575px;
+	background-color: #ddf9f9;
+	width: 600px;
 	height: 700px;
 	float: left;
-	border: solid #cde6f6;
+	box-shadow:1px 0px 5px rgba(5,52,44,.6) inset;
 }
 
 #profcomments h1 {
-	width: 575px;
+	width: 600px;
 	text-align: center;
-	background-color: #cde6f6;
+	background-color: #91d8cb;
 	padding: 15px;
 	height: 30px;
-	}
-
-textarea {
-	width: 500px;
-	height: 50px;
-	padding: 10px;
-	}
-
-form {
-	padding-left: 30px;
 	}
 	
 .commentboxes {
 	padding-left: 10px;
-	margin-top: 50px;
+	margin-top: 30px;
 	margin-bottom: 50px;
 	padding-bottom: 50px;
 	}
+
+#leavecomment {
+	margin-left: 10px;
+	margin-top: 10px;
+	}
+
 	
-.commentboxes img {
+.commentboxes img, #leavecomment img {
     float:left;
     width:70px;
     height:70px;
@@ -591,7 +627,7 @@ form {
 .replycomment {
 	padding-left: 10px;
 	margin-left: 90px;
-	margin-top: 50px;
+	margin-top: 30px;
 	margin-bottom: 50px;
 	padding-bottom: 50px;
 	}
@@ -614,6 +650,7 @@ form {
    background-color:#FFFFFF;
    box-shadow:1px 1px 5px rgba(0,0,0,.2);
    }
+   
 	 
 .point {
    border-top:10px solid transparent;
@@ -636,21 +673,48 @@ form {
 	margin-left: 175px;
 	}
 
+#lcomment {
+	font-size: 14px;
+	font-weight: bold;
+	margin: 20px 25px 0px 360px;
+	padding: 5px 10px 5px 8px;
+	color: #213d42;
+	background-color: #f9f6ca;
+	text-decoration: none;
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0px 0px 5px #213d42;
+    -moz-box-shadow: inset 0px 0px 5px #213d42;
+    box-shadow: inset 0px 0px 5px #213d42;
+	}
+
+#profcomments textarea {
+	position: relative;
+	margin: 5px 10px 0px 30px;
+	border-radius: 10px;
+	resize: none;
+	width:335px;
+	padding:20px;
+	background-color:#FFFFFF;
+	box-shadow:1px 1px 5px rgba(0,0,0,.2);
+	}
+
 
 /* FRIENDS, FOLLOWERS, COLLABORATORS, BOTTOM RIGHT*/
 	
 #profbottomright {
-	width: 370px;
+	width: 360px;
 	height: 200px;
-	position: relative;
+	float: right;
 	}
 	
 #profbottomright h1 {
-	position: relative;
-	margin-top: 50px;
+	margin-top: 10px;
 	margin-left: 20px;
-	text-align: left;
-	padding-bottom: 20px 0px;
+	text-align: center;
+	padding: 15px 10px 15px 10px;
+	background-color: #91d8cb;
+	width: 320px;
+	height: 30px;
 	}
 	
 

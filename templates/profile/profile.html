@@ -117,7 +117,6 @@ $( "#tabs" ).tabs();
 <div id="profbannerright">
 <div id="profstatistics">
 <ul>
-<div class="profstat"><li><span>67,000</span></br>WORDS</li></div>
 <div class="profstat"><li><span>5,000</span></br>PAGEVIEWS</li></div>
 <div class="profstat"><li><span>420</span></br>COMMENTS</li></div>
 <div class="profstat"><li><span>67</span></br>WORKS</li></div>
@@ -146,16 +145,19 @@ $( "#tabs" ).tabs();
 		<li><a href="#tabs-5">Stats and Activity</a></li>
 	</ul>
 	<div id="tabs-1">
-	<div class="tabsbox">
-		<h1>Yo peeps what's up?</h2>
-		<p id="statustag">by Laurelin, posted 3 hours ago</p>
-		<p>Well, this is my first post on ScribbleHack.com and I have to say, IT FEELS GREAT! The website is going to be finished SOONER THAN YOU KNOW IT, PEOPLE!!! WOOOO!!!! I'd like to give a special thanks to the Captain and First Mate, JC and Rodrigo and of course our loyal crew. Anyway, so the status for today: I'm working on the profile page while Kae is finishing up the home page and working on the blank page. Not sure what JC and Rodrigo are doing because I don't understand what they do. XD But I see them doing stuff on GitHub that looks legit so we're good. XD Well, that's all for today, folks.</p>
-		<p class="statusboxstats">2 Likes</p>
-		<p class="statusboxstats">0 Comments</p>
+		<div class="tabsbox">
+			<h1>Yo peeps what's up?</h2>
+			<p id="statustag">by Laurelin, posted 3 hours ago</p>
+			<p>Well, this is my first post on ScribbleHack.com and I have to say, IT FEELS GREAT! The website is going to be finished SOONER THAN YOU KNOW IT, PEOPLE!!! WOOOO!!!! I'd like to give a special thanks to the Captain and First Mate, JC and Rodrigo and of course our loyal crew. Anyway, so the status for today: I'm working on the profile page while Kae is finishing up the home page and working on the blank page. Not sure what JC and Rodrigo are doing because I don't understand what they do. XD But I see them doing stuff on GitHub that looks legit so we're good. XD Well, that's all for today, folks.</p>
+			<p class="statusboxstats">2 Likes</p>
+			<p class="statusboxstats">0 Comments</p>
+		</div>
+	<div id="tabs1buttons">
+		<a href="link" class="button action like fancy-link login-required" rel="nofollow"><img class="icon" src="../../static/images/checkmark.png"/>Like</a>
+		<a href="link" class="button action like fancy-link login-required" rel="nofollow"><img class="icon" src="../../static/images/speechbubble.png"/>Comment</a>
 	</div>
-	<a href="link" class="button action like fancy-link login-required" rel="nofollow">Like</a>
-	<a href="link" class="button action like fancy-link login-required" rel="nofollow">Comment</a>
 	</div>
+	
 	<div id="tabs-2">
 		<div class="tabsbox">
 			<h1>ABOUT ME</h1>
@@ -164,20 +166,25 @@ $( "#tabs" ).tabs();
 			<p>Hi! My name is Lucero and I like warm hugs!</p>
 		</div>
 	</div>
+	
 	<div id="tabs-3">
 		<div class="tabsbox">
 			<h1>GROUPS</h1>
 		</div>
 	</div>
+	
 	<div id="tabs-4">
 		<div class="tabsbox">
 			<h1>REQUEST A CRITIQUE WITH LAURELIN</h1>
 		</div>
 	</div>
+	
 	<div id="tabs-5">
 		<div class="tabsbox">
 			<h1>STATS & ACTIVITY</h1>
-			<div id="statsgroup1">
+			<table>
+			<tr>
+			<td>
 			<p>Joined 6/28/2014</p>
 			<p>Last online: 8/5/2014</p>
 			<p>Last submission: 7/26/2014</p>
@@ -185,13 +192,15 @@ $( "#tabs" ).tabs();
 			<p>Submissions per week: 0.5</p>
 			<p>Number of forum posts: 36</p>
 			<p>Forum posts per week: 2</p>
-			</div>
-			<div id="statsgroup2">
+			</td>
+			<td>
 			<p>Number of critiques given: 7</p>
 			<p>Critique Rating:</p>
 			<p>Number of donations to the Universe: 12</p>
 			<p>Number of badges:22</p>
-			</div>
+			</td>
+			</tr>
+			</table>
 		</div>
 	</div>
 </div>
@@ -214,6 +223,14 @@ $( "#tabs" ).tabs();
 <figcaption><a href="link">Cherry Blossom Petals</a></figcaption>
 </figure>
 
+<figure>
+<a href="link"><img src="../../static/images/lucero-writing-example.jpg" width="130 height="175"></a>
+<figcaption><a href="link">Cherry Blossom Petals</a></figcaption>
+</figure>
+
+<br><br>
+<a id="view_p" href="">View Laurelin's Portfolio</a>
+
 </div><!-- featuredworks ends -->
 
 
@@ -224,11 +241,21 @@ $( "#tabs" ).tabs();
 
 <h1>Comments</h1>
 
-<a href="link" class="button action leave-a-comment fancy-link login-required" rel="nofollow">Leave a Comment</a>
 
-<form action="php link" method="get">
-	<textarea name="commentbox">Leave a comment! (Note to self: style comment boxes)</textarea>
-</form>
+
+
+<div class="bubble clearfix">
+			<div id="leavecomment">
+			<img id="rcommentimg" src="#" width: "50" height: "50"/>
+				<div class="point"></div>
+				<form action="php link" method="get">
+					<textarea name="commentbox" placeholder="Leave a comment!"></textarea>
+				</form>
+			</div>
+		</div>
+
+
+<a href="link" id="lcomment" class="button action leave-a-comment fancy-link login-required" rel="nofollow">Leave a Comment</a>
 
 	<div class="commentboxes">
 		<div class="bubble clearfix">
@@ -323,9 +350,9 @@ $( "#tabs" ).tabs();
 
 <div id="profbottomright">
 
-<h1>Friends and Followers</h1>
+	<h1>Friends and Followers</h1>
 
-<h1>Collaborators</h1>
+	<h1>Collaborators</h1>
 
 </div><!-- profbottomright ends -->
 

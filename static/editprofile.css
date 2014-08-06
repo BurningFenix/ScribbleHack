@@ -1,5 +1,5 @@
 body {
-	background-color: #ede3c2;
+	background: linear-gradient(#88d6f2, #226d8a);
 	padding: 0;
 	margin: 0;
 	font-family: UniversLTStd,arial,sans-serif;
@@ -24,7 +24,7 @@ body {
 }
 
 #wrapper {
-	background-color: #f4f1d1;
+	background-color: white;
 	width: 1000px;
 	height: auto;
 	text-align: left;
@@ -220,6 +220,7 @@ footer {
 }
 	
 	
+	
 /* CSS SPECIFICALLY FOR EDIT-PROFILE */
 
 #ppupload {
@@ -238,7 +239,6 @@ footer {
 }
 
 #tabs {
-	background-color: #ede3c2;
 	border: none;
 	margin: none;
 	padding: none;
@@ -246,14 +246,13 @@ footer {
 	}
 
 #tabs-1, #tabs-2, #tabs-3, #tabs-4, #tabs-5{
-	background-color: #f4f1d1;
 	height: 1500px;
 	width: 955px;
 	}
 
 .tabsbox {
-	background-color: #f4f1d1;
-	height: 1450px;
+	background-color: #f0fbfb;
+	height: 1000px;
 	width: 950px;
 	}
 
@@ -270,15 +269,11 @@ footer {
 	margin-bottom: 5px;
 	padding: 0px 30px 15px 30px;
 	}
-	
-.tabsbox #statustag {
-	padding: 0px 30px 0px 30px;
-	text-indent: 10px;
-	margin-top: 5px;
-	}
 
 #tabs h1 {
-	font-size: 20px;
+	font-size: 25px;
+	background-color: #91d8cb;
+	padding: 15px 10px 15px 20px;
 	}
 	
 #tabs-1 a {
@@ -294,50 +289,33 @@ footer {
 	vertical-align: top;
 	}
 
-#tabs-5 p {
-	margin: 0px 0px;
-	}
-	
-#tabs-5 {
-	-webkit-column-count: 2; /* Chrome, Safari, Opera */
-    -moz-column-count: 2; /* Firefox */
-    column-count: 2;
-	background-color: #f4f1d1;
-	column-width:250px;
-	-moz-column-width:250px; /* Firefox */
-	-webkit-column-width:250px; /* Safari and Chrome */
-	column-span:all;
-	-webkit-column-span:all; /* Safari and Chrome */
-}
-
-.statusboxstats {
-	text-indent: 20px;
-	text-align: center;
-	margin-top: 0px;
-	padding: 0px 0px 30px 150px;
-	float: left;
-	}
-
 #tabs .ui-tabs-nav { 
     padding-left: 0px; 
-    background: none; 
+    background: transparent; 
     border-width: 0px 0px 1px 0px; 
-    -moz-border-radius: 0px; 
-    -webkit-border-radius: 0px; 
-    border-radius: 0px; 
+    -moz-border-radius: 10px; 
+    -webkit-border-radius: 10px; 
+    border-radius: 10px; 
 } 
+
 #tabs .ui-tabs-panel { 
-    background: #ede3c2; 
+    background: #ddf9f9; 
     border-width: 0px 1px 1px 1px; 
 }	
 
 #tabs .ui-tabs-anchor {
-	background-color: #ede3c2;
+	background-color: #f0fbfb;
+	font-size: 13px;
+	font-weight: bold;
 	}
-	
-#tabs .ui-tabs-loading {
-	background-color: #f4f1d1;
-	}
+
+#tabs  li  a {
+    border-radius: 4px 4px 0 0;
+}
+
+#tabs  li  a:hover {
+    border-color: #EEEEEE #EEEEEE #DDDDDD;
+}
 	
 form p {
 	font-size: 20px;
@@ -392,10 +370,21 @@ input[type=radio] {
 	}
 
 input[type=submit]{
-    border: solid 2px white;
-    border-radius:20px;
-	box-shadow: 0px 2px 0px black;
-	padding: 10px 15px 10px 15px;
-	color: white;
-	background-color: black;
-}
+	font-size: 14px;
+	font-weight: bold;
+	margin-right: 25px;
+	margin-left: 25px;
+	padding: 5px 10px 5px 8px;
+	color: #213d42;
+	float: left;
+	background-color: #f9f6ca;
+	text-decoration: none;
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0px 0px 5px #213d42;
+    -moz-box-shadow: inset 0px 0px 5px #213d42;
+    box-shadow: inset 0px 0px 5px #213d42;
+	}
+
+#banner input[type=submit]{
+	margin-left: 410px;
+	}
