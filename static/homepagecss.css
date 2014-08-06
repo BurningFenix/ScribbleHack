@@ -2,6 +2,7 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: UniversLTStd,arial,sans-serif;
+	color: #091717;
 	background-image:
     linear-gradient(
       #288e78, #00241D
@@ -191,39 +192,6 @@ a:active {color:#00A58C;}
 	background-color: #091717;
 }
 
-#quicklinks ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-
-#quicklinks li {
-	float: left;
-	margin-top: 25px;
-	margin-left: 25px;
-	background: gainsboro;
-	padding: 8px 10px;
-	outline: 1px dashed grey;
-    outline-offset: -4px;
-}
-
-#quicklinks a {
-	display: block;
-	width: auto;
-	text-align: center;
-	text-decoration: none;
-		font-family: UniversLTStd;
-	src: url(universltstd.otf);  
-	font-size: 18px;
-	color: grey;
-	font-weight: bold;
-}
-
-#quicklinks a:hover {
-	color: #2f2f2f;
-}
-
-
 /* clearfix css */
 
 .clearfix:after {
@@ -292,11 +260,8 @@ html[xmlns] .clearfix {
 
 #home .contentleft #hpgallery > div { /*css for all gallery thumbnails*/
 	margin: 5px;
-	border-style: solid;
-	border-width: 0px;
-	border-color: grey;
 	border-radius: 8px;
-	background-color: #3d877f;
+	background-color: #288e78;
 	overflow: hidden;
 }
 
