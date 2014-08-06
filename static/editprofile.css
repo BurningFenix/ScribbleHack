@@ -175,7 +175,7 @@ a:active {color:#00A58C;}
 	}
 
 #banner {
-	height: 210px;
+	height: 150px;
 	border: solid 0 #007000;
 	border-bottom: 1px solid #2f2f2f;
 }
@@ -219,188 +219,22 @@ footer {
 }
 	
 	
-/* Specifically, Profile Page CSS */
+/* CSS SPECIFICALLY FOR EDIT-PROFILE */
 
-#profile #banner {
-	background-image: url(../../static/images/404banner.jpg);
-	position: relative;
-	margin: 0;
-	padding: 0;
-}
-
-#profile #profbannerleft {
-	width: 360px;
-	height: 175px;
-	position: absolute;
-	top: 20px;
-	left: 220px;
-}
-
-#profilepic{
-	width: 150px;
-	height: 150px;
-	float: left;
-	margin-left: 40px;
-	margin-top: 25px;
-	border-radius: 75px;
-	-webkit-border-radius: 75px;
-	-moz-border-radius: 75px;
-	border:3px solid #ffffff;
-	}
-
-#profile #profbigusername {
-	font-size: 38px;
-	margin: 0;
-}
-
-#profile #proffirstlastname {
-	font-size: 19px;
-	margin: 0;
-}
-
-#profile #profselftitle {
-	font-size: 15px;
-}
-
-#profile #profonlinestatus {
-	font-size: 13px;
-}
-
-#profile #profbannerright {
-	width: 400px;
-	height: 175px;
-	background-color: green;
-	float: right;
-	position: absolute;
-	top: 18px;
-	right: 25px;
-}
-
-#profile #profstatistics {
-	width: 400px;
-	float: right;
-	height: 50px;
-	position: relative;
-	top: 0;
-	background-color: #213d42;
-}
-
-#profile #profstatistics ul {
-	list-style: none;
-	margin: none;
-	padding: none;
-	display: inline;
-	padding: 10px;
-}
-
-#profile #profstatistics .profstat {
-	display: inline;
-	color: #cde6f6;
-	float: right;
-	margin-left: 22px;
-	margin-right: 23px;
-}
-
-#profile #profstatistics li {
-	text-align: center;
-	font-size: 10px;
-	margin: none;
-	padding: none;
-}
-
-#profile #profstatistics li span {
-	font-size: 21px;
-}
-	
-#profile #content {
-	height: 1577px;
-	margin: 0;
-	padding: 0;
-	position: relative;
-}
-
-#profile #contentleft {
-	margin: 0 0 0 25px;
-	padding: 0;
-	width: 578px;
-	height: 1576px;
-	position: absolute;
-	top: 1px;
-	left: 0;
-	border-right: solid 1px #213d42;
-	background-color: #cde6f6;
-}
-
-
-/* INTERESTS/BADGES SECTION, RIGHT */
-
-#contentright {
-	float: right;
-	margin: 0 25px 0 0;
-	padding: 0;
-	width: 370px;
-	height: 1576px;
-	position: absolute;
-	top: 1px;
-	right: 0;
-	background-color: #cde6f6;
-}
-
-#contentright h1 {
-	position: relative;
-	text-align: center;
-	}
-
-.proftopright {
-	display: inline;
-	float: right;
-}
-
-#interests {
-	height: 810px;
-	width: 260px;
-	background-color: #f4f1d1;
-	bottom: 20px;
-	margin-bottom: 50px;
-}
-	
-#interests h2 {
-	background-color: #ede3c2;
-	color: black;
-	}
-
-#interests p {
-	text-align: center;
-	padding: 5px 10px 5px 10px;
-	margin-bottom: 0px;
-	font-size: 13px;
-	height: 35px;
+#ppupload {
+	padding-top: 50px;
+	margin-left: 25px;
+	height: 60px;
+	width:60px;
+	-webkit-appearance:none; 
 	}
 	
-#badgeribbon {
-	height: 810px;
-	width: 90px;
-	margin-left: 10px;
-	background-color: #cde6f6;
+.uploadbutton input[type="file"]{
+    -webkit-appearance:none; 
+    position:absolute;
+    top:0; left:0;
+    opacity:0; 
 }
-
-#badgeribbon img {
-	padding-left: 10px;
-	}
-
-#badgeribbon p{
-	color: #c8853f;
-	}
-
-h2 {
-	color: #cde6f6;
-	text-align: center;
-	background-color: #213d42;
-	padding: 5px;
-	}
-	
-	
-/* TABS SECTION, LEFT */
 
 #tabs {
 	background-color: #ede3c2;
@@ -412,14 +246,14 @@ h2 {
 
 #tabs-1, #tabs-2, #tabs-3, #tabs-4, #tabs-5{
 	background-color: #f4f1d1;
-	height: 350px;
-	width: 540px;
+	height: 1500px;
+	width: 955px;
 	}
 
 .tabsbox {
 	background-color: #f4f1d1;
-	height: 290px;
-	width: 540px;
+	height: 1450px;
+	width: 950px;
 	}
 
 .tabsbox h1 {
@@ -503,155 +337,13 @@ h2 {
 	background-color: #f4f1d1;
 	}
 	
-/* PORTFOLIO SECTION, LEFT BENEATH TABS */
-
-#featuredworks {
-	width: 575px;
-	height: 400px;
-	float: left;
-	background-color: #f4f1d1;
-	border: solid #cde6f6;
-}
-
-#featuredworks h1 {
-	width: 575px;
-	text-align: center;
-	background-color: #cde6f6;
-	padding: 15px;
-	height: 30px;
+form p {
+	font-size: 20px;
+	font-weight: bold;
+	font-family:UniversLTStd;
+	margin: 0px 10px 0px 10px;
 	}
 
-figure {
-	float: left;
-	padding-left: 20px;
-	margin: 10px;
+#submitbutton {
+	margin-left: 50px;
 	}
-
-figcaption {
-	color: #cde6f6;
-	text-align: center;
-	margin: 5px;
-	}
-	
-	
-/* COMMENTS SECTION, BOTTOM LEFT */
-	
-#profcomments {
-	background-color: #f4f1d1;
-	width: 575px;
-	height: 700px;
-	float: left;
-	border: solid #cde6f6;
-}
-
-#profcomments h1 {
-	width: 575px;
-	text-align: center;
-	background-color: #cde6f6;
-	padding: 15px;
-	height: 30px;
-	}
-
-textarea {
-	width: 500px;
-	height: 50px;
-	padding: 10px;
-	}
-
-form {
-	padding-left: 30px;
-	}
-	
-.commentboxes {
-	padding-left: 10px;
-	margin-top: 50px;
-	margin-bottom: 50px;
-	padding-bottom: 50px;
-	}
-	
-.commentboxes img {
-    float:left;
-    width:70px;
-    height:70px;
-    border:3px solid #ffffff;
-    border-radius:50px
-    }
-
-.comment-content {
-   position:relative;
-   float:left;
-   margin-left:12px;
-   width:425px;
-   padding:20px;
-   border-radius:10px;
-   background-color:#FFFFFF;
-   box-shadow:1px 1px 5px rgba(0,0,0,.2);
-   }
-   
-.replycomment {
-	padding-left: 10px;
-	margin-left: 90px;
-	margin-top: 50px;
-	margin-bottom: 50px;
-	padding-bottom: 50px;
-	}
-	
-.replycomment img {
-    float:left;
-    width:70px;
-    height:70px;
-    border:3px solid #ffffff;
-    border-radius:50px
-    }	
-	
-.replycomment-content {
-   position:relative;
-   float:left;
-   margin-left:12px;
-   width:335px;
-   padding:20px;
-   border-radius:10px;
-   background-color:#FFFFFF;
-   box-shadow:1px 1px 5px rgba(0,0,0,.2);
-   }
-	 
-.point {
-   border-top:10px solid transparent;
-   border-bottom:10px solid transparent;
-   border-right: 12px solid #FFF;
-   position:absolute;
-   left:-10px;
-   top:12px;
-   }
-
-.searchcomments {
-	float: left;
-	position: relative;
-	margin-left: 10px;
-	margin-right: 10px;
-	text-align: center;
-	}
-
-#searchcomments {
-	margin-left: 175px;
-	}
-
-
-/* FRIENDS, FOLLOWERS, COLLABORATORS, BOTTOM RIGHT*/
-	
-#profbottomright {
-	width: 370px;
-	height: 200px;
-	position: relative;
-	}
-	
-#profbottomright h1 {
-	position: relative;
-	margin-top: 50px;
-	margin-left: 20px;
-	text-align: left;
-	padding-bottom: 20px 0px;
-	}
-	
-
-
