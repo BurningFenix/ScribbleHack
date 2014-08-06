@@ -1,9 +1,8 @@
 #from django.shortcuts import render
-from django.views.generic import ListView, FormView
+from django.views.generic import ListView, FormView, DetailView
 from braces.views import LoginRequiredMixin
 from .models import WritingPiece
 from .forms import CreateWritingForm
-
 
 class WritingListView(ListView):
 	model = WritingPiece
@@ -23,3 +22,7 @@ class CreateWritingView(LoginRequiredMixin, FormView):
 			allowed_contrib=form.cleaned_data['allowed_contrib']).save()
 		
 		return super(CreateWritingView, self).form_valid(form)
+
+class WritingDetailView(DetailView):
+	model = WritingPiece
+	template_name = 'writing/view_writing.html'

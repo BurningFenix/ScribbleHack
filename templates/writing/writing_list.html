@@ -5,7 +5,10 @@
 <h2>Works</h2>
 <ul>
 	{% for work in object_list %}
-		<li>{{ work.name }}</li>
+		<li>
+			{{ work.name }}<br />
+			Created: {{ work.creation_date|date:"g:i A, d M y" }}
+		</li>
 	{% endfor %}
 </ul>
 
