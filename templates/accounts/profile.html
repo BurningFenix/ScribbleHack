@@ -2,16 +2,12 @@
 <body>
 <h1> PROFILE PAGE </h1>
 
-{% if user.is_authenticated %}
+{% if object %}
+    <p>{{ object.username }}'s Profile</p>
+    <br/>
+{% elif user.is_authenticated %}
     <p>Welcome, {{ user.username }}. Thanks for logging in.</p>
-    <br \>
-    <h3>Some information we have about you:</h3>
-    <p>Age: {{ user.age }}
-    <br \>
-    Favorite Book: {{ user.favorite_book }}
-    <br \>
-    Favorite Hero: {{ user.favorite_hero }}</p>
-    <br \>
+    <br/>
 {% else %}
     <p>Welcome, new user. Please log in.</p>
 {% endif %}
