@@ -178,6 +178,7 @@ a:active {color:#00A58C;}
 	height: 150px;
 	border: solid 0 #007000;
 	border-bottom: 1px solid #2f2f2f;
+	text-align: center;
 }
 
 footer {
@@ -290,6 +291,7 @@ footer {
 
 #tabs-2 p {
 	margin: 10px 10px;
+	vertical-align: top;
 	}
 
 #tabs-5 p {
@@ -347,3 +349,53 @@ form p {
 #submitbutton {
 	margin-left: 50px;
 	}
+
+input[type=text], textarea {
+	background-color: white;
+    height: 28px;
+    padding-left:10px;
+    width: 300px;
+    box-shadow: 0px 0px 2px  #828181;
+	border-radius:5px;
+	margin-left: 10px;
+	font-size: 16px;
+	}
+
+textarea {
+	resize: none;
+	height: 70px;
+	padding-left: 10px;
+	padding-top: 10px;
+	}
+
+::-webkit-input-placeholder {
+   font-size: 16px;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   font-size: 16px; 
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   font-size: 16px; 
+}
+
+:-ms-input-placeholder {  
+   font-size: 16px;  
+}
+
+input[type=radio] {
+	height: 1em;
+	width: 1em;
+	margin-left: 15px;
+	vertical-align: top;
+	}
+
+input[type=submit]{
+    border: solid 2px white;
+    border-radius:20px;
+	box-shadow: 0px 2px 0px black;
+	padding: 10px 15px 10px 15px;
+	color: white;
+	background-color: black;
+}

@@ -113,6 +113,10 @@ $( "#tabs" ).tabs();
 <div id="banner">
 
 <h1>CHANGE BANNER</h2>
+<form action="figure this out" enctype="multipart/form-data" method="post">
+				<input type="file" name="bannerfile" size="40"><br>
+				<br><input type="submit" value="Update banner">
+			</form>
 
 
 </div><!-- banner ends -->
@@ -133,7 +137,6 @@ $( "#tabs" ).tabs();
 		<li><a href="#tabs-2">Favorites</a></li>
 		<li><a href="#tabs-3">Profile Picture</a></li>
 		<li><a href="#tabs-4">Other Options</a></li>
-		<li><a href="#tabs-5">Stats and Activity</a></li>
 	</ul>
 	<div id="tabs-1">
 	<div class="tabsbox">
@@ -285,15 +288,15 @@ $( "#tabs" ).tabs();
 	</div>
 	<div id="tabs-2">
 		<div class="tabsbox">
-			<h1>FAVORITES</h1>
+			<h1>FAVORITES</h1><br>
 			<form action="" method="get">
-				<p>Books: <input type="textarea" name="books"></p>
-				<p>Artworks: <input type="textarea" name="artworks"></p>
-				<p>Authors: <input type="textarea" name="authors"></p>
-				<p>Artists: <input type="textarea" name="artists"></p>
-				<p>TV/Movies: <input type="textarea" name="tvmovies"></p>
-				<p>Music: <input type="textarea" name="music"></p>
-				<p>Video Games: <input type="textarea" name="videogames"></p>
+				<p>Books: <textarea rows="10" cols="50" placeholder="My favorite books..." name="books"></textarea></p>
+				<p>Artworks: <textarea rows="10" cols="50" placeholder="My favorite artworks..." name="artworks"></textarea></p>
+				<p>Authors: <textarea rows="10" cols="50" placeholder="My favorite authors..." name="authors"></textarea></p>
+				<p>Artists: <textarea rows="10" cols="50" placeholder="My favorite artists..." name="artists"></textarea></p>
+				<p>TV/Movies: <textarea rows="10" cols="50" placeholder="My favorite TV shows and movies..." name="tv/movies"></textarea></p>
+				<p>Music: <textarea rows="10" cols="50" placeholder="My favorite music..." name="music"></textarea></p>
+				<p>Video Games: <textarea rows="10" cols="50" placeholder="My favorite video games..." name="videogames"></textarea></p>
 				<br><input id="submitbutton" type="submit" value="Update Profile">
 			</form>
 		</div>
@@ -303,17 +306,17 @@ $( "#tabs" ).tabs();
 			<h1>PROFILE PICTURE</h1>
 			<form id="ppupload" action="figure this out" enctype="multipart/form-data" method="post">
 				<input type="file" name="datafile" size="40"><br>
-				<input type="submit" value="Submit">
+				<br><input type="submit" value="Submit">
 			</form>
 		</div>
 	</div>
 	<div id="tabs-4">
 		<div class="tabsbox">
 			<h1>OTHER OPTIONS</h1>
-			<form action="" method="get">
-			<p>Enable users to request critiques from you?</p> <input type="radio" name="critiques" value="yes">Yes
-					<input type="radio" name="critiques" value="no">No
-			<br><input type="submit" value="Submit">
+			<form action="" method="get"></br>
+			<p>Enable users to request critiques from you?<input type="radio" name="critiques" value="yes">Yes
+					<input type="radio" name="critiques" value="no">No</p> 
+			<br><input id="submitbutton" type="submit" value="Update Profile">
 			</form>
 		</div>
 	</div>
