@@ -2,9 +2,10 @@ from django.conf.urls import patterns, url
 
 urlpatterns = patterns('apps.accounts.views',
     url(r'^profile/$', 'profile_view', name="accounts_profile"),
-    url(r'^profile/edit', 'edit_profile_view', name="accounts_edit"),
-    url(r'^logout/', 'logout_view', name='logout'),
-    url(r'^register/', 'register_view', name='accounts_register')
+    url(r'^profile/edit$', 'edit_profile_view', name="accounts_edit"),
+    url(r'^profile/(?P<pk>\d+)/$', 'other_profile_view', name='accounts_profile'),
+    url(r'^logout/$', 'logout_view', name='logout'),
+    url(r'^register/$', 'register_view', name='accounts_register')
  )
 
 urlpatterns += patterns('',

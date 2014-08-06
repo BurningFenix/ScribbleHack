@@ -4,7 +4,18 @@ from django.db import models
 
 # using AbstractUser as the super class
 class SHUser(AbstractUser):
-	#user = models.OneToOneField(settings.AUTH_USER_MODEL)
 	age = models.IntegerField(null=True)
-	favorite_book = models.CharField(max_length=40, blank=True)
-	favorite_hero = models.CharField(max_length=20, blank=True)
+	about = models.TextField()
+
+class Favorites(models.Model):
+	user = models.ManyToManyField(SHUser)
+	# for now these are just text fields.
+	# if we want, can change them to create links and
+	# a seperate table for each interest/favorite item
+	books = models.TextField()
+	authors = models.TextField()
+	artwork = models.TextField()
+	artists = models.TextField()
+	tv_movies = models.TextField()
+	music = models.TextField()
+	video_games = models.TextField()

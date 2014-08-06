@@ -2,7 +2,9 @@ from django.shortcuts import render_to_response, redirect
 from django.template import RequestContext
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.views.generic.detail import DetailView
 from .forms import EditProfileForm, RegisterForm
+from .models import SHUser
 
 #Profile Page
 # might want to remove this decorator so that
@@ -11,6 +13,10 @@ from .forms import EditProfileForm, RegisterForm
 def profile_view(request):
 	return render_to_response('accounts/profile.html',
 		context_instance=RequestContext(request))
+
+class OtherProfileView(DetailView):
+	model = SHUser
+	template_name = 'accounts/profile.html'
 
 #Edit Profile Pages
 @login_required(login_url='/accounts/login/')
