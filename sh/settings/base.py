@@ -29,6 +29,7 @@ INSTALLED_APPS = (
     'apps.homepage',
     'apps.accounts',
     'apps.universe',
+    'apps.writing',
     'south',
     #'debug_toolbar',
 )

@@ -8,9 +8,6 @@ class World(models.Model):
 	creator = models.ForeignKey(SHUser, related_name='creator')
 	members = models.ManyToManyField(SHUser, related_name='members')
 
-	class Meta:
-		abstract = True
-
 class Work(models.Model):
 	name = models.CharField(max_length=100)
 	world = models.ManyToManyField(World)

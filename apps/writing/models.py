@@ -1,5 +1,5 @@
 from django.db import models
-from apps.universe import World, Work
+from apps.universe.models import World, Work
 
 class Writing(World):
 	pass
