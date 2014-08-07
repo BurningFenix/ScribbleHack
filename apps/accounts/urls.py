@@ -1,10 +1,12 @@
 from django.conf.urls import patterns, url
+from .views import IndexView, LogoutView, OwnProfileView, RegisterView
 
 urlpatterns = patterns('apps.accounts.views',
-    url(r'^profile/$', 'profile_view', name="profile"),
-    url(r'^profile/edit', 'edit_profile_view', name="edit"),
-    url(r'^logout/', 'logout_view', name='logout'),
-    url(r'^register/', 'register_view', name='register')
+	url(r'^$', IndexView.as_view(), name="index"),
+    url(r'^profile/$', OwnProfileView.as_view(), name="profile"),
+    url(r'^profile/edit/$', 'edit_profile_view', name="edit"),
+    url(r'^logout/$', LogoutView.as_view(), name='logout'),
+    url(r'^register/$', RegisterView.as_view(), name='register'),
  )
 
 urlpatterns += patterns('',

@@ -6,8 +6,8 @@ admin.autodiscover()
 handler404 = 'sh.views.custom404'
 
 urlpatterns = patterns('',
-    url(r'^$', IndexView.as_view()),
-    url(r'^art$', ArtBrowseView.as_view()),
+    url(r'^$', IndexView.as_view(), name='index'),
+    url(r'^art$', ArtBrowseView.as_view(), name='art'),
     url(r'^accounts/', include('apps.accounts.urls', namespace='accounts')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'universe/', include('apps.universe.urls', namespace='universe')),
