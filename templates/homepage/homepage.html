@@ -4,7 +4,6 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>ScribbleHack</title>
     <link href="../../static/homepagecss.css" rel="stylesheet" type="text/css" />
-	<link href="../../static/coin-slider-styles.css" rel="stylesheet" type="text/css" />
     
 	<script src="../../static/js/jquery.js"></script>
 	<script src="../../static/js/jquery-ui.min.js"></script>
@@ -14,24 +13,47 @@
     $(document).ready(function () {
 		$('.fakecropartsm').fakecrop({wrapperWidth: 80, wrapperHeight: 80});
 		$('.fakecropartlg').fakecrop({wrapperWidth: 170, wrapperHeight: 170});
+		$('.fakecropartnews').fakecrop({wrapperWidth: 120, wrapperHeight: 120});
     });
 </script>
-
-	<script src="../../static/js/coin-slider.min.js" type="text/javascript"></script>
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('#slider').coinslider({width: 565, height: 300, effect: 'straight'});
-    });	
-</script>
- 
-	<!--<script src="../../static/js/homepagejs.js" type="text/javascript"></script>
-
-	<script src="../../static/js/sss.min.js"></script>
-	<script>
-		jQuery(function($) {
-		$('.slider').sss();
+	
+	<script src="../../static/js/jssor.slider.mini.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function () {
+		var _SlideshowTransitions = [
+            //Fade
+            { $Duration: 1400, $Opacity: 2 }
+            ];
+		
+        var options = {
+			$AutoPlay: true,
+			$SlideDuration: 800,
+			
+			$SlideshowOptions: {                               
+                    $Class: $JssorSlideshowRunner$,                
+                    $Transitions: _SlideshowTransitions,           
+                    $TransitionsOrder: 1,                           
+                    $ShowLink: true                                    
+                },
+					
+				$BulletNavigatorOptions: {                                
+                    $Class: $JssorBulletNavigator$,                       
+                    $ChanceToShow: 2,                               
+                    $AutoCenter: 1,                                                                     
+                    $Orientation: 1                                 
+                },
+									
+			$ArrowNavigatorOptions: {                       
+                    $Class: $JssorArrowNavigator$,              
+                    $ChanceToShow: 2,                               
+                    $AutoCenter: 2,                                
+                    $Steps: 1                                    
+                }
+		};
+        
+		var jssor_slider1 = new $JssorSlider$('slider1_container', options);
 		});
-	</script>-->
+</script>
 
 </head>
 
@@ -77,7 +99,7 @@
 
 <form id="tfnewsearch" method="get" action="#">
 		       <input type="submit" class="tfbutton" src="../../static/images/searchicon.png" img />
-		       <input type="text" value=" Search for stories, art or users" class="tftextinput" name="q" size="25" maxlength="120" onfocus="inputFocus(this)" onblur="inputBlur(this)">
+		       <input type="text" placeholder=" Search for stories, art or users" class="tftextinput" name="q" size="25" maxlength="120" onfocus="inputFocus(this)" onblur="inputBlur(this)">
 		</form>
 
 
@@ -91,7 +113,7 @@
 
 <div id="banner">
 
-<img id="octo" src="../../static/images/octobanner.jpg" />
+<img id="octo" src="../../static/images/octohomebanner.jpg" />
 
 </div><!-- banner ends -->
 
@@ -102,74 +124,124 @@
 <div class="topsection">
 <div class="contentleft clearfix">
 
-<div id="slider">
-    <a href="#" target="blank">
-        <img src="../../static/images/testimage6.jpg" >
-        <span>
-            Description for img01
+<!-- Jssor Slider Begin -->
+    <!-- You can move inline styles to css file or css block. -->
+    <div id="slider1_container" style="position: relative; width: 565px;
+        height: 330px; top: 10px; overflow: hidden;">
+
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 565px; height: 330px;
+            overflow: hidden; border-radius: 10px;">
+            <div>
+               <img u=image src="../../static/images/yukoart4.jpg" />
+            </div>
+            <div>
+               <img u=image src="../../static/images/kaeart1.jpg" />
+            </div>
+            <div>
+               <img u=image src="../../static/images/yukoart2.jpg" />
+            </div>
+            <div>
+               <img u=image src="../../static/images/pencils.jpg" />
+            </div>
+            <div>
+               <img u=image src="../../static/images/yukoart3.jpg" />
+            </div>
+        </div>   
+        <!-- Bullet Navigator Skin Begin -->
+        <style>
+            /* jssor slider bullet navigator skin 10 css */
+            /*
+            .jssorb10 div           (normal)
+            .jssorb10 div:hover     (normal mouseover)
+            .jssorb10 .av           (active)
+            .jssorb10 .av:hover     (active mouseover)
+            .jssorb10 .dn           (mousedown)
+            */
+            .jssorb10 div, .jssorb10 div:hover, .jssorb10 .av
+            {
+                background: url(../../static/images/b10.png) no-repeat;
+                overflow:hidden;
+                cursor: pointer;
+            }
+            .jssorb10 div { background-position: -10px -10px; }
+            .jssorb10 div:hover, .jssorb10 .av:hover { background-position: -40px -10px; }
+            .jssorb10 .av { background-position: -70px -10px; }
+            .jssorb10 .dn, .jssorb10 .dn:hover { background-position: -100px -10px; }
+        </style>
+        <!-- bullet navigator container -->
+        <div u="navigator" class="jssorb10" style="position: absolute; bottom: 16px;">
+            <!-- bullet navigator item prototype -->
+            <div u="prototype" style="POSITION: absolute; WIDTH: 20px; HEIGHT: 20px;"></div>
+        </div>
+        <!-- Bullet Navigator Skin End -->
+        
+        <!-- Arrow Navigator Skin Begin -->
+        <style>
+            /* jssor slider arrow navigator skin 14 css */
+            /*
+            .jssora14l              (normal)
+            .jssora14r              (normal)
+            .jssora14l:hover        (normal mouseover)
+            .jssora14r:hover        (normal mouseover)
+            .jssora14ldn            (mousedown)
+            .jssora14rdn            (mousedown)
+            */
+            .jssora14l, .jssora14r, .jssora14ldn, .jssora14rdn
+            {
+            	position: absolute;
+            	cursor: pointer;
+            	display: block;
+                background: url(../../static/images/a14.png) no-repeat;
+                overflow:hidden;
+            }
+            .jssora14l { background-position: -15px -35px; }
+            .jssora14r { background-position: -75px -35px; }
+            .jssora14l:hover { background-position: -135px -35px; }
+            .jssora14r:hover { background-position: -195px -35px; }
+            .jssora14ldn { background-position: -255px -35px; }
+            .jssora14rdn { background-position: -315px -35px; }
+        </style>
+        <!-- Arrow Left -->
+        <span u="arrowleft" class="jssora14l" style="width: 30px; height: 50px; top: 123px; left: 0px;">
         </span>
-    </a>
-    <a href="#" target="blank">
-        <img src="../../static/images/mermaid_1.jpg" >
-        <span>
-            Description for img02
+        <!-- Arrow Right -->
+        <span u="arrowright" class="jssora14r" style="width: 30px; height: 50px; top: 123px; right: 0px">
         </span>
-    </a>
-    <a href="#" target="blank">
-        <img src="../../static/images/testimage3.jpg" >
-        <span>
-            Description for img03
-        </span>
-    </a>
-</div>
+        <!-- Arrow Navigator Skin End -->
+    </div>
 
 <!-- slider ends -->
 
 <div id="hpgallery">
-<span>Popular in Art</span>
-	<div class="tb_right">
-		<a href="http://scribblehack.com/kaeyamane/newlayouts/static/images/narwhal.png">
-    		<img class="fakecropartsm" src="../../static/images/narwhal.png">
-  		</a>
-</div>
-	<div class="tb_right">
-	<img class="fakecropartsm" src="../../static/images/testimage3.jpg">
-</div>
-	<div class="tb_right">
-	<img class="fakecropartsm" src="../../static/images/testimage6.jpg">
-</div>
-	<div class="tb_right">
-	<img class="fakecropartsm" src="../../static/images/heart.png">
-</div>
-	<div class="large_tb_left">
-	<img class="fakecropartlg" src="../../static/images/mermaid_1.jpg">
-</div>
-	<div class="tb_right">
-	<img class="fakecropartsm" src="../../static/images/profilepic.jpg">
-</div>
-	<div class="tb_right">
-	<img class="fakecropartsm" src="../../static/images/octobanner.jpg">
-</div>
-	<div class="tb_right">3</div>
-	<div class="tb_right">4</div>
-	<div class="tb_left">1</div>
-	<div class="tb_left">2</div>
-	<div class="tb_left">3</div>
-	<div class="tb_left">4</div>
-	<div class="large_tb_right">2 big</div>
-	<div class="tb_left">1</div>
-	<div class="tb_left">2</div>
-	<div class="tb_left">3</div>
-	<div class="tb_left">4</div>
-	<div class="tb_right">1</div>
-	<div class="tb_right">2</div>
-	<div class="tb_left">3</div>
-	<div class="tb_left">4</div>
-	<div class="large_tb_right">3 big</div>
-<div class="tb_left">3</div>
-<div class="tb_left">4</div>
-<div class="tb_rightb">1a</div>
-<div class="tb_rightb">2a</div>
+<h1>Popular in Art</h1>
+	<div class="tb_right"><a href="#"><img class="fakecropartsm" src="../../static/images/mermaid_1.jpg" /></a></div>
+	<div class="tb_right"><a href="#"><img class="fakecropartsm" src="../../static/images/luceroart1.jpg" /></a></div>
+	<div class="tb_right"><a href="#"><img class="fakecropartsm" src="../../static/images/bi.jpg" /></a></div>
+	<div class="tb_right"><a href="#"><img class="fakecropartsm" src="../../static/images/slider.jpg" /></a></div>
+	<div class="large_tb_left"><a href="#"><img class="fakecropartlg" src="../../static/images/yukoart2.jpg" /></a></div>
+	<div class="tb_right"><a href="#"><img class="fakecropartsm" src="../../static/images/yukoart1.jpg" /></a></div>
+	<div class="tb_right"><a href="#"><img class="fakecropartsm" src="../../static/images/octobanner.jpg" /></a></div>
+	<div class="tb_right"><a href="#"><img class="fakecropartsm" src="../../static/images/yukoart3.jpg" /></a></div>
+	<div class="tb_right"><a href="#"><img class="fakecropartsm" src="../../static/images/narwhal.png" /></a></div>
+	<div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/yukoart4.jpg" /></a></div>
+	<div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/yukoart5.jpg" /></a></div>
+	<div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/pencils.jpg" /></a></div>
+	<div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/luceroart1.jpg" /></a></div>
+	<div class="large_tb_right"><a href="#"><img class="fakecropartlg" src="../../static/images/kaeart1.jpg" /></a></div>
+	<div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/narwhal.png" /></a></div>
+	<div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/bi.jpg" /></a></div>
+	<div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/octobanner.jpg" /></a></div>
+	<div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/heart.png" /></a></div>
+	<div class="tb_right"><a href="#"><img class="fakecropartsm" src="../../static/images/yukoart3.jpg" /></a></div>
+	<div class="tb_right"><a href="#"><img class="fakecropartsm" src="../../static/images/yukoart2.jpg" /></a></div>
+	<div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/kaeart1.jpg" /></a></div>
+	<div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/yukoart4.jpg" /></a></div>
+	<div class="large_tb_right"><a href="#"><img class="fakecropartlg" src="../../static/images/yukoart5.jpg" /></a></div>
+	<div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/pencils.jpg" /></a></div>
+	<div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/yukoart1.jpg" /></a></div>
+	<div class="tb_rightb"><a href="#"><img class="fakecropartsm" src="../../static/images/yukoart4.jpg" /></a></div>
+	<div class="tb_rightb"><a href="#"><img class="fakecropartsm" src="../../static/images/mermaid_1.jpg" /></a></div>
 
 </div><!-- gallery ends -->
 
@@ -180,42 +252,37 @@
 <div id="bookshelf">
 <div id=bookcasetitle>Popular in Writing</div>
 	<div class="shelf">
-		<div class="book">book1</div>
-		<div class="book">book2</div>
-		<div class="book">book3</div>
-		<div class="shelfbg"></div>
+		<div class="book"><img src="../../static/images/covernovelsm.jpg" /></div>
+		<div class="book"><img src="../../static/images/coverpoetrysm.jpg" /></div>
+		<div class="book"><img src="../../static/images/covershstorysm.jpg" /></div>
 	</div>
-	<div class="shelftitle">BEST COVER ART</div>
+	<div class="shelftitle"><a href="#" class="shelftitle">BEST COVER ART</a></div>
 	<div class="shelf">
-		<div class="book">book1</div>
-		<div class="book">book2</div>
-		<div class="book">book3</div>
-		<div class="shelfbg"></div>
+		<div class="book"><img src="../../static/images/coverart1sm.jpg" /></div>
+		<div class="book"><img src="../../static/images/coverart2sm.jpg" /></div>
+		<div class="book"><img src="../../static/images/coverart3sm.jpg" /></div>
 	</div>
-	<div class="shelftitle">BEST COVER ART 2</div>
+	<div class="shelftitle"><a href="#" class="shelftitle">BEST COVER ART</a></div>
 	<div class="shelf">
-		<div class="book">book1</div>
-		<div class="book">book2</div>
-		<div class="book">book3</div>
-		<div class="shelfbg"></div>
+		<div class="book"><img src="../../static/images/covernovelsm.jpg" /></div>
+		<div class="book"><img src="../../static/images/coverpoetrysm.jpg" /></div>
+		<div class="book"><img src="../../static/images/covershstorysm.jpg" /></div>
 	</div>
-	<div class="shelftitle">POPULAR NOVELS</div>
+	<div class="shelftitle"><a href="#" class="shelftitle">POPULAR NOVELS</a></div>
 	<div class="shelf">
-		<div class="book">book1</div>
-		<div class="book">book2</div>
-		<div class="book">book3</div>
-		<div class="shelfbg"></div>
+		<div class="book"><img src="../../static/images/coverart1sm.jpg" /></div>
+		<div class="book"><img src="../../static/images/coverart2sm.jpg" /></div>
+		<div class="book"><img src="../../static/images/coverart3sm.jpg" /></div>
 	</div>
-	<div class="shelftitle">RECENTLY UPDATED</div>
+	<div class="shelftitle"><a href="#" class="shelftitle">RECENTLY UPDATED</a></div>
 	<div class="shelf">
-		<div class="book">book1</div>
-		<div class="book">book2</div>
-		<div class="book">book3</div>
-		<div class="shelfbg"></div>
+		<div class="book"><img src="../../static/images/covernovelsm.jpg" /></div>
+		<div class="book"><img src="../../static/images/coverpoetrysm.jpg" /></div>
+		<div class="book"><img src="../../static/images/covershstorysm.jpg" /></div>
 	</div>
-	<div class="shelftitle">POPULAR POEMS & STORIES</div>
+	<div class="shelftitle"><a href="#" class="shelftitle">POPULAR POEMS & STORIES</a></div>
 	<div id="bookcase_bg">
-		<img src="../../static/images/bookshelf.jpg"/>
+		<img src="../../static/images/catshelf.png"/>
 	</div>
 </div><!-- bookshelf ends -->
 
@@ -225,35 +292,65 @@
 <div id="bottomsection" class="clearfix">
 
 <div id="hpnews">
+
 <h1>News</h1>
-<ul>
-<li><h2>News article 1</h2>
-	<h3>posted 8/5/14</h3>
-    <p>news blurb</p>
-</li>
-<li><h2>News article 2</h2>
-	<h3>posted 8/5/14</h3>
-    <p>news blurb</p>
-</li>
-<li><h2>News article 3</h2>
-	<h3>posted 8/5/14</h3>
-    <p>news blurb</p>
-</li>
-</ul>
+<div class="newspreview">
+<div class="newsprevblurb">
+<h2>Title of News Article</h2>
+<h3><em>Posted by Author on MM/DD/YY &nbsp; 12:34am</em></h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper non elit sed sodales. Morbi dignissim, justo sit amet hendrerit fermentum. [<a href="#">Read More</a>]</p>
+</div>
+<div><img class="fakecropartnews" src="../../static/images/yukoart1.jpg" /></div>
+</div>
+
+<div class="newspreview">
+<div class="newsprevblurb">
+<h2>Title of News Article</h2>
+<h3><em>Posted by Author on MM/DD/YY &nbsp; 12:34am</em></h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper non elit sed sodales. Morbi dignissim, justo sit amet hendrerit fermentum. [<a href="#">Read More</a>]</p>
+</div>
+<div><img class="fakecropartnews" src="../../static/images/yukoart1.jpg" /></div>
+</div>
+
+<div class="newspreview">
+<div class="newsprevblurb">
+<h2>Title of News Article</h2>
+<h3><em>Posted by Author on MM/DD/YY &nbsp; 12:34am</em></h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper non elit sed sodales. Morbi dignissim, justo sit amet hendrerit fermentum. [<a href="#">Read More</a>]</p>
+</div>
+<div><img class="fakecropartnews" src="../../static/images/yukoart1.jpg" /></div>
+</div>
+
 </div>
 
 <div id="hppolls">
 <h1>Polls</h1>
-<label class="label">What is your favorite color?</label><br>
-<form action="">
-	<input type="radio" name="interest" value="not">blue<br>
-	<input type="radio" name="interest" value="slightly">green<br>
-	<input type="radio" name="interest" value="moderately">red<br>
-	<input type="radio" name="interest" value="very">orange<br>
-	<input type="radio" name="interest" value="extremely">asldjkf<br>
-	</form>
-<input type="submit" value="Submit!" />
+<div id="daypoll">
+<div class="speech-bubble">
+  <div class="arrow bottom right"></div>
+  What is your favorite form of marine transportation?
 </div>
+<div id="hppollform">
+<form action="">
+	<input type="radio" class="pollchoice" name="interest" value="taxi">Whale Taxi<br>
+	<input type="radio" class="pollchoice" name="interest" value="horse">Seahorse<br>
+	<input type="radio" class="pollchoice" name="interest" value="bus">Catfish Bus<br>
+	<input type="radio" class="pollchoice" name="interest" value="train">Torpedo Train<br>
+	<input type="radio" class="pollchoice" name="interest" value="scuba">Scuba Tuba<br>
+	</form>
+<input type="submit" class="button" value="Submit!" />
+</div>
+<div id="pollcreature"><img src="../../static/images/narwhal.png" /></div>
+</div>
+<div id="moredaypolls">
+<div class="pollquest"><a href="#">What do you think of walruses who...</a></div>
+<div class="pollquest"><a href="#">Can dolphins and sharks be best friends?</a></div>
+<div class="pollquest"><a href="#">If you were invited to King Neptune's...</a></div>
+<div class="pollquest"><a href="#">Other Polls...</a></div>
+</div>
+</div>
+
+
 
 </div><!-- bottomsection ends -->
 
@@ -261,16 +358,6 @@
 
 <div id="footer">
 
-<div id="quicklinks">
-<ul>
-<li><a href="registration.html">Registration</a></li>
-<li><a href="emailverify.html">Email Verification</a></li>
-<li><a href="congrats.html">Congrats!</a></li>
-<li><a href="login.html">Sign in</a></li>
-<li><a href="forgotpwd.html">Forgot Password</a></li>
-<li><a href="homepage_login.html">Logged In</a></li>
-</ul>
-</div><!-- quicklinks ends -->
 
 </div><!-- footer ends -->
 
