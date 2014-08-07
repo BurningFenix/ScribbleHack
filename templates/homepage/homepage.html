@@ -13,6 +13,7 @@
     $(document).ready(function () {
 		$('.fakecropartsm').fakecrop({wrapperWidth: 80, wrapperHeight: 80});
 		$('.fakecropartlg').fakecrop({wrapperWidth: 170, wrapperHeight: 170});
+		$('.fakecropartnews').fakecrop({wrapperWidth: 120, wrapperHeight: 120});
     });
 </script>
 	
@@ -132,19 +133,19 @@
         <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 565px; height: 330px;
             overflow: hidden; border-radius: 10px;">
             <div>
-                <img u=image src="../../static/images/yukoart4.jpg" />
+                <a href="#" target="_blank"><img u=image src="../../static/images/yukoart4.jpg" /></a>
             </div>
             <div>
-                <img u=image src="../../static/images/kaeart1.jpg" />
+                <a href="#" target="_blank"><img u=image src="../../static/images/kaeart1.jpg" /></a>
             </div>
             <div>
-                <img u=image src="../../static/images/yukoart2.jpg" />
+                <a href="#" target="_blank"><img u=image src="../../static/images/yukoart2.jpg" /></a>
             </div>
             <div>
-                <img u=image src="../../static/images/pencils.jpg" />
+                <a href="#" target="_blank"><img u=image src="../../static/images/pencils.jpg" /></a>
             </div>
             <div>
-                <img u=image src="../../static/images/yukoart3.jpg" />
+                <a href="#" target="_blank"><img u=image src="../../static/images/yukoart3.jpg" /></a>
             </div>
         </div>   
         <!-- Bullet Navigator Skin Begin -->
@@ -255,33 +256,33 @@
 		<div class="book"><img src="../../static/images/coverpoetrysm.jpg" /></div>
 		<div class="book"><img src="../../static/images/covershstorysm.jpg" /></div>
 	</div>
-	<div class="shelftitle">BEST COVER ART</div>
+	<div class="shelftitle"><a href="#" class="shelftitle">BEST COVER ART</a></div>
 	<div class="shelf">
 		<div class="book"><img src="../../static/images/coverart1sm.jpg" /></div>
 		<div class="book"><img src="../../static/images/coverart2sm.jpg" /></div>
 		<div class="book"><img src="../../static/images/coverart3sm.jpg" /></div>
 	</div>
-	<div class="shelftitle">BEST COVER ART 2</div>
+	<div class="shelftitle"><a href="#" class="shelftitle">BEST COVER ART</a></div>
 	<div class="shelf">
 		<div class="book"><img src="../../static/images/covernovelsm.jpg" /></div>
 		<div class="book"><img src="../../static/images/coverpoetrysm.jpg" /></div>
 		<div class="book"><img src="../../static/images/covershstorysm.jpg" /></div>
 	</div>
-	<div class="shelftitle">POPULAR NOVELS</div>
+	<div class="shelftitle"><a href="#" class="shelftitle">POPULAR NOVELS</a></div>
 	<div class="shelf">
 		<div class="book"><img src="../../static/images/coverart1sm.jpg" /></div>
 		<div class="book"><img src="../../static/images/coverart2sm.jpg" /></div>
 		<div class="book"><img src="../../static/images/coverart3sm.jpg" /></div>
 	</div>
-	<div class="shelftitle">RECENTLY UPDATED</div>
+	<div class="shelftitle"><a href="#" class="shelftitle">RECENTLY UPDATED</a></div>
 	<div class="shelf">
 		<div class="book"><img src="../../static/images/covernovelsm.jpg" /></div>
 		<div class="book"><img src="../../static/images/coverpoetrysm.jpg" /></div>
 		<div class="book"><img src="../../static/images/covershstorysm.jpg" /></div>
 	</div>
-	<div class="shelftitle">POPULAR POEMS & STORIES</div>
+	<div class="shelftitle"><a href="#" class="shelftitle">POPULAR POEMS & STORIES</a></div>
 	<div id="bookcase_bg">
-		<img src="../../static/images/bookshelf.jpg"/>
+		<img src="../../static/images/catshelf.png"/>
 	</div>
 </div><!-- bookshelf ends -->
 
@@ -291,21 +292,35 @@
 <div id="bottomsection" class="clearfix">
 
 <div id="hpnews">
+
 <h1>News</h1>
-<ul>
-<li><h2>News article 1</h2>
-	<h3>posted 8/5/14</h3>
-    <p>news blurb</p>
-</li>
-<li><h2>News article 2</h2>
-	<h3>posted 8/5/14</h3>
-    <p>news blurb</p>
-</li>
-<li><h2>News article 3</h2>
-	<h3>posted 8/5/14</h3>
-    <p>news blurb</p>
-</li>
-</ul>
+<div class="newspreview">
+<div class="newsprevblurb">
+<h2>Title of News Article</h2>
+<h3><em>Posted by Author on MM/DD/YY &nbsp; 12:34am</em></h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper non elit sed sodales. Morbi dignissim, justo sit amet hendrerit fermentum. [<a href="#">Read More</a>]</p>
+</div>
+<div><img class="fakecropartnews" src="../../static/images/yukoart1.jpg" /></div>
+</div>
+
+<div class="newspreview">
+<div class="newsprevblurb">
+<h2>Title of News Article</h2>
+<h3><em>Posted by Author on MM/DD/YY &nbsp; 12:34am</em></h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper non elit sed sodales. Morbi dignissim, justo sit amet hendrerit fermentum. [<a href="#">Read More</a>]</p>
+</div>
+<div><img class="fakecropartnews" src="../../static/images/yukoart1.jpg" /></div>
+</div>
+
+<div class="newspreview">
+<div class="newsprevblurb">
+<h2>Title of News Article</h2>
+<h3><em>Posted by Author on MM/DD/YY &nbsp; 12:34am</em></h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper non elit sed sodales. Morbi dignissim, justo sit amet hendrerit fermentum. [<a href="#">Read More</a>]</p>
+</div>
+<div><img class="fakecropartnews" src="../../static/images/yukoart1.jpg" /></div>
+</div>
+
 </div>
 
 <div id="hppolls">
