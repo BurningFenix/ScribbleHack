@@ -1,5 +1,5 @@
 body {
-	background: linear-gradient(#88d6f2, #226d8a);
+	background: linear-gradient(#88d6f2, #226d8a) 100%;
 	padding: 0;
 	margin: 0;
 	font-family: UniversLTStd,arial,sans-serif;
@@ -180,11 +180,22 @@ a:active {color:#00A58C;}
 	border-bottom: 1px solid #2f2f2f;
 }
 
-footer {
-	position: absolute;
-	height: 200px;
-	background-color: #2f2f2f;
+#footer {
+	color: #f0fbfb;
+	height: 100px;
+	width: 950px;
+	padding: 90px 25px 25px 25px;
+	background-color: #213d42;
+	
 }
+
+#footer a {
+	color: #f9f6ca;
+	font-size: 20px;
+	display: inline;
+	margin: 15px 45px 15px 45px;
+	text-decoration: none;
+	}
 
 #quicklinks ul {
 	list-style-type: none;
