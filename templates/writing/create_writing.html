@@ -10,7 +10,7 @@
 {% endif %}
 
 <h1>Create Writing</h1>
-<form action="{% url 'create_writing' %}" method="post">
+<form action="{% url 'writing:create' %}" method="post">
 {% csrf_token %}
 <p>Title: <input name="name" type="text" />
 <br />

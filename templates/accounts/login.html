@@ -8,8 +8,8 @@
 <p>Your username and password didn't match. Please try again.</p>
 {% endif %}
 
-<a href="{% url "accounts_profile" %}">Accounts Profile</a>
-<form method="post" action="{% url 'django.contrib.auth.views.login' %}">
+<a href="{% url 'accounts:profile' %}">Accounts Profile</a>
+<form method="post" action="{% url 'accounts:login' %}">
 {% csrf_token %}
 <table>
 <tr>

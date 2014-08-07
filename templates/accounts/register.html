@@ -6,12 +6,12 @@
 <p>Invalid input. Please try again.</p>
 {% endif %}
 
-<form action="{% url 'accounts_register' %}" method="post">
+<form action="{% url 'accounts:register' %}" method="post">
 {% csrf_token %}
 {{ form.as_p }}
 <input type="submit" value="Submit" />
 </form>
 
-<a href="{% url 'homepage_index' %}">Homepage</a>
+<a href="{% url 'index' %}">Homepage</a>
 </body>
 </html>

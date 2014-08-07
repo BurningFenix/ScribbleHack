@@ -55,7 +55,7 @@ def logout_view(request):
 
 	# probably should add something to show that
 	# the user was logged out successfully
-	return redirect('homepage_index')
+	return redirect('/')
 
 def register_view(request):
 	if request.method == 'POST':
