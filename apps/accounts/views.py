@@ -65,9 +65,13 @@ class LogoutView(RedirectView):
 		return super(LogoutView, self).get(request, *args, **kwargs)
 
 class RegisterView(FormView):
-	template_name = 'accounts/profile.html'
+	template_name = 'accounts/register.html'
 	form_class = RegisterForm
-	success_url = 'accounts/profile.html'
+	success_url = 'accounts:profile'
+
+	# def get(self, request, *args, **kwargs):
+	# 	form = RegisterForm()
+	# 	return render_to_response('accounts/register.html', {'form':form})
 
 	def form_valid(self, form):
 		from .models import SHUser
