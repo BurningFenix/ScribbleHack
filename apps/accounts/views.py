@@ -22,40 +22,29 @@ class IndexView(RedirectView):
 class OwnProfileView(LoginRequiredMixin, TemplateView):
 	template_name = 'accounts/profile.html'
 
-#Edit Profile Pages
-@login_required(login_url='/accounts/login/')
-def edit_profile_view(request):
-	if request.method == 'POST':
-		form = EditProfileForm(request.POST)
-		if form.is_valid():
-			changedUser = False
-			# for everything that is valid (and not None/'')
-			# itering through keys because the keys are also the
-			# names of the attributes in the request.user instance
-			for key in form.cleaned_data.keys():
-				# not sure if should create var to store form.cleaned_data[key]
+class EditProfileView(LoginRequiredMixin, FormView):
+	template_name = 'accounts/edit_profile.html'
+	form_class = EditProfileForm
+	success_url = 'accounts:profile'
+
+	def form_valid(self, form):
+		changedUser = False
+		# for everything that is valid (and not None/'')
+		# itering through keys because the keys are also the
+		# names of the attributes in the request.user instance
+		for key in form.cleaned_data.keys():
+			# not sure if should create var to store form.cleaned_data[key]
 				
-				# if not the same as stored value, set new value
-				if form.cleaned_data[key] != getattr(request.user, key):
-					setattr(request.user, key, form.cleaned_data[key])
-					changedUser = True
+			# if not the same as stored value, set new value
+			if form.cleaned_data[key] != getattr(self.request.user, key):
+				setattr(self.request.user, key, form.cleaned_data[key])
+				changedUser = True
 
-			# only need to access the database if something was changed
-			if changedUser == True:
-				request.user.save()
+		# only need to access the database if something was changed
+		if changedUser == True:
+			self.request.user.save()
 
-			return render_to_response('accounts/profile.html',
-				context_instance=RequestContext(request))
-	else:
-		# passing the dictionary will trigger validation of the form
-		# use js or whatever if you want to provide hints
-		form = EditProfileForm({'age':request.user.age,
-			'favorite_book':request.user.favorite_book,
-			'favorite_hero':request.user.favorite_hero}
-		)
-
-	return render_to_response('accounts/edit_profile.html', {'form': form},
-		context_instance=RequestContext(request))
+		return redirect(self.success_url)
 
 class LogoutView(RedirectView):
 	url = '/'
@@ -68,10 +57,6 @@ class RegisterView(FormView):
 	template_name = 'accounts/register.html'
 	form_class = RegisterForm
 	success_url = 'accounts:profile'
-
-	# def get(self, request, *args, **kwargs):
-	# 	form = RegisterForm()
-	# 	return render_to_response('accounts/register.html', {'form':form})
 
 	def form_valid(self, form):
 		from .models import SHUser
