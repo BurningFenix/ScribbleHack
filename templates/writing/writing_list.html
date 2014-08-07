@@ -6,7 +6,7 @@
 <ul>
 	{% for work in object_list %}
 		<li>
-			<a href="{% url 'writing_detail' work.pk %}">{{ work.name }}</a><br />
+			<a href="{% url 'writing:detail' work.pk %}">{{ work.name }}</a><br />
 			Created: {{ work.creation_date|date:"g:i A, d M y" }}
 		</li>
 	{% endfor %}

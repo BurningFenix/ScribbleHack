@@ -6,12 +6,16 @@
 <p>Invalid input. Please try again.</p>
 {% endif %}
 
-<form action="{% url 'accounts_edit' %}" method="post">
+<form action="{% url 'accounts:edit' %}" method="post">
 {% csrf_token %}
-{{ form.as_p }}
+<p>
+	Age: <input name='age' type="text" /><br/>
+	Favorite Book: <input name='favorite_book' type="text" /><br/>
+	Favorite Hero: <input name='favorite_hero' type="text" /><br/>
+</p>
 <input type="submit" value="Submit" />
 </form>
 
-<a href="{% url 'logout' %}">Logout</a>
+<a href="{% url 'accounts:logout' %}">Logout</a>
 </body>
 </html>

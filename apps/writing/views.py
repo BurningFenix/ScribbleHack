@@ -1,4 +1,3 @@
-#from django.shortcuts import render
 from django.views.generic import ListView, FormView, DetailView
 from braces.views import LoginRequiredMixin
 from .models import WritingPiece

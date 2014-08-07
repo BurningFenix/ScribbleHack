@@ -1,17 +1,18 @@
 from django.conf.urls import patterns, url
-from .views import OtherProfileView
+from .views import IndexView, LogoutView, OwnProfileView,\
+	RegisterView, EditProfileView
 
 urlpatterns = patterns('apps.accounts.views',
-    url(r'^profile/$', 'profile_view', name="accounts_profile"),
-    url(r'^profile/edit$', 'edit_profile_view', name="accounts_edit"),
-    url(r'^profile/(?P<pk>\d+)/$', OtherProfileView.as_view(), name='accounts_profile'),
-    url(r'^logout/$', 'logout_view', name='logout'),
-    url(r'^register/$', 'register_view', name='accounts_register')
+	url(r'^$', IndexView.as_view(), name="index"),
+    url(r'^profile/$', OwnProfileView.as_view(), name="profile"),
+    url(r'^profile/edit/$', EditProfileView.as_view(), name="edit"),
+    url(r'^logout/$', LogoutView.as_view(), name='logout'),
+    url(r'^register/$', RegisterView.as_view(), name='register'),
  )
 
 urlpatterns += patterns('',
 	# so this follows the following format:
 	# (regular expression, Python callback function [, optional_dictionary [, optional_name]])
 	(r'^login/$', 'django.contrib.auth.views.login',
-		{'template_name': 'accounts/login.html'},'accounts_login'),
+		{'template_name': 'accounts/login.html'},'login'),
 )
