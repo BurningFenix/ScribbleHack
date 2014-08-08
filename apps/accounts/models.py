@@ -6,16 +6,14 @@ from django.db import models
 class SHUser(AbstractUser):
 	age = models.IntegerField(null=True)
 	about = models.TextField()
-
-class Favorites(models.Model):
-	user = models.ManyToManyField(SHUser)
+	
 	# for now these are just text fields.
 	# if we want, can change them to create links and
 	# a seperate table for each interest/favorite item
-	books = models.TextField()
-	authors = models.TextField()
-	artwork = models.TextField()
-	artists = models.TextField()
-	tv_movies = models.TextField()
-	music = models.TextField()
-	video_games = models.TextField()
+	books = models.TextField(null=True, blank=True)
+	authors = models.TextField(null=True, blank=True)
+	artwork = models.TextField(null=True, blank=True)
+	artists = models.TextField(null=True, blank=True)
+	tv_movies = models.TextField(null=True, blank=True)
+	music = models.TextField(null=True, blank=True)
+	video_games = models.TextField(null=True, blank=True)
