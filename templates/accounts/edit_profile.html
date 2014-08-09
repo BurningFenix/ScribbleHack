@@ -1,7 +1,19 @@
-<html>
-<body>
-<h1> EDIT PROFILE </h1>
+{% extends 'base.html' %}
+{% load static %}
 
+{% block sylesheet %}
+{% static 'editprofile.css' %}
+{% endblock %}
+
+{% block head_extra %}
+<script>
+$(function() {
+$( "#tabs" ).tabs();
+});
+</script>
+{% endblock %}
+
+{% block contentleft %}
 {% if form.errors %}
 <p>Invalid input. Please try again.</p>
 {% endif %}

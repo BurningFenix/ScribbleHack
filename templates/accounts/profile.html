@@ -1,19 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block sylesheet %}
 {% static 'profile.css' %}
 {% endblock %}
-{# still pretty new to this. #}
 
-{% if object %}
-    <p>{{ object.username }}'s Profile</p>
-    <br/>
-{% elif user.is_authenticated %}
-    <p>Welcome, {{ user.username }}. Thanks for logging in.</p>
-    <br/>
-{% else %}
-    <p>Welcome, new user. Please log in.</p>
-{% endif %}
+{# still pretty new to this. #}
 
 {% block contentleft %}
 <div id="tabs">
