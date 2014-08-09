@@ -10,3 +10,10 @@ l2:
 	what would be the ideal model like if we want people to be creative as they want without being so restrictive?
 
 read on merges/ git diff
+
+JC Answers:
+
+I'm not entirely so sure of what you are asking, but I am planning to setup a meeting between us so we answer all of 
+these questions. Also my job will be to include the html/css/jquery stuff working properly with ur scripts and
+teach the designers of how they can modify/add things themselves in the future and also how to install new apps with pip 
+since everytime we have something new then they also need to be aware of it.
