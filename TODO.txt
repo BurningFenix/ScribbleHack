@@ -8,3 +8,5 @@ l2:
 	is it possible for people to create their own databases in this?
 	as in create their own apps for their own idea?
 	what would be the ideal model like if we want people to be creative as they want without being so restrictive?
+
+read on merges/ git diff
