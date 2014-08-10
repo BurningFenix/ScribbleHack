@@ -374,6 +374,12 @@ html[xmlns] .clearfix {
 	left: 0px;
 }
 
+#home .contentright #bookshelf #bookcase_bg img {
+	position: relative;
+	top: 60px;
+	left: 16px;
+}
+
 #home .contentright .shelf {
 	width: 324px;
 	height: 118px;
