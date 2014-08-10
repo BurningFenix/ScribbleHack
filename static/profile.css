@@ -43,10 +43,14 @@ h1 {
 	-moz-box-shadow: 0 0 15px #213d42;
 }
 
-a:link {color:#ed7d3f;}
+a:link {color:#eb7925;}
 a:visited {color:#24555f;}
-a:hover {color:#ffb48b;}
+a:hover {color:#ec904d;}
 a:active {color:#00A58C;}
+
+a {
+	text-decoration: none;
+	}
 
 #header {
 	height: 260px;
@@ -405,9 +409,8 @@ footer {
 	}
 
 h2 {
-	color: #abdfdb;
 	text-align: center;
-	background-color: #213d42;
+	background-color: #f0fbfb;
 	padding: 5px;
 	}
 	
@@ -587,7 +590,7 @@ figure {
 	}
 
 figcaption {
-	color: #abdfdb;
+	font-size: 12px;
 	text-align: center;
 	margin: 5px;
 	}
