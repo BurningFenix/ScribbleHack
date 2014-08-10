@@ -1,5 +1,6 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from django.forms import ModelForm
 #from django.utils.translation import ugettext_lazy as _
 
 # using AbstractUser as the super class
@@ -18,4 +19,10 @@ class SHUser(AbstractUser):
 	artists = models.TextField(blank=True)
 	tv_movies = models.TextField(blank=True)
 	music = models.TextField(blank=True)
-	video_games = models.TextField(blank=True)
+	videogames = models.TextField(blank=True)
+
+class SHUserForm(ModelForm):
+	class Meta:
+		model = SHUser
+		fields = ['age', 'about', 'books', 'authors', 'artworks',
+			'artists', 'tv_movies', 'music', 'videogames']
