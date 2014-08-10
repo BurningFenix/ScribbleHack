@@ -295,6 +295,7 @@ footer {
 	position: relative;
 	background-color: #213d42;
 	margin-top: 120px;
+	border-radius: 10px;
 }
 
 #profile #profstatistics ul {
@@ -366,12 +367,12 @@ footer {
 }
 
 #interests {
-	height: 810px;
+	height: 835px;
 	width: 260px;
 	background-color: #c8f2e9;
 	bottom: 20px;
 	margin-bottom: 15px;
-	box-shadow:1px 0px 5px rgba(5,52,44,.6) inset;
+	border-radius: 10px;
 }
 
 #interests h1 {
@@ -392,11 +393,11 @@ footer {
 	}
 	
 #badgeribbon {
-	height: 810px;
+	height: 825px;
 	width: 80px;
-	background-color: #f0fbfb;
+	background-color: #099bb6;
 	padding: 5px;
-	box-shadow:0px 0px 5px rgba(5,52,44,.7) inset;
+	border-radius: 10px;
 }
 
 #badgeribbon img {
@@ -428,14 +429,14 @@ h2 {
 #tabs-1, #tabs-2, #tabs-3, #tabs-4, #tabs-5{
 	height: 350px;
 	width: 570px;
-	box-shadow:1px 0px 5px 1px rgba(5,52,44,.6) inset;
 	margin-right: 0px;
 	background-color: #c8f2e9;
+	border-radius: 10px;
 	}
 
 .tabsbox {
 	background-color: #f0fbfb;
-	height: 290px;
+	height: 300px;
 	width: 530px;
 	}
 
@@ -450,12 +451,11 @@ h2 {
 .tabsbox #statustag {
 	padding: 0px 30px 0px 30px;
 	text-indent: 10px;
-	margin-top: 10px;
+	margin-top: 5px;
 	}
 
 #tabs h1 {
-	font-size: 20px;
-	padding: 12px 15px 12px 30px;
+	padding: 14px 15px 10px 30px;
 	}
 	
 #tabs-1 a {
@@ -573,7 +573,8 @@ td {
 	height: 400px;
 	float: left;
 	background-color: #c8f2e9;
-	box-shadow:1px 0px 5px 1px rgba(5,52,44,.6) inset;
+	margin-top: 20px;
+	border-radius: 10px;
 }
 
 #featuredworks h1 {
@@ -611,7 +612,8 @@ figcaption {
 	width: 570px;
 	height: 700px;
 	float: left;
-	box-shadow:1px 0px 5px 1px rgba(5,52,44,.6) inset;
+	margin-top: 20px;
+	border-radius: 10px;
 }
 
 #profcomments h1 {
@@ -734,6 +736,7 @@ figcaption {
 	width: 360px;
 	height: 200px;
 	float: right;
+	border-radius: 10px;
 	}
 	
 #profbottomright h1 {
