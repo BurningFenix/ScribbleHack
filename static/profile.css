@@ -32,6 +32,24 @@ h1 {
 	font-family: UniversLTStd,arial,sans-serif;
 }
 
+h2 {
+	text-align: left;
+	background-color: #f0fbfb;
+	padding: 5px;
+	font-weight: normal;
+	font-size: 24px;
+	}
+
+h3 {
+	font-size: 12px;
+	font-weight: normal;
+	}
+
+p {
+	font-size: 14px;
+	font-weight: normal;
+	}
+
 #wrapper {
 	background-color: #81d1c7;
 	width: 1000px;
@@ -53,7 +71,8 @@ a {
 	}
 
 #header {
-	height: 260px;
+	height: 200px;
+	margin-bottom: 20px;
 }
 
 #sitenav {
@@ -193,11 +212,21 @@ a {
 	border-bottom: 1px solid #2f2f2f;
 }
 
-footer {
-	position: absolute;
-	height: 200px;
-	background-color: #2f2f2f;
+#footer {
+	color: #f0fbfb;
+	height: 100px;
+	width: 950px;
+	padding: 90px 25px 25px 25px;
+	background-color: #213d42;
 }
+
+#footer a {
+	color: #f9f6ca;
+	font-size: 20px;
+	display: inline;
+	margin: 15px 45px 15px 45px;
+	text-decoration: none;
+	}
 
 #quicklinks ul {
 	list-style-type: none;
@@ -231,7 +260,9 @@ footer {
 	color: #2f2f2f;
 }
 	
-	
+/* For help navigating this CSS, all the stuff at the top comes first (banner, and everything in it), then it goes from left to right. So basically, the tabs box, PORTFOLIO, COMMENTS, FAVORITES, BADGES, FRIENDS & FOLLOWERS, COLLABORATERS. */
+
+
 /* Specifically, Profile Page CSS */
 
 #profile #banner {
@@ -243,18 +274,19 @@ footer {
 
 #profile #profbannerleft {
 	width: 360px;
-	height: 175px;
+	height: 150px;
 	position: absolute;
-	top: 20px;
-	left: 220px;
+	top: 22px;
+	left: 200px;
 }
 
 #profilepic{
-	width: 150px;
-	height: 150px;
+	width: 120px;
+	height: 120px;
+	position: absolute;
 	float: left;
-	margin-left: 40px;
-	margin-top: 25px;
+	left: 40px;
+	top: 13px;
 	border-radius: 75px;
 	-webkit-border-radius: 75px;
 	-moz-border-radius: 75px;
@@ -263,20 +295,19 @@ footer {
 
 #profile #profbigusername {
 	font-size: 38px;
-	margin: 0;
+	margin: 0px 0px 10px 0px;
+	line-height: 40px;
 }
 
 #profile #proffirstlastname {
-	font-size: 19px;
+	font-size: 18px;
 	margin: 0;
+	text-indent: 10px;
 }
 
 #profile #profselftitle {
 	font-size: 15px;
-}
-
-#profile #profonlinestatus {
-	font-size: 13px;
+	text-indent: 10px;
 }
 
 #profile #profbannerright {
@@ -288,13 +319,22 @@ footer {
 	right: 25px;
 }
 
+#profile #profonlinestatus {
+	font-size: 13px;
+	float: right;
+	font-style: italic;
+	position: absolute;
+	right: 10px;
+}
+
 #profile #profstatistics {
 	width: 285px;
 	float: right;
 	height: 50px;
-	position: relative;
+	position: absolute;
 	background-color: #213d42;
-	margin-top: 120px;
+	top: 40px;
+	right: 0px;
 	border-radius: 10px;
 }
 
@@ -343,78 +383,6 @@ footer {
 }
 
 
-/* INTERESTS/BADGES SECTION, RIGHT */
-
-#contentright {
-	float: right;
-	margin: 0 25px 0 0;
-	padding: 0;
-	width: 370px;
-	height: 1576px;
-	position: absolute;
-	top: 1px;
-	right: 0;
-}
-
-#contentright h1 {
-	position: relative;
-	text-align: center;
-	}
-
-.proftopright {
-	display: inline;
-	float: right;
-}
-
-#interests {
-	height: 835px;
-	width: 260px;
-	background-color: #c8f2e9;
-	bottom: 20px;
-	margin-bottom: 15px;
-	border-radius: 10px;
-}
-
-#interests h1 {
-	margin-top: 15px;
-	padding: 10px 15px 5px 15px;
-	}
-
-#interests h1, #interests h2 {
-	color: black;
-	}
-
-#interests p {
-	text-align: center;
-	padding: 5px 10px 5px 10px;
-	margin-bottom: 0px;
-	font-size: 13px;
-	height: 35px;
-	}
-	
-#badgeribbon {
-	height: 825px;
-	width: 80px;
-	background-color: #099bb6;
-	padding: 5px;
-	border-radius: 10px;
-}
-
-#badgeribbon img {
-	padding-left: 10px;
-	}
-
-#badgeribbon p{
-	color: #c8853f;
-	text-align: center;
-	}
-
-h2 {
-	text-align: center;
-	background-color: #f0fbfb;
-	padding: 5px;
-	}
-	
 	
 /* TABS SECTION, LEFT */
 
@@ -424,6 +392,10 @@ h2 {
 	padding: none;
 	background: none;
 	width: 570px;
+	}
+
+#tabs h2 {
+	padding: 14px 15px 5px 30px;
 	}
 
 #tabs-1, #tabs-2, #tabs-3, #tabs-4, #tabs-5{
@@ -438,31 +410,39 @@ h2 {
 	background-color: #f0fbfb;
 	height: 300px;
 	width: 530px;
+	border-radius: 10px;
 	}
 
 .tabsbox p {
 	text-align: left;
 	margin-bottom: 5px;
 	padding: 0px 30px 15px 30px;
-	font-size: 13px;
-	font-weight: bold;
 	}
 	
-.tabsbox #statustag {
-	padding: 0px 30px 0px 30px;
-	text-indent: 10px;
+#tabs-1 h2 {
+	margin-bottom: 0px;
+	}
+	
+#tabs-1 h3 {
 	margin-top: 5px;
+	padding-left: 30px;
+	text-indent: 5px;
+	font-style: italic;
 	}
 
-#tabs h1 {
-	padding: 14px 15px 10px 30px;
+.statusboxstats {
+	margin-left: 30px;
+	}
+
+#viewcomments {
+	margin-left: 430px;
 	}
 	
-#tabs-1 a {
+.button {
 	font-size: 14px;
 	font-weight: bold;
-	margin-right: 25px;
-	margin-left: 25px;
+	margin-right: 0px;
+	margin-left: none;
 	padding: 5px 10px 5px 8px;
 	color: #213d42;
 	float: left;
@@ -472,13 +452,14 @@ h2 {
 	-webkit-box-shadow: inset 0px 0px 5px #213d42;
     -moz-box-shadow: inset 0px 0px 5px #213d42;
     box-shadow: inset 0px 0px 5px #213d42;
+	height: 18px;
 	}
 
-#tabs1buttons {
-	width: 570px;
+.statusboxstats  p {
+	margin: 0px;
+	padding: 10px 50px 0px 10px;
 	float: left;
-	margin-left: 135px;
-	margin-top: 10px;
+	line-height: 18px;
 	}
 	
 .icon {
@@ -532,14 +513,6 @@ td {
 	vertical-align: top;
 	}
 
-.statusboxstats {
-	text-indent: 20px;
-	text-align: center;
-	margin-top: 0px;
-	padding: 0px 0px 30px 150px;
-	float: left;
-	}
-
 #tabs .ui-tabs-nav { 
     padding-left: 0px; 
     background: transparent;  
@@ -573,7 +546,7 @@ td {
 	height: 400px;
 	float: left;
 	background-color: #c8f2e9;
-	margin-top: 20px;
+	margin-top: 30px;
 	border-radius: 10px;
 }
 
@@ -612,7 +585,7 @@ figcaption {
 	width: 570px;
 	height: 700px;
 	float: left;
-	margin-top: 20px;
+	margin-top: 30px;
 	border-radius: 10px;
 }
 
@@ -728,7 +701,77 @@ figcaption {
 	background-color:#FFFFFF;
 	box-shadow:1px 1px 5px rgba(0,0,0,.2);
 	}
+	
+	
+	
 
+/* INTERESTS/BADGES SECTION, RIGHT */
+
+#contentright {
+	float: right;
+	margin: 0 25px 0 0;
+	padding: 0;
+	width: 370px;
+	height: 1576px;
+	position: absolute;
+	top: 1px;
+	right: 0;
+}
+
+#contentright h1 {
+	position: relative;
+	text-align: center;
+	}
+
+.proftopright {
+	display: inline;
+	float: right;
+}
+
+#interests {
+	height: 830px;
+	width: 260px;
+	background-color: #c8f2e9;
+	margin-right:10px;
+	border-radius: 10px;
+	padding: 5px;
+}
+
+#interests h1 {
+	margin-top: 15px;
+	padding: 0px 15px 0px 15px;
+	}
+
+#interests h2 {
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 0px;
+	}
+
+#interests p {
+	text-align: center;
+	padding: 5px 10px 5px 10px;
+	height: 25px;
+	}
+	
+#badgeribbon {
+	height: 830px;
+	width: 80px;
+	background-color: #c8f2e9;
+	padding: 5px;
+	border-radius: 10px;
+}
+
+#badgeribbon img {
+	padding-left: 10px;
+	}
+
+#badgeribbon p{
+	text-align: center;
+	}
+	
+	
+	
 
 /* FRIENDS, FOLLOWERS, COLLABORATORS, BOTTOM RIGHT*/
 	
@@ -746,6 +789,13 @@ figcaption {
 	padding: 15px 10px 15px 10px;
 	width: 330px;
 	height: 30px;
+	}
+
+.brboxes {
+	height: 332px;
+	background-color: #c8f2e9;
+	border-radius: 10px;
+	margin-top: 30px;
 	}
 	
 

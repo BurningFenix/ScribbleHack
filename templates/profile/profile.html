@@ -111,18 +111,22 @@ $( "#tabs" ).tabs();
 
 </div><!-- sitenav ends -->
 
+
+
+
+
 <div id="banner">
 
-<img id="profilepic" src="../../static/images/luceroprofilepic.jpg"/>
+<img id="profilepic" src="../../static/images/luceroprofilepic.jpg" width="120" height="120" />
 
 <div id="profbannerleft">
 <p id="profbigusername">Laurelin</p>
 <p id="proffirstlastname">Lucero Calleo</p>
 <p id="profselftitle"><em>Fantasy Writer</em></p>
-<p id="profonlinestatus">Last online Feb 2012</p>
 </div><!-- profbannerleft ends -->
 
 <div id="profbannerright">
+<p id="profonlinestatus">Last online Feb 2012</p>
 <div id="profstatistics">
 <ul>
 <div class="profstat"><li><span>5,000</span></br>PAGEVIEWS</li></div>
@@ -154,21 +158,25 @@ $( "#tabs" ).tabs();
 	</ul>
 	<div id="tabs-1">
 		<div class="tabsbox">
-			<h1>Yo peeps what's up?</h2>
-			<p id="statustag">by Laurelin, posted 3 hours ago</p>
+			<h2>Yo peeps what's up?</h2>
+			<h3>by Laurelin, posted 3 hours ago</h3>
 			<p>Well, this is my first post on ScribbleHack.com and I have to say, IT FEELS GREAT! The website is going to be finished SOONER THAN YOU KNOW IT, PEOPLE!!! WOOOO!!!! I'd like to give a special thanks to the Captain and First Mate, JC and Rodrigo and of course our loyal crew. Anyway, so the status for today: I'm working on the profile page while Kae is finishing up the home page and working on the blank page. Not sure what JC and Rodrigo are doing because I don't understand what they do. XD But I see them doing stuff on GitHub that looks legit so we're good. XD Well, that's all for today, folks.</p>
-			<p class="statusboxstats">2 Likes</p>
-			<p class="statusboxstats">0 Comments</p>
+			
+			<div class="statusboxstats">
+				<a href="link" class="button" rel="nofollow"><img class="icon" src="../../static/images/checkmark.png"/>Like</a>
+				<p>2 Likes</p>
+			</div>
+			<div class="statusboxstats">
+				<a href="link" class="button" rel="nofollow"><img class="icon" src="../../static/images/speechbubble.png"/>Comment</a>
+				<p><a href="">0 Comments</a></p>
+			</div>
+			<br><br>
 		</div>
-	<div id="tabs1buttons">
-		<a href="link" class="button action like fancy-link login-required" rel="nofollow"><img class="icon" src="../../static/images/checkmark.png"/>Like</a>
-		<a href="link" class="button action like fancy-link login-required" rel="nofollow"><img class="icon" src="../../static/images/speechbubble.png"/>Comment</a>
-	</div>
 	</div>
 	
 	<div id="tabs-2">
 		<div class="tabsbox">
-			<h1>ABOUT ME</h1>
+			<h2>About Me</h2>
 			<p>Birthday: June 28</p>
 			<p>Female</p>
 			<p>Hi! My name is Lucero and I like warm hugs!</p>
@@ -177,7 +185,7 @@ $( "#tabs" ).tabs();
 	
 	<div id="tabs-3">
 		<div class="tabsbox">
-			<h1>GROUPS</h1>
+			<h2>Groups</h2>
 			<img src="../../static/images/groupprofilepic.png"/>
 			<h2><a href="">Batmans Unite!</a></h2>
 			<p>We are vengeance... We are the night... We are the BATMEN.</p>
@@ -190,9 +198,9 @@ $( "#tabs" ).tabs();
 	
 	<div id="tabs-4">
 		<div class="tabsbox">
-			<h1>REQUEST A CRITIQUE WITH LAURELIN</h1>
-			<p>Choose up to 3 works that you would like to have critiqued:
+			<h2>Request a critique with Laurelin</h2>
 			<form action="" method="get">
+			<p>Choose up to 3 works that you would like to have critiqued:</p>
 				<select name="user works">
 					<option value="work1">The Tales of Masochists</option>
 					<option value="work2">Deep-Fried</option>
@@ -223,7 +231,7 @@ $( "#tabs" ).tabs();
 	
 	<div id="tabs-5">
 		<div class="tabsbox">
-			<h1>STATS & ACTIVITY</h1>
+			<h2>Stats & Activity</h2>
 			<table>
 			<tr>
 			<td>
@@ -282,9 +290,6 @@ $( "#tabs" ).tabs();
 <div id="profcomments">
 
 <h1>Comments</h1>
-
-
-
 
 <div class="bubble clearfix">
 			<div id="leavecomment">
@@ -356,13 +361,13 @@ $( "#tabs" ).tabs();
 <div id="contentright" class="clearfix">
 
 <div id="badgeribbon" class="proftopright">
-	<p class="badgetext">MOST RECENT BADGES</p>
+	<p>MOST RECENT BADGES</p>
 		<img src="../../static/images/badge1.png"/>
 		<img src="../../static/images/badge2.png"/>
 		<img src="../../static/images/badge3.png"/>
 		<img src="../../static/images/badge4.png"/>
 		<img src="../../static/images/badge5.png"/>
-	<p class="badgetext"> <a href="link"> ALL BADGES</a></p>
+	<p><a href="link"> ALL BADGES</a></p>
 </div>
 
 
@@ -370,21 +375,21 @@ $( "#tabs" ).tabs();
 
 <div id="interests" class="proftopright">
 
-<h1>FAVORITES</h1>
+<h1>Favorites</h1>
 
-<h2>BOOKS</h2>
+<h2>Books</h2>
 <p>The Brothers Karamazov, The Lord of the Rings, Crime and Punishment</p>
-<h2>AUTHORS</h2>
+<h2>Authors</h2>
 <p>J.R.R. Tolkien, Fyodor Dostoevsky, Paulo Coelho</p>
-<h2>ARTWORKS</h2>
+<h2>Artworks</h2>
 <p>Starry Night</p>
-<h2>ARTISTS</h2>
+<h2>Artists</h2>
 <p>Jones De Ro, Jennifer Healy, Pierre Auguste Cot, Auguste Renoir</p>
-<h2>TV/MOVIES</h2>
+<h2>TV/Movies</h2>
 <p>The Lord of the Rings, Pan's Labyrinth, Big Fish</p>
-<h2>MUSIC</h2>
+<h2>Music</h2>
 <p>Songs from animated Disney classics, Kutless, Josh Groban</p>
-<h2>VIDEO GAMES</h2>
+<h2>Video Games</h2>
 <p>The Legend of Zelda, Fire Emblem, Metroid, Harvest Moon</p>
 
 </div>
@@ -395,9 +400,13 @@ $( "#tabs" ).tabs();
 
 <div id="profbottomright">
 
-	<h1>Friends and Followers</h1>
+<div class="brboxes">
+<h1>Friends and Followers</h1>
+</div>
 
-	<h1>Collaborators</h1>
+<div class="brboxes">
+<h1>Collaborators</h1>
+</div>
 
 </div><!-- profbottomright ends -->
 
@@ -407,9 +416,13 @@ $( "#tabs" ).tabs();
 
 
 
-<footer>
-
-</footer><!-- footer ends -->
+<div id="footer">
+<a href="">About</a>
+<a href="">FAQ</a>
+<a href="">Terms of Service</a>
+<a href="">Privacy Policy</a>
+<a href="">Who We Are</a>
+</div><!-- footer ends -->
 
 
 </div><!-- wrapper ends -->
