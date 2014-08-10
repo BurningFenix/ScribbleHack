@@ -1,5 +1,5 @@
 body {
-	background: linear-gradient(#88d6f2, #226d8a);
+	background: linear-gradient(#099bb6, #002231);
 	padding: 0;
 	margin: 0;
 	font-family: UniversLTStd,arial,sans-serif;
@@ -23,20 +23,29 @@ body {
 	font-weight: bold;
 }
 
+
+h1 {
+	margin: 0 0 12px 0;
+	padding: 0;
+	font-size: 30px;
+	font-weight: normal;
+	font-family: UniversLTStd,arial,sans-serif;
+}
+
 #wrapper {
-	background-color: white;
+	background-color: #81d1c7;
 	width: 1000px;
 	height: auto;
 	text-align: left;
 	margin: 0 auto;
-	box-shadow: 0 0 15px #A8A8A8;
-	-webkit-box-shadow: 0 0 15px #A8A8A8;
-	-moz-box-shadow: 0 0 15px #A8A8A8;
+	box-shadow: 0 0 15px #213d42;
+	-webkit-box-shadow: 0 0 15px #213d42;
+	-moz-box-shadow: 0 0 15px #213d42;
 }
 
-a:link {color:#007777;}
+a:link {color:#ed7d3f;}
 a:visited {color:#24555f;}
-a:hover {color:#00A58C;}
+a:hover {color:#ffb48b;}
 a:active {color:#00A58C;}
 
 #header {
@@ -175,7 +184,7 @@ a:active {color:#00A58C;}
 	}
 
 #banner {
-	height: 210px;
+	height: 150px;
 	border: solid 0 #007000;
 	border-bottom: 1px solid #2f2f2f;
 }
@@ -207,7 +216,7 @@ footer {
 	width: auto;
 	text-align: center;
 	text-decoration: none;
-		font-family: UniversLTStd;
+	font-family: UniversLTStd;
 	src: url(universltstd.otf);  
 	font-size: 18px;
 	color: grey;
@@ -294,7 +303,7 @@ footer {
 
 #profile #profstatistics .profstat {
 	display: inline;
-	color: #ddf9f9;
+	color: #abdfdb;
 	float: right;
 	margin-left: 22px;
 	margin-right: 23px;
@@ -355,25 +364,19 @@ footer {
 #interests {
 	height: 810px;
 	width: 260px;
-	background-color: #ddf9f9;
+	background-color: #c8f2e9;
 	bottom: 20px;
 	margin-bottom: 15px;
 	box-shadow:1px 0px 5px rgba(5,52,44,.6) inset;
 }
 
 #interests h1 {
-	margin-top: 0px;
-	padding: 10px 15px 10px 15px;
+	margin-top: 15px;
+	padding: 10px 15px 5px 15px;
 	}
 
 #interests h1, #interests h2 {
-	background-color: #91d8cb;
 	color: black;
-	box-shadow:1px 0px 5px rgba(5,52,44,.5) inset;
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0px 0px 10px #213d42;
-    -moz-box-shadow: inset 0px 0px 10px #213d42;
-    box-shadow: inset 0px 0px 10px #213d42;
 	}
 
 #interests p {
@@ -402,7 +405,7 @@ footer {
 	}
 
 h2 {
-	color: #ddf9f9;
+	color: #abdfdb;
 	text-align: center;
 	background-color: #213d42;
 	padding: 5px;
@@ -424,7 +427,7 @@ h2 {
 	width: 570px;
 	box-shadow:1px 0px 5px 1px rgba(5,52,44,.6) inset;
 	margin-right: 0px;
-	background-color: #ddf9f9;
+	background-color: #c8f2e9;
 	}
 
 .tabsbox {
@@ -449,12 +452,7 @@ h2 {
 
 #tabs h1 {
 	font-size: 20px;
-	background-color: #91d8cb;
 	padding: 12px 15px 12px 30px;
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0px 0px 8px #213d42;
-    -moz-box-shadow: inset 0px 0px 8px #213d42;
-    box-shadow: inset 0px 0px 8px #213d42;
 	}
 	
 #tabs-1 a {
@@ -571,20 +569,15 @@ td {
 	width: 570px;
 	height: 400px;
 	float: left;
-	background-color: #ddf9f9;
+	background-color: #c8f2e9;
 	box-shadow:1px 0px 5px 1px rgba(5,52,44,.6) inset;
 }
 
 #featuredworks h1 {
 	width: 540px;
-	text-align: center;
-	background-color: #91d8cb;
-	padding: 15px;
+	text-align: left;
+	padding: 15px 15px 15px 30px;
 	height: 30px;
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0px 0px 10px #213d42;
-    -moz-box-shadow: inset 0px 0px 10px #213d42;
-    box-shadow: inset 0px 0px 10px #213d42;
 	}
 
 figure {
@@ -594,7 +587,7 @@ figure {
 	}
 
 figcaption {
-	color: #ddf9f9;
+	color: #abdfdb;
 	text-align: center;
 	margin: 5px;
 	}
@@ -602,22 +595,16 @@ figcaption {
 #view_p {
 	font-size: 14px;
 	font-weight: bold;
-	margin: 25px 25px 25px 10px;
-	padding: 5px 10px 5px 8px;
-	color: #213d42;
+	margin: 25px 25px 25px 0px;
+	padding: 5px 10px 5px 0px;
 	float: left;
-	background-color: #f9f6ca;
 	text-decoration: none;
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0px 0px 5px #213d42;
-    -moz-box-shadow: inset 0px 0px 5px #213d42;
-    box-shadow: inset 0px 0px 5px #213d42;
 	}
 	
 /* COMMENTS SECTION, BOTTOM LEFT */
 	
 #profcomments {
-	background-color: #ddf9f9;
+	background-color: #c8f2e9;
 	width: 570px;
 	height: 700px;
 	float: left;
@@ -626,14 +613,9 @@ figcaption {
 
 #profcomments h1 {
 	width: 540px;
-	text-align: center;
-	background-color: #91d8cb;
-	padding: 15px;
+	text-align: left;
+	padding: 15px 15px 15px 30px;
 	height: 30px;
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0px 0px 10px #213d42;
-    -moz-box-shadow: inset 0px 0px 10px #213d42;
-    box-shadow: inset 0px 0px 10px #213d42;
 	}
 	
 .commentboxes {
@@ -754,16 +736,13 @@ figcaption {
 #profbottomright h1 {
 	margin-top: 7px;
 	margin-left: 10px;
-	text-align: center;
+	text-align: left;
 	padding: 15px 10px 15px 10px;
-	background-color: #91d8cb;
 	width: 330px;
 	height: 30px;
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0px 0px 10px #213d42;
-    -moz-box-shadow: inset 0px 0px 10px #213d42;
-    box-shadow: inset 0px 0px 10px #213d42;
 	}
+	
+
 	
 
 
