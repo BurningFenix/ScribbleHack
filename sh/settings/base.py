@@ -24,6 +24,7 @@ INSTALLED_APPS = (
     'apps.universe',
     'apps.writing',
     'south',
+    'widget_tweaks',
     #'debug_toolbar',
 )
 

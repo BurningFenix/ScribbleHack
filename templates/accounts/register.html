@@ -1,22 +1,171 @@
-<html>
-<body>
-<h1> REGISTER </h1>
+{% load widget_tweaks %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>ScribbleHack</title>
+    <link href="../../static/homepagecss.css" rel="stylesheet" type="text/css" />
 
+<style type="text/css">
+
+p, label {
+  color:#2f2f2f;
+  font-size: 12px;
+}
+
+#error_box{
+  float: right;
+  width: 310px;
+  background-color: #F94646;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  border-radius:25px;
+  }
+
+#error_box li{
+  color:white;
+  line-height: 75%;
+  font-size: 12px;
+
+  }
+
+
+</style>
+
+</head>
+
+<body id="home">
+
+<div id="wrapper">
+
+<div id="header">
+
+<div id="sitenav">
+
+
+<div id="sitenavleft" class="clearfix">
+
+<a href="homepage.html">
+<div id="logo" class="clearfix">
+<div id="icon">
+</div><!-- icon ends -->
+<img src="../../static/images/logo.png" />
+</div><!-- logo ends -->
+</a>
+
+<div id="sitenavpagelinks" class="clearfix">
+<div class="navlink clearfix">
+<a href="#">Browse</a>
+</div><!-- navlink ends -->
+<div class="navlink clearfix">
+<a href="#">Universe</a>
+</div><!-- navlink ends -->
+<div class="navlink clearfix">
+<a href="#">Groups</a>
+</div><!-- navlink ends -->
+<div class="navlink clearfix">
+<a href="#">Projects</a>
+</div><!-- navlink ends -->
+</div><!-- sitenavpagelinks ends -->
+
+</div><!-- sitenavleft ends -->
+
+<div id="sitenavright" class="clearfix">
+
+<div id="navsearchbox">
+
+<form id="tfnewsearch" method="get" action="#">
+           <input type="submit" class="tfbutton" src="../../static/images/searchicon.png" img />
+           <input type="text" placeholder=" Search for stories, art or users" class="tftextinput" name="q" size="25" maxlength="120" onfocus="inputFocus(this)" onblur="inputBlur(this)">
+    </form>
+
+
+</div><!-- navsearchbox ends -->
+
+<a href="{% url "accounts:login" %}">Sign in</a>
+
+</div><!-- sitenavright ends -->
+
+</div><!-- sitenav ends -->
+
+<div id="banner">
+
+<img id="shipline" src="../../static/images/bi.jpg" />
+
+</div><!-- banner ends -->
+
+</div><!-- header ends -->
+
+
+
+<div class="content clearfix">
+
+<div id="clipboard">
+<img id="clipboardart" src="../../static/images/clipboard.png"/>
+
+<h1>New Member Registration Form</h1>
+
+<div id="regform" class="clearfix">
 {% if form.errors %}
-<p>Invalid input. Please try again.</p>
+    <div id="error_box"><!--error box begins here-->
+
+     <ul>{% if form.username.errors %}
+            <li></p>{{ form.username.errors.as_text }} </p></li>
+        {% endif %}
+
+        {% if form.email.errors %}
+         <li></p>{{ form.email.errors.as_text }}</p></li>
+        {% endif %}
+
+        {% if form.password.errors %}
+            <li></p>{{ form.password.errors.as_text }}</p></li>
+        {% endif %}
+
+        {% if form.password2.errors %}
+            <li></p>{{ form.password2.errors.as_text }}</p></li>
+        {% endif %}
+
+        {% if form.non_field_errors %}
+            <li></p> {{ form.non_field_errors.as_text }} </p></li>
+        {% endif %}
+    </ul>
+    </div><!--error box ends here-->
 {% endif %}
 
 <form action="{% url 'accounts:register' %}" method="post">
-{% csrf_token %}
-<p>
-	Username: <input name="username" type="text" /><br/>
-	Password: <input name="password" type="password" /><br/>
-	Password again: <input name="password2" type="password" /><br/>
-	<input type="submit" value="Submit" />
+    {% csrf_token %}
 
-</p>
+    <div id="regformtop">
+        <p><label class="regformlabel" for="username">Username:</label>{{form.username|add_class:"textbox"}}</p>
+
+        <!--<p><label class="regformlabel" for="email">E-mail:</label>{{form.email|add_class:"textbox"}}</p> -->
+
+        <p><label class="regformlabel">Create Password:</label>{{ form.password|add_class:"textbox" }}</p>
+
+        <p><label class="regformlabel">Retype Password:</label>{{ form.password2|add_class:"textbox" }}</p>
+
+        <!--<p><label class="regformlabel" for="username">Date of Birth:</label>{{form.dob}}</p> -->
+
+    </div><!-- regformtop ends -->
+
+    <input type="image" src="../../static/images/clipboardbutton.jpg" value="Submit" id="regformbutton"  />
+
 </form>
 
-<a href="{% url 'index' %}">Homepage</a>
+</div><!-- regform ends -->
+</div><!-- clipboard ends -->
+
+</div><!-- content ends -->
+
+<div id="footer">
+
+
+</div><!-- footer ends -->
+
+
+</div><!-- wrapper ends -->
+
+
 </body>
 </html>
