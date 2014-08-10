@@ -8,9 +8,9 @@ handler404 = 'sh.views.custom404'
 
 urlpatterns = patterns('',
     url(r'^$', IndexView.as_view(), name='index'),
-    url(r'accounts/', include('apps.accounts.urls', namespace='accounts')),
-    url(r'universe/', include('apps.universe.urls', namespace='universe')),
-    url(r'writing/', include('apps.writing.urls', namespace='writing')),
+    url(r'^accounts/', include('apps.accounts.urls', namespace='accounts')),
+    url(r'^universe/', include('apps.universe.urls', namespace='universe')),
+    url(r'^writing/', include('apps.writing.urls', namespace='writing')),
     url(r'^art$', ArtBrowseView.as_view(), name='art'),
     url(r'^admin/', include(admin.site.urls)),
     
