@@ -1,0 +1,262 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block sylesheets %}
+	<link href="{% static 'profile.css' %}" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="{% static 'js/jquery-ui-1.10.4.custom.min.css' %}" />
+{% endblock %}
+
+{# still pretty new to this. #}
+
+{% block contentleft %}
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">Status</a></li>
+		<li><a href="#tabs-2">About Me</a></li>
+		<li><a href="#tabs-3">Groups</a></li>
+		<li><a href="#tabs-4">Request a Critique</a></li>
+		<li><a href="#tabs-5">Stats and Activity</a></li>
+	</ul>
+	<div id="tabs-1">
+		<div class="tabsbox">
+			<h1>Yo peeps what's up?</h2>
+			<p id="statustag">by Laurelin, posted 3 hours ago</p>
+			<p>Well, this is my first post on ScribbleHack.com and I have to say, IT FEELS GREAT! The website is going to be finished SOONER THAN YOU KNOW IT, PEOPLE!!! WOOOO!!!! I'd like to give a special thanks to the Captain and First Mate, JC and Rodrigo and of course our loyal crew. Anyway, so the status for today: I'm working on the profile page while Kae is finishing up the home page and working on the blank page. Not sure what JC and Rodrigo are doing because I don't understand what they do. XD But I see them doing stuff on GitHub that looks legit so we're good. XD Well, that's all for today, folks.</p>
+			<p class="statusboxstats">2 Likes</p>
+			<p class="statusboxstats">0 Comments</p>
+		</div>
+	<div id="tabs1buttons">
+		<a href="link" class="button action like fancy-link login-required" rel="nofollow"><img class="icon" src="{% static 'images/checkmark.png' %}"/>Like</a>
+		<a href="link" class="button action like fancy-link login-required" rel="nofollow"><img class="icon" src="{% static 'images/speechbubble.png' %}"/>Comment</a>
+	</div>
+	</div>
+	
+	<div id="tabs-2">
+		<div class="tabsbox">
+			<h1>ABOUT ME</h1>
+			<p>Birthday: June 28</p>
+			<p>Female</p>
+			<p>Hi! My name is Lucero and I like warm hugs!</p>
+		</div>
+	</div>
+	
+	<div id="tabs-3">
+		<div class="tabsbox">
+			<h1>GROUPS</h1>
+			<img src="{% static 'images/groupprofilepic.png' %}"/>
+			<h2><a href="">Batmans Unite!</a></h2>
+			<p>We are vengeance... We are the night... We are the BATMEN.</p>
+			<img src="{% static 'images/groupprofilepic.png' %}"/>
+			<h2><a href="">Batmans Unite!</a></h2>
+			<p>We are vengeance... We are the night... We are the BATMEN.</p>
+			<a id="moregroups" href="">More Groups...</a>
+		</div>
+	</div>
+	
+	<div id="tabs-4">
+		<div class="tabsbox">
+			<h1>REQUEST A CRITIQUE WITH LAURELIN</h1>
+			<p>Choose up to 3 works that you would like to have critiqued:
+			<form action="" method="get">
+				<select name="user works">
+					<option value="work1">The Tales of Masochists</option>
+					<option value="work2">Deep-Fried</option>
+					<option value="work3">Existentialism</option>
+				</select><br>
+				<select name="user works">
+					<option value="work1">The Tales of Masochists</option>
+					<option value="work2">Deep-Fried</option>
+					<option value="work3">Existentialism</option>
+				</select><br>
+				<select name="user works">
+					<option value="work1">The Tales of Masochists</option>
+					<option value="work2">Deep-Fried</option>
+					<option value="work3">Existentialism</option>
+				</select>
+			<p>Propose a time limit to complete the critique:</p>
+				<select name="timelimit">
+					<option value="oneday">1 day</option>
+					<option value="3days">3 days</option>
+					<option value="1wk">1 week</option>
+					<option value="2wks">2 weeks</option>
+					<option value="3wks">4 weeks</option>
+				</select>
+			<br><input id="submitbutton" type="submit" value="Request Critique">
+			</form>
+		</div>
+	</div>
+	
+	<div id="tabs-5">
+		<div class="tabsbox">
+			<h1>STATS & ACTIVITY</h1>
+			<table>
+			<tr>
+			<td>
+			<p>Joined 6/28/2014</p>
+			<p>Last online: 8/5/2014</p>
+			<p>Last submission: 7/26/2014</p>
+			<p>Number of submissions: 32</p>
+			<p>Submissions per week: 0.5</p>
+			<p>Number of forum posts: 36</p>
+			<p>Forum posts per week: 2</p>
+			</td>
+			<td>
+			<p>Number of critiques given: 7</p>
+			<p>Critique Rating:</p>
+			<p>Number of donations to the Universe: 12</p>
+			<p>Number of badges:22</p>
+			</td>
+			</tr>
+			</table>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<div id="featuredworks">
+
+<h1>Portfolio</h1>
+
+<figure>
+<a href="link"><img src="../../static/images/lucero-art-example.jpg" width="175" height="175"></a>
+<figcaption><a href="link">Sad Knight</a></figcaption>
+</figure>
+
+<figure>
+<a href="link"><img src="../../static/images/lucero-writing-example.jpg" width="130 height="175"></a>
+<figcaption><a href="link">Cherry Blossom Petals</a></figcaption>
+</figure>
+
+<figure>
+<a href="link"><img src="../../static/images/lucero-writing-example.jpg" width="130 height="175"></a>
+<figcaption><a href="link">Cherry Blossom Petals</a></figcaption>
+</figure>
+
+<br><br>
+<a id="view_p" href="">View Laurelin's Portfolio</a>
+
+</div><!-- featuredworks ends -->
+
+
+
+
+
+<div id="profcomments">
+
+<h1>Comments</h1>
+
+
+
+
+<div class="bubble clearfix">
+			<div id="leavecomment">
+			<img id="rcommentimg" src="#" width: "50" height: "50"/>
+				<div class="point"></div>
+				<form action="php link" method="get">
+					<textarea name="commentbox" placeholder="Leave a comment!"></textarea>
+				</form>
+			</div>
+		</div>
+
+
+<a href="link" id="lcomment" class="button action leave-a-comment fancy-link login-required" rel="nofollow">Leave a Comment</a>
+
+	<div class="commentboxes">
+		<div class="bubble clearfix">
+			<img src="#" width: "50" height: "50"/>
+			<div class="comment-content">
+				<div class="point"></div>
+				<p>Hey Lucero! I think your profile is pretty awesome.</p>
+			</div>
+		</div>
+	</div>
+	
+		<div class="replycomment">
+			<img src="#" width: "50" height: "50"/>
+			<div class="replycomment-content">
+				<div class="point"></div>
+				<p>Why thank you. Yours is pretty awesome too.</p>
+			</div>
+		</div>
+	
+	<div class="commentboxes">
+		<img src="#" width: "50" height: "50"/>
+		<div class="comment-content">
+			<div class="point"></div>
+			<p>Hey Lucero! I think your profile is pretty awesome.</p>
+		</div>
+	</div>
+	
+	<div class="commentboxes">
+		<div class="bubble clearfix">
+			<img src="#" width: "50" height: "50"/>
+			<div class="comment-content">
+				<div class="point"></div>
+				<p>Hey Lucero! I think your profile is pretty awesome.</p>
+			</div>
+		</div>
+	</div>
+
+<div id="searchcomments">
+	<a class="searchcomments" href="link"> Previous</a>
+	<a class="searchcomments" href="link"> 1</a>
+	<a class="searchcomments" href="link"> 2</a>
+	<a class="searchcomments" href="link"> 3</a>
+	<a class="searchcomments" href="link"> 4</a>
+	<a class="searchcomments" href="link"> 5</a>
+	<a class="searchcomments" href="link"> Next</a>
+</div>
+
+</div><!-- profcomments ends -->
+{% endblock %}
+
+{% block contentright %}
+<div id="badgeribbon" class="proftopright">
+	<p class="badgetext">MOST RECENT BADGES</p>
+		<img src="../../static/images/badge1.png"/>
+		<img src="../../static/images/badge2.png"/>
+	<p class="badgetext"> <a href="link"> ALL BADGES</a></p>
+</div>
+
+
+
+
+<div id="interests" class="proftopright">
+
+<h1>FAVORITES</h1>
+
+<h2>BOOKS</h2>
+<p>{{ user.books }}</p>
+<h2>AUTHORS</h2>
+<p>{{ user.authors }}</p>
+<h2>ARTWORKS</h2>
+<p>{{ user.artworks }}</p>
+<h2>ARTISTS</h2>
+<p>{{ user.artists }}</p>
+<h2>TV/MOVIES</h2>
+<p>{{ user.tv_movies }}</p>
+<h2>MUSIC</h2>
+<p>{{ user.music }}</p>
+<h2>VIDEO GAMES</h2>
+<p>{{ user.video_games }}</p>
+
+</div>
+
+
+
+
+
+<div id="profbottomright">
+
+	<h1>Friends and Followers</h1>
+
+	<h1>Collaborators</h1>
+
+</div><!-- profbottomright ends -->
+{% endblock %}
+
+<a href="{% url 'accounts:edit' %}">Edit Profile</a>
+<a href="{% url 'accounts:logout' %}">Logout</a>
