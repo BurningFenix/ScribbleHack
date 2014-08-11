@@ -116,17 +116,7 @@ $( "#tabs" ).tabs();
 
 </div> <!-- header ends -->
 
-<div id="left">
-	<div id="browse_file"><span id="helm_text">Browse File</span></div>
-	<div id="preview_image"><div id="image"><span id="preview_image">Preview Image</span></div></div>
-	<div id="mature_content">
-		<span style="font-size: 20px"><b><i>Mature Content?</i></b></span>
-		<input type="radio" value="yes" name="mature"> Yes
-		<input type="radio" value="no" name="mature"> No
-	</div>
-</div>
-
-	<div id="right">
+	<div id="contentleft">
 		<div id="form">
 			<form>
 				<h2>Title</h2><br>
@@ -135,17 +125,6 @@ $( "#tabs" ).tabs();
 				<h2>Description</h2><br>
 				<textarea name="desc" rows="5" style="width: 400px"></textarea><br><br>
 				
-				<h2>Categories</h2><br>
-				<select name="categories" style="float: left; margin-right: 20px; width: 190px; height: 35px;">
-					<option value="a">A</option>
-					<option value="b">B</option>
-					<option value="c">C</option>
-				</select>
-				<select name="categories" style="float: left; width: 190px; height: 35px;">
-					<option value="a">A</option>
-					<option value="b">B</option>
-					<option value="c">C</option>
-				</select>
 	<br><br>
 
 				<h2>Type</h2>			
@@ -198,7 +177,19 @@ $( "#tabs" ).tabs();
 			
 			<div id="submit"><span id="submit_button">Submit</span></div>
 		</div><!-- form ends -->
-	</div><!-- right ends -->
+	</div><!-- contentleft ends -->
+
+<div id="contentright">
+	<div id="browse_file"><span id="helm_text">Browse File</span></div>
+	<div id="preview_image"><div id="image"><span id="preview_image">Preview Image</span></div></div>
+	<div id="mature_content">
+		<span style="font-size: 20px"><b><i>Mature Content?</i></b></span>
+		<input type="radio" value="yes" name="mature"> Yes
+		<input type="radio" value="no" name="mature"> No
+	</div>
+</div><!-- contentright ends -->
+
+
 	
 <div id="footer">
 
