@@ -1,4 +1,4 @@
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect
 from django.views.generic import ListView, FormView, DetailView
 from django.views.generic.edit import UpdateView
 from django.core.urlresolvers import reverse
@@ -33,6 +33,7 @@ class EditWritingView(LoginRequiredMixin, UpdateView):
 	def get_success_url(self):
 		return reverse("writing:detail", kwargs={"pk":self.object.pk})
 
+	# will only get the object if the user is the owner of the object
 	def get_object(self):
 		object = super(EditWritingView, self).get_object()
 
@@ -44,6 +45,17 @@ class EditWritingView(LoginRequiredMixin, UpdateView):
 			return object
 		else:
 			return None
+
+	def get(self, request, *args, **kwargs):
+		response = super(EditWritingView, self).get(request, *args, **kwargs)
+		if self.object is None:
+			# if there is no object, then the user is not the owner
+			# if the user is not the owner, then he/she is not
+			# allowed to edit the object
+			# this redirects them to the detail page
+			return redirect('writing:detail', pk=kwargs['pk'])
+		else:
+			return response
 
 class WritingDetailView(DetailView):
 	model = WritingPiece
