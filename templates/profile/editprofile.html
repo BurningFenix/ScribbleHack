@@ -56,7 +56,7 @@ $( "#tabs" ).tabs();
 	
 </head>
 
-<body id="profile">
+<body id="editprofile">
 
 <div id="wrapper">
 
@@ -289,7 +289,8 @@ $( "#tabs" ).tabs();
 				<p>Gender: <input type="radio" name="gender" value="male">Male
 						<input type="radio" name="gender" value="female">Female</p>
 				<p id="aboutme">Description: <textarea rows="10" cols="50" placeholder="Who are you?" name="description"></textarea></p>
-			<br><input id="submitbutton" type="submit" value="Update Profile">
+			<br><input id="submitbutton" type="submit" value="Preview changes">
+				<input id="submitbutton" type="submit" value="Update Profile">
 			
 			</form>
 	</div>
@@ -305,6 +306,7 @@ $( "#tabs" ).tabs();
 				<p>TV/Movies: <textarea rows="10" cols="50" placeholder="My favorite TV shows and movies..." name="tv/movies"></textarea></p>
 				<p>Music: <textarea rows="10" cols="50" placeholder="My favorite music..." name="music"></textarea></p>
 				<p>Video Games: <textarea rows="10" cols="50" placeholder="My favorite video games..." name="videogames"></textarea></p>
+				<input id="submitbutton" type="submit" value="Preview changes">
 				<br><input id="submitbutton" type="submit" value="Update Profile">
 			</form>
 		</div>
@@ -314,7 +316,8 @@ $( "#tabs" ).tabs();
 			<h1>Profile Picture</h1>
 			<form id="ppupload" action="figure this out" enctype="multipart/form-data" method="post">
 				<input type="file" name="datafile" size="40"><br>
-				<br><input type="submit" value="Submit">
+				<br><input id="submitbutton" type="submit" value="Preview changes">
+					<input type="submit" value="Update Profile">
 			</form>
 		</div>
 	</div>
@@ -336,14 +339,21 @@ $( "#tabs" ).tabs();
 
 
 
-
-
-
 </div><!-- content ends -->
 
-<footer>
+<div id="footer">
 
-</footer><!-- footer ends -->
+	<div class="footerlist">
+		<p><a id="about" href="">About</a></p>
+		<p><a id="faq" href="">FAQ</a></p>
+		<p><a id="crew" href="">The Crew</a></p>
+	</div>
+	<div class="footerlist">
+		<p><a id="tos" href="">Terms of Service</a></p>
+		<p><a id="ppolicy" href="">Privacy Policy</a></p>
+	</div>
+
+</div><!-- footer ends -->
 
 
 </div><!-- wrapper ends -->

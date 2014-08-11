@@ -1,5 +1,5 @@
 body {
-	background: linear-gradient(#88d6f2, #226d8a);
+	background: linear-gradient(#099bb6, #002231);
 	padding: 0;
 	margin: 0;
 	font-family: UniversLTStd,arial,sans-serif;
@@ -23,24 +23,74 @@ body {
 	font-weight: bold;
 }
 
+
+h1 {
+	margin: 0 0 12px 0;
+	padding: 0;
+	font-size: 35px;
+	font-family: cantoraone,arial,sans-serif;
+	font-weight: normal;
+}
+
+h2 {
+	text-align: left;
+	background-color: #f0fbfb;
+	padding: 5px;
+	font-weight: normal;
+	font-size: 24px;
+	font-family: cantoraone,arial,sans-serif;
+	}
+
+h3 {
+	font-size: 14px;
+	font-weight: normal;
+	font-family: sheep-sans,arial,sans-serif;
+	}
+
+p {
+	font-size: 15px;
+	font-weight: normal;
+	font-family: sheep-sans,arial,sans-serif;
+	}
+
 #wrapper {
-	background-color: white;
+	background-color: #81d1c7;
 	width: 1000px;
 	height: auto;
 	text-align: left;
 	margin: 0 auto;
-	box-shadow: 0 0 15px #A8A8A8;
-	-webkit-box-shadow: 0 0 15px #A8A8A8;
-	-moz-box-shadow: 0 0 15px #A8A8A8;
+	box-shadow: 0 0 15px #213d42;
+	-webkit-box-shadow: 0 0 15px #213d42;
+	-moz-box-shadow: 0 0 15px #213d42;
 }
 
-a:link {color:#007777;}
-a:visited {color:#24555f;}
-a:hover {color:#00A58C;}
+a:link {color:#d46900;}
+a:visited {color:#099bb6;}
+a:hover {color:#efa168;}
 a:active {color:#00A58C;}
 
+a {
+	text-decoration: none;
+	}
+	
+.button {
+	font-size: 14px;
+	font-weight: bold;
+	padding: 5px 10px 5px 8px;
+	color: #213d42;
+	float: left;
+	background-color: #efcf98;
+	text-decoration: none;
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0px 0px 5px #213d42;
+    -moz-box-shadow: inset 0px 0px 5px #213d42;
+    box-shadow: inset 0px 0px 5px #213d42;
+	height: 18px;
+	}
+	
 #header {
-	height: 260px;
+	height: 200px;
+	margin-bottom: 20px;
 }
 
 #sitenav {
@@ -178,14 +228,47 @@ a:active {color:#00A58C;}
 	height: 150px;
 	border: solid 0 #007000;
 	border-bottom: 1px solid #2f2f2f;
-	text-align: center;
 }
 
-footer {
-	position: absolute;
+#footer {
 	height: 200px;
-	background-color: #2f2f2f;
+	width: 1000px;
+	background-color: #213d42;
+	font-size: 20px;
 }
+
+#footer p {
+	font-size: 20px;
+	}
+	
+.footerlist {
+	float: left;
+	margin-top: 30px;
+	}
+	
+#about {
+	margin-left: 100px;
+	}
+
+#faq {
+	margin-left: 130px;
+	margin-top: 10px;
+	}
+	
+#crew {
+	margin-left: 140px;
+	margin-top: 10px;
+	}
+	
+#tos {
+	margin-left: 160px;
+	}
+
+#ppolicy {
+	margin-left: 190px;
+	margin-top: 10px;
+	}
+
 
 #quicklinks ul {
 	list-style-type: none;
@@ -208,7 +291,7 @@ footer {
 	width: auto;
 	text-align: center;
 	text-decoration: none;
-		font-family: UniversLTStd;
+	font-family: UniversLTStd;
 	src: url(universltstd.otf);  
 	font-size: 18px;
 	color: grey;
@@ -246,14 +329,16 @@ footer {
 	}
 
 #tabs-1, #tabs-2, #tabs-3, #tabs-4, #tabs-5{
-	height: 1500px;
+	height: 1020px;
 	width: 955px;
+	border-radius: 10px;
 	}
 
 .tabsbox {
 	background-color: #f0fbfb;
 	height: 1000px;
 	width: 950px;
+	border-radius: 10px;
 	}
 
 .tabsbox h1 {
@@ -271,17 +356,7 @@ footer {
 	}
 
 #tabs h1 {
-	font-size: 25px;
-	background-color: #91d8cb;
 	padding: 15px 10px 15px 20px;
-	}
-	
-#tabs-1 a {
-	text-align: center;
-	margin-right: 100px;
-	padding: 15px 0px 30px 115px;
-	color: black;
-	float: left;
 	}
 
 #tabs-2 p {
@@ -319,8 +394,6 @@ footer {
 	
 form p {
 	font-size: 20px;
-	font-weight: bold;
-	font-family:UniversLTStd;
 	margin: 0px 10px 0px 10px;
 	}
 
@@ -376,12 +449,10 @@ input[type=radio] {
 input[type=submit]{
 	font-size: 14px;
 	font-weight: bold;
-	margin-right: 25px;
-	margin-left: 25px;
 	padding: 5px 10px 5px 8px;
 	color: #213d42;
 	float: left;
-	background-color: #f9f6ca;
+	background-color: #efcf98;
 	text-decoration: none;
 	border-radius: 10px;
 	-webkit-box-shadow: inset 0px 0px 5px #213d42;
