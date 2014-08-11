@@ -201,7 +201,48 @@ a:active {color:#288e78;}
 
 #footer {
 	height: 200px;
-	background-color: #091717;
+	width: 1000px;
+	background-color: #213d42;
+	font-size: 20px;
+}
+
+#footer p {
+	font-size: 20px;
+	}
+	
+.footerlist {
+	float: left;
+	margin-top: 30px;
+	}
+	
+#about {
+	margin-left: 100px;
+	}
+
+#faq {
+	margin-left: 130px;
+	margin-top: 10px;
+	}
+	
+#crew {
+	margin-left: 140px;
+	margin-top: 10px;
+	}
+	
+#tos {
+	margin-left: 160px;
+	}
+
+#ppolicy {
+	margin-left: 190px;
+	margin-top: 10px;
+	}
+
+
+#quicklinks ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 
 /* clearfix css */
@@ -566,3 +607,12 @@ html[xmlns] .clearfix {
 }
 
 
+
+
+
+.templinks {
+	margin-left: 250px;
+	margin-top: 5px;
+	font-size: 14px;
+	float: right;
+	}
