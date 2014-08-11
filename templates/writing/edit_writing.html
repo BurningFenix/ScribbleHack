@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Writing{% endblock %}
+
+{% block contentleft %}
+	<form action="{% url 'writing:edit' pk=object.pk %}" method="post">
+	{% csrf_token %}
+		Name: <input name="name" type="text" /><br/>
+		Text: <textarea name="content"></textarea>
+		<br />
+		<input type="checkbox" name="allowed_contrib" /> Allow contributions<br />
+		contributions<br />
+		<input type="submit" value="Save" />
+	</form>
+{% endblock contentleft %}
