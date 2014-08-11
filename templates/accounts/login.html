@@ -1,4 +1,3 @@
-{% load widget_tweaks %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -20,17 +19,17 @@
 <div id="logbox" class="clearfix">
 <img src="../../static/images/logbox.png" />
 
-<form action="." method="POST">
+<form action="{% url 'accounts:login' %}" method="POST">
     {% csrf_token %}
 
     <div id="username">
-    <label for="username" class="inputlabels">Username</label><br />
-    {{ form.username|add_class:"loginput" }}
+    <label for="username" class="inputlabels">Username</label><br>
+    <input type="text" name="username" class="loginput" size="26">
     </div><!-- username ends -->
 
     <div id="password">
-    <label for="password" class="inputlabels">Password<span> <a href="#">Forgot?</a></span></label><br />
-    {{ form.password|add_class:"loginput" }}
+    <label for="password" class="inputlabels">Password<span> <a href="#">Forgot?</a></span></label><br>
+    <input type="password" name="password" class="loginput" size="26">
     </div><!-- password ends -->
 
     <input type="submit" value="login" id="logbutton" class="input">
