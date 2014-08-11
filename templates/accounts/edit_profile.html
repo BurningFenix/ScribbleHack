@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block sylesheet %}
-{% static 'editprofile.css' %}
+{% block sylesheets %}
+	<link href="{% static 'editprofile.css' %}" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="{% static 'js/jquery-ui-1.10.4.custom.min.css' %}" />
 {% endblock %}
 
 {% block head_extra %}
