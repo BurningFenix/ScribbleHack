@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ScribbleHack</title>
+<link href="../../static/submit.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="../../static/js/jquery-ui-1.10.4.custom.min.css" />
+<script src="../../static/js/jquery-1.10.2.js"></script>
+<script src="../../static/js/jquery-ui-1.10.4.custom.min.js"></script>
+ <script>
+$(function() {
+$( "#tabs" ).tabs();
+});
+</script>
+	<style>
+	body{
+		font: 75% "Trebuchet MS", sans-serif;
+	}
+	.demoHeaders {
+		margin-top: 2em;
+	}
+	#dialog-link {
+		padding: .4em 1em .4em 20px;
+		text-decoration: none;
+		position: relative;
+	}
+	#dialog-link span.ui-icon {
+		margin: 0 5px 0 0;
+		position: absolute;
+		left: .2em;
+		top: 50%;
+		margin-top: -8px;
+	}
+	#icons {
+		margin: 0;
+		padding: 0;
+	}
+	#icons li {
+		margin: 2px;
+		position: relative;
+		padding: 4px 0;
+		cursor: pointer;
+		float: left;
+		list-style: none;
+	}
+	#icons span.ui-icon {
+		float: left;
+		margin: 0 4px;
+	}
+	.fakewindowcontain .ui-widget-overlay {
+		position: absolute;
+	}
+	</style>
+</head>
+
+<body id="submitpage">
+
+<div id="wrapper">
+
+<div id="header">
+
+<div id="sitenav">
+
+
+<div id="sitenavleft" class="clearfix">
+
+<a href="homepage.html">
+<div id="logo" class="clearfix">
+<div id="icon">
+</div><!-- icon ends -->
+<img src="../../static/images/logo.png" />
+</div><!-- logo ends -->
+</a>
+
+<div id="sitenavpagelinks" class="clearfix">
+<div class="navlink clearfix">
+<a href="#">Browse</a>
+</div><!-- navlink ends -->
+<div class="navlink clearfix">
+<a href="#">Universe</a>
+</div><!-- navlink ends -->
+<div class="navlink clearfix">
+<a href="#">Groups</a>
+</div><!-- navlink ends -->
+<div class="navlink clearfix">
+<a href="#">Forums</a>
+
+</div><!-- navlink ends -->
+</div><!-- sitenavpagelinks ends -->
+
+</div><!-- sitenavleft ends -->
+
+<div id="sitenavright" class="clearfix">
+
+<div id="navsearchbox">
+
+<form id="tfnewsearch" method="get" action="#">
+		       <input type="submit" class="tfbutton" src="../../static/images/searchicon.png" img />
+		       <input type="text" value=" Search for stories, art or users" class="tftextinput" name="q" size="25" maxlength="120" onfocus="inputFocus(this)" onblur="inputBlur(this)">
+		</form>
+
+
+</div><!-- navsearchbox ends -->
+
+<a href="login.html">Sign in</a>
+
+<a href="profile.html">Username</a>
+<!-- Insert Gear Settings icon --> 
+
+</div><!-- sitenavright ends -->
+
+</div><!-- sitenav ends -->
+
+
+<div id="banner"></div>
+
+</div> <!-- header ends -->
+
+<div id="left">
+	<div id="browse_file"><span id="helm_text">Browse File</span></div>
+	<div id="preview_image"><div id="image"><span id="preview_image">Preview Image</span></div></div>
+	<div id="mature_content">
+		<span style="font-size: 20px"><b><i>Mature Content?</i></b></span>
+		<input type="radio" value="yes" name="mature"> Yes
+		<input type="radio" value="no" name="mature"> No
+	</div>
+</div>
+
+	<div id="right">
+		<div id="form">
+			<form>
+				<h2>Title</h2><br>
+				<input type="text" name="title" style="width:400px; height:35px;"><br><br>
+				
+				<h2>Description</h2><br>
+				<textarea name="desc" rows="5" style="width: 400px"></textarea><br><br>
+				
+				<h2>Categories</h2><br>
+				<select name="categories" style="float: left; margin-right: 20px; width: 190px; height: 35px;">
+					<option value="a">A</option>
+					<option value="b">B</option>
+					<option value="c">C</option>
+				</select>
+				<select name="categories" style="float: left; width: 190px; height: 35px;">
+					<option value="a">A</option>
+					<option value="b">B</option>
+					<option value="c">C</option>
+				</select>
+	<br><br>
+
+				<h2>Type</h2>			
+				<select name="type" style="float: left; width: 190px; height: 35px;">
+					<option>Type</option>
+					<option>Novel</option>
+					<option>Short Story</option>
+					<option>Poem</option>
+					<option>Script</option>
+					<option>Graphic Novel</option>
+					<option>Nonfiction</option>
+				</select>
+
+	<br><br>
+	
+				<h2>Genre</h2>
+				<select name="genre" style="float: left; width: 190px; height: 35px;">
+				   <option>Genre</option>
+				   <option>General</option>
+				   <option>Action/Adventure</option>
+				   <option>Fantasy</option>
+				   <option>Sci-Fi</option>
+				   <option>Historical Fiction</option>
+				   <option>Slice of Life</option>
+				   <option>Paranormal</option>
+				   <option>Romance</option>
+				   <option>Comedy</option>
+				   <option>Mystery</option>
+				   <option>Thriller</option>
+				</select>
+	
+	<br><br>
+				
+				<h2>Tags</h2><br>
+				<input type="text" name="tags" style="width:400px; height:35px;"><br><br>
+				
+				<h2>Visibility</h2><br>
+				<select name="permissions" style="float: left; margin-right: 20px; width: 190px; height: 35px;">
+					<option value="a">Public</option>
+					<option value="b">Private</option>
+					<option value="c">Friends only</option>
+				</select><br><br>
+				
+				<h2>Critique Options</h2><br>
+				<select name="critique_options" style="float: left; margin-right: 20px; width: 190px; height: 35px;">
+					<option value="a">Allow this work to be critiqued</option>
+					<option value="b">I don't want critiques on this work</option>
+				</select>
+			</form><br><br>
+			
+			<div id="submit"><span id="submit_button">Submit</span></div>
+		</div><!-- form ends -->
+	</div><!-- right ends -->
+	
+<div id="footer">
+
+	<div class="footerlist">
+		<p><a id="about" href="">About</a></p>
+		<p><a id="faq" href="">FAQ</a></p>
+		<p><a id="crew" href="">The Crew</a></p>
+	</div>
+	<div class="footerlist">
+		<p><a id="tos" href="">Terms of Service</a></p>
+		<p><a id="ppolicy" href="">Privacy Policy</a></p>
+	</div>
+	<div class="footerlist">
+		<p><a class="templinks" href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/homepage/homepage.html">Home Page</a></p>
+		<p><a class="templinks" href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/profile/profile.html">Profile Page</a></p>
+		<p><a class="templinks" href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/profile/editprofile.html">Edit Profile Page</a></p>
+	</div>
+
+</div><!-- footer ends -->
+	
+</div><!-- wrapper ends -->
+<body>
+</html>

@@ -34,8 +34,6 @@ h1 {
 
 h2 {
 	text-align: left;
-	background-color: #f0fbfb;
-	padding: 5px;
 	font-weight: normal;
 	font-size: 24px;
 	font-family: cantoraone,arial,sans-serif;
@@ -72,7 +70,7 @@ a:active {color:#00A58C;}
 a {
 	text-decoration: none;
 	}
-	
+
 .button {
 	font-size: 14px;
 	font-weight: bold;
@@ -224,12 +222,6 @@ a {
 		clear:both;
 	}
 
-#banner {
-	height: 150px;
-	border: solid 0 #007000;
-	border-bottom: 1px solid #2f2f2f;
-}
-
 #footer {
 	height: 200px;
 	width: 1000px;
@@ -303,170 +295,102 @@ a {
 }
 	
 	
-	
-/* CSS SPECIFICALLY FOR EDIT-PROFILE */
-
-#ppupload {
-	padding-top: 50px;
-	margin-left: 25px;
-	height: 60px;
-	width:60px;
-	-webkit-appearance:none; 
-	}
-	
-.uploadbutton input[type="file"]{
-    -webkit-appearance:none; 
-    position:absolute;
-    top:0; left:0;
-    opacity:0; 
-}
-
-#tabs {
-	border: none;
-	margin: none;
-	padding: none;
-	background: none;
-	}
-
-#tabs-1, #tabs-2, #tabs-3, #tabs-4, #tabs-5{
-	height: 1020px;
-	width: 955px;
-	border-radius: 10px;
-	}
-
-.tabsbox {
-	background-color: #f0fbfb;
-	height: 1000px;
-	width: 950px;
-	border-radius: 10px;
-	}
-
-.tabsbox h1 {
-	color: black;
-	text-align: left;
-	margin-bottom: 0px;
-	padding: 30px 30px 0px 30px;
-	}
-
-.tabsbox p {
-	color: black;
-	text-align: left;
-	margin-bottom: 5px;
-	padding: 0px 30px 15px 30px;
-	}
-
-#tabs h1 {
-	padding: 15px 10px 15px 20px;
-	}
-
-#tabs-2 p {
-	margin: 10px 10px;
-	vertical-align: top;
-	}
-
-#tabs .ui-tabs-nav { 
-    padding-left: 0px; 
-    background: transparent; 
-    border-width: 0px 0px 1px 0px; 
-    -moz-border-radius: 10px; 
-    -webkit-border-radius: 10px; 
-    border-radius: 10px; 
-} 
-
-#tabs .ui-tabs-panel { 
-    background: #ddf9f9; 
-    border-width: 0px 1px 1px 1px; 
-}	
-
-#tabs .ui-tabs-anchor {
-	background-color: #f0fbfb;
-	font-size: 13px;
-	font-weight: bold;
-	}
-
-#tabs  li  a {
-    border-radius: 4px 4px 0 0;
-}
-
-#tabs  li  a:hover {
-    border-color: #EEEEEE #EEEEEE #DDDDDD;
+#banner {
+	height: 150px;
+	border: solid 0 #007000;
+	border-bottom: 1px solid #2f2f2f;
 }
 	
-form p {
-	font-size: 20px;
-	margin: 0px 10px 0px 10px;
-	}
+	
+/* Specifically, Submit Page CSS */	
 
-#submitbutton {
-	margin-left: 50px;
-	}
 
-input[type=text], textarea {
-	background-color: white;
-    height: 28px;
-    padding-left:10px;
-    width: 300px;
-    box-shadow: 0px 0px 2px  #828181;
-	border-radius:5px;
-	margin-left: 10px;
-	font-size: 16px;
-	}
 
-textarea {
-	resize: none;
-	height: 70px;
-	padding-left: 10px;
-	padding-top: 10px;
-	}
-
-::-webkit-input-placeholder {
-   font-size: 16px;
-}
-
-:-moz-placeholder { /* Firefox 18- */
-   font-size: 16px; 
-}
-
-::-moz-placeholder {  /* Firefox 19+ */
-   font-size: 16px; 
-}
-
-:-ms-input-placeholder {  
-   font-size: 16px;  
-}
-
-#aboutme {
-	vertical-align: top;
-	}
-
-input[type=radio] {
-	height: 1em;
-	width: 1em;
-	margin-left: 15px;
-	vertical-align: top;
-	}
-
-input[type=submit]{
-	font-size: 14px;
-	font-weight: bold;
-	padding: 5px 10px 5px 8px;
-	color: #213d42;
+#left {
+	background: inherit;
+	position: relative;
 	float: left;
-	background-color: #efcf98;
-	text-decoration: none;
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0px 0px 5px #213d42;
-    -moz-box-shadow: inset 0px 0px 5px #213d42;
-    box-shadow: inset 0px 0px 5px #213d42;
-	}
+	width: 50%;
+	height: 1500px;
+}
+#right {
+	background: inherit;
+	position: relative;
+	float: right;
+	width: 50%;
+	height: 1500px;
+}
+#browse_file {
+	background-image: url('helm_button.png');
+	background-repeat: no-repeat;
+	background-size: 90%;
+	height: 200px;
+	margin: 20px;
+}
+#helm_text {
+	color: white;
+	font-size: 24px;
+	position: absolute;
+	top: 125px;
+	left: 255px;
+	text-shadow: 1px 1px 1px #000;
+	letter-spacing: 1px;
+}
+#preview_image {
+	position: relative;
+	float: left;
+	width: 100%;
+}
+#image {
+	width: 400px;
+	height: 400px;
+	background: white;
+	border: 1px solid #000;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+#preview_image {
+	line-height: 400px;
+	text-align: center;
+	font-weight: bold;
+}
+#mature_content {
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	font-size: 14px;
+}
 
-#banner input[type=submit]{
-	margin-left: 410px;
-	}
-	
+#form {
+	width: 400px;
+	margin-top: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 24px;
+}
+#submit {
+	position: relative;
+	height: 85px;
+	width: 230px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#submit_button {
+	color: white;
+	font-size: 24px;
+	position: absolute;
+	top: 21px;
+	left: 73px;
+	text-shadow: 1px 1px 1px #000;
+	letter-spacing: 1px;
+	cursor: hand;
+}
 
-	
-	
+
+
 .templinks {
 	margin-left: 250px;
 	margin-top: 5px;
