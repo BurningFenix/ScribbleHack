@@ -53,7 +53,7 @@ $( "#tabs" ).tabs();
 	</style>
 </head>
 
-<body id="submitpage">
+<body id="profile">
 
 <div id="wrapper">
 
@@ -112,23 +112,44 @@ $( "#tabs" ).tabs();
 </div><!-- sitenav ends -->
 
 
-<div id="banner"></div>
 
-</div> <!-- header ends -->
 
-	<div id="contentleft">
-		<div id="form">
+
+<div id="banner">
+
+</div><!-- banner ends -->
+
+</div><!-- header ends -->
+
+
+
+<div id="content" class="clearfix">
+
+	<div id="contentleft" class="clearfix">
+	
+	
+	<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">Writing</a></li>
+		<li><a href="#tabs-2">Art</a></li>
+	</ul>
+	
+	<div id="tabs-1">
+	<div class="tabsbox">
+	<div id="browse_file"><h2><span>Browse File</span></h2></div>
+		<form action="figure this out" enctype="multipart/form-data" method="post">
+					<input type="file" name="browsefile" size="40"><br>
+		</form>
+	<div id="form">
 			<form>
-				<h2>Title</h2><br>
-				<input type="text" name="title" style="width:400px; height:35px;"><br><br>
+				<h2>Title: <input type="text" name="title" style="width:300px; height:20px;"></h2>
 				
-				<h2>Description</h2><br>
-				<textarea name="desc" rows="5" style="width: 400px"></textarea><br><br>
 				
-	<br><br>
+				<h2>Description:</h2>
+				<textarea name="desc" rows="5" style="width: 400px"></textarea>
 
-				<h2>Type</h2>			
-				<select name="type" style="float: left; width: 190px; height: 35px;">
+				<h2 id="type">Type:
+				<select name="type" style="width: 150px; height: 30px; font-size: 16px;">
 					<option>Type</option>
 					<option>Novel</option>
 					<option>Short Story</option>
@@ -137,11 +158,10 @@ $( "#tabs" ).tabs();
 					<option>Graphic Novel</option>
 					<option>Nonfiction</option>
 				</select>
-
-	<br><br>
+				</h2>
 	
-				<h2>Genre</h2>
-				<select name="genre" style="float: left; width: 190px; height: 35px;">
+				<h2>Genre:
+				<select name="genre" style="width: 150px; height: 30px; font-size: 16px;">
 				   <option>Genre</option>
 				   <option>General</option>
 				   <option>Action/Adventure</option>
@@ -155,41 +175,153 @@ $( "#tabs" ).tabs();
 				   <option>Mystery</option>
 				   <option>Thriller</option>
 				</select>
-	
-	<br><br>
+				</h2>
 				
-				<h2>Tags</h2><br>
-				<input type="text" name="tags" style="width:400px; height:35px;"><br><br>
+				<h2>Tags:
+				<input type="text" name="tags" style="width:300px; height:20px;">
+				</h2>
 				
-				<h2>Visibility</h2><br>
-				<select name="permissions" style="float: left; margin-right: 20px; width: 190px; height: 35px;">
+				<h2>Visibility:
+				<select name="visibility" style="width: 200px; height: 30px; font-size: 16px;">
 					<option value="a">Public</option>
 					<option value="b">Private</option>
 					<option value="c">Friends only</option>
-				</select><br><br>
+				</select>
+				</h2>
 				
-				<h2>Critique Options</h2><br>
-				<select name="critique_options" style="float: left; margin-right: 20px; width: 190px; height: 35px;">
+				<h2>Critique Options:
+				<select name="critique_options" style="width: 300px; height: 30px; font-size: 16px;">
 					<option value="a">Allow this work to be critiqued</option>
 					<option value="b">I don't want critiques on this work</option>
 				</select>
-			</form><br><br>
+				</h2>
+			</form>
 			
-			<div id="submit"><span id="submit_button">Submit</span></div>
 		</div><!-- form ends -->
+		
+		<img class="barrels" src="../../static/images/barrels.png" height="250px" width="250px"/>
+		
+		</div><!-- tabsbox ends -->
+		</div><!-- tabs-1 ends -->
+		
+		
+		
+		
+			
+	<div id="tabs-2">
+	<div class="tabsbox">
+	<div id="browse_file"><h2><span>Browse File</span></h2></div>
+		<form action="figure this out" enctype="multipart/form-data" method="post">
+					<input type="file" name="browsefile" size="40"><br>
+		</form>
+	<div id="form">
+			<form>
+				<h2>Title: <input type="text" name="title" style="width:300px; height:20px;"></h2>
+				
+				
+				<h2>Description:</h2>
+				<textarea name="desc" rows="5" style="width: 400px"></textarea>
+
+				<h2 id="type">Type 1:
+				<select name="type" style="width: 150px; height: 30px; font-size: 16px;">
+					<option>Abstract/Surreal</option>
+					<option>Landscapes/Scenery</option>
+					<option>Still Life </option>
+					<option>Portraits/People</option>
+					<option>Photography</option>
+					<option>Design/Graphics</option>
+					<option>Fanart</option>
+					<option>Comics</option>
+					<option>3D</option>
+					<option>Miscellaneous</option>
+				</select>
+				</h2>
+	
+				<h2>Type 2:
+				<select name="type2" style="width: 150px; height: 30px; font-size: 16px;">
+					<option>Abstract/Surreal</option>
+					<option>Landscapes/Scenery</option>
+					<option>Still Life</option>
+					<option>Portraits/People</option>
+					<option>Photography</option>
+					<option>Design/Graphics</option>
+					<option>Fanart</option>
+					<option>Comics</option>
+					<option>3D</option>
+					<option>Miscellaneous</option>
+				</select>
+				</h2>
+				<br>
+				
+				<h2>Medium:
+				<select name="medium" style="width: 150px; height: 30px; font-size: 16px;">
+					<option>Graphite</option>
+					<option>Charcoal</option>
+					<option>Colored Pencils</option>
+					<option>Watercolor, Oil, or Acrylics</option>
+					<option>Encaustic</option>
+					<option>Plaster</option>
+					<option>Metal</option>
+					<option>Wood</option>
+					<option>Crayons</option>
+					<option>Oil/Chalk Pastel</option>
+					<option>Textiles</option>
+					<option>Markers</option>
+					<option>Ink</option>
+					<option>Other - Mention it in the tags!</option>
+				</select>
+				</h2>
+				
+				<h2>Tags:
+				<input type="text" name="tags" style="width:300px; height:20px;">
+				</h2>
+				
+				<h2>Visibility:
+				<select name="visibility" style="width: 200px; height: 30px; font-size: 16px;">
+					<option value="a">Public</option>
+					<option value="b">Private</option>
+					<option value="c">Friends only</option>
+				</select>
+				</h2>
+				
+				<h2>Critique Options:
+				<select name="critique_options" style="width: 300px; height: 30px; font-size: 16px;">
+					<option value="a">Allow this work to be critiqued</option>
+					<option value="b">I don't want critiques on this work</option>
+				</select>
+				</h2>
+			</form>
+			
+		</div><!-- form ends -->
+		
+		<img class="barrels" src="../../static/images/barrels.png" height="250px" width="250px"/>
+		
+		</div><!-- tabsbox ends -->
+		</div><!-- tabs-2 ends -->
+		</div><!-- tabs ends -->
+
 	</div><!-- contentleft ends -->
 
-<div id="contentright">
-	<div id="browse_file"><span id="helm_text">Browse File</span></div>
+<div id="contentright" class="clearfix">
+	<div class="tabsbox">
+	<h2>Preview</h2>
 	<div id="preview_image"><div id="image"><span id="preview_image">Preview Image</span></div></div>
 	<div id="mature_content">
 		<span style="font-size: 20px"><b><i>Mature Content?</i></b></span>
 		<input type="radio" value="yes" name="mature"> Yes
 		<input type="radio" value="no" name="mature"> No
 	</div>
+	
+	<div id="submit"><span id="submit_button">Submit</span></div>
+	
+	
+	</div><!-- tabsbox ends -->
+	
+
+	
 </div><!-- contentright ends -->
 
-
+</div><!-- content ends -->
 	
 <div id="footer">
 
@@ -211,5 +343,6 @@ $( "#tabs" ).tabs();
 </div><!-- footer ends -->
 	
 </div><!-- wrapper ends -->
-<body>
+
+</body>
 </html>
