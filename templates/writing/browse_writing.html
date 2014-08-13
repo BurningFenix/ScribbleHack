@@ -32,15 +32,17 @@
   {% endfor %}
 
   <div id="browse_pagenumbers">
-  	<a href="link"><img class="arrowbutton" src="../../static/images/left_arrow.png"></a>
-  	<a href class="browse_numbers">1</a>
-  	<a href class="browse_numbers">2</a>
-  	<a href class="browse_numbers">3</a>
-  	<a href class="browse_numbers">4</a>
-  	<a href class="browse_numbers">5</a>
-  	<a href class="browse_numbers">6</a>
-  	<a href class="browse_numbers">...</a>
-  	<a href="link"><img class="arrowbutton" src="../../static/images/right_arrow.png"></a>
+    {% if page_obj.has_previous %}
+  	 <a href="?page={{ page_obj.previous_page_number }}"><img class="arrowbutton" src="../../static/images/left_arrow.png"></a>
+    {% endif %}
+
+    {% for page in paginator.page_range %}
+  	 <a href="?page={{ page }}" class="browse_numbers">{{ page }}</a>
+    {% endfor %}
+
+    {% if page_obj.has_next %}
+  	 <a href="?page={{ page_obj.next_page_number }}"><img class="arrowbutton" src="../../static/images/right_arrow.png"></a>
+    {% endif %}
   </div>
 {% endblock contentleft %}
 
