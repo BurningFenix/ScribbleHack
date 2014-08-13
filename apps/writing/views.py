@@ -8,7 +8,7 @@ from .forms import CreateWritingForm
 
 class WritingListView(ListView):
 	model = WritingPiece
-	template_name = 'writing/writing_list.html'
+	template_name = 'writing/browse_writing.html'#'writing/writing_list.html'
 
 class CreateWritingView(LoginRequiredMixin, FormView):
 	model = WritingPiece
