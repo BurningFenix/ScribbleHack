@@ -1,3 +1,4 @@
+from django.http import Http404
 from django.shortcuts import redirect
 from django.contrib.auth import authenticate, login, logout
 from django.views.generic import TemplateView
@@ -9,10 +10,6 @@ from .models import SHUser
 
 from braces.views import LoginRequiredMixin
 
-class OtherProfileView(DetailView):
-	model = SHUser
-	template_name = 'accounts/profile.html'
-
 # when someone goes to /accounts/ it will automatically take you
 # to either the login page or to your profile page
 class IndexView(RedirectView):
@@ -23,8 +20,34 @@ class IndexView(RedirectView):
 		return redirect(redirectPage)
 
 # displays the profile page of the user currently logged in
-class OwnProfileView(LoginRequiredMixin, TemplateView):
+class ProfileView(LoginRequiredMixin, DetailView):
+	model = SHUser
 	template_name = 'accounts/profile.html'
+
+	def get_queryset(self):
+		try:
+			qs = self.model.objects.get(pk=self.kwargs['pk'])
+		except:
+			qs = None
+
+		return qs
+
+	def get_object(self):
+		if self.kwargs['pk'] is None:
+			object = self.request.user
+		elif self.get_queryset() is None:
+			object = None
+		else:
+			object = self.get_queryset()
+
+		return object
+
+	def get(self, request, *args, **kwargs):
+		if self.get_object() is None:
+			raise Http404
+		else:
+			return super(ProfileView, self).get(request, *args, **kwargs)
+
 
 class EditProfileView(LoginRequiredMixin, FormView):
 	template_name = 'accounts/edit_profile.html'

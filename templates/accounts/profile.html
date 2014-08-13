@@ -18,8 +18,8 @@ $( "#tabs" ).tabs();
 {% block banner %}
 <div id="profbannerleft">
 <img id="profilepic" src="{% static 'images/luceroprofilepic.jpg' %}" width="120" height="120" />
-<p id="profbigusername">Laurelin</p>
-<p id="proffirstlastname">Lucero Calleo</p>
+<p id="profbigusername">{{ object.username }}</p>
+<p id="proffirstlastname">{{ user.first_name }} {{ user.lastname }}</p>
 <p id="profselftitle"><em>Fantasy Writer</em></p>
 </div><!-- profbannerleft ends -->
 

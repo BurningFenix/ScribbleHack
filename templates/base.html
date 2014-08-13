@@ -108,7 +108,7 @@
 </div><!-- navsearchbox ends -->
 
 {% if user.is_authenticated %}
-<a href="{% url 'accounts:profile' %}">{{ user.username }}</a>
+<a href="{% url 'accounts:profile' pk=user.pk %}">{{ user.username }}</a>
 {% else %}
 <a href="{% url 'accounts:login' %}">Sign in</a>
 {% endif %}
