@@ -6,9 +6,16 @@ from braces.views import LoginRequiredMixin
 from .models import WritingPiece
 from .forms import CreateWritingForm
 
+#import pprint
+
 class WritingListView(ListView):
 	model = WritingPiece
 	template_name = 'writing/browse_writing.html'#'writing/writing_list.html'
+
+	# gets one query set that follows the foreign key 'owner'
+	def get_queryset(self):
+		return self.model.objects.select_related('owner')
+		
 
 class CreateWritingView(LoginRequiredMixin, FormView):
 	model = WritingPiece
