@@ -10,7 +10,8 @@ class WritingListView(ListView):
 	model = WritingPiece
 	template_name = 'writing/browse_writing.html'#'writing/writing_list.html'
 	# will show 20 writing pieces per page (5 rows)
-	# pagination adds one query
+	# pagination adds one query because it needs to know how many
+	# WritingPiece entries exist in the database
 	paginate_by = 20
 
 	# gets one query set that follows the foreign key 'owner'
