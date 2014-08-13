@@ -40,7 +40,7 @@ class EditWritingView(LoginRequiredMixin, UpdateView):
 		# this will only allow you to get the object that
 		# you are trying to edit if you are the owner
 		# if you are not the owner, then no object is returned
-		### currently uses another query to figure out the owner.
+		### currently uses another query to figure out who is the owner.
 		### bonus points if can figure out how to make this more efficient
 		if self.request.user == object.owner:
 			return object
