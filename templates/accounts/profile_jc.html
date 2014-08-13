@@ -1,21 +1,124 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block stylesheets %}
-	{{ block.super }}
-	<link href="{% static 'profile.css' %}" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="{% static 'js/jquery-ui-1.10.4.custom.min.css' %}" />
-{% endblock stylesheets %}
-
-{% block head_extra %}
-<script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ScribbleHack</title>
+<link href="../../static/profile.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="../../static/js/jquery-ui-1.10.4.custom.min.css" />
+<script src="../../static/js/jquery-1.10.2.js"></script>
+<script src="../../static/js/jquery-ui-1.10.4.custom.min.js"></script>
+ <script>
 $(function() {
 $( "#tabs" ).tabs();
 });
 </script>
-{% endblock head_extra %}
+	<style>
+	body{
+		font: 75% "Trebuchet MS", sans-serif;
+	}
+	.demoHeaders {
+		margin-top: 2em;
+	}
+	#dialog-link {
+		padding: .4em 1em .4em 20px;
+		text-decoration: none;
+		position: relative;
+	}
+	#dialog-link span.ui-icon {
+		margin: 0 5px 0 0;
+		position: absolute;
+		left: .2em;
+		top: 50%;
+		margin-top: -8px;
+	}
+	#icons {
+		margin: 0;
+		padding: 0;
+	}
+	#icons li {
+		margin: 2px;
+		position: relative;
+		padding: 4px 0;
+		cursor: pointer;
+		float: left;
+		list-style: none;
+	}
+	#icons span.ui-icon {
+		float: left;
+		margin: 0 4px;
+	}
+	.fakewindowcontain .ui-widget-overlay {
+		position: absolute;
+	}
+	</style>
+</head>
 
-{% block banner %}
+<body id="profile">
+
+<div id="wrapper">
+
+<div id="header">
+
+<div id="sitenav">
+
+
+<div id="sitenavleft" class="clearfix">
+
+<a href="homepage.html">
+<div id="logo" class="clearfix">
+<div id="icon">
+</div><!-- icon ends -->
+<img src="../../static/images/logo.png" />
+</div><!-- logo ends -->
+</a>
+
+<div id="sitenavpagelinks" class="clearfix">
+<div class="navlink clearfix">
+<a href="#">Browse</a>
+</div><!-- navlink ends -->
+<div class="navlink clearfix">
+<a href="#">Universe</a>
+</div><!-- navlink ends -->
+<div class="navlink clearfix">
+<a href="#">Groups</a>
+</div><!-- navlink ends -->
+<div class="navlink clearfix">
+<a href="#">Forums</a>
+
+</div><!-- navlink ends -->
+</div><!-- sitenavpagelinks ends -->
+
+</div><!-- sitenavleft ends -->
+
+<div id="sitenavright" class="clearfix">
+
+<div id="navsearchbox">
+
+<form id="tfnewsearch" method="get" action="#">
+		       <input type="submit" class="tfbutton" src="../../static/images/searchicon.png" img />
+		       <input type="text" value=" Search for stories, art or users" class="tftextinput" name="q" size="25" maxlength="120" onfocus="inputFocus(this)" onblur="inputBlur(this)">
+		</form>
+
+
+</div><!-- navsearchbox ends -->
+
+<a href="login.html">Sign in</a>
+
+<a href="profile.html">Username</a>
+<!-- Insert Gear Settings icon --> 
+
+</div><!-- sitenavright ends -->
+
+</div><!-- sitenav ends -->
+
+
+
+
+
+<div id="banner">
+
+
+
 <div id="profbannerleft">
 <img id="profilepic" src="../../static/images/luceroprofilepic.jpg" width="120" height="120" />
 <p id="profbigusername">Laurelin</p>
@@ -33,11 +136,19 @@ $( "#tabs" ).tabs();
 </ul>
 </div><!-- profstatistics ends -->
 </div><!-- profbannerright ends -->
-{% endblock banner %}
 
-{% block body_id %}profile{% endblock %}
+</div><!-- banner ends -->
 
-{% block contentleft %}
+</div><!-- header ends -->
+
+
+
+
+
+<div id="content" class="clearfix">
+
+<div id="contentleft" class="clearfix">
+
 <div id="tabs">
 	<ul>
 		<li><a href="#tabs-1">Status</a></li>
@@ -59,11 +170,6 @@ $( "#tabs" ).tabs();
 			<div class="statusboxstats">
 				<a href="link" class="button" rel="nofollow"><img class="icon" src="../../static/images/speechbubble.png"/>Comment</a>
 				<p><a href="">0 Comments</a></p>
-			</div>
-			<br>
-			<div id="journallinks">
-				<p><a href="">View previous entries</a></p>
-				<p><a href="profile_edit_journal.html">Update blog</a></p>
 			</div>
 			<br><br>
 		</div>
@@ -285,14 +391,23 @@ $( "#tabs" ).tabs();
 </div>
 
 </div><!-- profcomments ends -->
-{% endblock %}
 
-{% block contentright %}
+</div><!-- contentleft ends -->
+
+
+
+
+
+<div id="contentright" class="clearfix">
+
 <div id="badgeribbon" class="proftopright">
-	<p class="badgetext">MOST RECENT BADGES</p>
+	<p>MOST RECENT BADGES</p>
 		<img src="../../static/images/badge1.png"/>
 		<img src="../../static/images/badge2.png"/>
-	<p class="badgetext"> <a href="link"> ALL BADGES</a></p>
+		<img src="../../static/images/badge3.png"/>
+		<img src="../../static/images/badge4.png"/>
+		<img src="../../static/images/badge5.png"/>
+	<p><a href="link"> ALL BADGES</a></p>
 </div>
 
 
@@ -300,22 +415,22 @@ $( "#tabs" ).tabs();
 
 <div id="interests" class="proftopright">
 
-<h1>FAVORITES</h1>
+<h1>Favorites</h1>
 
-<h2>BOOKS</h2>
-<p>{{ user.books }}</p>
-<h2>AUTHORS</h2>
-<p>{{ user.authors }}</p>
-<h2>ARTWORKS</h2>
-<p>{{ user.artworks }}</p>
-<h2>ARTISTS</h2>
-<p>{{ user.artists }}</p>
-<h2>TV/MOVIES</h2>
-<p>{{ user.tv_movies }}</p>
-<h2>MUSIC</h2>
-<p>{{ user.music }}</p>
-<h2>VIDEO GAMES</h2>
-<p>{{ user.video_games }}</p>
+<h2>Books</h2>
+<p>The Brothers Karamazov, The Lord of the Rings, Crime and Punishment</p>
+<h2>Authors</h2>
+<p>J.R.R. Tolkien, Fyodor Dostoevsky, Paulo Coelho</p>
+<h2>Artworks</h2>
+<p>Starry Night</p>
+<h2>Artists</h2>
+<p>Jones De Ro, Jennifer Healy, Pierre Auguste Cot, Auguste Renoir</p>
+<h2>TV/Movies</h2>
+<p>The Lord of the Rings, Pan's Labyrinth, Big Fish</p>
+<h2>Music</h2>
+<p>Songs from animated Disney classics, Kutless, Josh Groban</p>
+<h2>Video Games</h2>
+<p>The Legend of Zelda, Fire Emblem, Metroid, Harvest Moon</p>
 
 </div>
 
@@ -325,12 +440,45 @@ $( "#tabs" ).tabs();
 
 <div id="profbottomright">
 
-	<h1>Friends and Followers</h1>
+<div class="brboxes">
+<h1>Friends & Followers</h1>
+</div>
 
-	<h1>Collaborators</h1>
+<div class="brboxes">
+<h1>Collaborators</h1>
+</div>
 
 </div><!-- profbottomright ends -->
-{% endblock %}
 
-<a href="{% url 'accounts:edit' %}">Edit Profile</a>
-<a href="{% url 'accounts:logout' %}">Logout</a>
+</div><!-- contentright ends -->
+
+</div><!-- content ends -->
+
+
+
+<div id="footer">
+
+	<div class="footerlist">
+		<p><a id="about" href="">About</a></p>
+		<p><a id="faq" href="">FAQ</a></p>
+		<p><a id="crew" href="">The Crew</a></p>
+	</div>
+	<div class="footerlist">
+		<p><a id="tos" href="">Terms of Service</a></p>
+		<p><a id="ppolicy" href="">Privacy Policy</a></p>
+	</div>
+	<div class="footerlist">
+		<p><a class="templinks" href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/homepage/homepage.html">Home Page</a></p>
+		<p><a class="templinks" href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/profile/profile.html">Profile Page</a></p>
+		<p><a class="templinks" href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/profile/editprofile.html">Edit Profile Page</a></p>
+		<p><a class="templinks" href="{% url 'accounts:logout' %}">Logout</a></p>
+	</div>
+
+</div><!-- footer ends -->
+
+
+</div><!-- wrapper ends -->
+
+
+</body>
+</html>
