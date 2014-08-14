@@ -4,7 +4,11 @@ Added a README so that it stops bugging me for one lol (JC)
 
 Template Testing Links
 ----------------------
-make sure to python manage.py runserver before clicking the links
+make sure to
+
+	python manage.py runserver
+
+before clicking the links
 
 [templates/browse/browse_writing.html](http://127.0.0.1:8000/testing/browse_writing)
 
