@@ -321,8 +321,8 @@ a {
 
 #contentleft {
 	margin: 0 0 0 25px;
-	padding: 0;
-	width: 570px;
+	padding: 0px 0px 0px 10px;
+	width: 560px;
 	height: 1576px;
 	position: absolute;
 	top: 1px;
@@ -333,25 +333,49 @@ a {
 
 .browse_cover {
 	background-color:#f0fbfb;
-	border-radius: 10px;
 	width: 120px;
-	margin: 5px;
-	padding: 5px;
+	margin: 10px;
+	padding: 10px 0px 0px 0px;
 	float: left;
 	text-align: center;
-	height: 260px;
+	height: 210px;
 	}
 
 .browse_cover a {
+    font-size: 12px;
 	margin-top: 10px;
 	margin-bottom: 0px;
+    text-align: center;
 	}
 	
 .browse_cover h2 {
-	font-size: 18px;
-	margin-top: 10px;
+	font-size: 14px;
+	margin-top: 5px;
 	margin-bottom: 0px;
+    text-align: center;
 	}
+
+.hoverbox {
+    display: none;
+    padding: 10px;
+}
+
+.hoverbox p {
+    text-align: left;
+    font-size: 10px;
+}
+
+.browse_cover:hover .hoverbox {
+    display: block;
+    width: 300px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    background-color: #f0fbfb;
+    border-radius: 10px;
+    border: 2px solid #099bb6;
+    box-shadow: inset 0px 0px 10px  #099bb6;
+}
 
 .browse_artwork {
 	background-color: #c8f2e9;
@@ -479,11 +503,12 @@ select {
 #recommendations .browse_cover {
 	background-color:#f0fbfb;
 	border-radius: 10px;
-	width: 80px;
+	width: 90px;
 	margin: 5px;
 	float: left;
 	text-align: center;
-	height: 230px;
+	height: 200px;
+    padding-top: 10px;
 	}
 
 #recommendations .browse_cover a {
