@@ -19,7 +19,7 @@ $( "#tabs" ).tabs();
 <div id="profbannerleft">
 <img id="profilepic" src="{% static 'images/luceroprofilepic.jpg' %}" width="120" height="120" />
 <p id="profbigusername">{{ object.username }}</p>
-<p id="proffirstlastname">{{ user.first_name }} {{ user.lastname }}</p>
+<p id="proffirstlastname">{{ object.first_name }} {{ object.lastname }}</p>
 <p id="profselftitle"><em>Fantasy Writer</em></p>
 </div><!-- profbannerleft ends -->
 
@@ -303,19 +303,19 @@ $( "#tabs" ).tabs();
 <h1>FAVORITES</h1>
 
 <h2>BOOKS</h2>
-<p>{{ user.books }}</p>
+<p>{{ object.books }}</p>
 <h2>AUTHORS</h2>
-<p>{{ user.authors }}</p>
+<p>{{ object.authors }}</p>
 <h2>ARTWORKS</h2>
-<p>{{ user.artworks }}</p>
+<p>{{ object.artworks }}</p>
 <h2>ARTISTS</h2>
-<p>{{ user.artists }}</p>
+<p>{{ object.artists }}</p>
 <h2>TV/MOVIES</h2>
-<p>{{ user.tv_movies }}</p>
+<p>{{ object.tv_movies }}</p>
 <h2>MUSIC</h2>
-<p>{{ user.music }}</p>
+<p>{{ object.music }}</p>
 <h2>VIDEO GAMES</h2>
-<p>{{ user.video_games }}</p>
+<p>{{ object.video_games }}</p>
 
 </div>
 
