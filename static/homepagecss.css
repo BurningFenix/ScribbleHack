@@ -7,20 +7,20 @@ body {
 }
 
 @font-face {
-	font-family:UniversLTStd;
-	src:url(universltstd.otf);
+	font-family:"UniversLTStd";
+	src:url("universltstd.otf");
 	font-weight: normal;
 }
 
 @font-face {
-	font-family:UniversLTStd;
-	src:url(universltstdlight.otf);
+	font-family:"UniversLTStd";
+	src:url("universltstdlight.otf");
 	font-weight: lighter;
 }
 
 @font-face {
-	font-family:UniversLTStd;
-	src:url(universltstdbold.otf);
+	font-family:"UniversLTStd";
+	src:url("universltstdbold.otf");
 	font-weight: bold;
 }
 
@@ -197,7 +197,7 @@ a {
 #banner {
 	height: 150px;
 	border: solid 0 #007000;
-	border-bottom: 1px solid #288e78;
+	border-bottom: 1px solid #213d42;
 }
 
 #footer {
