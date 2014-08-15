@@ -1,484 +1,333 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>ScribbleHack</title>
-<link href="../../static/profile.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="../../static/js/jquery-ui-1.10.4.custom.min.css" />
-<script src="../../static/js/jquery-1.10.2.js"></script>
-<script src="../../static/js/jquery-ui-1.10.4.custom.min.js"></script>
- <script>
-$(function() {
-$( "#tabs" ).tabs();
-});
-</script>
-	<style>
-	body{
-		font: 75% "Trebuchet MS", sans-serif;
-	}
-	.demoHeaders {
-		margin-top: 2em;
-	}
-	#dialog-link {
-		padding: .4em 1em .4em 20px;
-		text-decoration: none;
-		position: relative;
-	}
-	#dialog-link span.ui-icon {
-		margin: 0 5px 0 0;
-		position: absolute;
-		left: .2em;
-		top: 50%;
-		margin-top: -8px;
-	}
-	#icons {
-		margin: 0;
-		padding: 0;
-	}
-	#icons li {
-		margin: 2px;
-		position: relative;
-		padding: 4px 0;
-		cursor: pointer;
-		float: left;
-		list-style: none;
-	}
-	#icons span.ui-icon {
-		float: left;
-		margin: 0 4px;
-	}
-	.fakewindowcontain .ui-widget-overlay {
-		position: absolute;
-	}
-	</style>
-</head>
+{% extends 'base.html' %}
+{% load static %}
 
-<body id="profile">
+{% block stylesheets %}
+	{{ block.super }}
+	<link href="{% static 'profile.css' %}" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="{% static 'js/jquery-ui-1.10.4.custom.min.css' %}" />
+{% endblock stylesheets %}
 
-<div id="wrapper">
+{% block head_extra %}
+	<script>
+	$(function() {
+	$( "#tabs" ).tabs();
+	});
+	</script>
+{% endblock head_extra %}
 
-<div id="header">
+{% block banner %}
+	<div id="profbannerleft">
+	<img id="profilepic" src="{% static 'images/luceroprofilepic.jpg' %}" width="120" height="120" />
+	<p id="profbigusername">{{ object.username }}</p>
+	<p id="proffirstlastname">{{ object.first_name }} {{ object.lastname }}</p>
+	<p id="profselftitle"><em>Fantasy Writer</em></p>
+	</div><!-- profbannerleft ends -->
 
-<div id="sitenav">
-
-
-<div id="sitenavleft" class="clearfix">
-
-<a href="homepage.html">
-<div id="logo" class="clearfix">
-<div id="icon">
-</div><!-- icon ends -->
-<img src="../../static/images/logo.png" />
-</div><!-- logo ends -->
-</a>
-
-<div id="sitenavpagelinks" class="clearfix">
-<div class="navlink clearfix">
-<a href="#">Browse</a>
-</div><!-- navlink ends -->
-<div class="navlink clearfix">
-<a href="#">Universe</a>
-</div><!-- navlink ends -->
-<div class="navlink clearfix">
-<a href="#">Groups</a>
-</div><!-- navlink ends -->
-<div class="navlink clearfix">
-<a href="#">Forums</a>
-
-</div><!-- navlink ends -->
-</div><!-- sitenavpagelinks ends -->
-
-</div><!-- sitenavleft ends -->
-
-<div id="sitenavright" class="clearfix">
-
-<div id="navsearchbox">
-
-<form id="tfnewsearch" method="get" action="#">
-		       <input type="submit" class="tfbutton" src="../../static/images/searchicon.png" img />
-		       <input type="text" value=" Search for stories, art or users" class="tftextinput" name="q" size="25" maxlength="120" onfocus="inputFocus(this)" onblur="inputBlur(this)">
-		</form>
-
-
-</div><!-- navsearchbox ends -->
-
-<a href="login.html">Sign in</a>
-
-<a href="profile.html">Username</a>
-<!-- Insert Gear Settings icon --> 
-
-</div><!-- sitenavright ends -->
-
-</div><!-- sitenav ends -->
-
-
-
-
-
-<div id="banner">
-
-
-
-<div id="profbannerleft">
-<img id="profilepic" src="../../static/images/luceroprofilepic.jpg" width="120" height="120" />
-<p id="profbigusername">Laurelin</p>
-<p id="proffirstlastname">Lucero Calleo</p>
-<p id="profselftitle"><em>Fantasy Writer</em></p>
-</div><!-- profbannerleft ends -->
-
-<div id="profbannerright">
-<p id="profonlinestatus">Last online Feb 2012</p>
-<div id="profstatistics">
-<ul>
-<div class="profstat"><li><span>5,000</span></br>PAGEVIEWS</li></div>
-<div class="profstat"><li><span>420</span></br>COMMENTS</li></div>
-<div class="profstat"><li><span>67</span></br>WORKS</li></div>
-</ul>
-</div><!-- profstatistics ends -->
-</div><!-- profbannerright ends -->
-
-</div><!-- banner ends -->
-
-</div><!-- header ends -->
-
-
-
-
-
-<div id="content" class="clearfix">
-
-<div id="contentleft" class="clearfix">
-
-<div id="tabs">
+	<div id="profbannerright">
+	<p id="profonlinestatus">Last online Feb 2012</p>
+	<div id="profstatistics">
 	<ul>
-		<li><a href="#tabs-1">Status</a></li>
-		<li><a href="#tabs-2">About Me</a></li>
-		<li><a href="#tabs-3">Groups</a></li>
-		<li><a href="#tabs-4">Request a Critique</a></li>
-		<li><a href="#tabs-5">Stats and Activity</a></li>
+	<div class="profstat"><li><span>5,000</span></br>PAGEVIEWS</li></div>
+	<div class="profstat"><li><span>420</span></br>COMMENTS</li></div>
+	<div class="profstat"><li><span>67</span></br>WORKS</li></div>
 	</ul>
-	<div id="tabs-1">
-		<div class="tabsbox">
-			<h2>Yo peeps what's up?</h2>
-			<h3>by Laurelin, posted 3 hours ago</h3>
-			<p>Well, this is my first post on ScribbleHack.com and I have to say, IT FEELS GREAT! The website is going to be finished SOONER THAN YOU KNOW IT, PEOPLE!!! WOOOO!!!! I'd like to give a special thanks to the Captain and First Mate, JC and Rodrigo and of course our loyal crew. Anyway, so the status for today: I'm working on the profile page while Kae is finishing up the home page and working on the blank page. Not sure what JC and Rodrigo are doing because I don't understand what they do. XD But I see them doing stuff on GitHub that looks legit so we're good. XD Well, that's all for today, folks.</p>
-			
-			<div class="statusboxstats">
-				<a href="link" class="button" rel="nofollow"><img class="icon" src="../../static/images/checkmark.png"/>Like</a>
-				<p>2 Likes</p>
+	</div><!-- profstatistics ends -->
+	</div><!-- profbannerright ends -->
+{% endblock banner %}
+
+{% block body_id %}profile{% endblock %}
+
+{% block contentleft %}
+	<div id="tabs">
+		<ul>
+			<li><a href="#tabs-1">Status</a></li>
+			<li><a href="#tabs-2">About Me</a></li>
+			<li><a href="#tabs-3">Groups</a></li>
+			<li><a href="#tabs-4">Request a Critique</a></li>
+			<li><a href="#tabs-5">Stats and Activity</a></li>
+		</ul>
+		<div id="tabs-1">
+			<div class="tabsbox">
+				<h2>Yo peeps what's up?</h2>
+				<h3>by Laurelin, posted 3 hours ago</h3>
+				<p>Well, this is my first post on ScribbleHack.com and I have to say, IT FEELS GREAT! The website is going to be finished SOONER THAN YOU KNOW IT, PEOPLE!!! WOOOO!!!! I'd like to give a special thanks to the Captain and First Mate, JC and Rodrigo and of course our loyal crew. Anyway, so the status for today: I'm working on the profile page while Kae is finishing up the home page and working on the blank page. Not sure what JC and Rodrigo are doing because I don't understand what they do. XD But I see them doing stuff on GitHub that looks legit so we're good. XD Well, that's all for today, folks.</p>
+				
+				<div class="statusboxstats">
+					<a href="link" class="button" rel="nofollow"><img class="icon" src="{% static 'images/checkmark.png' %}"/>Like</a>
+					<p>2 Likes</p>
+				</div>
+				<div class="statusboxstats">
+					<a href="link" class="button" rel="nofollow"><img class="icon" src="{% static 'images/speechbubble.png' %}"/>Comment</a>
+					<p><a href="">0 Comments</a></p>
+				</div>
+				<br>
+				<div id="journallinks">
+					<p><a href="">View previous entries</a></p>
+					<p><a href="profile_edit_journal.html">Update blog</a></p>
+				</div>
+				<br><br>
 			</div>
-			<div class="statusboxstats">
-				<a href="link" class="button" rel="nofollow"><img class="icon" src="../../static/images/speechbubble.png"/>Comment</a>
-				<p><a href="">0 Comments</a></p>
+		</div>
+		
+		<div id="tabs-2">
+			<div class="tabsbox">
+				<h2>About Me</h2>
+				<p>Birthday: June 28</p>
+				<p>Female</p>
+				<p>Hi! My name is Lucero and I like warm hugs!</p>
 			</div>
-			<br><br>
 		</div>
-	</div>
-	
-	<div id="tabs-2">
-		<div class="tabsbox">
-			<h2>About Me</h2>
-			<p>Birthday: June 28</p>
-			<p>Female</p>
-			<p>Hi! My name is Lucero and I like warm hugs!</p>
+		
+		<div id="tabs-3">
+			<div class="tabsbox">
+				<h2>Groups</h2>
+				<img src="{% static 'images/groupprofilepic.png' %}"/>
+				<h2><a href="">Batmans Unite!</a></h2>
+				<p>We are vengeance... We are the night... We are the BATMEN.</p>
+				<img src="{% static 'images/groupprofilepic.png' %}"/>
+				<h2><a href="">Batmans Unite!</a></h2>
+				<p>We are vengeance... We are the night... We are the BATMEN.</p>
+				<a id="moregroups" href="">More Groups...</a>
+			</div>
 		</div>
-	</div>
-	
-	<div id="tabs-3">
-		<div class="tabsbox">
-			<h2>Groups</h2>
-			<img src="../../static/images/groupprofilepic.png"/>
-			<h2><a href="">Batmans Unite!</a></h2>
-			<p>We are vengeance... We are the night... We are the BATMEN.</p>
-			<img src="../../static/images/groupprofilepic.png"/>
-			<h2><a href="">Batmans Unite!</a></h2>
-			<p>We are vengeance... We are the night... We are the BATMEN.</p>
-			<a id="moregroups" href="">More Groups...</a>
-		</div>
-	</div>
-	
-	<div id="tabs-4">
-		<div class="tabsbox">
-			<h2>Request a critique with Laurelin</h2>
-			<form action="" method="get">
-			<p>Choose up to 3 works that you would like to have critiqued:</p>
-				<select name="user works">
-					<option value="work1">The Tales of Masochists</option>
-					<option value="work2">Deep-Fried</option>
-					<option value="work3">Existentialism</option>
-				</select><br>
-				<select name="user works">
-					<option value="work1">The Tales of Masochists</option>
-					<option value="work2">Deep-Fried</option>
-					<option value="work3">Existentialism</option>
-				</select><br>
-				<select name="user works">
-					<option value="work1">The Tales of Masochists</option>
-					<option value="work2">Deep-Fried</option>
-					<option value="work3">Existentialism</option>
-				</select>
-			<p>Propose a time limit to complete the critique:</p>
-				<select name="timelimit">
-					<option value="oneday">1 day</option>
-					<option value="3days">3 days</option>
-					<option value="1wk">1 week</option>
-					<option value="2wks">2 weeks</option>
-					<option value="3wks">4 weeks</option>
-				</select>
-			<br><input id="submitbutton" type="submit" value="Request Critique">
-			</form>
-		</div>
-	</div>
-	
-	<div id="tabs-5">
-		<div class="tabsbox">
-			<h2>Stats & Activity</h2>
-			<table>
-			<tr>
-			<td>
-			<p>Joined 6/28/2014</p>
-			<p>Last online: 8/5/2014</p>
-			<p>Last submission: 7/26/2014</p>
-			<p>Number of submissions: 32</p>
-			<p>Submissions per week: 0.5</p>
-			<p>Number of forum posts: 36</p>
-			<p>Forum posts per week: 2</p>
-			</td>
-			<td>
-			<p>Number of critiques given: 7</p>
-			<p>Critique Rating:</p>
-			<p>Number of donations to the Universe: 12</p>
-			<p>Number of badges:22</p>
-			</td>
-			</tr>
-			</table>
-		</div>
-	</div>
-</div>
-
-
-
-
-
-<div id="featuredworks">
-
-<h1>Portfolio</h1>
-
-<h2>Art</h2>
-
-<figure>
-	<a href="link"><img src="../../static/images/lucero-art-example.jpg" width="145" height="145"></a>
-	<figcaption>
-		<h3><a href="link">Sad Knight</a></h3>
-		<h3>5 stars</h3>
-	</figcaption>
-</figure>
-
-<figure>
-	<a href="link"><img src="../../static/images/lucero-art-example.jpg" width="145" height="145"></a>
-	<figcaption>
-		<h3><a href="link">Sad Knight</a></h3>
-		<h3>5 stars</h3>
-	</figcaption>
-</figure>
-
-<figure>
-	<a href="link"><img src="../../static/images/lucero-art-example.jpg" width="145" height="145"></a>
-	<figcaption>
-		<h3><a href="link">Sad Knight</a></h3>
-		<h3>5 stars</h3>
-	</figcaption>
-</figure>
-
-
-<h2>Writing</h2>
-
-
-<figure>
-	<a href="link"><img src="../../static/images/lucero-writing-example.jpg" width="100" height="145"></a>
-	<figcaption>
-		<h3><a href="link">Cherry Blossom Petals</a></h3>
-		<h3>5 stars</h3>
-	</figcaption>
-</figure>
-
-<figure>
-	<a href="link"><img src="../../static/images/lucero-writing-example.jpg" width="100" height="145"></a>
-	<figcaption>
-		<h3><a href="link">Cherry Blossom Petals</a></h3>
-		<h3>5 stars</h3>
-	</figcaption>
-</figure>
-
-<figure>
-	<a href="link"><img src="../../static/images/lucero-writing-example.jpg" width="100" height="145"></a>
-	<figcaption>
-		<h3><a href="link">Cherry Blossom Petals</a></h3>
-		<h3>5 stars</h3>
-	</figcaption>
-</figure>
-
-<br><br>
-<p id="viewport"><a href="">View Laurelin's Portfolio</a></p>
-
-</div><!-- featuredworks ends -->
-
-
-
-
-
-<div id="profcomments">
-
-<h1>Comments</h1>
-
-<div class="bubble clearfix">
-			<div id="leavecomment">
-			<img id="rcommentimg" src="#" width: "50" height: "50"/>
-				<div class="point"></div>
-				<form action="php link" method="get">
-					<textarea name="commentbox" placeholder="Leave a comment!"></textarea>
+		
+		<div id="tabs-4">
+			<div class="tabsbox">
+				<h2>Request a critique with Laurelin</h2>
+				<form action="" method="get">
+				<p>Choose up to 3 works that you would like to have critiqued:</p>
+					<select name="user works">
+						<option value="work1">The Tales of Masochists</option>
+						<option value="work2">Deep-Fried</option>
+						<option value="work3">Existentialism</option>
+					</select><br>
+					<select name="user works">
+						<option value="work1">The Tales of Masochists</option>
+						<option value="work2">Deep-Fried</option>
+						<option value="work3">Existentialism</option>
+					</select><br>
+					<select name="user works">
+						<option value="work1">The Tales of Masochists</option>
+						<option value="work2">Deep-Fried</option>
+						<option value="work3">Existentialism</option>
+					</select>
+				<p>Propose a time limit to complete the critique:</p>
+					<select name="timelimit">
+						<option value="oneday">1 day</option>
+						<option value="3days">3 days</option>
+						<option value="1wk">1 week</option>
+						<option value="2wks">2 weeks</option>
+						<option value="3wks">4 weeks</option>
+					</select>
+				<br><input id="submitbutton" type="submit" value="Request Critique">
 				</form>
 			</div>
 		</div>
+		
+		<div id="tabs-5">
+			<div class="tabsbox">
+				<h2>Stats & Activity</h2>
+				<table>
+				<tr>
+				<td>
+				<p>Joined 6/28/2014</p>
+				<p>Last online: 8/5/2014</p>
+				<p>Last submission: 7/26/2014</p>
+				<p>Number of submissions: 32</p>
+				<p>Submissions per week: 0.5</p>
+				<p>Number of forum posts: 36</p>
+				<p>Forum posts per week: 2</p>
+				</td>
+				<td>
+				<p>Number of critiques given: 7</p>
+				<p>Critique Rating:</p>
+				<p>Number of donations to the Universe: 12</p>
+				<p>Number of badges:22</p>
+				</td>
+				</tr>
+				</table>
+			</div>
+		</div>
+	</div>
 
 
-<a href="link" id="lcomment" class="button action leave-a-comment fancy-link login-required" rel="nofollow">Leave a Comment</a>
 
-	<div class="commentboxes">
-		<div class="bubble clearfix">
+
+
+	<div id="featuredworks">
+
+	<h1>Portfolio</h1>
+
+	<h2>Art</h2>
+
+	<figure>
+		<a href="link"><img src="{% static 'images/lucero-art-example.jpg' %}" width="145" height="145"></a>
+		<figcaption>
+			<h3><a href="link">Sad Knight</a></h3>
+			<h3>5 stars</h3>
+		</figcaption>
+	</figure>
+
+	<figure>
+		<a href="link"><img src="{% static 'images/lucero-art-example.jpg' %}" width="145" height="145"></a>
+		<figcaption>
+			<h3><a href="link">Sad Knight</a></h3>
+			<h3>5 stars</h3>
+		</figcaption>
+	</figure>
+
+	<figure>
+		<a href="link"><img src="{% static 'images/lucero-art-example.jpg' %}" width="145" height="145"></a>
+		<figcaption>
+			<h3><a href="link">Sad Knight</a></h3>
+			<h3>5 stars</h3>
+		</figcaption>
+	</figure>
+
+
+	<h2>Writing</h2>
+
+
+	<figure>
+		<a href="link"><img src="{% static 'images/lucero-writing-example.jpg' %}" width="100" height="145"></a>
+		<figcaption>
+			<h3><a href="link">Cherry Blossom Petals</a></h3>
+			<h3>5 stars</h3>
+		</figcaption>
+	</figure>
+
+	<figure>
+		<a href="link"><img src="{% static 'images/lucero-writing-example.jpg' %}" width="100" height="145"></a>
+		<figcaption>
+			<h3><a href="link">Cherry Blossom Petals</a></h3>
+			<h3>5 stars</h3>
+		</figcaption>
+	</figure>
+
+	<figure>
+		<a href="link"><img src="{% static 'images/lucero-writing-example.jpg' %}" width="100" height="145"></a>
+		<figcaption>
+			<h3><a href="link">Cherry Blossom Petals</a></h3>
+			<h3>5 stars</h3>
+		</figcaption>
+	</figure>
+
+	<br><br>
+	<p id="viewport"><a href="">View Laurelin's Portfolio</a></p>
+
+	</div><!-- featuredworks ends -->
+
+
+
+
+
+	<div id="profcomments">
+
+	<h1>Comments</h1>
+
+	<div class="bubble clearfix">
+				<div id="leavecomment">
+				<img id="rcommentimg" src="#" width: "50" height: "50"/>
+					<div class="point"></div>
+					<form action="php link" method="get">
+						<textarea name="commentbox" placeholder="Leave a comment!"></textarea>
+					</form>
+				</div>
+			</div>
+
+
+	<a href="link" id="lcomment" class="button action leave-a-comment fancy-link login-required" rel="nofollow">Leave a Comment</a>
+
+		<div class="commentboxes">
+			<div class="bubble clearfix">
+				<img src="#" width: "50" height: "50"/>
+				<div class="comment-content">
+					<div class="point"></div>
+					<p>Hey Lucero! I think your profile is pretty awesome.</p>
+				</div>
+			</div>
+		</div>
+		
+			<div class="replycomment">
+				<img src="#" width: "50" height: "50"/>
+				<div class="replycomment-content">
+					<div class="point"></div>
+					<p>Why thank you. Yours is pretty awesome too.</p>
+				</div>
+			</div>
+		
+		<div class="commentboxes">
 			<img src="#" width: "50" height: "50"/>
 			<div class="comment-content">
 				<div class="point"></div>
 				<p>Hey Lucero! I think your profile is pretty awesome.</p>
 			</div>
 		</div>
-	</div>
-	
-		<div class="replycomment">
-			<img src="#" width: "50" height: "50"/>
-			<div class="replycomment-content">
-				<div class="point"></div>
-				<p>Why thank you. Yours is pretty awesome too.</p>
+		
+		<div class="commentboxes">
+			<div class="bubble clearfix">
+				<img src="#" width: "50" height: "50"/>
+				<div class="comment-content">
+					<div class="point"></div>
+					<p>Hey Lucero! I think your profile is pretty awesome.</p>
+				</div>
 			</div>
 		</div>
-	
-	<div class="commentboxes">
-		<img src="#" width: "50" height: "50"/>
-		<div class="comment-content">
-			<div class="point"></div>
-			<p>Hey Lucero! I think your profile is pretty awesome.</p>
-		</div>
-	</div>
-	
-	<div class="commentboxes">
-		<div class="bubble clearfix">
-			<img src="#" width: "50" height: "50"/>
-			<div class="comment-content">
-				<div class="point"></div>
-				<p>Hey Lucero! I think your profile is pretty awesome.</p>
-			</div>
-		</div>
+
+	<div id="searchcomments">
+		<a class="searchcomments" href="link"> Previous</a>
+		<a class="searchcomments" href="link"> 1</a>
+		<a class="searchcomments" href="link"> 2</a>
+		<a class="searchcomments" href="link"> 3</a>
+		<a class="searchcomments" href="link"> 4</a>
+		<a class="searchcomments" href="link"> 5</a>
+		<a class="searchcomments" href="link"> Next</a>
 	</div>
 
-<div id="searchcomments">
-	<a class="searchcomments" href="link"> Previous</a>
-	<a class="searchcomments" href="link"> 1</a>
-	<a class="searchcomments" href="link"> 2</a>
-	<a class="searchcomments" href="link"> 3</a>
-	<a class="searchcomments" href="link"> 4</a>
-	<a class="searchcomments" href="link"> 5</a>
-	<a class="searchcomments" href="link"> Next</a>
-</div>
+	</div><!-- profcomments ends -->
+{% endblock contentleft %}
 
-</div><!-- profcomments ends -->
-
-</div><!-- contentleft ends -->
-
-
-
-
-
-<div id="contentright" class="clearfix">
-
-<div id="badgeribbon" class="proftopright">
-	<p>MOST RECENT BADGES</p>
-		<img src="../../static/images/badge1.png"/>
-		<img src="../../static/images/badge2.png"/>
-		<img src="../../static/images/badge3.png"/>
-		<img src="../../static/images/badge4.png"/>
-		<img src="../../static/images/badge5.png"/>
-	<p><a href="link"> ALL BADGES</a></p>
-</div>
-
-
-
-
-<div id="interests" class="proftopright">
-
-<h1>Favorites</h1>
-
-<h2>Books</h2>
-<p>The Brothers Karamazov, The Lord of the Rings, Crime and Punishment</p>
-<h2>Authors</h2>
-<p>J.R.R. Tolkien, Fyodor Dostoevsky, Paulo Coelho</p>
-<h2>Artworks</h2>
-<p>Starry Night</p>
-<h2>Artists</h2>
-<p>Jones De Ro, Jennifer Healy, Pierre Auguste Cot, Auguste Renoir</p>
-<h2>TV/Movies</h2>
-<p>The Lord of the Rings, Pan's Labyrinth, Big Fish</p>
-<h2>Music</h2>
-<p>Songs from animated Disney classics, Kutless, Josh Groban</p>
-<h2>Video Games</h2>
-<p>The Legend of Zelda, Fire Emblem, Metroid, Harvest Moon</p>
-
-</div>
-
-
-
-
-
-<div id="profbottomright">
-
-<div class="brboxes">
-<h1>Friends & Followers</h1>
-</div>
-
-<div class="brboxes">
-<h1>Collaborators</h1>
-</div>
-
-</div><!-- profbottomright ends -->
-
-</div><!-- contentright ends -->
-
-</div><!-- content ends -->
-
-
-
-<div id="footer">
-
-	<div class="footerlist">
-		<p><a id="about" href="">About</a></p>
-		<p><a id="faq" href="">FAQ</a></p>
-		<p><a id="crew" href="">The Crew</a></p>
-	</div>
-	<div class="footerlist">
-		<p><a id="tos" href="">Terms of Service</a></p>
-		<p><a id="ppolicy" href="">Privacy Policy</a></p>
-	</div>
-	<div class="footerlist">
-		<p><a class="templinks" href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/homepage/homepage.html">Home Page</a></p>
-		<p><a class="templinks" href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/profile/profile.html">Profile Page</a></p>
-		<p><a class="templinks" href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/profile/editprofile.html">Edit Profile Page</a></p>
-		<p><a class="templinks" href="{% url 'accounts:logout' %}">Logout</a></p>
+{% block contentright %}
+	<div id="badgeribbon" class="proftopright">
+		<p class="badgetext">MOST RECENT BADGES</p>
+			<img src="{% static 'images/badge1.png' %}"/>
+			<img src="{% static 'images/badge2.png' %}"/>
+		<p class="badgetext"> <a href="link"> ALL BADGES</a></p>
 	</div>
 
-</div><!-- footer ends -->
 
 
-</div><!-- wrapper ends -->
+
+	<div id="interests" class="proftopright">
+
+	<h1>FAVORITES</h1>
+
+	<h2>BOOKS</h2>
+	<p>{{ object.books }}</p>
+	<h2>AUTHORS</h2>
+	<p>{{ object.authors }}</p>
+	<h2>ARTWORKS</h2>
+	<p>{{ object.artworks }}</p>
+	<h2>ARTISTS</h2>
+	<p>{{ object.artists }}</p>
+	<h2>TV/MOVIES</h2>
+	<p>{{ object.tv_movies }}</p>
+	<h2>MUSIC</h2>
+	<p>{{ object.music }}</p>
+	<h2>VIDEO GAMES</h2>
+	<p>{{ object.video_games }}</p>
+
+	</div>
 
 
-</body>
-</html>
+
+
+
+	<div id="profbottomright">
+
+		<h1>Friends and Followers</h1>
+
+		<h1>Collaborators</h1>
+
+	</div><!-- profbottomright ends -->
+{% endblock contentright %}

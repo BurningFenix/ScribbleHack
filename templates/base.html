@@ -10,7 +10,7 @@
 {% block stylesheets %}
 <link href="{% static 'blankpage.css' %}" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="{% static 'js/jquery-ui-1.10.4.custom.min.css' %}" />
-{% endblock %}
+{% endblock stylesheets %}
 <script src="{% static 'js/jquery-1.10.2.js' %}"></script>
 <script src="{% static 'js/jquery-ui-1.10.4.custom.min.js' %}"></script>
 
@@ -56,7 +56,7 @@
 {% block head_extra %}{% endblock %}
 </head>
 
-<body id="blank">
+<body id="{% block body_id %}blank{% endblock body_id %}">
 
 <div id="wrapper">
 
@@ -122,7 +122,7 @@
 
 
 <div id="banner">
-
+{% block banner %}{% endblock banner %}
 </div><!-- banner ends -->
 
 </div><!-- header ends -->
