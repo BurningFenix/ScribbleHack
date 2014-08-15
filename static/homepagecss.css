@@ -2,28 +2,25 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: UniversLTStd,arial,sans-serif;
-	color: #091717;
-	background-image:
-    linear-gradient(
-      #288e78, #00241D
-    );
+	color: #213d42;
+	background: linear-gradient(#099bb6, #002231);
 }
 
 @font-face {
-	font-family:UniversLTStd;
-	src:url(universltstd.otf);
+	font-family:"UniversLTStd";
+	src:url("universltstd.otf");
 	font-weight: normal;
 }
 
 @font-face {
-	font-family:UniversLTStd;
-	src:url(universltstdlight.otf);
+	font-family:"UniversLTStd";
+	src:url("universltstdlight.otf");
 	font-weight: lighter;
 }
 
 @font-face {
-	font-family:UniversLTStd;
-	src:url(universltstdbold.otf);
+	font-family:"UniversLTStd";
+	src:url("universltstdbold.otf");
 	font-weight: bold;
 }
 
@@ -40,20 +37,24 @@ h2, h3 {
 }
 
 #wrapper {
-	background-color: #63bfa5;
+	background-color: #81d1c7;
 	width: 1000px;
 	height: auto;
 	text-align: left;
 	margin: 0 auto;
-	box-shadow: 0 0 15px #00241D;
-	-webkit-box-shadow: 0 0 15px #00241D;
-	-moz-box-shadow: 0 0 15px #00241D;
+	box-shadow: 0 0 20px #001E2B;
+	-webkit-box-shadow: 0 0 20px #001E2B;
+	-moz-box-shadow: 0 0 20px #001E2B;
 }
 
-a:link {color:#00241D; text-decoration: none;}
-a:visited {color:#24555f;}
-a:hover {color:#288e78;}
-a:active {color:#288e78;}
+a:link {color:#d46900;}
+a:visited {color:#099bb6;}
+a:hover {color:#efa168;}
+a:active {color:#00A58C;}
+
+a {
+	text-decoration: none;
+	}
 
 #header {
 	height: 200px;
@@ -61,7 +62,7 @@ a:active {color:#288e78;}
 
 #sitenav {
 	height: 50px;
-	background-color: #091717;
+	background-color: #213d42;
 }
 
 #sitenavleft {
@@ -196,7 +197,7 @@ a:active {color:#288e78;}
 #banner {
 	height: 150px;
 	border: solid 0 #007000;
-	border-bottom: 1px solid #288e78;
+	border-bottom: 1px solid #213d42;
 }
 
 #footer {
@@ -295,7 +296,7 @@ html[xmlns] .clearfix {
 	margin-bottom: 21px;
 	width: 545px;
     height: 598px;
-	background: #cde6f6;
+	background: #c8f2e9;
 	border-radius: 10px;
 	padding: 10px;
 	position: absolute;
@@ -383,8 +384,8 @@ html[xmlns] .clearfix {
 	padding-left: 21px;
 	position: relative;
 	z-index: 26;
-	background-color: #091717;
-	color: white;
+	background-color: #213d42;
+	color: #f0fbfb;
 }
 
 #home .contentright #bookshelf .shelftitle{
@@ -396,8 +397,8 @@ html[xmlns] .clearfix {
 	position: relative;
 	z-index: 26;
 	text-align: center;
-	background-color: #091717;
-	color: white;
+	background-color: #213d42;
+	color: #f0fbfb;
 }
 
 #home .contentright #bookshelf .shelftitle a:link {
@@ -426,9 +427,9 @@ html[xmlns] .clearfix {
 	height: 118px;
 	position: relative;
 	z-index: 28;
-	background-image:
+	background:
     linear-gradient(
-      #288e78, #00241D
+      #099bb6, #002231
     );
 	/*margin-bottom: 18px;*/ /*keep only if there's no text between shelves*/
 	margin-left: 4px;
@@ -436,7 +437,7 @@ html[xmlns] .clearfix {
 	padding-top: 9px;
 	border: solid;
 	border-width: 0 14px 0 14px;
-	border-color: #00241D;
+	border-color: #002231;
 }
 
 #home .contentright .book {
@@ -464,14 +465,15 @@ html[xmlns] .clearfix {
 	float: left;
 	position: relative;
 	top: 15px;
-	background: #288e78;
+	background: #c8f2e9;
+	border-radius: 10px;
 }
 
 #hpnews .newspreview {
 	width: 530px;
 	height: 130px;
-	background: #cde6f6;
-	border-bottom: 1px solid grey;
+	background: #f0fbfb;
+	border-bottom: 0 solid grey;
 	margin-bottom: 10px;
 	border-radius: 8px;
 }
@@ -510,7 +512,7 @@ html[xmlns] .clearfix {
 	float: right;
 	height: 480px;
 	width: 323px;
-	background: #cde6f6;
+	background: #c8f2e9;
 	border-radius: 10px;
 	padding: 20px;
 	margin-right: 20px;
@@ -527,7 +529,7 @@ html[xmlns] .clearfix {
 }
 
 #hppolls .speech-bubble {
-    background-color: #f8f8f8;
+    background-color: #f0fbfb;
     border: 1px solid #c8c8c8;
     border-radius: 10px;
     width: 250px;
@@ -574,7 +576,7 @@ html[xmlns] .clearfix {
 }
 
 #hppolls #hppollform .button {
-    background: #288e78;
+    background: #efa168;
     border: none;
     padding: 8px 15px 8px 15px;
     box-shadow: 2px 2px 5px #00241D;
@@ -584,7 +586,7 @@ html[xmlns] .clearfix {
 	margin-top: 8px;
 }
 #hppolls #hppollform .button:hover {
-    background: #63bfa5;
+    background: #d46900;
 	color: #091717;
 	box-shadow: 1px 1px 5px #00241D;
 }
@@ -600,8 +602,8 @@ html[xmlns] .clearfix {
 #hppolls #moredaypolls {
 	width: 300px;
 	height: 75px;
-	background-color: #f8f8f8;
-    border: 1px solid #c8c8c8;
+	background-color: #f0fbfb;
+    border: 0 solid #c8c8c8;
 	border-radius: 8px;
 	padding: 15px;
 }

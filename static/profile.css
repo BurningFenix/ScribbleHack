@@ -27,7 +27,7 @@ body {
 h1 {
 	margin: 0 0 12px 0;
 	padding: 0;
-	font-size: 35px;
+	font-size: 30px;
 	font-family: cantoraone,arial,sans-serif;
 	font-weight: normal;
 }
@@ -37,18 +37,18 @@ h2 {
 	background-color: #f0fbfb;
 	padding: 5px;
 	font-weight: normal;
-	font-size: 24px;
+	font-size: 20px;
 	font-family: cantoraone,arial,sans-serif;
 	}
 
 h3 {
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: normal;
 	font-family: sheep-sans,arial,sans-serif;
 	}
 
 p {
-	font-size: 15px;
+	font-size: 14px;
 	font-weight: normal;
 	font-family: sheep-sans,arial,sans-serif;
 	}
@@ -448,18 +448,20 @@ a {
 	}
 
 #tabs-1, #tabs-2, #tabs-3, #tabs-4, #tabs-5{
-	height: 350px;
+	height: 380px;
 	width: 570px;
 	margin-right: 0px;
 	background-color: #c8f2e9;
 	border-radius: 10px;
+	padding-top: 1px;
 	}
 
 .tabsbox {
 	background-color: #f0fbfb;
-	height: 300px;
+	height: 350px;
 	width: 530px;
 	border-radius: 10px;
+	padding-top: 0px;
 	}
 
 .tabsbox p {
@@ -479,6 +481,15 @@ a {
 	font-style: italic;
 	}
 
+#journallinks {
+	width: 400px;
+	margin-top: 25px;
+	}
+
+#journallinks p {
+	float: left;
+	}
+	
 .statusboxstats {
 	margin-left: 30px;
 	}
@@ -501,6 +512,37 @@ a {
 	
 .icon {
 	margin-right: 5px;
+	}
+
+#tabs-1 textarea {
+	margin-left: 30px;
+	margin-bottom: 0px;
+	resize:none;
+	}
+
+#tabs-1 input[type=text] {
+	vertical-align: bottom;
+	}
+
+#tabs-1 input[type=submit] {
+	margin-left: 30px;
+	margin-top: 0px;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 5px 10px 5px 8px;
+	color: #213d42;
+	float: left;
+	background-color: #efcf98;
+	text-decoration: none;
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0px 0px 5px #213d42;
+    -moz-box-shadow: inset 0px 0px 5px #213d42;
+    box-shadow: inset 0px 0px 5px #213d42;
+	}
+
+#tabs1cancel {
+	margin-left: 30px;
+	float:left;
 	}
 
 #tabs-2 p {

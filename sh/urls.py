@@ -13,6 +13,7 @@ urlpatterns = patterns('',
     url(r'^writing/', include('apps.writing.urls', namespace='writing')),
     url(r'^art$', ArtBrowseView.as_view(), name='art'),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^testing/', include('apps.testing.urls', namespace='testing')),
     
     #url(r'^404/', 'sh.views.custom404')  # this is for testing
 )

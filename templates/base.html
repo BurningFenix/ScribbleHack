@@ -146,11 +146,31 @@
 
 
 <div id="footer">
-<a href="">About</a>
-<a href="">FAQ</a>
-<a href="">Terms of Service</a>
-<a href="">Privacy Policy</a>
-<a href="">Who We Are</a>
+<div class="footerlist">
+<p><a id="about" href="">About</a></p>
+<p><a id="faq" href="">FAQ</a></p>
+<p><a id="crew" href="">The Crew</a></p>
+</div>
+<div class="footerlist">
+<p><a id="tos" href="">Terms of Service</a></p>
+<p><a id="ppolicy" href="">Privacy Policy</a></p>
+</div>
+<div class="footerlist">
+<p><a class="templinks" href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/homepage/homepage.html">Home Page</a></p>
+<p><a class="templinks" href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/profile/profile.html">Profile Page</a></p>
+<p><a class="templinks" href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/profile/editprofile.html">Edit Profile Page</a></p>
+
+<h4>Template Testing Links</h4>
+<p>
+	<a href="{% url 'testing:browse_writing' %}">browse/browse_writing.html</a>
+	<a href="{% url 'testing:homepage' %}">homepage/homepage.html</a>
+	<a href="{% url 'testing:profile' %}">profile/profile.html</a>
+	<a href="{% url 'testing:edit_profile' %}">profile/editprofile.html</a>
+	<a href="{% url 'testing:profile_edit_journal' %}">profile/profile_edit_journal.html</a>
+	<a href="{% url 'testing:submit' %}">submit/submit.html</a>
+	<a href="{% url 'testing:display_writing' %}">writing/display_writing.html</a>
+</p>
+</div>
 </div><!-- footer ends -->
 
 

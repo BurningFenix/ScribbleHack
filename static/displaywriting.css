@@ -1,0 +1,602 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-family: UniversLTStd,arial,sans-serif;
+	color: #213d42;
+	background: linear-gradient(#099bb6, #002231);
+}
+
+@font-face {
+	font-family:"UniversLTStd";
+	src:url("universltstd.otf");
+	font-weight: normal;
+}
+
+@font-face {
+	font-family:"UniversLTStd";
+	src:url("universltstdlight.otf");
+	font-weight: lighter;
+}
+
+@font-face {
+	font-family:"UniversLTStd";
+	src:url("universltstdbold.otf");
+	font-weight: bold;
+}
+
+h1 {
+	margin: 0 0 12px 0;
+	padding: 0;
+	font-size: 30px;
+	font-weight: normal;
+}
+
+h2, h3 {
+	margin: 0;
+	padding: 0;
+}
+
+#wrapper {
+	background-color: #81d1c7;
+	width: 1000px;
+	height: auto;
+	text-align: left;
+	margin: 0 auto;
+	box-shadow: 0 0 20px #001E2B;
+	-webkit-box-shadow: 0 0 20px #001E2B;
+	-moz-box-shadow: 0 0 20px #001E2B;
+}
+
+a:link {color:#d46900;}
+a:visited {color:#099bb6;}
+a:hover {color:#efa168;}
+a:active {color:#00A58C;}
+
+a {
+	text-decoration: none;
+	}
+
+#header {
+	height: 200px;
+}
+
+#sitenav {
+	height: 50px;
+	background-color: #213d42;
+}
+
+#sitenavleft {
+	width: 545px;
+	height: 50px;
+	float: left;
+	
+}
+
+#logo {
+	float: left;
+	width: 127px;
+	margin: 10px 38px 0 10px;
+	position: relative;
+	
+}
+
+#logo img {
+	margin-right: 0;
+	float: right;
+}
+
+#icon {
+	float: left;
+	width: 22px;
+	height: 22px;
+	border-radius: 20px;
+	background-color: gainsboro;
+	position: absolute;
+	left: 0;
+	top: 3px;
+}
+
+#sitenavpagelinks {
+	float: left;
+	margin-top: 19px;
+	
+}
+
+.navlink {
+	float: left;
+	margin-right: 31px;
+}
+
+.navlink a {
+	font-family: 'Century Gothic', Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	color: white;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+}
+
+.navlink a:hover {
+    color: #71cfbd;
+}
+
+#sitenavright {
+	width: 445px;
+	height: 50px;
+	float: right;
+}
+
+#sitenavright a {
+	font-weight: lighter;
+	font-family: 'Century Gothic',arial,sans-serif;
+	font-size: 12px;
+	color: white;
+	float: right;
+	margin-right: 12px;
+	margin-top: 19px;
+	text-decoration: none;
+	-webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+    transition: 0.5s;
+}
+
+#sitenavright a:hover {
+	color: #71cfbd;
+}
+
+#navsearchbox {
+	margin-top: 11px;
+	margin-right: 7px;
+	float: right;
+}
+
+#navsearchbox #tfnewsearch{
+		float:right;
+		padding:0px;
+		margin-top: 2px;
+	}
+
+#navsearchbox .tftextinput{
+		margin: 0;
+		padding: 0 3px 0 3px;
+		font-family: UniversLTStd;
+		src: url(universltstd.otf); 
+		font-size:12px;
+		color:#2f2f2f;
+		border-style: none;
+		border-radius: 3px;
+		height: 25px;
+		width: 194px
+	}
+
+#navsearchbox #tfnewsearch .tfbutton{
+		background-image: url(../static/images/searchicon.png);
+		background-repeat: no-repeat;
+		margin-top: 0px;
+		margin-left: 2px;
+		color: transparent;
+		background-color: transparent;
+		height: 30px;
+		width: 30px;
+		float:right;
+		border-width: 0px;
+}
+
+	/* Fixes submit button height problem in Firefox */
+#navsearchbox .tfbutton::-moz-focus-inner {
+	  border: 0;
+	}
+
+#navsearchbox	.tfclear{
+		clear:both;
+	}
+
+#banner {
+	height: 150px;
+	border: solid 0 #007000;
+	border-bottom: 1px solid #213d42;
+}
+
+#footer {
+	height: 200px;
+	width: 1000px;
+	background-color: #213d42;
+	font-size: 20px;
+}
+
+#footer p {
+	font-size: 20px;
+	}
+	
+.footerlist {
+	float: left;
+	margin-top: 30px;
+	}
+	
+#footer #about {
+	margin-left: 100px;
+	}
+
+#footer #faq {
+	margin-left: 130px;
+	margin-top: 10px;
+	}
+	
+#footer #crew {
+	margin-left: 140px;
+	margin-top: 10px;
+	}
+	
+#footer #tos {
+	margin-left: 160px;
+	}
+
+#footer #ppolicy {
+	margin-left: 190px;
+	margin-top: 10px;
+	}
+
+
+/* clearfix css */
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+/* Display Writing CSS */
+
+#dispwrite .content {
+	height: auto;
+	margin: 0;
+	position: relative;
+}
+
+#dispwrite #header {
+	height: 50px;
+}
+
+.left_column{
+	width: 600px;
+	float: left;
+}
+
+.right_column{
+	width: 400px;
+	height: auto;
+	float: right;
+}
+
+#writingframe{
+	width: 570px;
+	height: 525px;
+	background-color: #f0fbfb;
+	margin: 30px 3px 10px 25px;
+    border-bottom: solid 45px #213d42;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 15px #2F786F;
+	-webkit-box-shadow: 0 0 15px #2F786F;
+	-moz-box-shadow: 0 0 15px #2F786F;
+}
+
+.writingcontent {
+    padding: 30px;
+}
+
+#writingframe h1 {
+    line-height: 150%;
+	margin-bottom: 20px;
+	font-family: UniversLTStd,arial,sans-serif;
+	src: url("universltstd.otf");
+    font-size: 22px;
+}
+
+#writingframe p{
+	line-height: 150%;
+	margin-bottom: 20px;
+	font-family: UniversLTStd,arial,sans-serif;
+	src: url("universltstd.otf");
+    font-size: 18px;
+}
+
+#artwork{
+	max-width:100%; 
+	max-height:100%;
+}
+
+.art_info{
+	width:365px;
+	height: auto;
+	margin: auto;
+	margin-top: 20px;
+	background-color: #c8f2e9;
+    line-height: 150%;
+	border-radius: 10px;
+}
+
+.box_title{
+	margin-top: 18px;
+	margin-left: 18px;
+	background-color: #c8f2e9;
+	border-radius: 10px;
+}
+
+.box_title h1{
+    font-family:30px;
+    font-weight: normal;
+}
+
+.box_title h2{
+	font-family: UniversLTStd;
+	src: url(universltstd.otf); 
+	font-size: 15px;
+    font-weight: normal;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    line-height: 150%;
+}
+
+.box_title p{
+	font-family: UniversLTStd;
+	src: url(universltstd.otf); 
+    font-size: 16px;
+	margin-top: 10px;
+	line-height: 150%;
+}
+
+.box_title .user_avatar {
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+
+.art_description{
+	height:auto;
+    margin: 20px 18px 5px 20px;
+}
+
+.art_description p{
+	font-family: UniversLTStd;
+	src: url(universltstd.otf); 
+	color:#2f2f2f;
+	line-height: 140%;
+	font-size: 14px;
+}
+
+.like_box{
+	width:370px;
+	height: 125px;
+	margin: auto;
+	margin-top: 20px;
+	background-color: #c8f2e9;
+	border-radius: 10px;
+}
+
+.more_box{
+	width:370px;
+	height: 285px;
+	margin: auto;
+	margin-top: 20px;
+	background-color: #c8f2e9;
+	border-radius: 10px;
+}
+
+.similar_box{
+	width:370px;
+	height: 340px;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	background-color: #c8f2e9;
+	border-radius: 10px;
+}
+
+.item{
+	width: 370px;
+	height: 75px;
+	margin-left: 18px;
+	margin-bottom: 18px;
+	background-color: blue;
+	float: left;
+}
+
+#item{
+	margin-left: 18px;
+	margin-right: 18px;
+}
+
+#item h3{
+	font-family: UniversLTStd;
+	src: url(universltstd.otf); 
+	font-size: 15px;
+}
+
+
+#item p{
+	font-family: UniversLTStd;
+	src: url(universltstd.otf); 
+	font-size: 11px;
+}
+
+ol, li{
+	font-family: UniversLTStd;
+	src: url(universltstd.otf); 
+	font-size: 11px;
+	list-style: none;
+}
+
+li{
+	color: #2f2f2f;
+}
+
+dd{
+	color: #007777;
+}
+
+ol{
+	margin-left: -20px;
+	margin-top: 20px;
+}
+
+.user_avatar{
+	margin-right: 5px;
+	border-radius: 50px;
+	width: 70px;
+	height: 70px;
+	border: 3px solid white;
+}
+
+
+#tags{
+	color:#007777;
+}
+
+#numberoflikes{
+	font-size: 11px;
+	color: #007777;
+	font-family: UniversLTStd;
+	src: url(universltstd.otf); 
+
+}
+
+.comment_section{
+    float: right;
+    font-family: UniversLTStd;
+	src: url(universltstd.otf); 
+    margin: 20px 5px 30px 30px;
+	background-color: #c8f2e9;
+	width: 570px;
+	height: auto;
+	border-radius: 10px;
+    font-size: 16px;
+}
+
+.comment_section h1 {
+    margin: 20px 0 10px 15px;
+}
+	
+.commentboxes {
+	padding-left: 10px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	}
+
+	
+.commentboxes img, #leavecomment img {
+    float:left;
+    width:70px;
+    height:70px;
+    border-radius:50px;
+    position: relative;
+    top: 10px;
+    left: 5px;
+    }
+
+.comment-content {
+   position:relative;
+   float:left;
+   margin: 20px 0px 5px 18px;
+   width:400px;
+   padding:20px;
+   border-radius:10px;
+   background-color:#FFFFFF;
+   box-shadow:1px 1px 5px rgba(0,0,0,.2);
+   }
+   
+.replycomment {
+	padding-left: 10px;
+	margin: 0 0 0px 90px;
+	padding-bottom: 50px;
+	}
+	
+.replycomment img {
+    float:left;
+    width:70px;
+    height:70px;
+    border-radius:50px;
+    margin: 5px 5px 0 0;
+    postion: relative;
+    top: 10px;
+    }
+	
+.replycomment-content {
+   position:relative;
+   float:left;
+   margin: 10px 0px 5px 12px;
+   width:315px;
+   padding:20px;
+   border-radius:10px;
+   background-color:#FFFFFF;
+   box-shadow:1px 1px 5px rgba(0,0,0,.2);
+   }
+   
+	 
+.point {
+   border-top:10px solid transparent;
+   border-bottom:10px solid transparent;
+   border-right: 12px solid #FFF;
+   position:absolute;
+   left:-10px;
+   top:20px;
+   }
+
+.searchcomments {
+	float: left;
+	position: relative;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center;
+	}
+
+#searchcomments {
+    margin: 20px auto 20px 140px;
+    padding-bottom: 30px;
+	}
+
+#leavecomment {
+    margin: 10px 0 0 10px;
+}
+
+#lcomment {
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0 0 1000px 408px;
+	padding: 5px 10px 5px 8px;
+	color: #213d42;
+	background-color: #efcf98;
+	text-decoration: none;
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0px 0px 5px #213d42;
+    -moz-box-shadow: inset 0px 0px 5px #213d42;
+    box-shadow: inset 0px 0px 5px #213d42;
+	}
+
+.comment_section textarea {
+	position: relative;
+	margin: 5px 10px 15px 15px;
+	border-radius: 10px;
+	resize: none;
+	width:400px;
+	padding:20px;
+	background-color:#FFFFFF;
+	box-shadow:1px 1px 5px rgba(0,0,0,.2);
+	}
