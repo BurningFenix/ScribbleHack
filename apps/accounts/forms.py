@@ -3,6 +3,7 @@ from django.utils.translation import ugettext as _
 
 class EditProfileForm(forms.Form):
 	books = forms.CharField(required=False)
+	authors = forms.CharField(required=False)
 	artworks = forms.CharField(required=False)
 	artists = forms.CharField(required=False)
 	tv_movies = forms.CharField(required=False)
