@@ -1,10 +1,10 @@
 from django.conf.urls import patterns, url
-from .views import IndexView, LogoutView, OwnProfileView,\
+from .views import IndexView, LogoutView, ProfileView,\
 	RegisterView, EditProfileView
 
 urlpatterns = patterns('apps.accounts.views',
 	url(r'^$', IndexView.as_view(), name="index"),
-    url(r'^profile/$', OwnProfileView.as_view(), name="profile"),
+    url(r'^profile/(?P<pk>\d+)?$', ProfileView.as_view(), name="profile"),
     url(r'^profile/edit/$', EditProfileView.as_view(), name="edit"),
     url(r'^logout/$', LogoutView.as_view(), name='logout'),
     url(r'^register/$', RegisterView.as_view(), name='register'),
