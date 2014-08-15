@@ -56,12 +56,14 @@ class EditProfileView(LoginRequiredMixin, FormView):
 
 	def form_valid(self, form):
 		changedUser = False
+		print form.cleaned_data
 		# for everything that is valid (and not None/'')
 		# itering through keys because the keys are also the
 		# names of the attributes in the request.user instance
 		for key in form.cleaned_data.keys():
 			# not sure if should create var to store form.cleaned_data[key]
-				
+			print "in key: ", key
+			print form.cleaned_data[key] == getattr(self.request.user, key)
 			# if not the same as stored value, set new value
 			if form.cleaned_data[key] != getattr(self.request.user, key):
 				setattr(self.request.user, key, form.cleaned_data[key])
