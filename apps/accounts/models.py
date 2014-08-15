@@ -20,9 +20,3 @@ class SHUser(AbstractUser):
 	tv_movies = models.TextField(blank=True)
 	music = models.TextField(blank=True)
 	videogames = models.TextField(blank=True)
-
-# class SHUserForm(ModelForm):
-# 	class Meta:
-# 		model = SHUser
-# 		fields = ['age', 'about', 'books', 'authors', 'artworks',
-# 			'artists', 'tv_movies', 'music', 'videogames']
