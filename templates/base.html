@@ -6,53 +6,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>{% block title %}ScribbleHack{% endblock %}</title>
+<title>{% block title %}Change TITLE{% endblock %}</title>
+
 {% block stylesheets %}
 <link href="{% static 'blankpage.css' %}" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="{% static 'js/jquery-ui-1.10.4.custom.min.css' %}" />
 {% endblock stylesheets %}
-<script src="{% static 'js/jquery-1.10.2.js' %}"></script>
-<script src="{% static 'js/jquery-ui-1.10.4.custom.min.js' %}"></script>
 
-	<style>
-	body{
-		font: 75% "Trebuchet MS", sans-serif;
-	}
-	.demoHeaders {
-		margin-top: 2em;
-	}
-	#dialog-link {
-		padding: .4em 1em .4em 20px;
-		text-decoration: none;
-		position: relative;
-	}
-	#dialog-link span.ui-icon {
-		margin: 0 5px 0 0;
-		position: absolute;
-		left: .2em;
-		top: 50%;
-		margin-top: -8px;
-	}
-	#icons {
-		margin: 0;
-		padding: 0;
-	}
-	#icons li {
-		margin: 2px;
-		position: relative;
-		padding: 4px 0;
-		cursor: pointer;
-		float: left;
-		list-style: none;
-	}
-	#icons span.ui-icon {
-		float: left;
-		margin: 0 4px;
-	}
-	.fakewindowcontain .ui-widget-overlay {
-		position: absolute;
-	}
-	</style>
 {% block head_extra %}{% endblock %}
 </head>
 
@@ -60,122 +19,109 @@
 
 <div id="wrapper">
 
-<div id="header">
+	<div id="header">
 
-<div id="sitenav">
+		<div id="sitenav">
 
+			<div id="sitenavleft" class="clearfix">
+				<a href="homepage.html">
+				
+				<div id="logo" class="clearfix">
+						
+					<div id="icon">
+					</div><!-- icon ends -->
+					<img src="{% static 'images/logo.png' %}" />
+				</div><!-- logo ends -->
+				</a>
 
-<div id="sitenavleft" class="clearfix">
+				<div id="sitenavpagelinks" class="clearfix">
+					<div class="navlink clearfix">
+						<a href="#">Browse</a>
+					</div><!-- navlink ends -->
 
-<a href="homepage.html">
-<div id="logo" class="clearfix">
-<div id="icon">
-</div><!-- icon ends -->
-<img src="{% static 'images/logo.png' %}" />
-</div><!-- logo ends -->
-</a>
+					<div class="navlink clearfix">
+						<a href="#">Universe</a>
+					</div><!-- navlink ends -->
+						
+					<div class="navlink clearfix">
+						<a href="#">Groups</a>
+					</div><!-- navlink ends -->
 
-<div id="sitenavpagelinks" class="clearfix">
-<div class="navlink clearfix">
-<a href="#">Browse</a>
-</div><!-- navlink ends -->
-<div class="navlink clearfix">
-<a href="#">Universe</a>
-</div><!-- navlink ends -->
-<div class="navlink clearfix">
-<a href="#">Groups</a>
-</div><!-- navlink ends -->
-<div class="navlink clearfix">
-<a href="#">Forums</a>
+					<div class="navlink clearfix">
+						<a href="#">Forums</a>
+					</div><!-- navlink ends -->
+				</div><!-- sitenavpagelinks ends -->
 
-</div><!-- navlink ends -->
-</div><!-- sitenavpagelinks ends -->
+			</div><!-- sitenavleft ends -->
 
-</div><!-- sitenavleft ends -->
+			<div id="sitenavright" class="clearfix">
 
+				<div id="navsearchbox">
 
+					<form id="tfnewsearch" method="get" action="#">
 
-<div id="sitenavright" class="clearfix">
+	       				<input type="submit" class="tfbutton" src="{% static 'images/searchicon.png' %}" img />
 
-<div id="navsearchbox">
+		     			<input type="text" placeholder=" Search for stories, art or users" class="tftextinput" name="q" size="25" maxlength="120" onfocus="inputFocus(this)" onblur="inputBlur(this)">
+					</form>
 
-<form id="tfnewsearch" method="get" action="#">
-		       <input type="submit" class="tfbutton" src="{% static 'images/searchicon.png' %}" img />
-		       <input type="text" placeholder=" Search for stories, art or users" class="tftextinput" name="q" size="25" maxlength="120" onfocus="inputFocus(this)" onblur="inputBlur(this)">
-		</form>
+				</div> <!-- navsearchbox ends -->
 
+				{% if user.is_authenticated %}
+					<a href="{% url 'accounts:profile' %}">{{ user.username }}</a>
+				{% else %}
+					<a href="{% url 'accounts:login' %}">Sign in</a>
+				{% endif %}
+				<!-- Insert Gear Settings icon --> 
 
-</div><!-- navsearchbox ends -->
+			</div><!-- sitenavright ends -->
 
-{% if user.is_authenticated %}
-<a href="{% url 'accounts:profile' %}">{{ user.username }}</a>
-{% else %}
-<a href="{% url 'accounts:login' %}">Sign in</a>
-{% endif %}
-<!-- Insert Gear Settings icon --> 
+		</div><!-- sitenav ends -->
 
-</div><!-- sitenavright ends -->
+		<div id="banner">
+		{% block banner %}{% endblock banner %}
+		</div><!-- banner ends -->
 
-</div><!-- sitenav ends -->
+	</div><!-- header ends -->
 
+	{% block content %}
+	<div id="content" class="clearfix">
+	</div><!-- content ends -->
+	{% endblock content %}
 
+	<div id="footer">
 
+		<div class="footerlist">
 
-<div id="banner">
-{% block banner %}{% endblock banner %}
-</div><!-- banner ends -->
+			<p><a id="about" href="">About</a></p>
+			<p><a id="faq" href="">FAQ</a></p>
+			<p><a id="crew" href="">The Crew</a></p>
+		</div>
 
-</div><!-- header ends -->
+		<div class="footerlist">
+			<p><a id="tos" href="">Terms of Service</a></p>
+			<p><a id="ppolicy" href="">Privacy Policy</a></p>
+		</div>
 
+		<div class="footerlist">
+			<p><a class="templinks" href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/homepage/homepage.html">Home Page</a></p>
+			<p><a class="templinks" href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/profile/profile.html">Profile Page</a></p>
+			<p><a class="templinks" href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/profile/editprofile.html">Edit Profile Page</a></p>
 
-<div id="content" class="clearfix">
-
-
-<div id="contentleft" class="clearfix">
-{% block contentleft %}{% endblock %}
-</div><!-- contentleft ends -->
-
-
-<div id="contentright" class="clearfix">
-{% block contentright %}{% endblock %}
-</div><!-- contentright ends -->
-
-
-</div><!-- content ends -->
-
-
-
-<div id="footer">
-<div class="footerlist">
-<p><a id="about" href="">About</a></p>
-<p><a id="faq" href="">FAQ</a></p>
-<p><a id="crew" href="">The Crew</a></p>
-</div>
-<div class="footerlist">
-<p><a id="tos" href="">Terms of Service</a></p>
-<p><a id="ppolicy" href="">Privacy Policy</a></p>
-</div>
-<div class="footerlist">
-<p><a class="templinks" href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/homepage/homepage.html">Home Page</a></p>
-<p><a class="templinks" href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/profile/profile.html">Profile Page</a></p>
-<p><a class="templinks" href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/profile/editprofile.html">Edit Profile Page</a></p>
-
-<h4>Template Testing Links</h4>
-<p>
-	<a href="{% url 'testing:browse_writing' %}">browse/browse_writing.html</a>
-	<a href="{% url 'testing:homepage' %}">homepage/homepage.html</a>
-	<a href="{% url 'testing:profile' %}">profile/profile.html</a>
-	<a href="{% url 'testing:edit_profile' %}">profile/editprofile.html</a>
-	<a href="{% url 'testing:profile_edit_journal' %}">profile/profile_edit_journal.html</a>
-	<a href="{% url 'testing:submit' %}">submit/submit.html</a>
-	<a href="{% url 'testing:display_writing' %}">writing/display_writing.html</a>
-</p>
-</div>
-</div><!-- footer ends -->
-
-
+			<h4>Template Testing Links</h4>
+				<p>
+					<a href="{% url 'testing:browse_writing' %}">browse/browse_writing.html</a>
+					<a href="{% url 'testing:homepage' %}">homepage/homepage.html</a>
+					<a href="{% url 'testing:profile' %}">profile/profile.html</a>
+					<a href="{% url 'testing:edit_profile' %}">profile/editprofile.html</a>
+					<a href="{% url 'testing:profile_edit_journal' %}">profile/profile_edit_journal.html</a>
+					<a href="{% url 'testing:submit' %}">submit/submit.html</a>
+					<a href="{% url 'testing:display_writing' %}">writing/display_writing.html</a>
+				</p>
+		</div> 
+	</div><!-- footer ends -->
 </div><!-- wrapper ends -->
-
 
 </body>
 </html>
+

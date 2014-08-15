@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'profile/base_profile.html' %}
 {% load static %}
 
 {% block stylesheets %}
@@ -8,11 +8,17 @@
 {% endblock stylesheets %}
 
 {% block head_extra %}
+	{{ block.super }}
+	<script src="{% static 'js/jquery-1.10.2.js' %}"></script>
+	<script src="{% static 'js/jquery-ui-1.10.4.custom.min.js' %}">
+	</script>
+
 	<script>
 	$(function() {
 	$( "#tabs" ).tabs();
 	});
 	</script>
+
 {% endblock head_extra %}
 
 {% block banner %}
@@ -149,10 +155,6 @@
 			</div>
 		</div>
 	</div>
-
-
-
-
 
 	<div id="featuredworks">
 

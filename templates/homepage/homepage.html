@@ -1,15 +1,16 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>ScribbleHack</title>
-    <link href="../../static/homepagecss.css" rel="stylesheet" type="text/css" />
-    
+{% extends "base.html" %}
+
+{% block title %}ScribbleHack{% endblock %}
+
+{% block stylesheets %}
+<link href="../../static/homepagecss.css" rel="stylesheet" type="text/css" />
+{% endblock stylesheets %}
+
+{% block head_extra %}
 	<script src="../../static/js/jquery.js"></script>
 	<script src="../../static/js/jquery-ui.min.js"></script>
-    
 	<script src="../../static/js/jquery.fakecrop.js" type="text/javascript"></script>
-<script type="text/javascript">
+    <script type="text/javascript">
     $(document).ready(function () {
 		$('.fakecropartsm').fakecrop({wrapperWidth: 80, wrapperHeight: 80});
 		$('.fakecropartlg').fakecrop({wrapperWidth: 170, wrapperHeight: 170});
@@ -54,73 +55,15 @@
 		var jssor_slider1 = new $JssorSlider$('slider1_container', options);
 		});
 </script>
+{% endblock head_extra %}
 
-</head>
+{% block body_id %}home{% endblock body_id %}
 
-<body id="home">
-
-<div id="wrapper">
-
-<div id="header">
-
-<div id="sitenav">
-
-
-<div id="sitenavleft" class="clearfix">
-
-<a href="homepage.html">
-<div id="logo" class="clearfix">
-<div id="icon">
-</div><!-- icon ends -->
-<img src="../../static/images/logo.png" />
-</div><!-- logo ends -->
-</a>
-
-<div id="sitenavpagelinks" class="clearfix">
-<div class="navlink clearfix">
-<a href="#">Browse</a>
-</div><!-- navlink ends -->
-<div class="navlink clearfix">
-<a href="#">Universe</a>
-</div><!-- navlink ends -->
-<div class="navlink clearfix">
-<a href="#">Groups</a>
-</div><!-- navlink ends -->
-<div class="navlink clearfix">
-<a href="#">Forums</a>
-</div><!-- navlink ends -->
-</div><!-- sitenavpagelinks ends -->
-
-</div><!-- sitenavleft ends -->
-
-<div id="sitenavright" class="clearfix">
-
-<div id="navsearchbox">
-
-<form id="tfnewsearch" method="get" action="#">
-		       <input type="submit" class="tfbutton" src="../../static/images/searchicon.png" img />
-		       <input type="text" placeholder=" Search for stories, art or users" class="tftextinput" name="q" size="25" maxlength="120" onfocus="inputFocus(this)" onblur="inputBlur(this)">
-		</form>
-
-
-</div><!-- navsearchbox ends -->
-
-<!-- <a href="login.html">Sign in</a> -->
-
-<a href="{% url "accounts:login" %}">Sign in</a>
-
-</div><!-- sitenavright ends -->
-
-</div><!-- sitenav ends -->
-
-<div id="banner">
-
+{% block banner %}
 <img id="octo" src="../../static/images/octohomebanner.jpg" />
+{% endblock banner %}
 
-</div><!-- banner ends -->
-
-</div><!-- header ends -->
-
+{% block content %} 
 <div class="content clearfix">
 
 <div class="topsection">
@@ -191,9 +134,9 @@
             */
             .jssora14l, .jssora14r, .jssora14ldn, .jssora14rdn
             {
-            	position: absolute;
-            	cursor: pointer;
-            	display: block;
+                position: absolute;
+                cursor: pointer;
+                display: block;
                 background: url(../../static/images/a14.png) no-repeat;
                 overflow:hidden;
             }
@@ -217,33 +160,33 @@
 
 <div id="hpgallery">
 <h1>Popular in Art</h1>
-	<div class="tb_right"><a href="#"><img class="fakecropartsm" src="../../static/images/mermaid_1.jpg" /></a></div>
-	<div class="tb_right"><a href="#"><img class="fakecropartsm" src="../../static/images/luceroart1.jpg" /></a></div>
-	<div class="tb_right"><a href="#"><img class="fakecropartsm" src="../../static/images/bi.jpg" /></a></div>
-	<div class="tb_right"><a href="#"><img class="fakecropartsm" src="../../static/images/slider.jpg" /></a></div>
-	<div class="large_tb_left"><a href="#"><img class="fakecropartlg" src="../../static/images/yukoart2.jpg" /></a></div>
-	<div class="tb_right"><a href="#"><img class="fakecropartsm" src="../../static/images/yukoart1.jpg" /></a></div>
-	<div class="tb_right"><a href="#"><img class="fakecropartsm" src="../../static/images/octobanner.jpg" /></a></div>
-	<div class="tb_right"><a href="#"><img class="fakecropartsm" src="../../static/images/yukoart3.jpg" /></a></div>
-	<div class="tb_right"><a href="#"><img class="fakecropartsm" src="../../static/images/narwhal.png" /></a></div>
-	<div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/yukoart4.jpg" /></a></div>
-	<div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/yukoart5.jpg" /></a></div>
-	<div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/pencils.jpg" /></a></div>
-	<div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/luceroart1.jpg" /></a></div>
-	<div class="large_tb_right"><a href="#"><img class="fakecropartlg" src="../../static/images/kaeart1.jpg" /></a></div>
-	<div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/narwhal.png" /></a></div>
-	<div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/bi.jpg" /></a></div>
-	<div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/octobanner.jpg" /></a></div>
-	<div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/heart.png" /></a></div>
-	<div class="tb_right"><a href="#"><img class="fakecropartsm" src="../../static/images/yukoart3.jpg" /></a></div>
-	<div class="tb_right"><a href="#"><img class="fakecropartsm" src="../../static/images/yukoart2.jpg" /></a></div>
-	<div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/kaeart1.jpg" /></a></div>
-	<div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/yukoart4.jpg" /></a></div>
-	<div class="large_tb_right"><a href="#"><img class="fakecropartlg" src="../../static/images/yukoart5.jpg" /></a></div>
-	<div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/pencils.jpg" /></a></div>
-	<div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/yukoart1.jpg" /></a></div>
-	<div class="tb_rightb"><a href="#"><img class="fakecropartsm" src="../../static/images/yukoart4.jpg" /></a></div>
-	<div class="tb_rightb"><a href="#"><img class="fakecropartsm" src="../../static/images/mermaid_1.jpg" /></a></div>
+    <div class="tb_right"><a href="#"><img class="fakecropartsm" src="../../static/images/mermaid_1.jpg" /></a></div>
+    <div class="tb_right"><a href="#"><img class="fakecropartsm" src="../../static/images/luceroart1.jpg" /></a></div>
+    <div class="tb_right"><a href="#"><img class="fakecropartsm" src="../../static/images/bi.jpg" /></a></div>
+    <div class="tb_right"><a href="#"><img class="fakecropartsm" src="../../static/images/slider.jpg" /></a></div>
+    <div class="large_tb_left"><a href="#"><img class="fakecropartlg" src="../../static/images/yukoart2.jpg" /></a></div>
+    <div class="tb_right"><a href="#"><img class="fakecropartsm" src="../../static/images/yukoart1.jpg" /></a></div>
+    <div class="tb_right"><a href="#"><img class="fakecropartsm" src="../../static/images/octobanner.jpg" /></a></div>
+    <div class="tb_right"><a href="#"><img class="fakecropartsm" src="../../static/images/yukoart3.jpg" /></a></div>
+    <div class="tb_right"><a href="#"><img class="fakecropartsm" src="../../static/images/narwhal.png" /></a></div>
+    <div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/yukoart4.jpg" /></a></div>
+    <div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/yukoart5.jpg" /></a></div>
+    <div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/pencils.jpg" /></a></div>
+    <div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/luceroart1.jpg" /></a></div>
+    <div class="large_tb_right"><a href="#"><img class="fakecropartlg" src="../../static/images/kaeart1.jpg" /></a></div>
+    <div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/narwhal.png" /></a></div>
+    <div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/bi.jpg" /></a></div>
+    <div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/octobanner.jpg" /></a></div>
+    <div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/heart.png" /></a></div>
+    <div class="tb_right"><a href="#"><img class="fakecropartsm" src="../../static/images/yukoart3.jpg" /></a></div>
+    <div class="tb_right"><a href="#"><img class="fakecropartsm" src="../../static/images/yukoart2.jpg" /></a></div>
+    <div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/kaeart1.jpg" /></a></div>
+    <div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/yukoart4.jpg" /></a></div>
+    <div class="large_tb_right"><a href="#"><img class="fakecropartlg" src="../../static/images/yukoart5.jpg" /></a></div>
+    <div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/pencils.jpg" /></a></div>
+    <div class="tb_left"><a href="#"><img class="fakecropartsm" src="../../static/images/yukoart1.jpg" /></a></div>
+    <div class="tb_rightb"><a href="#"><img class="fakecropartsm" src="../../static/images/yukoart4.jpg" /></a></div>
+    <div class="tb_rightb"><a href="#"><img class="fakecropartsm" src="../../static/images/mermaid_1.jpg" /></a></div>
 
 </div><!-- gallery ends -->
 
@@ -253,39 +196,39 @@
 
 <div id="bookshelf">
 <div id=bookcasetitle>Popular in Writing</div>
-	<div class="shelf">
-		<div class="book"><img src="../../static/images/covernovelsm.jpg" /></div>
-		<div class="book"><img src="../../static/images/coverpoetrysm.jpg" /></div>
-		<div class="book"><img src="../../static/images/covershstorysm.jpg" /></div>
-	</div>
-	<div class="shelftitle"><a href="#" class="shelftitle">BEST COVER ART</a></div>
-	<div class="shelf">
-		<div class="book"><img src="../../static/images/coverart1sm.jpg" /></div>
-		<div class="book"><img src="../../static/images/coverart2sm.jpg" /></div>
-		<div class="book"><img src="../../static/images/coverart3sm.jpg" /></div>
-	</div>
-	<div class="shelftitle"><a href="#" class="shelftitle">BEST COVER ART</a></div>
-	<div class="shelf">
-		<div class="book"><img src="../../static/images/covernovelsm.jpg" /></div>
-		<div class="book"><img src="../../static/images/coverpoetrysm.jpg" /></div>
-		<div class="book"><img src="../../static/images/covershstorysm.jpg" /></div>
-	</div>
-	<div class="shelftitle"><a href="#" class="shelftitle">POPULAR NOVELS</a></div>
-	<div class="shelf">
-		<div class="book"><img src="../../static/images/coverart1sm.jpg" /></div>
-		<div class="book"><img src="../../static/images/coverart2sm.jpg" /></div>
-		<div class="book"><img src="../../static/images/coverart3sm.jpg" /></div>
-	</div>
-	<div class="shelftitle"><a href="#" class="shelftitle">RECENTLY UPDATED</a></div>
-	<div class="shelf">
-		<div class="book"><img src="../../static/images/covernovelsm.jpg" /></div>
-		<div class="book"><img src="../../static/images/coverpoetrysm.jpg" /></div>
-		<div class="book"><img src="../../static/images/covershstorysm.jpg" /></div>
-	</div>
-	<div class="shelftitle"><a href="#" class="shelftitle">POPULAR POEMS & STORIES</a></div>
-	<div id="bookcase_bg">
-		<img src="../../static/images/anemone.png"/>
-	</div>
+    <div class="shelf">
+        <div class="book"><img src="../../static/images/covernovelsm.jpg" /></div>
+        <div class="book"><img src="../../static/images/coverpoetrysm.jpg" /></div>
+        <div class="book"><img src="../../static/images/covershstorysm.jpg" /></div>
+    </div>
+    <div class="shelftitle"><a href="#" class="shelftitle">BEST COVER ART</a></div>
+    <div class="shelf">
+        <div class="book"><img src="../../static/images/coverart1sm.jpg" /></div>
+        <div class="book"><img src="../../static/images/coverart2sm.jpg" /></div>
+        <div class="book"><img src="../../static/images/coverart3sm.jpg" /></div>
+    </div>
+    <div class="shelftitle"><a href="#" class="shelftitle">BEST COVER ART</a></div>
+    <div class="shelf">
+        <div class="book"><img src="../../static/images/covernovelsm.jpg" /></div>
+        <div class="book"><img src="../../static/images/coverpoetrysm.jpg" /></div>
+        <div class="book"><img src="../../static/images/covershstorysm.jpg" /></div>
+    </div>
+    <div class="shelftitle"><a href="#" class="shelftitle">POPULAR NOVELS</a></div>
+    <div class="shelf">
+        <div class="book"><img src="../../static/images/coverart1sm.jpg" /></div>
+        <div class="book"><img src="../../static/images/coverart2sm.jpg" /></div>
+        <div class="book"><img src="../../static/images/coverart3sm.jpg" /></div>
+    </div>
+    <div class="shelftitle"><a href="#" class="shelftitle">RECENTLY UPDATED</a></div>
+    <div class="shelf">
+        <div class="book"><img src="../../static/images/covernovelsm.jpg" /></div>
+        <div class="book"><img src="../../static/images/coverpoetrysm.jpg" /></div>
+        <div class="book"><img src="../../static/images/covershstorysm.jpg" /></div>
+    </div>
+    <div class="shelftitle"><a href="#" class="shelftitle">POPULAR POEMS & STORIES</a></div>
+    <div id="bookcase_bg">
+        <img src="../../static/images/anemone.png"/>
+    </div>
 </div><!-- bookshelf ends -->
 
 </div><!-- contentright ends -->
@@ -334,12 +277,12 @@
 </div>
 <div id="hppollform">
 <form action="">
-	<input type="radio" class="pollchoice" name="interest" value="taxi">Whale Taxi<br>
-	<input type="radio" class="pollchoice" name="interest" value="horse">Seahorse<br>
-	<input type="radio" class="pollchoice" name="interest" value="bus">Catfish Bus<br>
-	<input type="radio" class="pollchoice" name="interest" value="train">Torpedo Train<br>
-	<input type="radio" class="pollchoice" name="interest" value="scuba">Scuba Tuba<br>
-	</form>
+    <input type="radio" class="pollchoice" name="interest" value="taxi">Whale Taxi<br>
+    <input type="radio" class="pollchoice" name="interest" value="horse">Seahorse<br>
+    <input type="radio" class="pollchoice" name="interest" value="bus">Catfish Bus<br>
+    <input type="radio" class="pollchoice" name="interest" value="train">Torpedo Train<br>
+    <input type="radio" class="pollchoice" name="interest" value="scuba">Scuba Tuba<br>
+    </form>
 <input type="submit" class="button" value="Submit!" />
 </div>
 <div id="pollcreature"><img src="../../static/images/narwhal.png" /></div>
@@ -357,29 +300,5 @@
 </div><!-- bottomsection ends -->
 
 </div><!-- content ends -->
+{% endblock content %}
 
-<div id="footer">
-
-	<div class="footerlist">
-		<p><a id="about" href="">About</a></p>
-		<p><a id="faq" href="">FAQ</a></p>
-		<p><a id="crew" href="">The Crew</a></p>
-	</div>
-	<div class="footerlist">
-		<p><a id="tos" href="">Terms of Service</a></p>
-		<p><a id="ppolicy" href="">Privacy Policy</a></p>
-	</div>
-	<div class="footerlist">
-		<p><a class="templinks" href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/homepage/homepage.html">Home Page</a></p>
-		<p><a class="templinks" href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/profile/profile.html">Profile Page</a></p>
-		<p><a class="templinks" href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/profile/editprofile.html">Edit Profile Page</a></p>
-	</div>
-
-</div><!-- footer ends -->
-
-
-</div><!-- wrapper ends -->
-
-
-</body>
-</html>
