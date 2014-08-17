@@ -64,9 +64,9 @@ p {
 	-moz-box-shadow: 0 0 15px #213d42;
 }
 
-a:link {color:#d46900;}
+a:link {color:#ff5800;}
 a:visited {color:#099bb6;}
-a:hover {color:#efa168;}
+a:hover {color:#ff9d00;}
 a:active {color:#00A58C;}
 
 a {
@@ -77,16 +77,20 @@ a {
 	font-size: 14px;
 	font-weight: bold;
 	padding: 5px 10px 5px 8px;
-	color: #213d42;
+	color: black;
 	float: left;
-	background-color: #efcf98;
+	background-color: #ff9f75;
 	text-decoration: none;
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0px 0px 5px #213d42;
-    -moz-box-shadow: inset 0px 0px 5px #213d42;
-    box-shadow: inset 0px 0px 5px #213d42;
+	border-radius: 7px;
 	height: 18px;
+    -webkit-box-shadow: 5px 5px 5px #213d42;
+    -moz-box-shadow:  5px 5px 5px #213d42;
+    box-shadow: 5px 5px 5px #213d42;
 	}
+
+.button:hover {
+    margin-top: 2px;
+}
 	
 #header {
 	height: 200px;
