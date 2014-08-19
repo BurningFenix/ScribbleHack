@@ -461,7 +461,7 @@ a {
 	}
 
 #tabs-1, #tabs-2, #tabs-3, #tabs-4, #tabs-5{
-	height: 380px;
+	height: 370px;
 	width: 570px;
 	margin-right: 0px;
 	background-color: #c8f2e9;
@@ -654,7 +654,7 @@ td {
 
 #featuredworks {
 	width: 570px;
-	height: 650px;
+	height: 640px;
 	float: left;
 	background-color: #c8f2e9;
 	margin-top: 30px;
@@ -706,7 +706,7 @@ figure h3 {
 #profcomments {
 	background-color: #c8f2e9;
 	width: 570px;
-	height: 700px;
+	height: 720px;
 	float: left;
 	margin-top: 30px;
 	border-radius: 10px;
@@ -788,15 +788,15 @@ figure h3 {
 
 .searchcomments {
 	float: left;
-	position: relative;
 	margin-left: 10px;
 	margin-right: 10px;
 	text-align: center;
 	}
 
 #searchcomments {
+    position: relative;
 	margin-left: 175px;
-	margin-top: 50px;
+    top: 6px;
 	}
 
 #lcomment {
