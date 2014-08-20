@@ -10,16 +10,16 @@ make sure to
 
 before clicking the links
 
-[templates/browse/browse_writing.html](http://127.0.0.1:8000/testing/browse_writing)
+[templates/browse/browse_writing.html](http://127.0.0.1:8000/testing/browse_writing/)
 
-[templates/homepage/homepage.html](http://127.0.0.1:8000/testing/homepage)
+[templates/homepage/homepage.html](http://127.0.0.1:8000/testing/homepage/)
 
-[templates/profile/profile.html](http://127.0.0.1:8000/testing/profile)
+[templates/profile/profile.html](http://127.0.0.1:8000/testing/profile/)
 
-[templates/profile/editprofile.html](http://127.0.0.1:8000/testing/edit_profile)
+[templates/profile/editprofile.html](http://127.0.0.1:8000/testing/edit_profile/)
 
-[templates/profile/profile_edit_journal.html](http://127.0.0.1:8000/testing/profile_edit_journal)
+[templates/profile/profile_edit_journal.html](http://127.0.0.1:8000/testing/profile_edit_journal/)
 
-[templates/sumbit/submit.html](http://127.0.0.1:8000/testing/submit)
+[templates/sumbit/submit.html](http://127.0.0.1:8000/testing/submit/)
 
-[templates/writing/display_writing.html](http://127.0.0.1:8000/testing/display_writing)
+[templates/writing/display_writing.html](http://127.0.0.1:8000/testing/display_writing/)
