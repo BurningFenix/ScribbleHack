@@ -64,9 +64,9 @@ p {
 	-moz-box-shadow: 0 0 15px #213d42;
 }
 
-a:link {color:#d46900;}
+a:link {color:#ff5800;}
 a:visited {color:#099bb6;}
-a:hover {color:#efa168;}
+a:hover {color:#ff9d00;}
 a:active {color:#00A58C;}
 
 a {
@@ -74,19 +74,25 @@ a {
 	}
 
 .button {
-	font-size: 14px;
+	font-size: 15px;
 	font-weight: bold;
 	padding: 5px 10px 5px 8px;
-	color: #213d42;
+	color: black;
 	float: left;
-	background-color: #efcf98;
+	background: linear-gradient(#ff9f75, #ff7d44);
 	text-decoration: none;
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0px 0px 5px #213d42;
-    -moz-box-shadow: inset 0px 0px 5px #213d42;
-    box-shadow: inset 0px 0px 5px #213d42;
+	border-radius: 7px;
 	height: 18px;
+    -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow:  1px 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 	}
+
+.button:hover {
+     -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow:  inset 1px 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
 	
 #header {
 	height: 200px;
@@ -243,7 +249,14 @@ a {
 	
 .footerlist {
 	float: left;
-	margin-top: 30px;
+	margin-top: 10px;
+	}
+
+.templinks {
+	margin-left: 250px;
+	margin-top: 5px;
+	font-size: 14px;
+	float: right;
 	}
 	
 #about {
@@ -302,6 +315,10 @@ a {
 	color: #2f2f2f;
 }
 	
+
+
+
+
 /* For help navigating this CSS, all the stuff at the top comes first (banner, and everything in it), then it goes from left to right. So basically, the tabs box, PORTFOLIO, COMMENTS, FAVORITES, BADGES, FRIENDS & FOLLOWERS, COLLABORATERS. */
 
 
@@ -315,7 +332,7 @@ a {
 }
 
 #profile #profbannerleft {
-	width: 430px;
+	width: 400px;
 	height: 130px;
 	position: absolute;
 	top: 10px;
@@ -325,13 +342,13 @@ a {
 }
 
 #profilepic{
-	width: 120px;
-	height: 120px;
+	width: 100px;
+	height: 100px;
 	position: absolute;
 	float: left;
-	margin-right: 50px;
-	left: 10px;
-	top: 2px;
+	margin-right: 30px;
+	left: 13px;
+	top: 13px;
 	border-radius: 75px;
 	-webkit-border-radius: 75px;
 	-moz-border-radius: 75px;
@@ -343,7 +360,7 @@ a {
 	margin: 0px 0px 5px 0px;
 	font-family: cantoraone,arial,sans-serif;
 	position: relative;
-	left: 150px;
+	left: 140px;
 }
 
 #profile #proffirstlastname {
@@ -373,7 +390,10 @@ a {
 	float: right;
 	font-style: italic;
 	position: absolute;
-	right: 10px;
+    left: 260px;
+    padding: 3px 8px 3px 8px;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,.7);
 }
 
 #profile #profstatistics {
@@ -448,7 +468,7 @@ a {
 	}
 
 #tabs-1, #tabs-2, #tabs-3, #tabs-4, #tabs-5{
-	height: 380px;
+	height: 370px;
 	width: 570px;
 	margin-right: 0px;
 	background-color: #c8f2e9;
@@ -556,11 +576,12 @@ a {
 	margin-top: 0px;
 	}
 
-#moregroups {
+.tabslinks {
 	text-align: center;
 	font-weight: bold;
 	padding-left: 220px;
 	text-decoration: none;
+    margin-bottom: 0px;
 	}
 	
 #tabs-3 p {
@@ -578,7 +599,25 @@ a {
 	padding-left: 25px;
 	margin-right: 10px;
 	}
-	
+
+#tabs-4 figure {
+    width: 140px;
+    height: 200px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#tabs-4 figure p {
+    margin-top: 5px;
+    padding: 5px;
+}
+
+#tabs-4 figure h3 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	text-decoration: none;
+	}
+
 #tabs-5 p {
 	margin: 0px 0px;
 	}
@@ -622,7 +661,7 @@ td {
 
 #featuredworks {
 	width: 570px;
-	height: 650px;
+	height: 640px;
 	float: left;
 	background-color: #c8f2e9;
 	margin-top: 30px;
@@ -674,7 +713,7 @@ figure h3 {
 #profcomments {
 	background-color: #c8f2e9;
 	width: 570px;
-	height: 700px;
+	height: 720px;
 	float: left;
 	margin-top: 30px;
 	border-radius: 10px;
@@ -756,30 +795,37 @@ figure h3 {
 
 .searchcomments {
 	float: left;
-	position: relative;
 	margin-left: 10px;
 	margin-right: 10px;
 	text-align: center;
 	}
 
 #searchcomments {
+    position: relative;
 	margin-left: 175px;
-	margin-top: 50px;
+    top: 6px;
 	}
 
 #lcomment {
-	font-size: 14px;
-	font-weight: bold;
+	font-size: 15px;
+    color: black;
+    font-weight: bold;
 	margin: 10px 25px 20px 360px;
 	padding: 5px 10px 5px 8px;
-	color: #213d42;
-	background-color: #efcf98;
+	color: black;
+	background: linear-gradient(#ff9f75, #ff7d44);
 	text-decoration: none;
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0px 0px 5px #213d42;
-    -moz-box-shadow: inset 0px 0px 5px #213d42;
-    box-shadow: inset 0px 0px 5px #213d42;
+	border-radius: 7px;
+	 -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow:  1px 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 	}
+
+lcomment:hover {
+    -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow:  inset 1px 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
 
 #profcomments textarea {
 	position: relative;
@@ -792,10 +838,9 @@ figure h3 {
 	box-shadow:1px 1px 5px rgba(0,0,0,.2);
 	}
 	
-	
-	
 
-/* INTERESTS/BADGES SECTION, RIGHT */
+
+/* BEGIN CONTENTRIGHT */
 
 #contentright {
 	float: right;
@@ -813,9 +858,39 @@ figure h3 {
 	text-align: center;
 	}
 
+/* BUTTONS ON THE TOP RIGHT */
+
+#toprightbuttons a {
+    color: black;
+}
+
+.special_button {
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+    padding: 5px 7px 5px 7px;
+    text-decoration: none;
+    margin-right: 8px;
+    background: linear-gradient(#ff9f75, #ff7d44);
+	text-decoration: none;
+	border-radius: 7px;
+    -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow:  1px 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.special_button:hover {
+    -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow:  inset 1px 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* INTERESTS/BADGES SECTION, RIGHT */
+
 .proftopright {
 	display: inline;
 	float: right;
+    margin-top: 14px;
 }
 
 #interests {
@@ -881,18 +956,20 @@ figure h3 {
 	}
 
 .brboxes {
-	height: 332px;
+	height: 250px;
 	background-color: #c8f2e9;
 	border-radius: 10px;
 	margin-top: 30px;
 	}
+
+#treasures {
+    height: 380px;
+    background-color: #c8f2e9;
+	border-radius: 10px;
+	margin-top: 30px;
+}
 	
 
-.templinks {
-	margin-left: 250px;
-	margin-top: 5px;
-	font-size: 14px;
-	float: right;
-	}
+
 
 

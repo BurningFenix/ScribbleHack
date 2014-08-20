@@ -269,9 +269,16 @@ a {
 	
 .footerlist {
 	float: left;
-	margin-top: 30px;
+	margin-top: 10px;
 	}
-	
+
+.templinks {
+	margin-left: 250px;
+	margin-top: 5px;
+	font-size: 14px;
+	float: right;
+	}
+
 #about {
 	margin-left: 100px;
 	}
@@ -487,14 +494,6 @@ textarea {
 	cursor: hand;
 }
 
-
-.templinks {
-	margin-left: 250px;
-	margin-top: 5px;
-	font-size: 14px;
-	float: right;
-	}
-	
 
 /* clearfix css */
 

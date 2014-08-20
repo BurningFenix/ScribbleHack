@@ -215,6 +215,13 @@ a {
 	float: left;
 	margin-top: 30px;
 	}
+
+.templinks {
+	margin-left: 250px;
+	margin-top: 5px;
+	font-size: 14px;
+	float: right;
+	}
 	
 #footer #about {
 	margin-left: 100px;
