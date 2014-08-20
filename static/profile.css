@@ -249,7 +249,14 @@ a {
 	
 .footerlist {
 	float: left;
-	margin-top: 30px;
+	margin-top: 10px;
+	}
+
+.templinks {
+	margin-left: 250px;
+	margin-top: 5px;
+	font-size: 14px;
+	float: right;
 	}
 	
 #about {
@@ -963,11 +970,6 @@ lcomment:hover {
 }
 	
 
-.templinks {
-	margin-left: 250px;
-	margin-top: 5px;
-	font-size: 14px;
-	float: right;
-	}
+
 
 

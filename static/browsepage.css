@@ -247,7 +247,14 @@ a {
 	
 .footerlist {
 	float: left;
-	margin-top: 30px;
+	margin-top: 10px;
+	}
+
+.templinks {
+	margin-left: 250px;
+	margin-top: 5px;
+	font-size: 14px;
+	float: right;
 	}
 	
 #about {
@@ -272,7 +279,6 @@ a {
 	margin-left: 190px;
 	margin-top: 10px;
 	}
-
 
 #quicklinks ul {
 	list-style-type: none;
