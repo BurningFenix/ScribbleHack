@@ -8,7 +8,7 @@ from .forms import CreateWritingForm
 
 class WritingListView(ListView):
 	model = WritingPiece
-	template_name = 'writing/browse_writing.html'#'writing/writing_list.html'
+	template_name = 'writing/browse_writing.html'
 	# will show 20 writing pieces per page (5 rows)
 	# pagination adds one query because it needs to know how many
 	# WritingPiece entries exist in the database
@@ -69,3 +69,7 @@ class EditWritingView(LoginRequiredMixin, UpdateView):
 class WritingDetailView(DetailView):
 	model = WritingPiece
 	template_name = 'writing/view_writing.html'
+
+	# gets one query set that follows the foreign key 'owner'
+	def get_queryset(self):
+		return self.model.objects.select_related('owner')

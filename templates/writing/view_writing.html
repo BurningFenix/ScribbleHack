@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% load humanize %}
 
 {% block stylesheets %}
@@ -108,7 +109,7 @@
 			<div class="box_title">
 				<img class="user_avatar" src="../../static/images/luceroprofilepic.jpg" width="70px" height="70px">
 				<h1>{{ object.name }}</h1>
-					<h2>by <a href="../profile/profile.html">Laurelin</a> </br> Posted {{ object.creation_date|naturalday }}</h2>
+					<h2>by <a href="{% url 'accounts:profile' pk=object.owner.pk %}">{{ object.owner.username }}</a> </br> Posted {{ object.creation_date|naturalday }}</h2>
 	        </div>
 				<div class="art_description">
 	                			<img src="../../static/images/coverpoetry.jpg">
@@ -131,7 +132,7 @@
 			 <center><p id="numberoflikes"> 34 likes (12 today) </p></center>
 
 			<ol>
-			<li>Date Submitted: <font color="#007777">1/9/14 </font> </li>
+			<li>Date Submitted: <font color="#007777">{{ object.creation_date }} </font> </li>
 		</br>
 			<li>Genre: <font color="#007777">Action </font></li>
 			</ol>
