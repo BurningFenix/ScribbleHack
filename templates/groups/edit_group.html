@@ -11,7 +11,7 @@
 
 </head>
 
-<body id="create_group">
+<body id="edit_group">
 
 <div id="wrapper">
 
@@ -86,51 +86,60 @@
 <div id="content" class="clearfix">
 
 <div id="contentleft" class="clearfix">
+
+
+<div id="grouphead">
     
+    <h1>GROUP NAME</h1>
     
-
-<div id="groupbody">
-    
-    <div id="creategroupform">
-
-        <form>
-
-            <h2>Name of Group: <input type="text" name="title" style="width:300px; height:20px;"></h2>
-
-            <p><em>Warning: At least ten users must join this group within one week of its creation. If you are unable to find this many members, the group will automatically be deleted!</em></p>
-
-            <h2>Category:<br>
-                        <p><input type="checkbox" name="category" value="art">Art<br></p>
-                        <p><input type="checkbox" name="category" value="writing">Writing<br></p>
-                        <p><input type="checkbox" name="category" value="interest">Interest</p>
-            </h2>
-
-            <h2>Group Description:</h2>
-            <textarea rows="8" cols="100"></textarea>
-
-            <h2>Group Tags: <input type="text" name="title" style="width:300px; height:20px;"></h2>
-
-    </div><!-- creategroupform ends -->
-        
+    <div id="groupnav">
+        <a href="">Newsfeed</a>
+        <a href="">Group Discussions</a>
+        <a href="">Members</a>
+        <a href="">Photos</a>
+        <a href="">Documents</a>
+    </div>
 </div>
-        
-</div><!-- contentleft ends -->
     
+<div id="groupbody">
+     
+    <div id="creategroupform">
+    
+        <h1>Hello, President!</h1>
+    
+    
+        <form>
+    
+        <h2>Edit Group Name: <input type="text" placeholder="GROUP NAME" name="title" style="width:300px; height:20px;"></h2>
+        
+        <p><em>*Your group members will be notified of any changes to the group name. You are allowed to change the group name only up to three times!</em></p>
+        
+
+        <h2>Update Group Description:</h2>
+        <textarea rows="8" cols="100">Insert previous group description here. </textarea>
+        
+        <h2>Add/Remove Tags: <input type="text" name="title" style="width:300px; height:20px;"></h2>
+        <p>Insert list of tags here.</p>
+    
+            </div><!-- creategroupform ends -->
+</div><!-- groupbody ends -->
+    
+</div><!-- contentleft ends -->
     
     
     
         
 <div id="contentright" class="clearfix">
     
-        <div id="flag">
-            <img src=""/>
-        </div>
+    <div id="flag">
+        <img src=""/>
+    </div>
     
     <br>
     
     <div id="groupbody">
 
-        <h2>Group Banner:<br> <input type="file" name="browsefile" size="40"></h2>
+        <h2>Update Group Banner: <input type="file" name="browsefile" size="40"></h2>
 
 
             <br>
@@ -141,17 +150,18 @@
 					<option>Friend #2</option>
 					<option>Friend #3</option>
 				</select>
-            <br>
+            <br><br>
 
-        <input id="submitbutton" type="submit" value="Create Group!">
-
+        <input id="submitbutton" type="submit" value="Update Group!">
+    
         </form>
     
     <p><a href="">Cancel</a></p>
     
-    </div><!-- groupbody ends -->
- 
-</div>  <!-- contentright ends -->
+    </div> <!-- groupbody ends -->
+
+    
+</div> <!-- contentright ends -->
       
     
 </div><!-- content ends -->
