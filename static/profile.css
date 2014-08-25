@@ -324,14 +324,14 @@ a {
 
 /* Specifically, Profile Page CSS */
 
-#profile #banner {
+#banner {
 	background-image: url(../../static/images/404banner.jpg);
 	position: relative;
 	margin: 0;
 	padding: 0;
 }
 
-#profile #profbannerleft {
+#profbannerleft {
 	width: 400px;
 	height: 130px;
 	position: absolute;
@@ -355,7 +355,7 @@ a {
 	border:3px solid #ffffff;
 	}
 
-#profile #profbigusername {
+#profbigusername {
 	font-size: 45px;
 	margin: 0px 0px 5px 0px;
 	font-family: cantoraone,arial,sans-serif;
@@ -363,20 +363,20 @@ a {
 	left: 140px;
 }
 
-#profile #proffirstlastname {
+#proffirstlastname {
 	font-size: 18px;
 	margin: 0px;
 	position: relative;
 	left: 160px;
 }
 
-#profile #profselftitle {
+#profselftitle {
 	font-size: 15px;
 	position: relative;
 	left: 160px;
 }
 
-#profile #profbannerright {
+#profbannerright {
 	width: 400px;
 	height: 175px;
 	float: right;
@@ -385,7 +385,7 @@ a {
 	right: 25px;
 }
 
-#profile #profonlinestatus {
+#profonlinestatus {
 	font-size: 13px;
 	float: right;
 	font-style: italic;
@@ -396,7 +396,7 @@ a {
     background-color: rgba(255,255,255,.7);
 }
 
-#profile #profstatistics {
+#profstatistics {
 	width: 285px;
 	float: right;
 	height: 50px;
@@ -407,7 +407,7 @@ a {
 	border-radius: 10px;
 }
 
-#profile #profstatistics ul {
+#profstatistics ul {
 	list-style: none;
 	margin: none;
 	padding: none;
@@ -415,7 +415,7 @@ a {
 	padding: 10px 5px 10px 5px;
 }
 
-#profile #profstatistics .profstat {
+#profstatistics .profstat {
 	display: inline;
 	color: #abdfdb;
 	float: right;
@@ -423,25 +423,25 @@ a {
 	margin-right: 23px;
 }
 
-#profile #profstatistics li {
+#profstatistics li {
 	text-align: center;
 	font-size: 10px;
 	margin: none;
 	padding: none;
 }
 
-#profile #profstatistics li span {
+#profstatistics li span {
 	font-size: 21px;
 }
 	
-#profile #content {
+#content {
 	height: 1850px;
 	margin: 0;
 	padding: 0;
 	position: relative;
 }
 
-#profile #contentleft {
+#contentleft {
 	margin: 0 0 0 25px;
 	padding: 0;
 	width: 570px;
