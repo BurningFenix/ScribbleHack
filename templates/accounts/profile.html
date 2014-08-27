@@ -1,5 +1,6 @@
 {% extends 'profile/base_profile.html' %}
 {% load static %}
+{% load humanize %}
 
 {% block stylesheets %}
 	{{ block.super }}
@@ -30,12 +31,12 @@
 	</div><!-- profbannerleft ends -->
 
 	<div id="profbannerright">
-	<p id="profonlinestatus">Last online Feb 2012</p>
+	<p id="profonlinestatus">Last online {{ object.last_login|naturalday }}</p>
 	<div id="profstatistics">
 	<ul>
 	<div class="profstat"><li><span>5,000</span></br>PAGEVIEWS</li></div>
-	<div class="profstat"><li><span>420</span></br>COMMENTS</li></div>
-	<div class="profstat"><li><span>67</span></br>WORKS</li></div>
+	<div class="profstat"><li><span>{{ object.writingcomment__count}}</span></br>COMMENTS</li></div>
+	<div class="profstat"><li><span>{{ object.writingpiece__count }}</span></br>WORKS</li></div>
 	</ul>
 	</div><!-- profstatistics ends -->
 	</div><!-- profbannerright ends -->

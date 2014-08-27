@@ -4,6 +4,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.views.generic.base import RedirectView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import FormView
+from django.db.models import Count
 from .forms import EditProfileForm, RegisterForm
 from .models import SHUser
 
@@ -18,10 +19,18 @@ class IndexView(RedirectView):
 			redirectPage = 'accounts:profile'
 		return redirect(redirectPage)
 
-# displays the profile page of the user currently logged in
 class ProfileView(LoginRequiredMixin, DetailView):
 	model = SHUser
 	template_name = 'accounts/profile.html'
+
+	# this allows the number of writingpiece objects that a
+	# user has to be determined with the same query as the
+	# retrieval of the user's information and the number of
+	# writingpieces each user has
+	def get_queryset(self):
+		q = self.model.objects.annotate(Count('writingpiece'),
+			Count('writingcomment'))
+		return q
 
 	# gets the object based on pk
 	def get_object(self):
@@ -32,12 +41,16 @@ class ProfileView(LoginRequiredMixin, DetailView):
 		if self.kwargs['pk'] is None \
 			or self.kwargs['pk'] == str(self.request.user.pk):
 
-			object = self.request.user
+			# doesnt do anything for performance. still will query twice
+			#muhpk = self.request.session['_auth_user_id']
+			object = self.get_queryset().get(pk=self.request.user.pk)
+			#print(dir(object.writingpiece_set))
 		else:
 			try:
-				object = self.model.objects.get(pk=self.kwargs['pk'])
+				object = self.get_queryset().get(pk=self.kwargs['pk'])
 			except:
 				object = None
+
 		return object
 
 	# super gets the response, 404 if there is no object to display
