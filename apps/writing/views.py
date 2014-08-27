@@ -41,15 +41,23 @@ class EditWritingView(LoginRequiredMixin, UpdateView):
 	def get_success_url(self):
 		return reverse("writing:detail", kwargs={"pk":self.object.pk})
 
+	# will only allow lookups of writingpiece that
+	# the logged in user has created
+	def get_queryset(self):
+		return self.model.objects.filter(
+			author=self.request.user
+			).select_related('author')
+
 	# will only get the object if the user is the author of the object
 	def get_object(self):
-		object = super(EditWritingView, self).get_object()
+		object = self.get_queryset().get(pk=self.kwargs['pk'])
 
 		# this will only allow you to get the object that
 		# you are trying to edit if you are the author
 		# if you are not the author, then no object is returned
 		### currently uses another query to figure out who is the author.
 		### bonus points if can figure out how to make this more efficient
+		###### used select_related() in queryset to make it more efficient
 		if self.request.user == object.author:
 			return object
 		else:

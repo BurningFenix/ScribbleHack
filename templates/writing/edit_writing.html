@@ -5,7 +5,7 @@
 {% block contentleft %}
 	<form action="{% url 'writing:edit' pk=object.pk %}" method="post">
 	{% csrf_token %}
-		Name: <input name="name" type="text" /><br/>
+		Name: <input name="title" type="text" /><br/>
 		Text: <textarea name="content"></textarea>
 		<br />
 		<input type="checkbox" name="allowed_contrib" /> Allow contributions<br />
