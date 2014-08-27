@@ -26,8 +26,8 @@
   {% for work in object_list %}
     <div class="browse_cover">
     <a href="{% url 'writing:detail' pk=work.pk %}"><img src="{% static 'images/bookcover1.jpg' %}" width="100" height="150"></a>
-    <h2>{{ work.name }}</h2>
-    <a ref="link">{{ work.owner }}</a>
+    <h2>{{ work.title }}</h2>
+    <a ref="{% url 'accounts:profile' pk=work.author.pk %}">{{ work.author }}</a>
     </div>
   {% endfor %}
 

@@ -29,7 +29,7 @@
 
 		<div id="writingframe">
 	    <div class="writingcontent">
-		<h1>{{ object.name }}</h1>
+		<h1>{{ object.title }}</h1>
 	  	<p>
 	  	{{ object.content }}
 	  	</p>
@@ -108,8 +108,8 @@
 		<div class="art_info">
 			<div class="box_title">
 				<img class="user_avatar" src="../../static/images/luceroprofilepic.jpg" width="70px" height="70px">
-				<h1>{{ object.name }}</h1>
-					<h2>by <a href="{% url 'accounts:profile' pk=object.owner.pk %}">{{ object.owner.username }}</a> </br> Posted {{ object.creation_date|naturalday }}</h2>
+				<h1>{{ object.title }}</h1>
+					<h2>by <a href="{% url 'accounts:profile' pk=object.author.pk %}">{{ object.author.username }}</a> </br> Posted {{ object.creation_date|naturalday }}</h2>
 	        </div>
 				<div class="art_description">
 	                			<img src="../../static/images/coverpoetry.jpg">

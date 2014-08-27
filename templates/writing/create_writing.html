@@ -12,7 +12,7 @@
 <h1>Create Writing</h1>
 <form action="{% url 'writing:create' %}" method="post">
 {% csrf_token %}
-<p>Title: <input name="name" type="text" />
+<p>Title: <input name="title" type="text" />
 <br />
 Text: <textarea name="content"></textarea>
 <br />
