@@ -5,6 +5,55 @@
 <title>ScribbleHack</title>
 <link href="../../static/profile.css" rel="stylesheet" type="text/css">
 <style type="text/css"></style></head>
+    
+    <link rel="stylesheet" href="../../static/js/jquery-ui-1.10.4.custom.min.css" />
+<script src="../../static/js/jquery-1.10.2.js"></script>
+<script src="../../static/js/jquery-ui-1.10.4.custom.min.js"></script>
+ <script>
+$(function() {
+$( "#tabs" ).tabs();
+});
+</script>
+	<style>
+	body{
+		font: 75% "Trebuchet MS", sans-serif;
+	}
+	.demoHeaders {
+		margin-top: 2em;
+	}
+	#dialog-link {
+		padding: .4em 1em .4em 20px;
+		text-decoration: none;
+		position: relative;
+	}
+	#dialog-link span.ui-icon {
+		margin: 0 5px 0 0;
+		position: absolute;
+		left: .2em;
+		top: 50%;
+		margin-top: -8px;
+	}
+	#icons {
+		margin: 0;
+		padding: 0;
+	}
+	#icons li {
+		margin: 2px;
+		position: relative;
+		padding: 4px 0;
+		cursor: pointer;
+		float: left;
+		list-style: none;
+	}
+	#icons span.ui-icon {
+		float: left;
+		margin: 0 4px;
+	}
+	.fakewindowcontain .ui-widget-overlay {
+		position: absolute;
+	}
+	</style>
+</head>
 
 
 <body id="portfolio">
@@ -89,7 +138,17 @@
 <div id="content">
     
 <div id="contentleft" class="clearfix">
-
+    
+    <h1>Portfolio</h1>
+    
+    
+    <div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">Writing</a></li>
+		<li><a href="#tabs-2">Art</a></li>
+	</ul>
+            
+<div id="tabs-1">
 
 <div class="browse_cover">
 <a href="link"><img src="../../static/images/bookcover1.jpg" width="80" height="100"></a>
@@ -587,6 +646,8 @@
 	<a href="link"><img class="arrowbutton" src="../../static/images/right_arrow.png"></a>
 </div>
 
+</div>
+</div>
     
 </div><!-- contentleft ends -->
 
