@@ -6,21 +6,14 @@ body {
 }
 
 @font-face {
-	font-family:UniversLTStd;
-	src:url(universltstd.otf);
-	font-weight: normal;
-}
-
-@font-face {
-	font-family:UniversLTStd;
-	src:url(universltstdlight.otf);
-	font-weight: lighter;
-}
-
-@font-face {
-	font-family:UniversLTStd;
-	src:url(universltstdbold.otf);
-	font-weight: bold;
+    font-family: 'open_sansregular';
+    src: url('OpenSans-Regular-webfont.eot');
+    src: url('OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans-Regular-webfont.woff') format('woff'),
+         url('OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 
@@ -28,29 +21,24 @@ h1 {
 	margin: 0 0 12px 0;
 	padding: 0;
 	font-size: 30px;
-	font-family: cantoraone,arial,sans-serif;
 	font-weight: normal;
 }
 
 h2 {
 	text-align: left;
-	background-color: #f0fbfb;
 	padding: 5px;
 	font-weight: normal;
 	font-size: 20px;
-	font-family: cantoraone,arial,sans-serif;
 	}
 
 h3 {
 	font-size: 12px;
 	font-weight: normal;
-	font-family: sheep-sans,arial,sans-serif;
 	}
 
 p {
 	font-size: 14px;
 	font-weight: normal;
-	font-family: sheep-sans,arial,sans-serif;
 	}
 
 #wrapper {
@@ -323,6 +311,10 @@ a {
 
 
 /* Specifically, Profile Page CSS */
+
+#profile h2 {
+    background-color: #f0fbfb;
+}
 
 #banner {
 	background-image: url(../../static/images/404banner.jpg);
@@ -973,15 +965,33 @@ lcomment:hover {
 
 /* PORTFOLIO */
 
+#portfolio #contentleft {
+    background-color: #c8f2e9;
+    border-radius: 10px;
+}
 
+#portfolio h1 {
+    margin-left: 20px;
+    margin-top: 20px;
+}
 
-#portfolio #tabs-1 {
+#portfolio #tabs {
+    width: 560px;
+    padding: 0px;
+}
+
+#portfolio #tabs h2 {
+    padding-left: 10px;
+}
+
+#portfolio #tabs-1, #portfolio #tabs-2 {
 	height: 1500px;
-	width: 570px;
+	width: 560px;
 	margin-right: 0px;
+    margin-left: 5px;
 	background-color: #c8f2e9;
 	border-radius: 10px;
-	padding-top: 1px;
+	padding: 0px;
 	}
 
 
@@ -1000,6 +1010,7 @@ lcomment:hover {
 	margin-top: 10px;
 	margin-bottom: 0px;
     text-align: center;
+    margin-left: 0px;
 	}
 	
 .browse_cover h2 {
@@ -1111,4 +1122,53 @@ lcomment:hover {
 	
 	}
 
+#portfolio #tabs .ui-tabs-nav { 
+    padding-left: 0px; 
+    background: transparent;  
+    -moz-border-radius: 10px; 
+    -webkit-border-radius: 10px; 
+    border-radius: 10px; 
+	border: none;
+	margin-left: 200px;
+	margin-top: 10px;
+    margin-bottom: 20px;
+} 
 
+#portfolio #tabs .ui-tabs-anchor {
+	background-color: #f0fbfb;
+	font-size: 16px;
+	font-weight: bold;
+	border: solid 1px #213d42;
+	-webkit-box-shadow: inset 0px 0px 5px #213d42;
+    -moz-box-shadow: inset 0px 0px 5px #213d42;
+    box-shadow: inset 0px 0px 5px #213d42;
+	}
+
+#portfolio #contentright {
+    background-color: #c8f2e9;
+    border-radius: 10px;
+}
+
+#folders {
+    margin-left: 15px;
+}
+
+#portfolio #contentright h2 {
+    margin-left: 15px;
+}
+
+.folders {
+    float: left;
+    text-align: center;
+}
+
+.folders p {
+    margin-top: 5px;
+}
+
+.foldericon {
+    background-color: white;
+    height: 150px;
+    width: 150px;
+    margin: 10px 10px 0px 10px;
+}

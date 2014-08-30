@@ -749,3 +749,263 @@ select {
     margin-right: auto;
     margin-left: auto;
 }
+
+
+
+
+
+
+
+/* GROUP PHOTOS */
+
+#group_photos #contentleft {
+    background-color: #c8f2e9;
+    border-radius: 10px;
+}
+
+#group_photos h1 {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#group_photos #tabs {
+    width: 560px;
+    padding: 0px;
+}
+
+#group_photos #tabs h2 {
+    padding-left: 10px;
+}
+
+#group_photos #tabs-1, #group_photos #tabs-2 {
+	height: 1500px;
+	width: 560px;
+	margin-right: 0px;
+    margin-left: 5px;
+	background-color: #c8f2e9;
+	border-radius: 10px;
+	padding: 0px;
+	}
+
+
+.browse_cover {
+	background-color:#f0fbfb;
+	width: 120px;
+	margin: 10px;
+	padding: 10px 0px 0px 0px;
+	float: left;
+	text-align: center;
+	height: 210px;
+	}
+
+.browse_cover a {
+    font-size: 12px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+    text-align: center;
+	}
+	
+.browse_cover h2 {
+	font-size: 14px;
+	margin-top: 5px;
+	margin-bottom: 0px;
+    text-align: center;
+	}
+
+.hoverbox {
+    display: none;
+    padding: 1px;
+    position: absolute;
+    left: 110px;
+    bottom: 110px;
+    height: auto;
+    width: 250px;
+    background-color: #ff9d00;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.hoverbox h2 {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.hoverbox p {
+    text-align: left;
+    font-size: 11px;
+    margin-top: 0px;
+}
+
+.browse_cover:hover .hoverbox {
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.browse_cover .insidebox {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: inset 0 0px 10px #ff9d00;
+	-webkit-box-shadow: inset 0 0px 10px #ff9d00;
+	-moz-box-shadow: inset 0 0px 10px #ff9d00;
+}
+
+.point { 
+   border-top:10px solid transparent;
+   border-bottom:10px solid transparent;
+   border-right: 12px solid #ff9d00;
+   position:absolute;
+   left:-12px;
+   top:12px;
+   }
+
+.browse_artwork {
+	background-color:#f0fbfb;
+	width: 120px;
+	margin: 10px;
+	padding: 10px 0px 0px 0px;
+	float: left;
+	text-align: center;
+	height: 210px;
+	}
+
+.browse_artwork a {
+    font-size: 12px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+    text-align: center;
+	}
+	
+.browse_artwork h2 {
+	font-size: 14px;
+	margin-top: 5px;
+	margin-bottom: 0px;
+    text-align: center;
+	}
+
+
+#browse_pagenumbers {
+	font-weight: bold;
+	font-size: 18px;
+	width: 300px;
+	text-align: center;
+	height: 50px;
+    margin-left: 175px;
+	}
+
+.browse_numbers {
+	float: left;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 5px;
+	padding-right: 5px;
+	height: 30px;
+	}
+
+.arrowbutton {
+	float: left;
+	padding-top: 10px;
+	padding-right: 5px;
+	padding-left: 5px;
+	padding-bottom: 10px;
+	
+	}
+
+#group_photos #tabs {
+	border: none;
+	margin: none;
+	padding: none;
+	background: none;
+	width: 560px;
+	}
+
+#group_photos #tabs .ui-tabs-nav { 
+    padding-left: 0px; 
+    background: transparent;  
+    -moz-border-radius: 10px; 
+    -webkit-border-radius: 10px; 
+    border-radius: 10px; 
+	border: none;
+	margin-left: 150px;
+	margin-top: 10px;
+} 
+
+
+#group_photos #tabs .ui-tabs-anchor {
+	background-color: #f0fbfb;
+	font-size: 16px;
+	font-weight: bold;
+	border: solid 1px #213d42;
+	-webkit-box-shadow: inset 0px 0px 5px #213d42;
+    -moz-box-shadow: inset 0px 0px 5px #213d42;
+    box-shadow: inset 0px 0px 5px #213d42;
+	}
+
+#group_photos #tabs li {
+	background: none;
+	border: none;
+	}
+	
+#group_photos #tabs  li  a {
+    border-radius: 10px;
+}
+
+#group_photos #tabs  li  a:hover {
+    border-color: #EEEEEE #EEEEEE #DDDDDD;
+	background-color: #f0fbfb;
+}
+#group_photos #contentright {
+    background-color: #c8f2e9;
+    border-radius: 10px;
+}
+
+#folders {
+    margin-left: 15px;
+}
+
+#group_photos #contentright h2 {
+    margin-left: 15px;
+}
+
+.folders {
+    float: left;
+    text-align: center;
+}
+
+.folders p {
+    margin-top: 5px;
+}
+
+.foldericon {
+    background-color: white;
+    height: 150px;
+    width: 150px;
+    margin: 10px 10px 0px 10px;
+}
+
+
+/* clearfix css */
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
