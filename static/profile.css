@@ -397,14 +397,15 @@ a {
 	top: 40px;
 	right: 0px;
 	border-radius: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
 }
 
 #profstatistics ul {
 	list-style: none;
 	margin: none;
-	padding: none;
 	display: inline;
-	padding: 10px 5px 10px 5px;
+    padding: 0px;
 }
 
 #profstatistics .profstat {
@@ -431,6 +432,7 @@ a {
 	margin: 0;
 	padding: 0;
 	position: relative;
+    margin-bottom: 25px;
 }
 
 #contentleft {
@@ -443,7 +445,10 @@ a {
 	left: 0;
 }
 
-
+#profile #contentleft {
+    height: 1850px;
+    margin-bottom: 25px;
+}
 	
 /* TABS SECTION, LEFT */
 
@@ -456,7 +461,8 @@ a {
 	}
 
 #tabs h2 {
-	padding: 14px 15px 5px 30px;
+	padding: 14px 15px 0px 30px;
+    margin-bottom: 5px;
 	}
 
 #tabs-1, #tabs-2, #tabs-3, #tabs-4, #tabs-5{
@@ -480,10 +486,6 @@ a {
 	text-align: left;
 	margin-bottom: 5px;
 	padding: 0px 30px 15px 30px;
-	}
-	
-#tabs-1 h2 {
-	margin-bottom: 0px;
 	}
 	
 #tabs-1 h3 {
@@ -557,15 +559,12 @@ a {
 	float:left;
 	}
 
+#tabs-1 h3 {
+    margin-top: 10px;
+}
+
 #tabs-2 p {
 	margin: 10px 10px;
-	}
-
-#tabs-3 h2 {
-	background: none;
-	text-align: left;
-	margin-bottom: 0px;
-	margin-top: 0px;
 	}
 
 .tabslinks {
@@ -665,6 +664,7 @@ td {
 	text-align: left;
 	padding: 15px 15px 0px 30px;
 	height: 30px;
+    margin-bottom: 10px;
 	}
 
 #featuredworks h2 {
@@ -684,67 +684,77 @@ figure {
 	margin-bottom: 0px;
 	padding-bottom: 0px;
 	}
-	
-figure h3 {
-	margin-top: 5px;
-	margin-bottom: 0px;
-	padding: 0px 10px 0px 0px;
-	text-decoration: none;
-	}
 
 #viewport {
 	margin-left: 200px;
 	margin-top: 20px;
 	}
 
-	
-	
-	
+.line_thingy {
+    height: 1px;
+    width: 300px;
+    background-color: #a8a8a8;
+    margin-top: 0px;
+    margin-left: 10px;
+}
+
+figcaption p {
+    margin-top: 5px;
+    margin-bottom: 3px;
+    padding-left: 5px;
+}
+
+
+
 /* COMMENTS SECTION, BOTTOM LEFT */
 	
 #profcomments {
 	background-color: #c8f2e9;
 	width: 570px;
-	height: 720px;
+    height: auto;
+	max-height: 720px;
 	float: left;
 	margin-top: 30px;
+    margin-bottom: 25px;
 	border-radius: 10px;
 }
 
 #profcomments h1 {
 	width: 540px;
 	text-align: left;
-	padding: 15px 15px 15px 30px;
+	padding: 15px 15px 0px 30px;
 	height: 30px;
+    margin-bottom: 10px;
 	}
 	
 .commentboxes {
 	padding-left: 10px;
-	margin-top: 30px;
-	margin-bottom: 50px;
+	margin-top: 5px;
+	margin-bottom: 0px;
 	padding-bottom: 50px;
 	}
 
 #leavecomment {
 	margin-left: 10px;
-	margin-top: 10px;
+	margin-top: 20px;
 	}
-
 	
 .commentboxes img, #leavecomment img {
     float:left;
     width:70px;
     height:70px;
     border:3px solid #ffffff;
-    border-radius:50px
+    border-radius:50px;
+    margin-right: 10px;
     }
 
 .comment-content {
    position:relative;
    float:left;
-   margin: 10px 0px 10px 12px;
+   margin: 5px 0px 10px 12px;
    width:425px;
-   padding:20px;
+    height: auto;
+   padding: 0px 10px 0px 10px;
    border-radius:10px;
    background-color:#FFFFFF;
    box-shadow:1px 1px 5px rgba(0,0,0,.2);
@@ -752,7 +762,7 @@ figure h3 {
    
 .replycomment {
 	padding-left: 10px;
-	margin: 50px 0px 50px 90px;
+	margin: 10px 0px 10px 90px;
 	padding-bottom: 50px;
 	}
 	
@@ -761,7 +771,8 @@ figure h3 {
     width:70px;
     height:70px;
     border:3px solid #ffffff;
-    border-radius:50px
+    border-radius:50px;
+    margin-right: 10px;
     }	
 	
 .replycomment-content {
@@ -769,7 +780,8 @@ figure h3 {
    float:left;
    margin: 10px 0px 10px 12px;
    width:335px;
-   padding:20px;
+    height: auto;
+    padding: 0px 10px 0px 10px;
    border-radius:10px;
    background-color:#FFFFFF;
    box-shadow:1px 1px 5px rgba(0,0,0,.2);
@@ -785,6 +797,16 @@ figure h3 {
    top:12px;
    }
 
+.reply_report {
+    margin-left: 400px;
+    margin-top: 0px;
+}
+
+.reply_report a {
+    margin-right: 20px;
+    margin-top: 0px;
+}
+
 .searchcomments {
 	float: left;
 	margin-left: 10px;
@@ -793,16 +815,16 @@ figure h3 {
 	}
 
 #searchcomments {
-    position: relative;
-	margin-left: 175px;
-    top: 6px;
+    margin-top: 15px;
+    margin-left: 175px;
+    padding-bottom: 30px;
 	}
 
 #lcomment {
 	font-size: 15px;
     color: black;
     font-weight: bold;
-	margin: 10px 25px 20px 360px;
+	margin: 0px 25px 50px 400px;
 	padding: 5px 10px 5px 8px;
 	color: black;
 	background: linear-gradient(#ff9f75, #ff7d44);
@@ -813,21 +835,33 @@ figure h3 {
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 	}
 
-lcomment:hover {
+#lcomment:hover {
     -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
     -moz-box-shadow:  inset 1px 1px 1px rgba(0, 0, 0, 0.5);
     box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
+.lpoint {
+    border-top:10px solid transparent;
+    border-bottom:10px solid transparent;
+    border-right: 12px solid #FFF;
+    position:absolute;
+    left:100px;
+    top:1215px;
+}
+    
+
 #profcomments textarea {
 	position: relative;
-	margin: 5px 10px 0px 30px;
+	margin: 5px 10px 10px 15px;
 	border-radius: 10px;
 	resize: none;
-	width:335px;
-	padding:20px;
+    height: 60px;
+	width:420px;
+	padding:10px;
 	background-color:#FFFFFF;
 	box-shadow:1px 1px 5px rgba(0,0,0,.2);
+    border: none;
 	}
 	
 
@@ -939,10 +973,9 @@ lcomment:hover {
 	}
 	
 #profbottomright h1 {
-	margin-top: 7px;
-	margin-left: 10px;
+	margin: 7px 0px 10px 10px;
 	text-align: left;
-	padding: 15px 10px 15px 10px;
+	padding: 15px 10px 0px 10px;
 	width: 330px;
 	height: 30px;
 	}
@@ -1061,7 +1094,7 @@ lcomment:hover {
 	-moz-box-shadow: inset 0 0px 10px #ff9d00;
 }
 
-.point { 
+#portfolio .point { 
    border-top:10px solid transparent;
    border-bottom:10px solid transparent;
    border-right: 12px solid #ff9d00;

@@ -158,6 +158,7 @@ $( "#tabs" ).tabs();
 	<div id="tabs-1">
 		<div class="tabsbox">
 			<h2>Yo peeps what's up?</h2>
+            <div class="line_thingy"></div>
 			<h3>by Laurelin, posted 3 hours ago</h3>
 			<p>Well, this is my first post on ScribbleHack.com and I have to say, IT FEELS GREAT! The website is going to be finished SOONER THAN YOU KNOW IT, PEOPLE!!! WOOOO!!!! I'd like to give a special thanks to the Captain and First Mate, JC and Rodrigo and of course our loyal crew. Anyway, so the status for today: I'm working on the profile page while Kae is finishing up the home page and working on the blank page. Not sure what JC and Rodrigo are doing because I don't understand what they do. XD But I see them doing stuff on GitHub that looks legit so we're good. XD Well, that's all for today, folks.</p>
 			
@@ -181,6 +182,8 @@ $( "#tabs" ).tabs();
 	<div id="tabs-2">
 		<div class="tabsbox">
 			<h2>About Me</h2>
+            <div class="line_thingy"></div>
+            <br>
 			<p>Birthday: June 28</p>
 			<p>Female</p>
 			<p>Hi! My name is Lucero and I like warm hugs!</p>
@@ -190,6 +193,8 @@ $( "#tabs" ).tabs();
 	<div id="tabs-3">
 		<div class="tabsbox">
 			<h2>Groups</h2>
+            <div class="line_thingy"></div>
+            <br>
 			<img src="../../static/images/groupprofilepic.png"/>
 			<h2><a href="">Batmans Unite!</a></h2>
 			<p>We are vengeance... We are the night... We are the BATMEN.</p>
@@ -203,6 +208,8 @@ $( "#tabs" ).tabs();
 	<div id="tabs-4">
 		<div class="tabsbox">
 			<h2>Favorites</h2>
+            <div class="line_thingy"></div>
+            <br>
             <figure>
                 <a href="link"><img src="../../static/images/lucero-art-example.jpg" width="140" height="140"></a>
                 <figcaption>
@@ -235,6 +242,8 @@ $( "#tabs" ).tabs();
 	<div id="tabs-5">
 		<div class="tabsbox">
 			<h2>Stats & Activity</h2>
+            <div class="line_thingy"></div>
+            <br>
 			<table>
 			<tr>
 			<td>
@@ -265,6 +274,8 @@ $( "#tabs" ).tabs();
 <div id="featuredworks">
 
 <h1>Portfolio</h1>
+    
+         <div class="line_thingy"></div>
 
 <h2>Art</h2>
 
@@ -272,7 +283,6 @@ $( "#tabs" ).tabs();
 	<a href="link"><img src="../../static/images/lucero-art-example.jpg" width="145" height="145"></a>
 	<figcaption>
 		<p><a href="link">Sad Knight</a></p>
-		<h3>5 stars</h3>
 	</figcaption>
 </figure>
 
@@ -333,20 +343,22 @@ $( "#tabs" ).tabs();
 
 <h1>Comments</h1>
 
-<div class="bubble clearfix">
-			<div id="leavecomment">
-			<img id="rcommentimg" src="#" width: "50" height: "50"/>
-                <div class="comment-content">
-                <div class="point"></div>
-				<form action="php link" method="get">
-					<textarea name="commentbox" placeholder="Leave a comment!"></textarea>
-				</form>
-                    </div>
-			</div>
-		</div>
+       <div class="line_thingy"></div>
+
+<div id="leavecomment">
+    <img id="rcommentimg" src="#" width: "50" height: "50"/>
+
+            <div class="lpoint"></div>
+        <form action="php link" method="get">
+            <textarea name="commentbox" placeholder="Leave a comment!"></textarea>
+        </form>
+</div>
+	
 
 
-<a href="link" id="lcomment" class="button action leave-a-comment fancy-link login-required" rel="nofollow">Leave a Comment</a>
+<a href="link" id="lcomment">Leave a Comment</a>
+    
+    <br><br>
 
 	<div class="commentboxes">
 		<div class="bubble clearfix">
@@ -358,6 +370,11 @@ $( "#tabs" ).tabs();
 		</div>
 	</div>
 	
+    <div class="reply_report">
+        <a href="">Reply</a>
+        <a href="">Report</a>
+    </div>
+    
 		<div class="replycomment">
 			<img src="#" width: "50" height: "50"/>
 			<div class="replycomment-content">
@@ -365,24 +382,39 @@ $( "#tabs" ).tabs();
 				<p>Why thank you. Yours is pretty awesome too.</p>
 			</div>
 		</div>
+    
+    <div class="reply_report">
+        <a href="">Reply</a>
+        <a href="">Report</a>
+    </div>
 	
 	<div class="commentboxes">
 		<img src="#" width: "50" height: "50"/>
 		<div class="comment-content">
 			<div class="point"></div>
-			<p>Hey Lucero! I think your profile is pretty awesome.</p>
+			<p>A long time ago, when the world was young, there lived a young knight who dreamed of befriending dragons and talking to trees. His name...was JC.</p>
 		</div>
 	</div>
+    
+    <div class="reply_report">
+        <a href="">Reply</a>
+        <a href="">Report</a>
+    </div>
 	
 	<div class="commentboxes">
 		<div class="bubble clearfix">
 			<img src="#" width: "50" height: "50"/>
 			<div class="comment-content">
 				<div class="point"></div>
-				<p>Hey Lucero! I think your profile is pretty awesome.</p>
+				<p>Sup Lucero. Just wondering how longer comments are going to work. It's best to ask JC and Rodrigo about that because I'm certainly no expert. Not even sure if it's a front-end or back-end thing. Probably both. *sigh* So much left to learn and not enough time to learn it. T^T </p>
 			</div>
 		</div>
 	</div>
+    
+    <div class="reply_report">
+        <a href="">Reply</a>
+        <a href="">Report</a>
+    </div>
 
 <div id="searchcomments">
 	<a class="searchcomments" href="link"> Previous</a>
@@ -412,7 +444,7 @@ $( "#tabs" ).tabs();
 </div>
 
 <div id="badgeribbon" class="proftopright">
-	<p>MOST RECENT BADGES</p>
+	<p>BADGES</p>
 		<img src="../../static/images/badge1.png"/>
 		<img src="../../static/images/badge2.png"/>
 		<img src="../../static/images/badge3.png"/>
@@ -453,14 +485,17 @@ $( "#tabs" ).tabs();
 
 <div class="brboxes">
 <h1>Friends & Followers</h1>
+    <div class="line_thingy"></div>
 </div>
 
 <div class="brboxes">
 <h1>Collaborators</h1>
+    <div class="line_thingy"></div>
 </div>
 
 <div id="treasures">
     <h1>Universe Treasures</h1>
+    <div class="line_thingy"></div>
 </div>
     
 </div><!-- profbottomright ends -->
