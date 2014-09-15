@@ -42,7 +42,7 @@ p {
 	}
 
 #wrapper {
-	background-color: #81d1c7;
+	background-color: #f4f9ff;
 	width: 1000px;
 	height: auto;
 	text-align: left;
@@ -132,7 +132,6 @@ a {
 }
 
 .navlink a {
-	font-family: 'Century Gothic', Helvetica, Arial, sans-serif;
 	font-size: 12px;
 	color: white;
 	text-align: center;
@@ -153,7 +152,6 @@ a {
 
 #sitenavright a {
 	font-weight: lighter;
-	font-family: 'Century Gothic',arial,sans-serif;
 	font-size: 12px;
 	color: white;
 	float: right;
@@ -186,8 +184,6 @@ a {
 #navsearchbox .tftextinput{
 		margin: 0;
 		padding: 0 3px 0 3px;
-		font-family: UniversLTStd;
-		src: url(universltstd.otf); 
 		font-size:12px;
 		color:#2f2f2f;
 		border-style: none;
@@ -291,9 +287,7 @@ a {
 	display: block;
 	width: auto;
 	text-align: center;
-	text-decoration: none;
-	font-family: UniversLTStd;
-	src: url(universltstd.otf);  
+	text-decoration: none; 
 	font-size: 18px;
 	color: grey;
 	font-weight: bold;
@@ -311,10 +305,6 @@ a {
 
 
 /* Specifically, Profile Page CSS */
-
-#profile h2 {
-    background-color: #f0fbfb;
-}
 
 #banner {
 	background-image: url(../../static/images/404banner.jpg);
@@ -353,19 +343,28 @@ a {
 	font-family: cantoraone,arial,sans-serif;
 	position: relative;
 	left: 140px;
+    margin-bottom: 0px;
 }
 
 #proffirstlastname {
 	font-size: 18px;
-	margin: 0px;
+	margin-top: 10px;
+    margin-bottom: 5px;
 	position: relative;
 	left: 160px;
+}
+
+#profbannerleft .line_thingy {
+    position: absolute;
+    left: 120px;
+    width: 250px;
 }
 
 #profselftitle {
 	font-size: 15px;
 	position: relative;
 	left: 160px;
+    margin-top: 5px;
 }
 
 #profbannerright {
@@ -389,16 +388,15 @@ a {
 }
 
 #profstatistics {
-	width: 285px;
+	width: 270px;
 	float: right;
-	height: 50px;
+	height: 45px;
 	position: absolute;
 	background-color: #213d42;
 	top: 40px;
 	right: 0px;
 	border-radius: 10px;
-    padding-top: 10px;
-    padding-right: 10px;
+    padding-top: 5px;
 }
 
 #profstatistics ul {
@@ -469,13 +467,13 @@ a {
 	height: 370px;
 	width: 570px;
 	margin-right: 0px;
-	background-color: #c8f2e9;
+	background-color: #ffffff;
 	border-radius: 10px;
 	padding-top: 1px;
 	}
 
 .tabsbox {
-	background-color: #f0fbfb;
+	background-color: #ffffff;
 	height: 350px;
 	width: 530px;
 	border-radius: 10px;
@@ -654,7 +652,7 @@ td {
 	width: 570px;
 	height: 640px;
 	float: left;
-	background-color: #c8f2e9;
+	background-color: #ffffff;
 	margin-top: 30px;
 	border-radius: 10px;
 }
@@ -709,7 +707,7 @@ figcaption p {
 /* COMMENTS SECTION, BOTTOM LEFT */
 	
 #profcomments {
-	background-color: #c8f2e9;
+	background-color: #ffffff;
 	width: 570px;
     height: auto;
 	max-height: 720px;
@@ -892,12 +890,12 @@ figcaption p {
 
 .special_button {
     font-size: 15px;
-    color: black;
+    color: #213d47;
     font-weight: bold;
     padding: 5px 7px 5px 7px;
     text-decoration: none;
     margin-right: 8px;
-    background: linear-gradient(#ff9f75, #ff7d44);
+    background: linear-gradient(#ffe5a9, #ffca53);
 	text-decoration: none;
 	border-radius: 7px;
     -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
@@ -922,7 +920,7 @@ figcaption p {
 #interests {
 	height: 830px;
 	width: 260px;
-	background-color: #c8f2e9;
+	background-color: #ffffff;
 	margin-right:10px;
 	border-radius: 10px;
 	padding: 5px;
@@ -947,7 +945,7 @@ figcaption p {
 #badgeribbon {
 	height: 830px;
 	width: 80px;
-	background-color: #c8f2e9;
+	background-color: #ffffff;
 	padding: 5px;
 	border-radius: 10px;
 }
@@ -982,14 +980,14 @@ figcaption p {
 
 .brboxes {
 	height: 250px;
-	background-color: #c8f2e9;
+	background-color: #ffffff;
 	border-radius: 10px;
 	margin-top: 30px;
 	}
 
 #treasures {
     height: 380px;
-    background-color: #c8f2e9;
+    background-color: #ffffff;
 	border-radius: 10px;
 	margin-top: 30px;
 }
@@ -999,7 +997,7 @@ figcaption p {
 /* PORTFOLIO */
 
 #portfolio #contentleft {
-    background-color: #c8f2e9;
+    background-color: #ffffff;
     border-radius: 10px;
 }
 
@@ -1022,7 +1020,7 @@ figcaption p {
 	width: 560px;
 	margin-right: 0px;
     margin-left: 5px;
-	background-color: #c8f2e9;
+	background-color: #ffffff;
 	border-radius: 10px;
 	padding: 0px;
 	}
@@ -1178,7 +1176,7 @@ figcaption p {
 	}
 
 #portfolio #contentright {
-    background-color: #c8f2e9;
+    background-color: #ffffff;
     border-radius: 10px;
 }
 
