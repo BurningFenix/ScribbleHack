@@ -1,5 +1,5 @@
 body {
-	background: linear-gradient(#099bb6, #002231);
+	background: linear-gradient(#d3f9ff, #003174);
 	padding: 0;
 	margin: 0;
 	font-family: UniversLTStd,arial,sans-serif;
@@ -42,7 +42,7 @@ p {
 	}
 
 #wrapper {
-	background-color: #f2ebce;
+	background-color: #f8f2d6;
 	width: 1000px;
 	height: auto;
 	text-align: left;
@@ -67,7 +67,7 @@ a {
 	padding: 5px 10px 5px 8px;
 	color: black;
 	float: left;
-	background: linear-gradient(#ff9f75, #ff7d44);
+	background: linear-gradient(#ffe5a9, #ffca53);
 	text-decoration: none;
 	border-radius: 7px;
 	height: 18px;
@@ -89,7 +89,7 @@ a {
 
 #sitenav {
 	height: 50px;
-	background-color: #213d42;
+	background-color: #1a0c04;
 }
 
 #sitenavleft {
@@ -223,7 +223,7 @@ a {
 #footer {
 	height: 200px;
 	width: 1000px;
-	background-color: #213d42;
+	background-color: #1a0c04;
 	font-size: 20px;
 }
 
@@ -392,7 +392,7 @@ a {
 	float: right;
 	height: 45px;
 	position: absolute;
-	background-color: #213d42;
+	background-color: #1a0c04;
 	top: 40px;
 	right: 0px;
 	border-radius: 10px;
@@ -633,9 +633,10 @@ td {
 }	
 
 #tabs .ui-tabs-anchor {
-	background-color: #f0fbfb;
+	background-color: #1a0c04;
 	font-size: 13px;
 	font-weight: bold;
+    color: #f5f1da;
 	}
 	
 #tabs  li  a {
@@ -825,12 +826,8 @@ figcaption p {
 	margin: 0px 25px 50px 400px;
 	padding: 5px 10px 5px 8px;
 	color: black;
-	background: linear-gradient(#ff9f75, #ff7d44);
 	text-decoration: none;
 	border-radius: 7px;
-	 -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow:  1px 1px 1px rgba(0, 0, 0, 0.5);
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 	}
 
 #lcomment:hover {
