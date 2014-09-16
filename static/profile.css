@@ -2,7 +2,6 @@ body {
 	background: linear-gradient(#d3f9ff, #003174);
 	padding: 0;
 	margin: 0;
-	font-family: UniversLTStd,arial,sans-serif;
 }
 
 @font-face {
@@ -221,51 +220,77 @@ a {
 }
 
 #footer {
-	height: 200px;
-	width: 1000px;
+	height: 250px;
+	width: 950px;
 	background-color: #1a0c04;
 	font-size: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
-
-#footer p {
-	font-size: 20px;
-	}
 	
 .footerlist {
 	float: left;
 	margin-top: 10px;
+    margin-left: 0px;
+    background: linear-gradient(#391f0f, #1a0c04);
+    border-radius: 5px;
+    padding: 35px 20px 10px 20px;
+    height: 180px;
 	}
+
+.footerlist p {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+#footerlist2 {
+    float: left;
+	margin-top: 10px;
+    margin-left: 10px;
+    background: linear-gradient(#391f0f, #1a0c04);
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+    color: #f5f1da;
+    height: 200px;
+	}
+
+#footerlist2 img {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+#footerlist3 {
+    float: left;
+	margin-top: 10px;
+    margin-left: 10px;
+    background: linear-gradient(#391f0f, #1a0c04);
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+    color: #f5f1da;
+    height: 200px;
+    width: 200px;
+	}
+
+#footerlist3 .special_button {
+    margin-top: 8px;
+    margin-left: 90px;
+}
 
 .templinks {
-	margin-left: 250px;
-	margin-top: 5px;
+	margin: 10px 0px 0px 10px;
 	font-size: 14px;
-	float: right;
-	}
-	
-#about {
-	margin-left: 100px;
-	}
-
-#faq {
-	margin-left: 130px;
-	margin-top: 10px;
-	}
-	
-#crew {
-	margin-left: 140px;
-	margin-top: 10px;
-	}
-	
-#tos {
-	margin-left: 160px;
+	float: left;
+    background: linear-gradient(#391f0f, #1a0c04);
+    border-radius: 5px;
+    padding: 35px 20px 10px 20px;
+    height: 180px;
+    width: 103px;
 	}
 
-#ppolicy {
-	margin-left: 190px;
-	margin-top: 10px;
-	}
-
+.templinks p {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
 
 #quicklinks ul {
 	list-style-type: none;
@@ -338,7 +363,7 @@ a {
 	}
 
 #profbigusername {
-	font-size: 45px;
+	font-size: 43px;
 	margin: 0px 0px 5px 0px;
 	font-family: cantoraone,arial,sans-serif;
 	position: relative;
@@ -347,9 +372,9 @@ a {
 }
 
 #proffirstlastname {
-	font-size: 18px;
+	font-size: 16px;
 	margin-top: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 	position: relative;
 	left: 160px;
 }
@@ -361,14 +386,15 @@ a {
 }
 
 #profselftitle {
-	font-size: 15px;
+	font-size: 16px;
 	position: relative;
 	left: 160px;
-    margin-top: 5px;
+    margin-top: 2px;
+    margin-bottom: 5px;
 }
 
 #profbannerright {
-	width: 400px;
+	width: 370px;
 	height: 175px;
 	float: right;
 	position: absolute;
@@ -377,24 +403,24 @@ a {
 }
 
 #profonlinestatus {
-	font-size: 13px;
-	float: right;
+	font-size: 12px;
 	font-style: italic;
-	position: absolute;
-    left: 260px;
-    padding: 3px 8px 3px 8px;
+	position: relative;
+    left: 160px;
     border-radius: 5px;
-    background-color: rgba(255,255,255,.7);
+    margin-top: 0px;
 }
 
 #profstatistics {
-	width: 270px;
+	width: 360px;
 	float: right;
-	height: 45px;
+	height: 40px;
 	position: absolute;
+    left: 10px;
+    top: -20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 	background-color: #1a0c04;
-	top: 40px;
-	right: 0px;
 	border-radius: 10px;
     padding-top: 5px;
 }
@@ -408,7 +434,7 @@ a {
 
 #profstatistics .profstat {
 	display: inline;
-	color: #abdfdb;
+	color: #f5f1da;
 	float: right;
 	margin-left: 22px;
 	margin-right: 23px;
@@ -422,7 +448,7 @@ a {
 }
 
 #profstatistics li span {
-	font-size: 21px;
+	font-size: 18px;
 }
 	
 #content {
@@ -431,6 +457,13 @@ a {
 	padding: 0;
 	position: relative;
     margin-bottom: 25px;
+}
+
+#profile h1 {
+    background-color: #f0dfba;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    height: 20px;
 }
 
 #contentleft {
@@ -659,11 +692,11 @@ td {
 }
 
 #featuredworks h1 {
-	width: 540px;
+	width: 525px;
 	text-align: left;
-	padding: 15px 15px 0px 30px;
+	padding: 15px 15px 15px 30px;
 	height: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 	}
 
 #featuredworks h2 {
@@ -719,9 +752,9 @@ figcaption p {
 }
 
 #profcomments h1 {
-	width: 540px;
+	width: 525px;
 	text-align: left;
-	padding: 15px 15px 0px 30px;
+	padding: 15px 15px 15px 30px;
 	height: 30px;
     margin-bottom: 10px;
 	}
@@ -881,6 +914,13 @@ figcaption p {
 
 /* BUTTONS ON THE TOP RIGHT */
 
+#toprightbuttons {
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    width: 370px;
+}
+
 #toprightbuttons a {
     color: black;
 }
@@ -920,12 +960,13 @@ figcaption p {
 	background-color: #ffffff;
 	margin-right:10px;
 	border-radius: 10px;
-	padding: 5px;
+	padding: 0px;
+    margin-top: 50px;
 }
 
 #interests h1 {
-	margin-top: 15px;
-	padding: 0px 15px 0px 15px;
+	margin-top: 0px;
+	padding: 15px 15px 25px 15px;
 	}
 
 #interests h2 {
@@ -945,6 +986,7 @@ figcaption p {
 	background-color: #ffffff;
 	padding: 5px;
 	border-radius: 10px;
+    margin-top: 50px;
 }
 
 #badgeribbon img {
@@ -968,11 +1010,10 @@ figcaption p {
 	}
 	
 #profbottomright h1 {
-	margin: 7px 0px 10px 10px;
+	margin: 7px 0px 10px 0px;
 	text-align: left;
-	padding: 15px 10px 0px 10px;
+	padding: 15px 15px 25px 15px;
 	width: 330px;
-	height: 30px;
 	}
 
 .brboxes {

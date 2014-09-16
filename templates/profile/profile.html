@@ -123,17 +123,17 @@ $( "#tabs" ).tabs();
             <div class="line_thingy"></div>
         <p id="proffirstlastname">Lucero Calleo</p>
         <p id="profselftitle"><em>Fantasy Writer</em></p>
+                <p id="profonlinestatus">Last online Feb 2012</p>
     </div><!-- profbannerleft ends -->
 
     <div id="profbannerright">
-        <p id="profonlinestatus">Last online Feb 2012</p>
-        <div id="profstatistics">
-            <ul>
-            <div class="profstat"><li><span>5,000</span></br>PAGEVIEWS</li></div>
-            <div class="profstat"><li><span>420</span></br>COMMENTS</li></div>
-            <div class="profstat"><li><span>67</span></br>WORKS</li></div>
-            </ul>
-        </div><!-- profstatistics ends -->
+        <div id="toprightbuttons">
+            <a class="special_button" href="">Message</a>
+            <a class="special_button" href="">Friend</a>
+            <a class="special_button" href="">Follow</a>
+            <a class="special_button" href="">Request Critique</a>
+        </div>
+
     </div><!-- profbannerright ends -->
 
 </div><!-- banner ends -->
@@ -275,8 +275,6 @@ $( "#tabs" ).tabs();
 <div id="featuredworks">
 
 <h1>Portfolio</h1>
-    
-         <div class="line_thingy"></div>
 
 <h2>Art</h2>
 
@@ -343,8 +341,6 @@ $( "#tabs" ).tabs();
 <div id="profcomments">
 
 <h1>Comments</h1>
-
-       <div class="line_thingy"></div>
 
 <div id="leavecomment">
     <img id="rcommentimg" src="#" width: "50" height: "50"/>
@@ -437,12 +433,14 @@ $( "#tabs" ).tabs();
 
 <div id="contentright" class="clearfix">
     
-<div id="toprightbuttons">
-    <a class="special_button" href="">Message</a>
-    <a class="special_button" href="">Friend</a>
-    <a class="special_button" href="">Follow</a>
-    <a class="special_button" href="">Request Critique</a>
-</div>
+<div id="profstatistics">
+    <ul>
+    <div class="profstat"><li><span>34</span></br>CRITIQUES</li></div>
+    <div class="profstat"><li><span>5,000</span></br>PAGEVIEWS</li></div>
+    <div class="profstat"><li><span>420</span></br>COMMENTS</li></div>
+    <div class="profstat"><li><span>67</span></br>WORKS</li></div>
+    </ul>
+</div><!-- profstatistics ends -->
 
 <div id="badgeribbon" class="proftopright">
 	<p>BADGES</p>
@@ -486,17 +484,14 @@ $( "#tabs" ).tabs();
 
 <div class="brboxes">
 <h1>Friends & Followers</h1>
-    <div class="line_thingy"></div>
 </div>
 
 <div class="brboxes">
 <h1>Collaborators</h1>
-    <div class="line_thingy"></div>
 </div>
 
 <div id="treasures">
     <h1>Universe Treasures</h1>
-    <div class="line_thingy"></div>
 </div>
     
 </div><!-- profbottomright ends -->
@@ -510,24 +505,48 @@ $( "#tabs" ).tabs();
 <div id="footer">
 
 	<div class="footerlist">
-		<p><a id="about" href="">About</a></p>
-		<p><a id="faq" href="">FAQ</a></p>
-		<p><a id="crew" href="">The Crew</a></p>
-	</div>
-	<div class="footerlist">
-		<p><a id="tos" href="">Terms of Service</a></p>
-		<p><a id="ppolicy" href="">Privacy Policy</a></p>
+		<p><a href="">About</a></p>
+		<p><a href="">FAQ</a></p>
+		<p><a href="">The Crew</a></p>
+		<p><a href="">Terms of Service</a></p>
+		<p><a href="">Privacy Policy</a></p>
+        <p><a href="">Contact</a></p>
 	</div>
     
-	<div class="footerlist">
-		<p><a class="templinks" href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/homepage/homepage.html">Home Page</a></p>
-		<p><a class="templinks" href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/profile/profile.html">Profile Page</a></p>
-		<p><a class="templinks" href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/profile/editprofile.html">Edit Profile Page</a></p>
-        <p><a class="templinks" href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/submit/submit.html">Submit</a></p>
-        <p><a class="templinks" href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/groups/groups_main.html">Group Main Page</a></p>
-        <p><a class="templinks" href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/groups/group_home.html">Group Home</a></p>
-        <p><a class="templinks" href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/writing/displaywriting.html">Display Writing</a></p>
+    <div id="footerlist2">
+        <h2>Like us on Facebook!</h2>
+        <h2><img src="../../static/images/fb_icon50.png" width="30px" height="30px"/>ScribbleHack</h2>
+    </div>
+    
+    <div id="footerlist3">
+        <h2>Never miss an update!</h2>
+            <p>Subscribe to the ScribbleHack mailing list!</p>
+        <p>
+            <form> 
+                <input type="text" name="title" placeholder=Email... style="width:200px; height:15px;"><br>
+                <input type="submit" class="special_button" value="Sign me up!">
+            </form>
+        </p>
+    </div>
+    
+	<div class="templinks">
+		<p><a href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/homepage/homepage.html">Home Page</a></p>
+		<p><a href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/profile/profile.html">Profile Page</a></p>
+		<p><a href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/profile/editprofile.html">Edit Profile</a></p>
+        <p><a href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/submit/submit.html">Submit</a></p>
+        <p><a href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/writing/displaywriting.html">Display Writing</a></p>
+        <p><a href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/profile/portfolio.html">Portfolio</a></p>
 	</div>
+
+    <div class="templinks">
+        <p><a href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/groups/groups_main.html">Group Main</a></p>
+        <p><a href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/groups/group_home.html">Group Home</a></p>
+        <p><a href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/groups/group_photos.html">Group Photos</a></p>
+        <p><a href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/groups/group_members.html">Group Members</a></p>
+        <p><a href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/groups/create_group.html">Create Group</a></p>
+        <p><a href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/groups/edit_group.html">Edit Group</a></p>
+        <p><a href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/groups/join_group.html">Join Group</a></p>
+        </div>
 
 </div><!-- footer ends -->
 
