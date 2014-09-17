@@ -2,6 +2,7 @@ body {
 	background: linear-gradient(#d3f9ff, #003174);
 	padding: 0;
 	margin: 0;
+    font-family: 'open_sansregular', Arial, sans-serif;
 }
 
 @font-face {
@@ -15,11 +16,10 @@ body {
     font-style: normal;
 }
 
-
 h1 {
 	margin: 0 0 12px 0;
 	padding: 0;
-	font-size: 30px;
+	font-size: 24px;
 	font-weight: normal;
 }
 
@@ -27,7 +27,7 @@ h2 {
 	text-align: left;
 	padding: 5px;
 	font-weight: normal;
-	font-size: 20px;
+	font-size: 18px;
 	}
 
 h3 {
@@ -36,12 +36,13 @@ h3 {
 	}
 
 p {
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: normal;
 	}
 
 #wrapper {
 	background-color: #f8f2d6;
+    background-image:url(../static/images/ricepaper2.png); background-repeat:repeat”;
 	width: 1000px;
 	height: auto;
 	text-align: left;
@@ -88,7 +89,7 @@ a {
 
 #sitenav {
 	height: 50px;
-	background-color: #1a0c04;
+	background-color: #2f2f2f;
 }
 
 #sitenavleft {
@@ -222,7 +223,7 @@ a {
 #footer {
 	height: 250px;
 	width: 950px;
-	background-color: #1a0c04;
+	background-color: #2f2f2f;
 	font-size: 20px;
     padding-left: 25px;
     padding-right: 25px;
@@ -662,7 +663,7 @@ td {
 	border: none;
 } 
 #tabs .ui-tabs-panel {  
-    width: 530px;
+    width: 518px;
 }	
 
 #tabs .ui-tabs-anchor {
