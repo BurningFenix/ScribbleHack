@@ -1,0 +1,557 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ScribbleHack</title>
+<link href="../../static/profile_ky.css" rel="stylesheet" type="text/css" />
+<script src="../../static/js/jquery.js"></script>
+<script src="../../static/js/jquery-ui.min.js"></script>
+<script>
+$(function() {
+$( "#tabs" ).tabs();
+});
+</script>
+	<style>
+	body{
+		font: 75% "Trebuchet MS", sans-serif;
+	}
+	.demoHeaders {
+		margin-top: 2em;
+	}
+	#dialog-link {
+		padding: .4em 1em .4em 20px;
+		text-decoration: none;
+		position: relative;
+	}
+	#dialog-link span.ui-icon {
+		margin: 0 5px 0 0;
+		position: absolute;
+		left: .2em;
+		top: 50%;
+		margin-top: -8px;
+	}
+	#icons {
+		margin: 0;
+		padding: 0;
+	}
+	#icons li {
+		margin: 2px;
+		position: relative;
+		padding: 4px 0;
+		cursor: pointer;
+		float: left;
+		list-style: none;
+	}
+	#icons span.ui-icon {
+		float: left;
+		margin: 0 4px;
+	}
+	.fakewindowcontain .ui-widget-overlay {
+		position: absolute;
+	}
+	</style>
+</head>
+
+<body id="profile">
+
+<div id="wrapper">
+
+<div id="header">
+
+<div id="sitenav">
+
+
+<div id="sitenavleft" class="clearfix">
+
+<a href="homepage.html">
+<div id="logo" class="clearfix">
+<div id="icon">
+</div><!-- icon ends -->
+<img src="../../static/images/logo.png" />
+</div><!-- logo ends -->
+</a>
+
+<div id="sitenavpagelinks" class="clearfix">
+<div class="navlink clearfix">
+<a href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/browse/browse_art.html">Browse</a>
+</div><!-- navlink ends -->
+<div class="navlink clearfix">
+<a href="#">Universe</a>
+</div><!-- navlink ends -->
+<div class="navlink clearfix">
+<a href="#">Groups</a>
+</div><!-- navlink ends -->
+<div class="navlink clearfix">
+<a href="#">Forums</a>
+
+</div><!-- navlink ends -->
+</div><!-- sitenavpagelinks ends -->
+
+</div><!-- sitenavleft ends -->
+
+<div id="sitenavright" class="clearfix">
+
+<div id="navsearchbox">
+
+<form id="tfnewsearch" method="get" action="#">
+		       <input type="submit" class="tfbutton" src="../../static/images/searchicon.png" img />
+		       <input type="text" value=" Search for stories, art or users" class="tftextinput" name="q" size="25" maxlength="120" onfocus="inputFocus(this)" onblur="inputBlur(this)">
+		</form>
+
+
+</div><!-- navsearchbox ends -->
+
+<a href="login.html">Sign in</a>
+
+<a href="profile.html">Username</a>
+<!-- Insert Gear Settings icon --> 
+
+</div><!-- sitenavright ends -->
+
+</div><!-- sitenav ends -->
+
+
+
+
+
+<div id="banner">
+
+    <div id="profbannerleft">
+        <img id="profilepic" src="../../static/images/luceroprofilepic.jpg" width="100" height="100" />
+        <p id="profbigusername">Laurelin</p>
+            <div class="line_thingy"></div>
+        <p id="proffirstlastname">Lucero Calleo</p>
+        <p id="profselftitle"><em>Fantasy Writer</em></p>
+                <p id="profonlinestatus">Last online Feb 2012</p>
+    </div><!-- profbannerleft ends -->
+
+    <div id="profbannerright">
+        <div id="toprightbuttons">
+            <a class="special_button" href="">Message</a>
+            <a class="special_button" href="">Friend</a>
+            <a class="special_button" href="">Follow</a>
+            <a class="special_button" href="">Request Critique</a>
+        </div>
+
+    </div><!-- profbannerright ends -->
+
+</div><!-- banner ends -->
+
+</div><!-- header ends -->
+
+
+
+
+
+<div id="content" class="clearfix">
+
+<div id="contentleft" class="clearfix">
+    
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">Status</a></li>
+		<li><a href="#tabs-2">About Me</a></li>
+		<li><a href="#tabs-3">Groups</a></li>
+		<li><a href="#tabs-4">Favorites</a></li>
+		<li><a href="#tabs-5">Stats and Activity</a></li>
+	</ul>
+	<div id="tabs-1">
+		<div class="tabsbox">
+			<h2>Yo peeps what's up?</h2>
+            <div class="line_thingy"></div>
+			<h3>by Laurelin, posted 3 hours ago</h3>
+			<p>Well, this is my first post on ScribbleHack.com and I have to say, IT FEELS GREAT! The website is going to be finished SOONER THAN YOU KNOW IT, PEOPLE!!! WOOOO!!!! I'd like to give a special thanks to the Captain and First Mate, JC and Rodrigo and of course our loyal crew. Anyway, so the status for today: I'm working on the profile page while Kae is finishing up the home page and working on the blank page. Not sure what JC and Rodrigo are doing because I don't understand what they do. XD But I see them doing stuff on GitHub that looks legit so we're good. XD Well, that's all for today, folks.</p>
+			
+			<div class="statusboxstats">
+				<a href="link" class="button" rel="nofollow"><img class="icon" src="../../static/images/checkmark.png"/>Like</a>
+				<p>2 Likes</p>
+			</div>
+			<div class="statusboxstats">
+				<a href="link" class="button" rel="nofollow"><img class="icon" src="../../static/images/speechbubble.png"/>Comment</a>
+				<p><a href="">0 Comments</a></p>
+			</div>
+			<br>
+			<div id="journallinks">
+				<p><a href="">View previous entries</a></p>
+				<p><a href="profile_edit_journal.html">Update blog</a></p>
+			</div>
+			<br><br>
+		</div>
+	</div>
+	
+	<div id="tabs-2">
+		<div class="tabsbox">
+			<h2>About Me</h2>
+            <div class="line_thingy"></div>
+            <br>
+			<p>Birthday: June 28</p>
+			<p>Female</p>
+			<p>Hi! My name is Lucero and I like warm hugs!</p>
+		</div>
+	</div>
+	
+	<div id="tabs-3">
+		<div class="tabsbox">
+			<h2>Groups</h2>
+            <div class="line_thingy"></div>
+            <br>
+			<img src="../../static/images/groupprofilepic.png"/>
+			<h2><a href="">Batmans Unite!</a></h2>
+			<p>We are vengeance... We are the night... We are the BATMEN.</p>
+			<img src="../../static/images/groupprofilepic.png"/>
+			<h2><a href="">Batmans Unite!</a></h2>
+			<p>We are vengeance... We are the night... We are the BATMEN.</p>
+			<a class="tabslinks" href="">More Groups...</a>
+		</div>
+	</div>
+	
+	<div id="tabs-4">
+		<div class="tabsbox">
+			<h2>Favorites</h2>
+            <div class="line_thingy"></div>
+            <br>
+            <figure>
+                <a href="link"><img src="../../static/images/lucero-art-example.jpg" width="140" height="140"></a>
+                <figcaption>
+                    <p><a href="link">Sad Knight</a></p>
+                    <h3>5 stars</h3>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <a href="link"><img src="../../static/images/lucero-art-example.jpg" width="140" height="140"></a>
+                <figcaption>
+                    <p><a href="link">Sad Knight</a></p>
+                    <h3>5 stars</h3>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <a href="link"><img src="../../static/images/lucero-art-example.jpg" width="140" height="140"></a>
+                <figcaption>
+                    <p><a href="link">Sad Knight</a></p>
+                    <h3>5 stars</h3>
+                </figcaption>
+            </figure>
+            
+            <a class="tabslinks" href="">View Favorites</a>
+			
+		</div>
+	</div>
+	
+	<div id="tabs-5">
+		<div class="tabsbox">
+			<h2>Stats & Activity</h2>
+            <div class="line_thingy"></div>
+            <br>
+			<table>
+			<tr>
+			<td>
+			<p>Joined 6/28/2014</p>
+			<p>Last online: 8/5/2014</p>
+			<p>Last submission: 7/26/2014</p>
+			<p>Number of submissions: 32</p>
+			<p>Submissions per week: 0.5</p>
+			<p>Number of forum posts: 36</p>
+			<p>Forum posts per week: 2</p>
+			</td>
+			<td>
+			<p>Number of critiques given: 7</p>
+			<p>Critique Rating:</p>
+			<p>Number of donations to the Universe: 12</p>
+			<p>Number of badges:22</p>
+			</td>
+			</tr>
+			</table>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<div id="featuredworks">
+
+<h1>Portfolio</h1>
+
+<h2>Art</h2>
+
+<figure>
+	<a href="link"><img src="../../static/images/lucero-art-example.jpg" width="145" height="145"></a>
+	<figcaption>
+		<p><a href="link">Sad Knight</a></p>
+	</figcaption>
+</figure>
+
+<figure>
+	<a href="link"><img src="../../static/images/lucero-art-example.jpg" width="145" height="145"></a>
+	<figcaption>
+		<p><a href="link">Sad Knight</a></p>
+		<h3>5 stars</h3>
+	</figcaption>
+</figure>
+
+<figure>
+	<a href="link"><img src="../../static/images/lucero-art-example.jpg" width="145" height="145"></a>
+	<figcaption>
+		<p><a href="link">Sad Knight</a></p>
+		<h3>5 stars</h3>
+	</figcaption>
+</figure>
+
+
+<h2>Writing</h2>
+
+
+<figure>
+	<a href="link"><img src="../../static/images/lucero-writing-example.jpg" width="100" height="145"></a>
+	<figcaption>
+		<p><a href="link">Cherry Blossom Petals</a></p>
+		<h3>5 stars</h3>
+	</figcaption>
+</figure>
+
+<figure>
+	<a href="link"><img src="../../static/images/lucero-writing-example.jpg" width="100" height="145"></a>
+	<figcaption>
+		<p><a href="link">Cherry Blossom Petals</a></>
+		<h3>5 stars</h3>
+	</figcaption>
+</figure>
+
+<figure>
+	<a href="link"><img src="../../static/images/lucero-writing-example.jpg" width="100" height="145"></a>
+	<figcaption>
+		<p><a href="link">Cherry Blossom Petals</a></p>
+		<h3>5 stars</h3>
+	</figcaption>
+</figure>
+
+<br><br>
+<p id="viewport"><a href="">View Laurelin's Portfolio</a></p>
+
+</div><!-- featuredworks ends -->
+
+
+
+
+
+<div id="profcomments">
+
+<h1>Comments</h1>
+
+<div id="leavecomment">
+    <img id="rcommentimg" src="#" width: "50" height: "50"/>
+
+            <div class="lpoint"></div>
+        <form action="php link" method="get">
+            <textarea name="commentbox" placeholder="Leave a comment!"></textarea>
+        </form>
+</div>
+	
+
+
+<a href="link" id="lcomment" class="special_button">Leave a Comment</a>
+    
+    <br><br>
+
+	<div class="commentboxes">
+		<div class="bubble clearfix">
+			<img src="#" width: "50" height: "50"/>
+			<div class="comment-content">
+				<div class="point"></div>
+				<p>Hey Lucero! I think your profile is pretty awesome.</p>
+			</div>
+		</div>
+	</div>
+	
+    <div class="reply_report">
+        <a href="">Reply</a>
+        <a href="">Report</a>
+    </div>
+    
+		<div class="replycomment">
+			<img src="#" width: "50" height: "50"/>
+			<div class="replycomment-content">
+				<div class="point"></div>
+				<p>Why thank you. Yours is pretty awesome too.</p>
+			</div>
+		</div>
+    
+    <div class="reply_report">
+        <a href="">Reply</a>
+        <a href="">Report</a>
+    </div>
+	
+	<div class="commentboxes">
+		<img src="#" width: "50" height: "50"/>
+		<div class="comment-content">
+			<div class="point"></div>
+			<p>A long time ago, when the world was young, there lived a young knight who dreamed of befriending dragons and talking to trees. His name...was JC.</p>
+		</div>
+	</div>
+    
+    <div class="reply_report">
+        <a href="">Reply</a>
+        <a href="">Report</a>
+    </div>
+	
+	<div class="commentboxes">
+		<div class="bubble clearfix">
+			<img src="#" width: "50" height: "50"/>
+			<div class="comment-content">
+				<div class="point"></div>
+				<p>Sup Lucero. Just wondering how longer comments are going to work. It's best to ask JC and Rodrigo about that because I'm certainly no expert. Not even sure if it's a front-end or back-end thing. Probably both. *sigh* So much left to learn and not enough time to learn it. T^T </p>
+			</div>
+		</div>
+	</div>
+    
+    <div class="reply_report">
+        <a href="">Reply</a>
+        <a href="">Report</a>
+    </div>
+
+<div id="searchcomments">
+	<a class="searchcomments" href="link"> Previous</a>
+	<a class="searchcomments" href="link"> 1</a>
+	<a class="searchcomments" href="link"> 2</a>
+	<a class="searchcomments" href="link"> 3</a>
+	<a class="searchcomments" href="link"> 4</a>
+	<a class="searchcomments" href="link"> 5</a>
+	<a class="searchcomments" href="link"> Next</a>
+</div>
+
+</div><!-- profcomments ends -->
+
+</div><!-- contentleft ends -->
+
+
+
+
+
+<div id="contentright" class="clearfix">
+    
+<div id="profstatistics">
+    <ul>
+    <div class="profstat"><li><span>34</span></br>CRITIQUES</li></div>
+    <div class="profstat"><li><span>5,000</span></br>PAGEVIEWS</li></div>
+    <div class="profstat"><li><span>420</span></br>COMMENTS</li></div>
+    <div class="profstat"><li><span>67</span></br>WORKS</li></div>
+    </ul>
+</div><!-- profstatistics ends -->
+
+<div id="badgeribbon" class="proftopright">
+	<p>BADGES</p>
+		<img src="../../static/images/badge1.png"/>
+		<img src="../../static/images/badge2.png"/>
+		<img src="../../static/images/badge3.png"/>
+		<img src="../../static/images/badge4.png"/>
+		<img src="../../static/images/badge5.png"/>
+	<p><a href="link"> ALL BADGES</a></p>
+</div>
+
+
+
+
+<div id="interests" class="proftopright">
+
+<h1>Interests</h1>
+
+<h2>Books</h2>
+<p>The Brothers Karamazov, The Lord of the Rings, Crime and Punishment</p>
+<h2>Authors</h2>
+<p>J.R.R. Tolkien, Fyodor Dostoevsky, Paulo Coelho</p>
+<h2>Artworks</h2>
+<p>Starry Night</p>
+<h2>Artists</h2>
+<p>Jones De Ro, Jennifer Healy, Pierre Auguste Cot, Auguste Renoir</p>
+<h2>TV/Movies</h2>
+<p>The Lord of the Rings, Pan's Labyrinth, Big Fish</p>
+<h2>Music</h2>
+<p>Songs from animated Disney classics, Kutless, Josh Groban</p>
+<h2>Video Games</h2>
+<p>The Legend of Zelda, Fire Emblem, Metroid, Harvest Moon</p>
+
+</div>
+
+
+
+
+
+<div id="profbottomright">
+
+<div class="brboxes">
+<h1>Friends & Followers</h1>
+</div>
+
+<div class="brboxes">
+<h1>Collaborators</h1>
+</div>
+
+<div id="treasures">
+    <h1>Universe Treasures</h1>
+</div>
+    
+</div><!-- profbottomright ends -->
+
+</div><!-- contentright ends -->
+
+</div><!-- content ends -->
+
+
+
+<div id="footer">
+
+	<div class="footerlist">
+		<p><a href="">About</a></p>
+		<p><a href="">FAQ</a></p>
+		<p><a href="">The Crew</a></p>
+		<p><a href="">Terms of Service</a></p>
+		<p><a href="">Privacy Policy</a></p>
+        <p><a href="">Contact</a></p>
+	</div>
+    
+    <div id="footerlist2">
+        <h2>Like us on Facebook!</h2>
+        <h2><img src="../../static/images/fb_icon50.png" width="30px" height="30px"/>ScribbleHack</h2>
+    </div>
+    
+    <div id="footerlist3">
+        <h2>Never miss an update!</h2>
+            <p>Subscribe to the ScribbleHack mailing list!</p>
+        <p>
+            <form> 
+                <input type="text" name="title" placeholder=Email... style="width:200px; height:15px;"><br>
+                <input type="submit" class="special_button" value="Sign me up!">
+            </form>
+        </p>
+    </div>
+    
+	<div class="templinks">
+		<p><a href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/homepage/homepage.html">Home Page</a></p>
+		<p><a href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/profile/profile.html">Profile Page</a></p>
+		<p><a href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/profile/editprofile.html">Edit Profile</a></p>
+        <p><a href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/submit/submit.html">Submit</a></p>
+        <p><a href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/writing/displaywriting.html">Display Writing</a></p>
+        <p><a href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/profile/portfolio.html">Portfolio</a></p>
+	</div>
+
+    <div class="templinks">
+        <p><a href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/groups/groups_main.html">Group Main</a></p>
+        <p><a href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/groups/group_home.html">Group Home</a></p>
+        <p><a href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/groups/group_photos.html">Group Photos</a></p>
+        <p><a href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/groups/group_members.html">Group Members</a></p>
+        <p><a href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/groups/create_group.html">Create Group</a></p>
+        <p><a href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/groups/edit_group.html">Edit Group</a></p>
+        <p><a href="http://scribblehack.com/kaeyamane/newlayouts/blue/templates/groups/join_group.html">Join Group</a></p>
+        </div>
+
+</div><!-- footer ends -->
+
+
+</div><!-- wrapper ends -->
+
+
+</body>
+</html>
