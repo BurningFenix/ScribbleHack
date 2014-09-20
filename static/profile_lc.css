@@ -52,7 +52,7 @@ p {
 	-moz-box-shadow: 0 0 15px #213d42;
 }
 
-a:link {color:#ff5800;}
+a:link {color:#ff9d00;}
 a:visited {color:#099bb6;}
 a:hover {color:#ff9d00;}
 a:active {color:#00A58C;}
@@ -60,27 +60,6 @@ a:active {color:#00A58C;}
 a {
 	text-decoration: none;
 	}
-
-.button {
-	font-size: 15px;
-	font-weight: bold;
-	padding: 5px 10px 5px 8px;
-	color: black;
-	float: left;
-	background: linear-gradient(#ffe5a9, #ffca53);
-	text-decoration: none;
-	border-radius: 7px;
-	height: 18px;
-    -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow:  1px 1px 1px rgba(0, 0, 0, 0.5);
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-	}
-
-.button:hover {
-     -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow:  inset 1px 1px 1px rgba(0, 0, 0, 0.5);
-    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
-}
 	
 #header {
 	height: 200px;
@@ -89,7 +68,7 @@ a {
 
 #sitenav {
 	height: 50px;
-	background-color: #311b08;
+	background-color: #020417;
 }
 
 #sitenavleft {
@@ -216,6 +195,7 @@ a {
 
 #banner {
 	height: 150px;
+    background-image: url(../static/images/forest_banner.jpg);
 	border: solid 0 #007000;
 	border-bottom: 1px solid #2f2f2f;
 }
@@ -333,18 +313,17 @@ a {
 /* Specifically, Profile Page CSS */
 
 #banner {
-	background-image: url(../../static/images/404banner.jpg);
 	position: relative;
 	margin: 0;
 	padding: 0;
 }
 
 #profbannerleft {
-	width: 400px;
+	width: 465px;
 	height: 130px;
 	position: absolute;
 	top: 10px;
-	left: 10px;
+	left: 28px;
 	background-color: rgba(255,255,255,.7);
 	border-radius: 10px;
 }
@@ -364,33 +343,33 @@ a {
 	}
 
 #profbigusername {
-	font-size: 43px;
-	margin: 0px 0px 5px 0px;
+	font-size: 38px;
+	margin: 0px;
 	font-family: cantoraone,arial,sans-serif;
 	position: relative;
-	left: 140px;
-    margin-bottom: 0px;
+	left: 138px;
 }
 
 #proffirstlastname {
-	font-size: 16px;
-	margin-top: 10px;
+	font-size: 13px;
+	margin-top: 8px;
     margin-bottom: 0px;
 	position: relative;
-	left: 160px;
+	left: 154px;
 }
 
 #profbannerleft .line_thingy {
     position: absolute;
+    top: 48px;
     left: 120px;
-    width: 250px;
+    width: 320px;
 }
 
 #profselftitle {
-	font-size: 16px;
+	font-size: 13px;
 	position: relative;
-	left: 160px;
-    margin-top: 2px;
+	left: 154px;
+    margin-top: 1px;
     margin-bottom: 5px;
 }
 
@@ -404,11 +383,11 @@ a {
 }
 
 #profonlinestatus {
-	font-size: 12px;
+	font-size: 11px;
 	font-style: italic;
-	position: relative;
-    left: 160px;
-    border-radius: 5px;
+	position: absolute;
+    left: 335px;
+    bottom: 36px;
     margin-top: 0px;
 }
 
@@ -528,6 +507,17 @@ a {
 	font-style: italic;
 	}
 
+#tabs-1 .special_button {
+    color: #dfe9ed;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 5px 10px 5px 8px;
+	float: left;
+	text-decoration: none;
+	border-radius: 7px;
+	height: 18px;
+	}
+
 #journallinks {
 	width: 400px;
 	margin-top: 25px;
@@ -545,11 +535,6 @@ a {
 	margin-left: 430px;
 	}
 	
-.button {
-	margin-right: 0px;
-	margin-left: none;
-	}
-
 .statusboxstats  p {
 	margin: 0px;
 	padding: 10px 50px 0px 10px;
@@ -672,15 +657,23 @@ td {
 	font-size: 13px;
 	font-weight: bold;
     color: #f5f1da;
+    border-radius: 5px;
 	}
-	
-#tabs  li  a {
-    border-radius: 4px 4px 0 0;
+
+ul li.ui-state-active,ul li.ui-tabs-selected {
+    background-color: #258c9a;
+    border: none;
 }
 
-#tabs  li  a:hover {
-    border-color: #EEEEEE #EEEEEE #DDDDDD;
+#tabs .ui-tabs-anchor:hover {
+    background-color: #258c9a;
 }
+
+#tabs li {
+	background: none;
+	border: none;
+	}
+	
 	
 /* PORTFOLIO SECTION */
 
@@ -777,7 +770,7 @@ figcaption p {
     float:left;
     width:70px;
     height:70px;
-    border:3px solid #ffffff;
+    border:3px solid #dedede;
     border-radius:50px;
     margin-right: 10px;
     }
@@ -790,7 +783,7 @@ figcaption p {
     height: auto;
    padding: 0px 10px 0px 10px;
    border-radius:10px;
-   background-color:#FFFFFF;
+   background-color:#ebf1fa;
    box-shadow:1px 1px 5px rgba(0,0,0,.2);
    }
    
@@ -804,7 +797,7 @@ figcaption p {
     float:left;
     width:70px;
     height:70px;
-    border:3px solid #ffffff;
+    border:3px solid #dedede;
     border-radius:50px;
     margin-right: 10px;
     }	
@@ -817,7 +810,7 @@ figcaption p {
     height: auto;
     padding: 0px 10px 0px 10px;
    border-radius:10px;
-   background-color:#FFFFFF;
+   background-color:#ebf1fa;
    box-shadow:1px 1px 5px rgba(0,0,0,.2);
    }
    
@@ -825,7 +818,7 @@ figcaption p {
 .point {
    border-top:10px solid transparent;
    border-bottom:10px solid transparent;
-   border-right: 12px solid #FFF;
+   border-right: 12px solid #ebf1fa;
    position:absolute;
    left:-10px;
    top:12px;
@@ -858,14 +851,14 @@ figcaption p {
 
 #lcomment {
 	font-size: 15px;
-    color: black;
     font-weight: bold;
 	margin: 0px 25px 50px 400px;
 	padding: 5px 10px 5px 8px;
-	color: black;
+	color: #dfe9ed;
 	text-decoration: none;
 	border-radius: 7px;
 	}
+
 
 #lcomment:hover {
     -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
@@ -876,10 +869,10 @@ figcaption p {
 .lpoint {
     border-top:10px solid transparent;
     border-bottom:10px solid transparent;
-    border-right: 12px solid #FFF;
+    border-right: 12px solid #f6f9fd;
     position:absolute;
     left:100px;
-    top:1315px;
+    top:1270px;
 }
     
 
@@ -891,7 +884,7 @@ figcaption p {
     height: 60px;
 	width:420px;
 	padding:10px;
-	background-color:#FFFFFF;
+	background-color:#f6f9fd;
 	box-shadow:1px 1px 5px rgba(0,0,0,.2);
     border: none;
 	}
@@ -920,22 +913,32 @@ figcaption p {
 
 #toprightbuttons {
     position: absolute;
-    top: 100px;
-    left: 10px;
-    width: 370px;
+    left: 110px;
+    width:350px;
+    top: 105px;
+    float: right;
 }
 
 #toprightbuttons a {
-    color: #d9f3ff;
+    color: #dfe9ed;
+    margin-top: 0px;
+    margin-right: 5px;
+    text-align: right;
+    padding: 4px 10px 4px 10px;
+}
+
+#toprightbuttons p {
+    margin-top: 0px;
+    float: right;
 }
 
 .special_button {
-    font-size: 15px;
+    font-size: 12px;
     font-weight: bold;
-    padding: 5px 7px 5px 7px;
+    padding: 5px 10px 5px 10px;
     text-decoration: none;
     margin-right: 8px;
-    background: linear-gradient(#65afc1, #0e0077);
+    background: linear-gradient(#258c9a, #182e3c);
 	text-decoration: none;
 	border-radius: 7px;
     -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
@@ -969,36 +972,53 @@ figcaption p {
 
 #interests h1 {
 	margin-top: 0px;
+    margin-bottom: 0px;
 	padding: 15px 15px 25px 15px;
 	}
 
 #interests h2 {
 	text-align: center;
+    margin-top: 0px;
 	margin-bottom: 0px;
+    background-color: #182e3c;
+    color: white;
 	}
 
 #interests p {
 	text-align: center;
 	padding: 5px 10px 5px 10px;
-	height: 25px;
+	height: auto;
 	}
 	
 #badgeribbon {
 	height: 830px;
 	width: 80px;
 	background-color: #ffffff;
-	padding: 5px;
+	padding: 0px 10px 0px 0px;
 	border-radius: 10px;
     margin-top: 50px;
 }
 
 #badgeribbon img {
 	padding-left: 10px;
+    margin-bottom: 10px;
 	}
 
 #badgeribbon p{
 	text-align: center;
+    background-color: #020417;
+    color: white;
+    margin-top: 0px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    width: 90px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 	}
+
+#badgeribbon h3 {
+    margin-left: 10px;
+}
 	
 	
 	
