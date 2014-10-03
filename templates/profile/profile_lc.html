@@ -11,6 +11,20 @@
 $(function() {
 $( "#tabs" ).tabs();
 });
+     
+     $('.ratings_stars').hover(
+    // Handles the mouseover
+    function() {
+        $(this).prevAll().andSelf().addClass('ratings_over');
+        $(this).nextAll().removeClass('ratings_vote'); 
+    },
+    // Handles the mouseout
+    function() {
+        $(this).prevAll().andSelf().removeClass('ratings_over');
+        set_votes($(this).parent());
+    }
+);
+     
 </script>
 	<style>
 	.demoHeaders {
@@ -126,7 +140,7 @@ $( "#tabs" ).tabs();
             <p><a class="special_button" href="">Request Critique</a></p>
             <p><a class="special_button" href="">Message</a></p>
             <p> <a class="special_button" href="">Friend</a></p>
-            <p><a class="special_button" href="">Follow</a></p>
+            <p><a class="special_button" href=""><img src="../../static/images/telescope_18.png"/>Follow</a></p>
         </div>
         
     </div><!-- profbannerleft ends -->
@@ -282,8 +296,21 @@ $( "#tabs" ).tabs();
 	<a href="link"><img src="../../static/images/lucero-art-example.jpg" width="145" height="145"></a>
 	<figcaption>
 		<p><a href="link">Sad Knight</a></p>
+        <div class='movie_choice'>
+    <div id="r1" class="rate_widget">
+        <div class="star_1 ratings_stars"></div>
+        <div class="star_2 ratings_stars"></div>
+        <div class="star_3 ratings_stars"></div>
+        <div class="star_4 ratings_stars"></div>
+        <div class="star_5 ratings_stars"></div>
+        <div class="total_votes">vote data</div>
+    </div>
+</div>
 	</figcaption>
+    
 </figure>
+    
+    
 
 <figure>
 	<a href="link"><img src="../../static/images/lucero-art-example.jpg" width="145" height="145"></a>

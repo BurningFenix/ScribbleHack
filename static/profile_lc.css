@@ -660,7 +660,7 @@ td {
     border-radius: 5px;
 	}
 
-ul li.ui-state-active,ul li.ui-tabs-selected {
+#tabs .ui-tabs-active a {
     background-color: #258c9a;
     border: none;
 }
@@ -711,6 +711,41 @@ figure {
 	margin-bottom: 0px;
 	padding-bottom: 0px;
 	}
+
+.rate_widget {
+    border:     1px solid #CCC;
+    overflow:   visible;
+    padding:    10px;
+    position:   relative;
+    width:      180px;
+    height:     32px;
+}
+.ratings_stars {
+    background: url('images/star_empty.png') no-repeat;
+    float:      left;
+    height:     28px;
+    padding:    2px;
+    width:      32px;
+}
+.ratings_vote {
+    background: url('images/star_full.png') no-repeat;
+}
+.ratings_over {
+    background: url('images/star_highlight.png') no-repeat;
+}
+
+.total_votes {
+    background: #eaeaea;
+    top: 58px;
+    left: 0;
+    padding: 5px;
+    position:   absolute;  
+} 
+.movie_choice {
+    font: 10px verdana, sans-serif;
+    margin: 0 auto 40px auto;
+    width: 180px;
+}
 
 #viewport {
 	margin-left: 200px;
@@ -920,7 +955,7 @@ figcaption p {
 }
 
 #toprightbuttons a {
-    color: #dfe9ed;
+    color: #dfede0;
     margin-top: 0px;
     margin-right: 5px;
     text-align: right;
@@ -930,6 +965,15 @@ figcaption p {
 #toprightbuttons p {
     margin-top: 0px;
     float: right;
+}
+
+#toprightbuttons img {
+    margin-bottom: 0px;
+    vertical-align: bottom;
+    margin-left: 0px; 
+    padding: 0px;
+    margin-right: 3px;
+    width: 18px;
 }
 
 .special_button {
